@@ -22,16 +22,17 @@ def parse_step(step):
     @return dictionary
     '''
 # \n# .*
-    step_info = re.compile(r'\*\*Step (\d+):\*\* ([^\{]*)')
+    step_info = re.compile(r'\*\*Step (\d+):\*\* ([^\{]*)\{*.*\}*([^#]*)')
     info_matches = step_info.search(step)
-    description_info = re.compile(r'\}\n\n(.*)\n\n## ', re.DOTALL) # DOTALL used so that '.' also matches '\n'
-    description_matches = description_info.search(step)
+    # # description_info = re.compile(r'\}\n\n(.*)\n\n## ', re.DOTALL) # DOTALL used so that '.' also matches '\n'
+    # description_info = re.compile(r'([^#]*)')
+    # description_matches = description_info.search(step)
 
     if(info_matches is not None):
         return {
             'number': info_matches.group(1).strip(),
             'step_name': info_matches.group(2).strip(),
-            'description': description_matches.group(1) if description_matches else None # Python equivilant to turnary expression
+            'description': info_matches.group(3).strip()
         }
     
     

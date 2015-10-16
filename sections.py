@@ -1,5 +1,6 @@
 import json
 import re
+from activity_splitter import splitSubsection
 
     
 def split_project(file_content):
@@ -13,7 +14,7 @@ def split_project(file_content):
     sections = file_content.split('\n# ')
     steps = sections[2:] # Because first 2 sections are intro and project_info
     project = {
-        'project_title': get_title(sections[0])
+        'title': get_title(sections[0])
     } 
     project.update(parse_intro(sections[1]))
     project['steps'] = []
@@ -23,7 +24,7 @@ def split_project(file_content):
         project['steps'].append(parse_step(step))
         project
 
-    print project
+    return project
 
 
 def parse_step(step):
@@ -45,7 +46,7 @@ def parse_step(step):
             'title': info_matches.group(2).strip(),
             'description': info_matches.group(3).strip()
         }
-        formated_step = parse_step_sections(split_steps(step))
+        formated_step = splitSubsection(parse_step_sections(split_steps(step)))
         result.update(formated_step)
         return result
     
@@ -74,8 +75,8 @@ def parse_intro(intro_section):
     description = photoPattern.sub('', intro_text)
 
     return {
-        'project_image': photo.group(1).strip() if photo else None,
-        'project_description': description.strip() if description else None 
+        'image': photo.group(1).strip() if photo else None,
+        'description': description.strip() if description else None 
     }
 
 def split_steps(step):
@@ -90,9 +91,9 @@ def split_steps(step):
 
     #Split up by challenges
     split_challenges = step.split('\n## Challenge')
-    print split_challenges
+    # print split_challenges
 
-    print split_challenges[0].split('\n## ')[1:]
+    return split_challenges[0].split('\n## ')[1:]
 
 def parse_step_sections(step_sections):
     '''
@@ -135,15 +136,17 @@ if __name__ == '__main__':
     # json.dump(dictionary, json_file)
     
     project = open("Flappy Parrot.md", "r").read()
+    output = open("flappy parrot.json", "w")
+    json.dump(split_project(project), output, indent = 4)
 
     # test get_title
-    intro = open("flappy_parrot/step0.md", "r").read()
+    # intro = open("flappy_parrot/step0.md", "r").read()
 
     # print get_title(intro)
 
     # test parse_step
-    step_info = open("flappy_parrot/step8.md", "r").read()
-    split_steps(step_info)
+    # step_info = open("flappy_parrot/step8.md", "r").read()
+    # split_steps(step_info)
 
     # print step_info
     # print parse_step(step_info)

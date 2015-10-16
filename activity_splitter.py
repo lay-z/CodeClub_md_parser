@@ -56,7 +56,7 @@ def splitSubsection(section):
         #result = []
         section[key] = []
         if(key == "tests"):
-            section[key] = parseComponent(value)
+            section[key] = [parseComponent(value)]
         else:
             component = value.split('\n+ ')
             for part in component:

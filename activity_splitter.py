@@ -100,16 +100,16 @@ def parseComponent(text):
 	text = blockPattern.sub('',text)
 	# print('text',text)
 
-	photoPattern = re.compile(r'!\[screenshot\]\((.*)\)')
+	imagePattern = re.compile(r'!\[screenshot\]\((.*)\)')
 
-	# find photos
-	match = photoPattern.search(text)
+	# find images
+	match = imagePattern.search(text)
 	if (match is not None):
-		result['photo'] = match.group(1).strip()
-		# if DEBUG: print('photo:',result['photo'] )
+		result['image'] = match.group(1).strip()
+		# if DEBUG: print('image:',result['image'] )
 
-	# remove photos
-	result['text']  = photoPattern.sub('',text).strip()
+	# remove images
+	result['text']  = imagePattern.sub('',text).strip()
 	# if DEBUG: print('text:',result['text'])
 
 	return result

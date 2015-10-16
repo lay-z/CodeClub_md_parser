@@ -34,7 +34,7 @@ def parse_step(step):
     @return dictionary
     '''
 
-    step_info = re.compile(r'\*\*Step (\d+):\*\* ([^\{]*)\{*.*\}*([^#]*)')
+    step_info = re.compile(r'Step (\d+): ([^\{]*)\{*.*\}*([^#]*)')
     info_matches = step_info.search(step)
     # # description_info = re.compile(r'\}\n\n(.*)\n\n## ', re.DOTALL) # DOTALL used so that '.' also matches '\n'
     # description_info = re.compile(r'([^#]*)')
@@ -73,6 +73,12 @@ def parse_intro(intro_section):
     intro_text = re.compile(r'\}\n\n(.*)', re.DOTALL).search(intro_section).group(1)
     photo = photoPattern.search(intro_section)
     description = photoPattern.sub('', intro_text)
+
+    if (photo is None):
+        photoPattern = re.compile(r'''<img src="(.*)">''')
+        photo = photoPattern.search(intro_text)
+        description = photoPattern.sub('', intro_text)
+
 
     return {
         'image': photo.group(1).strip() if photo else None,

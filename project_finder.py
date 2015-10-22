@@ -17,7 +17,7 @@ def build_root_url(url,directory,filename):
     return url + path 
 
 
-def change_image_path(dictionary,rootUrl):
+def change_image_path(dictionary,url,directory):
     """Recusrively look into dictionary to chagne the image keys to prepend a root url
     """
 
@@ -26,13 +26,12 @@ def change_image_path(dictionary,rootUrl):
 
     for key in dictionary:
         if ((key == 'image') and (dictionary[key] is not None)):
-            # print(key,dictionary[key],dictionary)
-            dictionary[key] = "{}/{}".format(rootUrl,dictionary[key])
+            dictionary[key] = build_root_url(url,directory,dictionary[key])
         elif (type(dictionary[key]) == dict):
-            change_image_path(dictionary[key],rootUrl)
+            change_image_path(dictionary[key],url,directory)
         elif (type(dictionary[key]) == list):
             for item in dictionary[key]:
-                change_image_path(item,rootUrl)
+                change_image_path(item,url,directory)
 
 
 def find_markdown(root,language,folders):
@@ -65,9 +64,12 @@ def find_projects():
     for markdownFile in markdownFiles:
 
         # Access the data
-        print(markdownFile)
-        projectName = os.path.split(os.path.split(markdownFile)[0])[1]
-        project = projects.get(projectName,{'name':projectName})
+        directory = os.path.split(markdownFile)[0]
+        projectName = os.path.split(directory)[-1]
+        directory = directory.replace('{}/'.format(config.codeClub['root']),'')
+
+        # print(os.path.split(os.path.split(markdownFile)[0]))
+        project = projects.get(projectName,{})
 
         # Open the markdown file
         with open(markdownFile) as openFile:
@@ -82,8 +84,11 @@ def find_projects():
             data = project_parser.parse_project(fileContent)
 
             # Change all image references to include full source
-            rootUrl = config.imageUrl + projectName
-            change_image_path(data,rootUrl)
+            change_image_path(
+                data,
+                config.imageUrl,
+                directory
+                )
 
         # Combine data with existing project data
         project.update(data)

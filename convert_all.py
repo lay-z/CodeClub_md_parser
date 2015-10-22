@@ -15,7 +15,7 @@ def changeImagePath(dictionary,rootUrl):
 	for key in dictionary:
 		if ((key == 'image') and (dictionary[key] is not None)):
 			print(key,dictionary[key],dictionary)
-			dictionary[key] = rootUrl + dictionary[key]
+			dictionary[key] = "{}/{}".format(rootUrl,dictionary[key])
 		elif (type(dictionary[key]) == dict):
 			changeImagePath(dictionary[key],rootUrl)
 		elif (type(dictionary[key]) == list):

@@ -3,7 +3,7 @@ import re
 
 from step_parser import parse_step
     
-def split_project(file_content):
+def parse_project(file_content):
     '''
     Splits a CodeClub project into respective steps
     @params file_content: .md file being split up into sections expects it to already
@@ -24,7 +24,7 @@ def split_project(file_content):
         project['steps'].append(step_obj)
 
     return project
-    
+
     
 def get_title(project_info):
     '''

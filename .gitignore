@@ -2,5 +2,6 @@
 code_club
 
 *.pyc
+venv
 
 projects.json

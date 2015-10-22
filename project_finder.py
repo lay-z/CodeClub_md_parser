@@ -94,11 +94,11 @@ def find_projects():
         project.update(data)
         projects[projectName] = project
 
-    return projects
+    return list(projects.values())
 
 if (__name__ == "__main__"):
 
     projects = find_projects()
 
     with open('projects.json','w') as openFile:
-        json.dump(list(projects.values()),openFile,indent=4)
+        json.dump(projects,openFile,indent=4)

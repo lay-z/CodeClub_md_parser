@@ -8,7 +8,7 @@ def parse_notes(project_notes):
 
     scratch_link_search = Search(
         project_notes,
-        r'\[jumpto\.cc/[^\]]*resources]\(([^:]*://jumpto.cc/[^\]]*)\)',
+        r'\[jumpto\.cc/[^\]]*resources]\(([^:]*://jumpto.cc/[^\)]*)\)',
         1
     )
 

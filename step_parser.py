@@ -3,7 +3,7 @@ import json
 
 from component_parser import parse_component
 
-def parse_step(step):
+def parse_step(raw_step):
     '''
     gets the step_title, the number, and the step_description (create a dictionary with it)
     @params step: string object of a step to parse step information from
@@ -11,19 +11,70 @@ def parse_step(step):
     '''
 
     step_info = re.compile(r'\**Step (\d+):\** ([^\{]*)\{*.*\}*([^#]*)')
-    info_matches = step_info.search(step)
+    info_matches = step_info.search(raw_step)
 
     if(info_matches is not None):
-        result = {
+
+        # Populate key step information
+        step = {
             'number': info_matches.group(1).strip(),
             'title': info_matches.group(2).strip(),
             'description': info_matches.group(3).strip()
         }
-        steps_list = split_steps(step)
-        step_section = parse_step_sections(steps_list)
+
+        # Extract step and challenges
+        raw_step, raw_challenges = split_steps(raw_step)
+
+        print(raw_step,'\n' + ('='*80) + '\n',raw_challenges[:1])
+
+        # Format step section
+        step_section = parse_step_sections(raw_step)
         formated_step = split_step_section(step_section)
-        result.update(formated_step)
-        return result
+        step.update(formated_step)
+
+        # Format all challenge sections
+        challenges = []
+        for raw_challenge in raw_challenges:
+            challenge = parse_challenge(raw_challenge)
+            challenges.append(challenge)
+
+        return step, challenges
+
+def parse_challenge(raw_challenge):
+    '''
+    gets the title, the number, and the description (create a dictionary with it)
+    @params step: string object of a step to parse step information from
+    @return dictionary
+    '''
+
+    challenge_info = re.compile(r'(\d*):\** ([^\{]*)\{*[^\}]*\}*\s*(.*)\+*')
+    info_matches = challenge_info.search(raw_challenge)
+    raw_challenge = challenge_info.sub('',raw_challenge)
+
+    if(info_matches is not None):
+
+        # Populate key step information
+        challenge = {
+            'number': info_matches.group(1).strip(),
+            'title': info_matches.group(2).strip(),
+            'description': info_matches.group(3).strip(),
+            'challenge' : True
+        }
+
+        raw_challenge_sections = [item.strip() for item in raw_challenge.split('\n## ') if (len(item.strip()) > 0)]
+
+        if (len(raw_challenge_sections) is 0):
+            return challenge
+
+        formated_challenge = split_step_section({'components':raw_challenge_sections[0]})
+        challenge.update(formated_challenge)
+
+        for raw_challenge_section in raw_challenge_sections[1:]:
+            challenge_section = parse_step_sections(raw_challenge_section)
+            formated_challenge = split_step_section(challenge_section)
+            challenge.update(formated_challenge)
+
+        return challenge
 
 def split_steps(step):
     '''
@@ -38,8 +89,11 @@ def split_steps(step):
     #Split up by challenges
     split_challenges = step.split('\n## Challenge')
     # print split_challenges
+    step = split_challenges[0].split('\n## ')[1:]
+    # challenges = [split_challenge.split('\n## ') for split_challenge in split_challenges[1:]]
+    challenges = split_challenges[1:]
 
-    return split_challenges[0].split('\n## ')[1:]
+    return step, challenges
 
 def parse_step_sections(step_sections):
     '''

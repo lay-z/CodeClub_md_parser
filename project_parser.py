@@ -19,9 +19,13 @@ def parse_project(file_content):
     project.update(parse_intro(sections[1]))
     project['steps'] = []
 
-    for step in steps:
-        step_obj = parse_step(step)
-        project['steps'].append(step_obj)
+    for raw_step in steps:
+        step, challenges = parse_step(raw_step)
+        project['steps'].append(step)
+
+        # Add all challenges
+        for challenge in challenges:
+            project['steps'].append(challenge)
 
     return project
 

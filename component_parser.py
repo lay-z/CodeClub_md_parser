@@ -9,7 +9,7 @@ def parse_component(text):
 
     result = {}
 
-    blockPattern = re.compile(r'```blocks([^`]*)```')
+    blockPattern = re.compile(r'`{3,}blocks([^`]*)`{3,}\s*')
 
     # find blocks
     match = blockPattern.search(text)
@@ -20,15 +20,18 @@ def parse_component(text):
     text = blockPattern.sub('',text)
     # print('text',text)
 
-    imagePattern = re.compile(r'!\[screenshot\]\((.*)\)')
+    imagePattern = re.compile(r'!\[screenshot\]\((.*)\)\s*')
 
     # find images
     match = imagePattern.search(text)
     if (match is not None):
         result['image'] = match.group(1).strip()
 
-    # remove images
-    result['text']  = imagePattern.sub('',text).strip()
+    # remove images from text
+    text = imagePattern.sub('',text).strip()
+
+    # remove all {} style blocks
+    result['text'] = re.sub(r'\{.*\}\s*','',text)
 
     return result
 

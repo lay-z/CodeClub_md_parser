@@ -10,7 +10,7 @@ def parse_step(raw_step):
     @return dictionary
     '''
 
-    step_info = re.compile(r'\**Step (\d+):\** ([^\{]*)\{*.*\}*([^#]*)')
+    step_info = re.compile(r'\**S*tep (\d+):*\.*\** ([^\{]*)\{*.*\}*([^#\+]*)')
     info_matches = step_info.search(raw_step)
 
     if(info_matches is not None):
@@ -25,8 +25,6 @@ def parse_step(raw_step):
         # Extract step and challenges
         raw_step, raw_challenges = split_steps(raw_step)
 
-        print(raw_step,'\n' + ('='*80) + '\n',raw_challenges[:1])
-
         # Format step section
         step_section = parse_step_sections(raw_step)
         formated_step = split_step_section(step_section)
@@ -40,6 +38,9 @@ def parse_step(raw_step):
 
         return step, challenges
 
+    else:
+        print(raw_step)
+
 def parse_challenge(raw_challenge):
     '''
     gets the title, the number, and the description (create a dictionary with it)
@@ -47,7 +48,7 @@ def parse_challenge(raw_challenge):
     @return dictionary
     '''
 
-    challenge_info = re.compile(r'(\d*):\** ([^\{]*)\{*[^\}]*\}*\s*(.*)\+*')
+    challenge_info = re.compile(r'(\d*):\** ([^\{]*)\{*[^\}]*\}*\s*(.*)')
     info_matches = challenge_info.search(raw_challenge)
     raw_challenge = challenge_info.sub('',raw_challenge)
 
@@ -61,13 +62,14 @@ def parse_challenge(raw_challenge):
             'challenge' : True
         }
 
-        raw_challenge_sections = [item.strip() for item in raw_challenge.split('\n## ') if (len(item.strip()) > 0)]
+        raw_challenge_sections = [item.strip() for item in raw_challenge.split('\n##') if (len(item.strip()) > 0)]
 
         if (len(raw_challenge_sections) is 0):
             return challenge
 
-        formated_challenge = split_step_section({'components':raw_challenge_sections[0]})
-        challenge.update(formated_challenge)
+        if ('save your project' not in raw_challenge_sections[0].lower()):
+            formated_challenge = split_step_section({'components':raw_challenge_sections[0]})
+            challenge.update(formated_challenge)
 
         for raw_challenge_section in raw_challenge_sections[1:]:
             challenge_section = parse_step_sections(raw_challenge_section)
@@ -89,7 +91,7 @@ def split_steps(step):
     #Split up by challenges
     split_challenges = step.split('\n## Challenge')
     # print split_challenges
-    step = split_challenges[0].split('\n## ')[1:]
+    step = split_challenges[0].split('\n##')[1:]
     # challenges = [split_challenge.split('\n## ') for split_challenge in split_challenges[1:]]
     challenges = split_challenges[1:]
 

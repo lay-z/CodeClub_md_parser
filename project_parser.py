@@ -11,7 +11,7 @@ def parse_project(file_content):
     @return dictionary: will return dictionary with section names as keys
                         values will be file objects of respective sections
     '''
-    sections = file_content.split('\n# ')
+    sections = re.split(r'\n#[^#]',file_content)
     steps = sections[2:] # Because first 2 sections are intro and project_info
     project = {
         'title': get_title(sections[0])
@@ -49,7 +49,13 @@ def parse_intro(intro_section):
     @return dictionary of project_description, project_image 
     '''
     photoPattern = re.compile(r'!\[screenshot\]\((.*)\)')
-    intro_text = re.compile(r'\}\n\n(.*)', re.DOTALL).search(intro_section).group(1)
+    intro_match = re.search(r'\}\n([^#]*)',intro_section)
+
+    if (intro_match is not None):
+        intro_text = intro_match.group(1)
+    else:
+        intro_text = intro_section
+
     photo = photoPattern.search(intro_section)
     description = photoPattern.sub('', intro_text)
 

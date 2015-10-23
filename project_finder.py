@@ -68,7 +68,7 @@ def find_projects():
         projectName = os.path.split(directory)[-1]
         directory = directory.replace('{}/'.format(config.codeClub['root']),'')
 
-        # print(os.path.split(os.path.split(markdownFile)[0]))
+        print(projectName)
         project = projects.get(projectName,{})
 
         # Open the markdown file
@@ -76,7 +76,7 @@ def find_projects():
             fileContent = openFile.read()
 
         # If notes file use notes parser to extract information
-        if ('- notes' in markdownFile):
+        if ('- notes' in markdownFile.lower()):
             data = notes_parser.parse_notes(fileContent)
 
         # Otherwise use project parser to extract information

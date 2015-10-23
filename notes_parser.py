@@ -15,7 +15,7 @@ def parse_notes(project_notes):
     if (scratch_link_search.check()):
         scratch_link = scratch_link_search.match()
     else:
-        scratch_link = 'http://jumpto.cc/scratch-on'
+        scratch_link = 'http://jumpto.cc/scratch-new'
 
     return {
         'link' : scratch_link

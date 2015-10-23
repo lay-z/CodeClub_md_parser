@@ -5,6 +5,7 @@ def parse_notes(project_notes):
     CodeClub scratch project
     """
 
+    result = {}
 
     scratch_link_search = Search(
         project_notes,
@@ -14,12 +15,9 @@ def parse_notes(project_notes):
 
     if (scratch_link_search.check()):
         scratch_link = scratch_link_search.match()
-    else:
-        scratch_link = 'http://jumpto.cc/scratch-new'
+        result.update({'link' : scratch_link})
 
-    return {
-        'link' : scratch_link
-    }
+    return result
     
 
 class Search:

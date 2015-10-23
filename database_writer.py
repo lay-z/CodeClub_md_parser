@@ -24,7 +24,9 @@ class DatabaseWriter:
         """Create an entry in the collection
         """
 
-        return self.collection.insert_one(entry)
+        result = self.collection.insert_one(entry)
+        entry['_id'] = result.inserted_id
+        return entry
 
     def update(self,query,entry):
         """Update the item with the given entry which matches the
@@ -37,6 +39,9 @@ class DatabaseWriter:
             return_document=ReturnDocument.AFTER
             )
 
+        if (updated is None):
+            return self.create(entry)
+
         return updated
 
     def query(self):
@@ -48,10 +53,10 @@ class DatabaseWriter:
 if (__name__ == "__main__"):
     databaseWriter = DatabaseWriter('projects')
 
-    for project in databaseWriter.query():
-        print(project['title'])
+    # for project in databaseWriter.query():
+    #     print(project['title'])
 
-    databaseWriter.update({'title':'Flappy Parrot'},{'link':'LINKEY'})
+    print(databaseWriter.update({'title':'Boat Race'},{'link':'LINKEY'}))
 
-    for project in databaseWriter.query():
-        print(project.get('link',''))
+    # for project in databaseWriter.query():
+    #     print(project.get('link',''))

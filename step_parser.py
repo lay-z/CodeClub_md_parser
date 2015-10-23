@@ -10,7 +10,7 @@ def parse_step(step):
     @return dictionary
     '''
 
-    step_info = re.compile(r'Step (\d+): ([^\{]*)\{*.*\}*([^#]*)')
+    step_info = re.compile(r'\**Step (\d+):\** ([^\{]*)\{*.*\}*([^#]*)')
     info_matches = step_info.search(step)
 
     if(info_matches is not None):

@@ -86,7 +86,7 @@ def find_projects():
             # Change all image references to include full source
             change_image_path(
                 data,
-                config.imageUrl,
+                config.projects['root'],
                 directory
                 )
 

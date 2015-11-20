@@ -1,25 +1,78 @@
 {
-    "Crossy Road" : {},
-    "Ori and the Blind Forest game" : {},
-    "Escape Game" : {},
-    "Space Junk" : {},
-    "Lost in Space" : {},
-    "ChatBot" : {},
-    "Dodgeball" : {},
-    "Boat Race" : {},
-    "Brain Game" : {},
-    "Desert Race" : {},
-    "Felix and Herbert" : {},
-    "Rock Band" : {},
-    "Fruit machine" : {},
-    "Paint Box" : {},
-    "Flappy Parrot" : {},
-    "What's That" : {},
-    "Ghostbusters" : {},
-    "Balloons" : {},
-    "Clone Wars" : {},
-    "Snowball Fight" : {},
-    "Memory" : {},
-    "Create Your Own World" : {},
-    "Catch the Dots" : {}
+    "Crossy Road" : [
+        "['huddle'] = 0",
+        "['steps'][1]['components'][0]['image'] = 'http://wiki.scratch.mit.edu/w/images/Make_a_var.png'",
+        "['steps'][1]['components'][0]['blocks'] = 'set [score] to [0]'",
+        "['steps'][1]['components'][1]['image'] = 'http://wiki.scratch.mit.edu/w/images/Make_a_var.png'",
+        "['steps'][1]['components'][1]['blocks'] = 'set [hit] to [0]'"
+    ],
+    "Ori and the Blind Forest game" : [
+        "['huddle'] = 1"
+    ],
+    "Escape Game" : [
+        "['huddle'] = 1"
+    ],
+    "Brain Game" : [
+        "['huddle'] = 1"
+    ],
+    "Create Your Own World" : [
+        "['huddle'] = 1"
+    ],
+    "Flappy Parrot" : [
+        "['huddle'] = 1"
+    ],
+    "Space Junk" : [
+        "['huddle'] = 1"
+    ],
+    "Ghostbusters" : [
+        "['huddle'] = 1"
+    ],
+    "Memory" : [
+        "['huddle'] = 1"
+    ],
+    "Desert Race" : [
+        "['huddle'] = 1"
+    ],
+    "Lost in Space" : [
+        "['huddle'] = 1"
+    ],
+    "Balloons" : [
+        "['huddle'] = 1"
+    ],
+    "What's That" : [
+        "['huddle'] = 1"
+    ],
+    "ChatBot" : [
+        "['huddle'] = 1"
+    ],
+    "Rock Band" : [
+        "['huddle'] = 1"
+    ],
+    "Felix and Herbert" : [
+        "['huddle'] = 1"
+    ],
+    "Fruit machine" : [
+        "['huddle'] = 1"
+    ],
+    "Dodgeball" : [
+        "['huddle'] = 1"
+    ],
+    "Fish Chomp" : [
+        "['huddle'] = 1"
+    ],
+    "Catch the Dots" : [
+        "['huddle'] = 1"
+    ],
+    "Snowball Fight" : [
+        "['huddle'] = 1"
+    ],
+    "Boat Race" : [
+        "['huddle'] = 1"
+    ],
+    "Paint Box" : [
+        "['huddle'] = 1"
+    ],
+    "Clone Wars" : [
+        "['huddle'] = 1"
+    ]
 }

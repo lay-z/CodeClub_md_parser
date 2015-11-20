@@ -7,4 +7,4 @@ git remote add origin https://github.com/CodeClub/scratch-curriculum.git
 git pull --quiet
 cd ..
 
-python update_projects.py
+python project_updater.py

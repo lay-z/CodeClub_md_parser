@@ -11,12 +11,16 @@ mongolabUri = 'mongodb://localhost:27017/turing_development'
 if (environment == 'production'):
     mongolabUri = config.mongolabUri
 
-projects = []
+codeclubProjects = []
 for project in project_finder.find_projects():
     if (project['title'] not in config.projects['ignore']):
-        projects.append(project)
+        codeclubProjects.append(project)
 
-json.dump(open('data/projects_codeclub.json','w'),projects)
+json.dump(codeclubProjects,open('data/projects_codeclub.json','w'),indent=4)
+turinglabProjects = json.load(open('data/projects_turinglab.json'))
+projects = turinglabProjects + codeclubProjects
+
+
 databaseWriter = database_writer.DatabaseWriter('projects',mongolabUri)
 
 print('Updating {} Database'.format(environment.title()))

@@ -32,7 +32,7 @@
                     {
                         "text": "Create a variable to check if the sprite has been hit", 
                         "image" : "http://wiki.scratch.mit.edu/w/images/Make_a_var.png",
-                        "blocks" : "set (hit) to [0]"
+                        "blocks" : "set (hit) to [1000]"
                     }
                 ], 
                 "title": "Create Variables"

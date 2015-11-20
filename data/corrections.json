@@ -7,7 +7,10 @@
         "['steps'][1]['components'][1]['blocks'] = 'set (hit) to [0]'"
     ],
     "Ori and the Blind Forest game" : [
-        "['huddle'] = 1"
+        "['huddle'] = 1",
+        "['steps'][2]['components'][0]['blocks'] = '''when gf clicked\n go to x:(230) y:(-194)'''",
+        "['steps'][2]['components'][1]['blocks'] = '''when gf clicked\n go to x:(-188) y:(-165)'''",
+        "['steps'][2]['components'][2]['blocks'] = '''when gf clicked\n go back (10) layers \n go to x:(-20) y:(-145)'''"
     ],
     "Escape Game" : [
         "['huddle'] = 1"
@@ -19,7 +22,12 @@
         "['huddle'] = 1"
     ],
     "Flappy Parrot" : [
-        "['huddle'] = 1"
+        "['huddle'] = 1",
+        "['steps'].pop(2)",
+        "['steps'][2]['number'] = 3",
+        "['steps'][3]['number'] = 4",
+        "['steps'][4]['number'] = 5",
+        "['steps'][5]['number'] = 6"
     ],
     "Space Junk" : [
         "['huddle'] = 1"

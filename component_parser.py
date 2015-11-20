@@ -9,7 +9,7 @@ def parse_component(text):
 
     result = {}
 
-    blockPattern = re.compile(r'`{3,}blocks([^`]*)`{3,}\s*')
+    blockPattern = re.compile(r'`{3,}(?:blocks|scratch)([^`]*)`{3,}\s*')
 
     # find blocks
     match = blockPattern.search(text)

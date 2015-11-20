@@ -26,11 +26,13 @@
                 "components": [
                     {
                         "text": "Create a variable to store the score", 
-                        "blocks": "(score). set [score] to [0]"
+                        "image" : "http://wiki.scratch.mit.edu/w/images/Make_a_var.png",
+                        "blocks" : "set (score) to [0]"
                     }, 
                     {
                         "text": "Create a variable to check if the sprite has been hit", 
-                        "blocks": "(hit). set [hit] to [0]"
+                        "image" : "http://wiki.scratch.mit.edu/w/images/Make_a_var.png",
+                        "blocks" : "set (hit) to [0]"
                     }
                 ], 
                 "title": "Create Variables"
@@ -72,7 +74,7 @@
                     }, 
                     {
                         "text": "When your sprite hits an edge. Move to the far left of the stage", 
-                        "blocks": "if <touching [edge]?> then\n\thide\n\tchange x by (-480)\n\tshow\nend"
+                        "blocks": "if <touching [edge]?> then\n\thide\n\tchange x by (-440)\n\tshow\nend"
                     }
                 ], 
                 "title": "Moving the Cars"
@@ -120,8 +122,13 @@
                 "description": "We will need 2 variables for this game at first, one to keep track of the level and one that tells us if Ori is jumping or not", 
                 "components": [
                     {
-                        "text": "Create variables called level and jumping and set them to 1 and 0", 
-                        "blocks": "(Level)\n (Jumping). set [Level] to [1] \n set [Jumping] to [0]"
+                        "text": "Create a variable called Level and set it to 1", 
+                        "image" : "http://wiki.scratch.mit.edu/w/images/Make_a_var.png",
+                        "blocks" : "set (Level) to [1]"
+                    },{
+                        "text": "Create a variable called Jumping and set it to 0", 
+                        "image" : "http://wiki.scratch.mit.edu/w/images/Make_a_var.png",
+                        "blocks" : "set (Jumping) to [0]"
                     }
                 ], 
                 "title": "Create variables"
@@ -146,15 +153,15 @@
                 "description": "Move each platform and water object to the correct position for each level", 
                 "components": [
                     {
-                        "text": "Make platform1 start in its correct position", 
+                        "text": "Make **platform1** start in its correct position", 
                         "blocks": "go to x:(230) y:(-194)"
                     }, 
                     {
-                        "text": "Make platform2 start in its correct position", 
+                        "text": "Make **platform2** start in its correct position", 
                         "blocks": "go to x:(-188) y:(-165)"
                     }, 
                     {
-                        "text": "Make water start in its correct position", 
+                        "text": "Make **water** start in its correct position", 
                         "blocks": "go back (10) layers \n go to x:(-20) y:(-145)"
                     }
                 ], 
@@ -170,7 +177,7 @@
                     }, 
                     {
                         "text": "Make Ori jump fall when not on platforms", 
-                        "blocks": "if <<not <touching [platform1]?>> or <not <touching [platform2]?>>> then\n\tchange y by (-10)\nend"
+                        "blocks": "if <<not <touching [platform1]?>> and <not <touching [platform2]?>>> then\n\tchange y by (-10)\nend"
                     }, 
                     {
                         "text": "Use the jump variable to stop Ori jumping in the air, remember to set Jumping back to 0 when Ori has landed (hint: use an if else statement for falling!)", 

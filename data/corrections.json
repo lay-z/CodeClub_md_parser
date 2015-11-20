@@ -2,9 +2,9 @@
     "Crossy Road" : [
         "['huddle'] = 0",
         "['steps'][1]['components'][0]['image'] = 'http://wiki.scratch.mit.edu/w/images/Make_a_var.png'",
-        "['steps'][1]['components'][0]['blocks'] = 'set [score] to [0]'",
+        "['steps'][1]['components'][0]['blocks'] = 'set (score) to [0]'",
         "['steps'][1]['components'][1]['image'] = 'http://wiki.scratch.mit.edu/w/images/Make_a_var.png'",
-        "['steps'][1]['components'][1]['blocks'] = 'set [hit] to [0]'"
+        "['steps'][1]['components'][1]['blocks'] = 'set (hit) to [0]'"
     ],
     "Ori and the Blind Forest game" : [
         "['huddle'] = 1"

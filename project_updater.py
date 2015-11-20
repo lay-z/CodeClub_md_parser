@@ -32,8 +32,6 @@ def main():
     json.dump(projects,open('data/projects.json','w'),indent=4)
     databaseWriter = database_writer.DatabaseWriter('projects',mongolabUri)
 
-    return
-
     print('Updating {} Database'.format(environment.title()))
     print('='*80)
 

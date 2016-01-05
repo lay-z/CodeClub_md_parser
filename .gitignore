@@ -1,3 +1,7 @@
+.c9
 code_club
 
 *.pyc
+venv
+
+projects.json

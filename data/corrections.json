@@ -1,0 +1,86 @@
+{
+    "Crossy Road" : [
+        "['number'] = 8",
+        "['steps'][1]['components'][0]['image'] = 'http://wiki.scratch.mit.edu/w/images/Make_a_var.png'",
+        "['steps'][1]['components'][0]['blocks'] = 'set (score) to [0]'",
+        "['steps'][1]['components'][1]['image'] = 'http://wiki.scratch.mit.edu/w/images/Make_a_var.png'",
+        "['steps'][1]['components'][1]['blocks'] = 'set (hit) to [0]'"
+    ],
+    "Ori and the Blind Forest game" : [
+        "['number'] = 9",
+        "['steps'][2]['components'][0]['blocks'] = '''when gf clicked\n go to x:(230) y:(-194)'''",
+        "['steps'][2]['components'][1]['blocks'] = '''when gf clicked\n go to x:(-188) y:(-165)'''",
+        "['steps'][2]['components'][2]['blocks'] = '''when gf clicked\n go back (10) layers \n go to x:(-20) y:(-145)'''"
+    ],
+    "Escape Game" : [
+        "['number'] = 4"
+    ],
+    "Brain Game" : [
+        "['number'] = 12"
+    ],
+    "Create Your Own World" : [
+        "['number'] = 15"
+    ],
+    "Flappy Parrot" : [
+        "['number'] = 19",
+        "['steps'].pop(2)",
+        "['steps'][2]['number'] = 3",
+        "['steps'][3]['number'] = 4",
+        "['steps'][4]['number'] = 5",
+        "['steps'][5]['number'] = 6"
+    ],
+    "Space Junk" : [
+        "['number'] = 18"
+    ],
+    "Ghostbusters" : [
+        "['number'] = 3"
+    ],
+    "Memory" : [
+        "['number'] = 10"
+    ],
+    "Desert Race" : [
+        "['number'] = 23"
+    ],
+    "Lost in Space" : [
+        "['number'] = 2"
+    ],
+    "Balloons" : [
+        "['number'] = 17"
+    ],
+    "What's That" : [
+        "['number'] = 22"
+    ],
+    "ChatBot" : [
+        "['number'] = 5"
+    ],
+    "Rock Band" : [
+        "['number'] = 1"
+    ],
+    "Felix and Herbert" : [
+        "['number'] = 16"
+    ],
+    "Fruit machine" : [
+        "['number'] = 24"
+    ],
+    "Dodgeball" : [
+        "['number'] = 11"
+    ],
+    "Fish Chomp" : [
+        "['number'] = 21"
+    ],
+    "Catch the Dots" : [
+        "['number'] = 13"
+    ],
+    "Snowball Fight" : [
+        "['number'] = 20"
+    ],
+    "Boat Race" : [
+        "['number'] = 7"
+    ],
+    "Paint Box" : [
+        "['number'] = 6"
+    ],
+    "Clone Wars" : [
+        "['number'] = 14"
+    ]
+}

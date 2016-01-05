@@ -1,0 +1,118 @@
+{
+    "description": "This game is a two player game where you race a parrot and a lioness across the desert. Each player has to press a key as fast as they can to move their animal, the first one to reach the edge of the screen wins.",
+    "image": "Archived_Projects/Desert_Race/desertrace_screenshot.png",
+    "name": "desert_race",
+    "number": 23,
+    "show": false,
+    "steps": [
+        {
+            "components": [
+                {
+                    "text": "+ Select the Stage, and add the **Nature/desert** backdrop.\nticking off the boxes below:"
+                },
+                {
+                    "text": "Add a new sprite, select the **Lioness** sprite that you will find in the **Animals** folder."
+                },
+                {
+                    "text": "Add another sprite, select the **Parrot** sprite that you will find in the **Animals** folder. `Shrink`it so that it is roughly the same size as the lioness sprite."
+                }
+            ],
+            "description": "",
+            "number": "1",
+            "title": "Create the scene and add the sprites"
+        },
+        {
+            "components": [
+                {
+                    "blocks": "when [l v] key pressed\n        move (4) steps",
+                    "text": "+ First select the lion sprite and set it to `move (4) steps`when you press the **\u2018L\u2019** key."
+                },
+                {
+                    "blocks": "when [a v] key pressed\n        move (4) steps",
+                    "text": "Next, select the parrot sprite and set it to `move (4) steps`when you press the **\u2018A\u2019** key."
+                }
+            ],
+            "description": "We want the sprite to move when you press a key.",
+            "number": "2",
+            "tests": [
+                {
+                    "text": "__Click the green flag__\nDo your lioness and parrot move across the screen when you press the \u2018A\u2019 and \u2018L\u2019 keys?"
+                }
+            ],
+            "title": "Make the lioness and the parrot move"
+        },
+        {
+            "components": [
+                {
+                    "text": "+ Add a new sprite from the library. Choose the **button3** sprite which is inside **\u201cThings\u201d**."
+                },
+                {
+                    "text": "Edit the costume of the button sprite, add the text **\u2018start\u2019** to it and click OK. Move the sprite to the middle of the stage."
+                },
+                {
+                    "blocks": "when FLAG clicked\n        show",
+                    "text": "Now add a script that shows the sprite when the project is run:"
+                },
+                {
+                    "blocks": "when this sprite clicked\n        say [3] for (1) secs\n        say [2] for (1) secs\n        say [1] for (1) secs\n        say [GO!] for (1) secs\n        hide",
+                    "text": "Now we want the button to count down from 3 and then say go and then `hide`when it is clicked. Add another script like this one:"
+                }
+            ],
+            "description": "We need to have a way to start the race and to know who has won. __First we create a start button.__",
+            "number": "3",
+            "title": "Starting the race"
+        },
+        {
+            "components": [
+                {
+                    "blocks": "when [a v] key pressed\n    if <(racing) = [1]> then\n        move (4) steps\n        if <touching [edge v]?> then\n        set (racing) to [0]",
+                    "text": "+ Add a block to the parrot\u2019s script that sets the **racing** variable to be 0 when the sprite touches the edge of the screen."
+                },
+                {
+                    "text": "Now we want the parrot to let us know if it wins the race. Record a new sound for the Parrot sprite that will be played when the parrot wins. Click `sounds`and then record the sound of the parrot winning the race!"
+                },
+                {
+                    "blocks": "when [a v] key pressed\n        if <(racing) = [1]> then\n            move (4) steps\n            if <touching [edge v]?> then\n                set (racing) to [0]\n                play sound [recording1 v]\n                say [The Parrot Wins! v] for (3) secs",
+                    "text": "Now add blocks that `play`the sound you recorded and makes the parrot say it has won:"
+                },
+                {
+                    "text": "Now repeat these steps for the lioness."
+                }
+            ],
+            "description": "",
+            "number": "4",
+            "title": "Finishing the race"
+        },
+        {
+            "components": [
+                {
+                    "blocks": "when [a v] key pressed\n    if <(racing) = [1]> then\n        move (4) steps\n        if <touching [edge v]?> then\n            set (racing) to [0]\n            play sound [recording1 v]\n            say [The Parrot Wins! v] for (3) secs\n            broadcast [finished v]",
+                    "text": "+ Click on the Parrot sprite.\nAdd a block that broadcasts a **\"finished\u201d** message after the sprite says it has won."
+                },
+                {
+                    "blocks": "when I receive [finished v]\n        set x to (-170)",
+                    "text": "Now we need to add a new script that listens for the finished broadcast and moves the parrot back to the start. What happens if you change the value that **x** is set to?"
+                },
+                {
+                    "text": "Now add the same script for the lioness. Test different **x** values to make sure the lion and the parrot line up at the start."
+                },
+                {
+                    "blocks": "when FLAG clicked\n        set x to (-170)",
+                    "text": "We also want to put the lion and the parrot in the same position when the project is run, so add another script to each that moves them to the start when we click the flag."
+                },
+                {
+                    "text": "Now click on the button sprite and add a script that shows it when it receives the finished message."
+                }
+            ],
+            "description": "After the race is finished we need to tell the other sprites we have won and reset the game so we can play again.\n\n__We need the winning sprite to broadcast that it has won.__",
+            "number": "5",
+            "tests": [
+                {
+                    "text": "__Click on the green flag.__\n\nCan you race against a friend, one of you moving the parrot by pressing \u2018A\u2019 and the other moving the Lion by pressing \u2018L\u2019?"
+                }
+            ],
+            "title": "Resetting the game"
+        }
+    ],
+    "title": "Desert Race"
+}

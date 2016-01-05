@@ -1,0 +1,207 @@
+{
+    "description": "This is a game that has three sprites that change costume. You have to stop them when they\u2019re showing the same picture (like a fruit machine!).",
+    "image": "Archived_Projects/Fruit_Machine/fruitmachine_screenshot.png",
+    "name": "fruit_machine",
+    "number": 24,
+    "show": false,
+    "steps": [
+        {
+            "components": [
+                {
+                    "text": "**Let\u2019s import the different pictures for the game**"
+                },
+                {
+                    "text": "Start a new scratch project. Delete the cat by right clicking it and clicking **Delete**"
+                },
+                {
+                    "text": "First of all let's add a new Backdrop from the library. Choose the **rays** backdrop from the **Other** category and then delete the original blank stage."
+                },
+                {
+                    "text": "Now add a new sprite from the library."
+                },
+                {
+                    "text": "Choose an image from any folder. We used **things/Bananas**, but you can use any image you want to."
+                },
+                {
+                    "text": "Click on the blue '**i**' next to the sprite's picture in the Sprites window. Rename the sprite to 'Fruit'."
+                },
+                {
+                    "text": "Now click the Costumes tab and import two more things so there are three costumes in total (we used **things/apple** and **things/watermelon-a**, but you can use any images you like).\n\nNow we\u2019ve got some costumes, we want the sprite to change between them."
+                }
+            ],
+            "description": "",
+            "number": "1",
+            "title": "Create a sprite that changes costumes"
+        },
+        {
+            "components": [
+                {
+                    "text": "+ Click the `Scripts` tab."
+                },
+                {
+                    "text": "Click `Events` and drag a `when flag clicked` into the scripts area. This will be triggered when we click the green flag."
+                },
+                {
+                    "text": "Click the **Control** tab and add a `forever` and attach it so it snaps to the bottom."
+                },
+                {
+                    "text": "**Click the green flag** in the top right. Notice that a yellow outline is around our script. It\u2019s running because we clicked the green flag, which triggers this."
+                },
+                {
+                    "text": "Now click `Looks` and drag in a `next costume` "
+                },
+                {
+                    "text": "How do we slow it down so it isn\u2019t changing so quickly? Click the `Control` tab and drag in a `wait 1 secs` "
+                },
+                {
+                    "blocks": "when FLAG clicked\n    forever\n        next costume\n        wait (0.5) secs",
+                    "text": "Adjust the time until it\u2019s repeating at a faster pace (a time of 0.5s looks good)."
+                }
+            ],
+            "description": "",
+            "extensions": [
+                {
+                    "text": "+ Adjust the time in the `wait 1 secs` block."
+                },
+                {
+                    "text": "What numbers do you think would make the game too easy, or too hard?"
+                }
+            ],
+            "number": "2",
+            "tests": [
+                {
+                    "text": "**Click the green flag.**\n\nDo the costumes change at a sensible rate?"
+                }
+            ],
+            "title": "Making the picture change"
+        },
+        {
+            "components": [
+                {
+                    "text": "Great! We can make the sprite change costumes forever, but how do we make it stop when we click on it?\n\nOne way to do it is by using a variable to set the state of the Sprite. This will also be useful later..."
+                },
+                {
+                    "text": "Create a new variable by clicking `Data` and `Make a variable`. Call it `stopped` and make it for only this sprite, then uncheck the box next to it so it doesn\u2019t display on the stage."
+                },
+                {
+                    "blocks": "when FLAG clicked\n    set [stopped v] to [NO]\n    forever\n        next costume\n        wait (0.5) secs",
+                    "text": "At the start of the game, the sprite won't have been clicked so we'll set the variable to be equal to **\"NO\"**."
+                },
+                {
+                    "blocks": "when this sprite clicked\n        set [stopped v] to [YES]",
+                    "text": "Now we'll set the variable `stopped` to  **\"YES\"** when someone clicks on the sprite."
+                },
+                {
+                    "blocks": "when FLAG clicked\n        set [stopped v] to [NO]\n        forever\n            if <(stopped) = [NO]> then\n                next costume\n                wait (0.5) secs",
+                    "text": "Finally we need to make the sprite stop changing costume when the variable `stopped` is still \"NO\"."
+                }
+            ],
+            "description": "",
+            "number": "3",
+            "tests": [
+                {
+                    "text": "Click the green flag, wait for a moment, then click on the sprite."
+                },
+                {
+                    "text": "Does it change costume before you click on it?"
+                },
+                {
+                    "text": "Does it stop when you do click on it?"
+                },
+                {
+                    "text": "**Start the program again**. Does it stop when you put the mouse pointer on it, without clicking?"
+                },
+                {
+                    "text": "Does the sprite stop when you click anywhere else on the Stage?"
+                }
+            ],
+            "title": "Making it stop when we click on it"
+        },
+        {
+            "components": [
+                {
+                    "text": "+ **Duplicate the sprite** (Fruit) by right-clicking on it in the bottom right corner."
+                },
+                {
+                    "text": "Duplicate it again so there are **3** sprites on the screen."
+                },
+                {
+                    "text": "Move each sprite so they are in a line. Make them a bit smaller with if you need to."
+                }
+            ],
+            "description": "Now we need to make the other sprites so we can play our game!",
+            "number": "4",
+            "tests": [
+                {
+                    "text": "Click the green flag. All the sprites should change. Try to stop them all on the same picture by clicking on each one in turn!"
+                }
+            ],
+            "title": "Creating the other sprite"
+        },
+        {
+            "components": [
+                {
+                    "text": "First of all, let's create a different Backdrop to display when the game has finished."
+                },
+                {
+                    "text": "Click on the stage and then the `Backdrops` tab. Change the name of the existing backdrop to **\"GameOn\"**."
+                },
+                {
+                    "text": "Duplicate the backdrop and then add some text to the copy that says **\"Game Over\"**. You can change the size of the text by clicking on it and then dragging one of the corners. Rename this backdrop to be **\"GameOver\"**."
+                },
+                {
+                    "text": "Click on the `Scripts` tab for the stage and set the \"GameOn\" backdrop to be the one displayed when the game is started."
+                },
+                {
+                    "blocks": "when FLAG clicked\n        switch backdrop to [GameOn v]\n        forever\n            if <([stopped v] of [Fruit3 v]) = [YES]> then\n                switch backdrop to [GameOver v]",
+                    "text": "How can we detect when all the sprites have stopped? Remember we use the `stopped` ."
+                }
+            ],
+            "description": "Let's make the sprites change to a random costume when the green flag is clicked.\n\nWhen you start the game just after you\u2019ve loaded it, all the sprites show the same costume and change in unison. It would make the game more interesting (and harder) if they changed in a less predictable way.",
+            "extensions": [
+                {
+                    "text": "**Make the game harder**\n\nChange the difficulty of the game somehow. Just making the costumes change quicker is fairly easy. Can you come up with something more imaginative?\n\nSome ideas you might like to try:"
+                },
+                {
+                    "text": "Change the number of costumes each sprite has."
+                },
+                {
+                    "text": "Make some sprites have unique costumes."
+                },
+                {
+                    "text": "Have different times between costume changes.\n\nHave fun coming up with your own things! Every time you make a change, think about whether it makes the game easier or harder. Is the game too easy or too hard? How can you adjust the difficulty so it\u2019s just right?"
+                }
+            ],
+            "number": "5",
+            "tests": [
+                {
+                    "text": "**Click the green flag.** Does the \"Game Over\" message appear when you all 3 Fruits are stopped, regardless of the order you clicked on them?"
+                }
+            ],
+            "title": "Start each sprite with a random costume"
+        },
+        {
+            "components": [
+                {
+                    "text": "+ We wrote the code to check that the game was over in **step 6**, so all we need to do now is check to see if the player has won. Go back to the backdrops and add some more text to the GameOver backdrop so that also displays the word **\"WIN\"**. Then change its name to **\"Win\"**."
+                },
+                {
+                    "text": "Copy the backdrop again to create one with a **\"Lose\"** message. Give it the name **\"Lose\"**."
+                },
+                {
+                    "blocks": "when FLAG clicked\n        switch backdrop to [GameOn v]\n        forever\n            if <<<([stopped v]  of [Fruit1 v]) = [YES]> and <([stopped v]  of [Fruit2 v]) = [YES]>> and <([stopped v]  of [Fruit3 v]) = [YES]>> then\n                if <<([costume # v]  of [Fruit1 v]) = ([costume # v]  of [Fruit2 v])> and <([costume # v]  of [Fruit2 v]) = ([costume # v]  of [Fruit3 v])>> then\n                    switch backdrop to [Win v]\n                else\n                    switch backdrop to [Lose v]",
+                    "text": "Now we need some code to work out which backdrop to display once the game is over. We can use an `if...then...else` and see if Fruit1 has the same costume as Fruit2, and if Fruit2 has the same costume as Fruit3."
+                }
+            ],
+            "description": "The aim of the game is to click on the sprites so they stop while showing the same costume. It would be nice to also display a message that told you whether you'd won or lost.",
+            "number": "7",
+            "tests": [
+                {
+                    "text": "Click the green flag. Does the correct message appear when the game has finished? What will happen if each sprite's costume numbers don't match (for example, if Fruit2's costume number 3 is an apple and Fruit3's costume number 3 is a melon)?"
+                }
+            ],
+            "title": "Tell the player whether they've won or lost."
+        }
+    ],
+    "title": "Fruit machine"
+}

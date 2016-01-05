@@ -1,0 +1,146 @@
+{
+    "description": "Help the Scratch mascot avoid the space junk and return safely back to Earth!\n\n<div class=\"scratch-preview\">\n  <iframe allowtransparency=\"true\" width=\"485\" height=\"402\" src=\"http://scratch.mit.edu/projects/embed/59295958/?autostart=false\" frameborder=\"0\"></iframe>\n  \n</div>",
+    "image": "Additional_Projects/Space_Junk/sj-final.png",
+    "name": "space_junk",
+    "number": 18,
+    "show": false,
+    "steps": [
+        {
+            "components": [
+                {
+                    "text": "+ Start a new Scratch project. You can find the online Scratch editor at <a href=\"http://jumpto.cc/scratch-new\">jumpto.cc/scratch-new</a>."
+                },
+                {
+                    "image": "Additional_Projects/Space_Junk/sj-shrink.png",
+                    "text": "Click the 'Shrink' button and then click on the cat a few times to make it a little smaller."
+                },
+                {
+                    "image": "Additional_Projects/Space_Junk/sj-bg.png",
+                    "text": "To add a background, click 'Choose backdrop from library' and select the 'Stars' backdrop.\n\n\tThis is how your stage should look:"
+                },
+                {
+                    "blocks": "when [left arrow v] key pressed?\n\tchange x by (-10)",
+                    "image": "Additional_Projects/Space_Junk/sj-coords.png",
+                    "text": "Let's move the cat to the left when the left arrow key is pressed. \n\n\tClick on your cat sprite, and add the following code:\n\n\tNotice that you need to change the x coordinate to move the cat to the left."
+                },
+                {
+                    "text": "Test out your cat by pressing the left arrow key. You should see your cat move towards the left of the stage."
+                },
+                {
+                    "blocks": "when [up arrow v] key pressed?\n\tchange y by (10)",
+                    "text": "To move the cat upwards when the up arrow key is pressed, you'll need to add some more code:"
+                },
+                {
+                    "text": "Test your project again to make sure that your new code works!"
+                }
+            ],
+            "description": "Let's allow the player to control the cat with the arrow keys.",
+            "number": "1",
+            "title": "Controlling the cat"
+        },
+        {
+            "challenge": true,
+            "description": "Can you add more code to your cat sprite, so that it moves up, down, left and right?",
+            "number": "",
+            "title": "More movement"
+        },
+        {
+            "components": [
+                {
+                    "image": "Additional_Projects/Space_Junk/sj-planet.png",
+                    "text": "+ Click 'Add new sprite from library' and add the 'Planet2' sprite to your stage. You can change the size of the planet if you want to."
+                },
+                {
+                    "blocks": "when flag clicked\n\tforever\n\t\tmove (2) steps\n\t\tif on edge, bounce\n\tend",
+                    "text": "Add this code to make the planet move around the stage forever:"
+                },
+                {
+                    "blocks": "set rotation style [don't rotate v]",
+                    "text": "Click the green flag to test our your new planet. It should move left and right across the stage.\n\n\tHave you noticed that your planet turns upside-down (rotates) when it hits the edge of the screen? To fix this, just add this code to your planet sprite:"
+                },
+                {
+                    "blocks": "if <touching [Cat1 v]?> then\n\t\tstop [all v]\n\tend",
+                    "text": "The game should end when the planet touches the cat, so let's add this code __inside__ the planet's `forever` loop:\n\n\tHere's how your planet's code should look:"
+                },
+                {
+                    "text": "Test your game again - does the game end when the planet hits the cat?"
+                }
+            ],
+            "description": "Let's add some space junk for the cat to avoid.",
+            "number": "2",
+            "title": "Space junk!"
+        },
+        {
+            "challenge": true,
+            "components": [
+                {
+                    "image": "Additional_Projects/Space_Junk/sj-move-help.png",
+                    "text": ""
+                }
+            ],
+            "description": "Can you change the way your planet moves? You can use these blocks to help you, as well as any other blocks you like.",
+            "number": "",
+            "title": "Changing your planet's orbit"
+        },
+        {
+            "components": [
+                {
+                    "image": "Additional_Projects/Space_Junk/sj-earth.png",
+                    "text": "+ Firstly, let's add the Earth sprite to the center of your stage."
+                },
+                {
+                    "blocks": "when flag clicked\n\tset size to (10) %\n\tforever\n\t\tchange size by (0.3)\n\tend",
+                    "text": "Add this code to your Earth sprite, so that it starts off very small and slowly get's bigger and bigger:"
+                },
+                {
+                    "image": "Additional_Projects/Space_Junk/sj-earth-big.png",
+                    "text": "Test out your Earth sprite. It should look as if your cat is slowly floating towards Earth!"
+                },
+                {
+                    "image": "Additional_Projects/Space_Junk/sj-time.png",
+                    "text": "Click on your stage, and create a new variable to store the time.\n\n\tYou should now see your timer in the top-left of the stage."
+                },
+                {
+                    "blocks": "when flag clicked\n\tforever\n\t\twait (0.1) secs\n\t\tchange [time v] by (0.1)\n\tend",
+                    "text": "Add this code to your stage, so that the timer counts up forever:"
+                },
+                {
+                    "image": "Additional_Projects/Space_Junk/sj-time-test.png",
+                    "text": "Click the green flag and you should see your timer start to count up!"
+                },
+                {
+                    "blocks": "when flag clicked\n\tset [time v] to [0]\n\twait until <(time) > [30]>\n\tsay [I made it!] for (2) secs\n\tstop [all v]",
+                    "text": "The game is won if the cat can avoid the space junk for 30 seconds.\n\n\tFor this to work, you just need to set your timer to 0 at the start of the game, and then wait until the timer gets to 30.\n\n\tClick on your cat sprite, and add this script:"
+                }
+            ],
+            "description": "Can you avoid the space junk for 30 seconds, and get back to Earth safely?",
+            "number": "3",
+            "title": "Getting back to Earth"
+        },
+        {
+            "challenge": true,
+            "components": [
+                {
+                    "image": "Additional_Projects/Space_Junk/sj-more-junk.png",
+                    "text": "See if you can make each sprite moves differently."
+                }
+            ],
+            "description": "Can you add more enemy sprites to your game, for the cat to avoid? You could add rocks, aliens, or anything else you like!",
+            "number": "",
+            "title": "More space junk"
+        },
+        {
+            "challenge": true,
+            "components": [
+                {
+                    "image": "Additional_Projects/Space_Junk/sj-mouse.png",
+                    "text": "You could even let one of your players use the mouse to control their character. Here are some blocks that may help you:"
+                }
+            ],
+            "description": "Can you improve your game, so that one of your enemy sprites is controlled by another player? They could use the w, a, s and d keys to control the enemy.",
+            "number": "",
+            "title": "2 players"
+        }
+    ],
+    "title": "Space Junk"
+}

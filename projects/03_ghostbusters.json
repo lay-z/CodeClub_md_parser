@@ -1,0 +1,130 @@
+{
+    "description": "This project is like the game __Whack-a-Mole__. You get points for hitting the ghosts that appear on the screen. The aim is to get as many points as possible in 30 seconds!",
+    "image": "Archived_Projects/Ghostbusters/ghostbsuters_screenshot.png",
+    "name": "ghostbusters",
+    "number": 3,
+    "show": false,
+    "steps": [
+        {
+            "components": [
+                {
+                    "blocks": "when FLAG clicked\n        set [speed v] to [5]\n        forever\n            move (speed) steps\n            if on edge, bounce",
+                    "text": "+ To stop the ghost getting stuck we need to make her go back the other way when she touches the edge of the screen. Edit your existing script by adding an `if on edge, bounce` block."
+                },
+                {
+                    "text": "To stop the ghost flipping upside down, click on the `rotation style: left-right` button in the (i) section of the Sprite Summary area for the ghost sprite."
+                }
+            ],
+            "description": "",
+            "extensions": [
+                {
+                    "text": "+ Try changing the value of the speed variable to make the ghost fly faster or slower."
+                },
+                {
+                    "text": "How would you make the ghost get faster the longer it's flying? (This is a tricky one, so don\u2019t worry if you can\u2019t see how to do it. You\u2019ll get more clues as you work through the project.)"
+                }
+            ],
+            "number": "1",
+            "tests": [
+                {
+                    "text": "Click the green flag."
+                },
+                {
+                    "text": "Does the ghost move from side to side across the screen?"
+                }
+            ],
+            "title": "Create a flying ghost"
+        },
+        {
+            "components": [
+                {
+                    "blocks": "when FLAG clicked\n    forever\n        hide\n        wait (pick random (2) to (5)) secs\n        show\n        wait (pick random (3) to (5)) secs",
+                    "text": "+ Create this script for the ghost:"
+                }
+            ],
+            "description": "To make the game more fun, we want the ghost to appear and vanish randomly. We\u2019ll do that with another script that runs at the same time as the one that moves the ghost. This new script needs to hide the ghost for a random time, then show it for a random time, and repeat that forever (or until the game finishes).",
+            "extensions": [
+                {
+                    "text": "+ Try changing the range of the random numbers. What happens if you pick very big numbers or very small numbers? (Does this give you any more clues for how to make the ghost speed up the longer the game is played?)"
+                }
+            ],
+            "number": "2",
+            "tests": [
+                {
+                    "text": "Click the green flag."
+                },
+                {
+                    "text": "Does the ghost move from side to side across the screen and vanish and appear again randomly?"
+                }
+            ],
+            "title": "Make the ghost appear & vanish randomly"
+        },
+        {
+            "components": [
+                {
+                    "text": "+ In the **Sounds** tab, add a new sound **Electronic/fairydust**, using the `Choose sound from library` button."
+                },
+                {
+                    "blocks": "when this sprite clicked\n        hide\n        play sound [Fairydust v]",
+                    "text": "Add this script to the ghost:"
+                }
+            ],
+            "description": "To turn this into a game, we need to give the player something to do. They need to click on the ghost to make it disappear. When the ghost is clicked, we want it to disappear and play a sound.",
+            "extensions": [
+                {
+                    "text": "+ Ask your volunteer if you can record your own sound to play."
+                }
+            ],
+            "number": "3",
+            "tests": [
+                {
+                    "text": "Click the green flag."
+                },
+                {
+                    "text": "Does the ghost disappear and play the sound when you click it?"
+                }
+            ],
+            "title": "Make the ghost disappear when it's clicked"
+        },
+        {
+            "components": [
+                {
+                    "blocks": "when this sprite clicked\n    \thide\n\t   play sound [Fairydust v]\n\t   change [score v] by (1)",
+                    "text": "+ Create a new `Variable` for all sprites called **score**, and alter the script for the ghost to increase this variable by one when it is clicked."
+                },
+                {
+                    "text": "Switch to the **Stage** and create a **new variable** called **time_left**."
+                },
+                {
+                    "blocks": "when FLAG clicked\n    \tset [time_left v] to (30)\n    \tset [score v] to (0)\n    \trepeat until <(time_left) = [0]>\n    \t\twait (1) secs\n    \t\tchange [time_left v] by (-1)\n    \tend\n    \tstop [all v]",
+                    "text": "Add a new script that occurs when the green flag is clicked to set `time_left` to stop the game."
+                }
+            ],
+            "description": "We\u2019ve got a ghost, but now we want to make a game! We want to score points every time we click on the ghost but we also want to have a time limit on the game. We can use a variable for the score and the timer.",
+            "extensions": [
+                {
+                    "text": "+ How might you make the ghost speed up as the game goes on?\n\nWell done you\u2019ve finished the basic game. There are more things you can do to your game though. Have a go at this challenge!"
+                }
+            ],
+            "number": "4",
+            "tests": [
+                {
+                    "text": "Click the green flag."
+                }
+            ],
+            "title": "Add a score and timer"
+        },
+        {
+            "challenge": true,
+            "components": [
+                {
+                    "text": "1. Duplicate the ghost by **right-clicking** it in the sprite list.\n2. For each ghost **adjust the size of the sprite** so the ghosts are different sizes.\n3. For each ghost change the **speed variable** so that they fly at different speeds.\n4. Move the ghosts around the canvas so that they are not all together."
+                }
+            ],
+            "description": "If one ghost is good, more must be better! Let\u2019s have three ghosts flying around.",
+            "number": "",
+            "title": "add more ghosts"
+        }
+    ],
+    "title": "Ghostbusters"
+}

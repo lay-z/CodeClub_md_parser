@@ -3,6 +3,7 @@
     "image": "https://raw.githubusercontent.com/CodeClub/scratch-curriculum/master/en-GB/Additional%20Projects/Space%20Junk/sj-final.png", 
     "name": "space_junk", 
     "number": 18, 
+    "show": false, 
     "steps": [
         {
             "components": [

@@ -3,6 +3,7 @@
     "image": "https://raw.githubusercontent.com/CodeClub/scratch-curriculum/master/en-GB/Term%202/Memory/colour-final.png", 
     "name": "memory", 
     "number": 10, 
+    "show": false, 
     "steps": [
         {
             "components": [

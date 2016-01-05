@@ -3,6 +3,7 @@
     "image": "https://raw.githubusercontent.com/CodeClub/scratch-curriculum/master/en-GB/Archived%20Projects/Felix%20and%20Herbert/felixherbert_screenshot.png", 
     "name": "felix_and_herbert", 
     "number": 16, 
+    "show": false, 
     "steps": [
         {
             "components": [

@@ -3,6 +3,7 @@
     "image": "https://raw.githubusercontent.com/CodeClub/scratch-curriculum/master/en-GB/Archived%20Projects/Fish%20Chomp/fishchomp_screenshot.png", 
     "name": "fish_chomp", 
     "number": 21, 
+    "show": false, 
     "steps": [
         {
             "components": [

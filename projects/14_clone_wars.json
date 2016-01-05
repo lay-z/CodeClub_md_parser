@@ -3,6 +3,7 @@
     "image": "https://raw.githubusercontent.com/CodeClub/scratch-curriculum/master/en-GB/Term%202/Clone%20Wars/invaders-final.png", 
     "name": "clone_wars", 
     "number": 14, 
+    "show": false, 
     "steps": [
         {
             "components": [

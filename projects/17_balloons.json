@@ -3,6 +3,7 @@
     "image": "https://raw.githubusercontent.com/CodeClub/scratch-curriculum/master/en-GB/Additional%20Projects/Balloons/balloons-final.png", 
     "name": "balloons", 
     "number": 17, 
+    "show": false, 
     "steps": [
         {
             "components": [

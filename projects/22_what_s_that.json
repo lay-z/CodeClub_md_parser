@@ -3,6 +3,7 @@
     "image": "https://raw.githubusercontent.com/CodeClub/scratch-curriculum/master/en-GB/Archived%20Projects/What%27s%20That/whatsthat_screenshot.png", 
     "name": "what_s_that", 
     "number": 22, 
+    "show": false, 
     "steps": [
         {
             "components": [

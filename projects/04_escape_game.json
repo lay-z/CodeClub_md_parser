@@ -4,6 +4,7 @@
     "link": "https://scratch.mit.edu/projects/81434280/#editor", 
     "name": "escape_game", 
     "number": 4, 
+    "show": false, 
     "steps": [
         {
             "components": [

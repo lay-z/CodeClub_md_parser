@@ -3,6 +3,7 @@
     "image": "https://raw.githubusercontent.com/CodeClub/scratch-curriculum/master/en-GB/Archived%20Projects/Desert%20Race/desertrace_screenshot.png", 
     "name": "desert_race", 
     "number": 23, 
+    "show": false, 
     "steps": [
         {
             "components": [

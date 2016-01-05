@@ -3,6 +3,7 @@
     "image": "https://raw.githubusercontent.com/CodeClub/scratch-curriculum/master/en-GB/Term%202/Brain%20Game/brain-final.png", 
     "name": "brain_game", 
     "number": 12, 
+    "show": false, 
     "steps": [
         {
             "components": [

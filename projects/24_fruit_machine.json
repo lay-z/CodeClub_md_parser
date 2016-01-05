@@ -3,6 +3,7 @@
     "image": "https://raw.githubusercontent.com/CodeClub/scratch-curriculum/master/en-GB/Archived%20Projects/Fruit%20Machine/fruitmachine_screenshot.png", 
     "name": "fruit_machine", 
     "number": 24, 
+    "show": false, 
     "steps": [
         {
             "components": [

@@ -3,6 +3,7 @@
     "image": "https://raw.githubusercontent.com/CodeClub/scratch-curriculum/master/en-GB/Additional%20Projects/Flappy%20Parrot/flappy_screenshot.png", 
     "name": "flappy_parrot", 
     "number": 19, 
+    "show": false, 
     "steps": [
         {
             "components": [

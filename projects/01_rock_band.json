@@ -3,6 +3,7 @@
     "image": "https://raw.githubusercontent.com/CodeClub/scratch-curriculum/master/en-GB/Term%201/Rock%20Band/band-final.png", 
     "name": "rock_band", 
     "number": 1, 
+    "show": false, 
     "steps": [
         {
             "components": [

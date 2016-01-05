@@ -4,6 +4,7 @@
     "link": "https://scratch.mit.edu/projects/80071110/#editor", 
     "name": "crossy_road", 
     "number": 8, 
+    "show": false, 
     "steps": [
         {
             "components": [

@@ -4,6 +4,7 @@
     "link": "https://scratch.mit.edu/projects/81314842/#editor", 
     "name": "ori_and_the_blind_forest_game", 
     "number": 9, 
+    "show": false, 
     "steps": [
         {
             "components": [

@@ -4,6 +4,7 @@
     "link": "http://jumpto.cc/paintbox-resources", 
     "name": "paint_box", 
     "number": 6, 
+    "show": false, 
     "steps": [
         {
             "components": [

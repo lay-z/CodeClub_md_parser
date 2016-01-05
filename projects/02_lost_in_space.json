@@ -4,6 +4,7 @@
     "link": "http://jumpto.cc/space-resources", 
     "name": "lost_in_space", 
     "number": 2, 
+    "show": false, 
     "steps": [
         {
             "components": [

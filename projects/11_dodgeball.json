@@ -4,6 +4,7 @@
     "link": "http://jumpto.cc/dodge-resources", 
     "name": "dodgeball", 
     "number": 11, 
+    "show": false, 
     "steps": [
         {
             "components": [

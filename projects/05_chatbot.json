@@ -3,6 +3,7 @@
     "image": "https://raw.githubusercontent.com/CodeClub/scratch-curriculum/master/en-GB/Term%201/ChatBot/chatbot-final.png", 
     "name": "chatbot", 
     "number": 5, 
+    "show": false, 
     "steps": [
         {
             "components": [

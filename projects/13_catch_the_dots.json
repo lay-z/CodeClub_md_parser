@@ -4,6 +4,7 @@
     "link": "http://jumpto.cc/dots-resources", 
     "name": "catch_the_dots", 
     "number": 13, 
+    "show": false, 
     "steps": [
         {
             "components": [

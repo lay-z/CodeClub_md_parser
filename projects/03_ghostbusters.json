@@ -3,6 +3,7 @@
     "image": "https://raw.githubusercontent.com/CodeClub/scratch-curriculum/master/en-GB/Archived%20Projects/Ghostbusters/ghostbsuters_screenshot.png", 
     "name": "ghostbusters", 
     "number": 3, 
+    "show": false, 
     "steps": [
         {
             "components": [

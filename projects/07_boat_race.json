@@ -4,6 +4,7 @@
     "link": "http://jumpto.cc/boatrace-resources", 
     "name": "boat_race", 
     "number": 7, 
+    "show": false, 
     "steps": [
         {
             "components": [

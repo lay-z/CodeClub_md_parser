@@ -1,246 +1,246 @@
 {
-    "description": "In this project you'll learn how to create a platform game, in which you have to dodge the moving balls and reach the end of the level.\n\n<div class=\"scratch-preview\">\n  <iframe allowtransparency=\"true\" width=\"485\" height=\"402\" src=\"http://scratch.mit.edu/projects/embed/39740618/?autostart=false\" frameborder=\"0\"></iframe>\n  \n</div>", 
-    "image": "https://raw.githubusercontent.com/CodeClub/scratch-curriculum/master/en-GB/Term%202/Dodgeball/dodge-final.png", 
-    "link": "http://jumpto.cc/dodge-resources", 
-    "name": "dodgeball", 
-    "number": 11, 
-    "show": false, 
+    "description": "In this project you'll learn how to create a platform game, in which you have to dodge the moving balls and reach the end of the level.\n\n<div class=\"scratch-preview\">\n  <iframe allowtransparency=\"true\" width=\"485\" height=\"402\" src=\"http://scratch.mit.edu/projects/embed/39740618/?autostart=false\" frameborder=\"0\"></iframe>\n  \n</div>",
+    "image": "Term_2/Dodgeball/dodge-final.png",
+    "link": "http://jumpto.cc/dodge-resources",
+    "name": "dodgeball",
+    "number": 11,
+    "show": false,
     "steps": [
         {
             "components": [
                 {
                     "text": "+ Start a new Scratch project, and delete the cat sprite so that your project is empty. You can find the online Scratch editor at <a href=\"http://jumpto.cc/scratch-new\">jumpto.cc/scratch-new</a>."
-                }, 
+                },
                 {
-                    "image": "https://raw.githubusercontent.com/CodeClub/scratch-curriculum/master/en-GB/Term%202/Dodgeball/dodge-resources.png", 
+                    "image": "Term_2/Dodgeball/dodge-resources.png",
                     "text": "For this project, you should have a 'Project Resources' folder, containing the background image you'll need. Make sure that you can find this folder, and ask your club leader if you can't find it."
-                }, 
+                },
                 {
-                    "image": "https://raw.githubusercontent.com/CodeClub/scratch-curriculum/master/en-GB/Term%202/Dodgeball/dodge-background.png", 
+                    "image": "Term_2/Dodgeball/dodge-background.png",
                     "text": "Add the image 'background.png' as a new stage backdrop, or draw your own! If you're drawing your own level, just make sure that the poles and the floors are different colours, and that there's a door (or something similar) that your player has to reach. Here's how your project should look:"
-                }, 
+                },
                 {
-                    "image": "https://raw.githubusercontent.com/CodeClub/scratch-curriculum/master/en-GB/Term%202/Dodgeball/dodge-characters.png", 
+                    "image": "Term_2/Dodgeball/dodge-characters.png",
                     "text": "Add a new sprite, which will be your character. It's better if you choose a sprite with multiple costumes, so that you can make it look as though it's walking."
-                }, 
+                },
                 {
-                    "blocks": "when flag clicked\n\t\tforever\n\t\t\tif <key [right arrow v] pressed? > then\n\t\t\t\tpoint in direction (90 v)\n\t\t\t\tmove (3) steps\n\t\t\t\tnext costume\n\t\t\tend\n\t\tend", 
+                    "blocks": "when flag clicked\n\t\tforever\n\t\t\tif <key [right arrow v] pressed? > then\n\t\t\t\tpoint in direction (90 v)\n\t\t\t\tmove (3) steps\n\t\t\t\tnext costume\n\t\t\tend\n\t\tend",
                     "text": "Let's use the arrow keys to move your character around. When the player presses the right arrow, you want your character to point right, move a few steps and change to the next costume:"
-                }, 
+                },
                 {
-                    "image": "https://raw.githubusercontent.com/CodeClub/scratch-curriculum/master/en-GB/Term%202/Dodgeball/dodge-walking.png", 
+                    "image": "Term_2/Dodgeball/dodge-walking.png",
                     "text": "Test out your character by clicking the flag and then holding down the right arrow key. Does your player move to the right? Does your character look like they are walking?"
-                }, 
+                },
                 {
                     "text": "To move your character to the left, you'll need to add another `if` loop, which moves your character to the left. Remember to test your new code, to make sure that it works!"
-                }, 
+                },
                 {
-                    "blocks": "if < <key [up arrow v] pressed?> and <touching color [#FFFF00]?> > then\n\t\t\tchange y by (4)\n\t\tend", 
+                    "blocks": "if < <key [up arrow v] pressed?> and <touching color [#FFFF00]?> > then\n\t\t\tchange y by (4)\n\t\tend",
                     "text": "To climb a pole, your character should move up slightly whenever the up arrow is pressed and they're touching the correct colour. Add this code inside your character's `forever` loop:"
-                }, 
+                },
                 {
-                    "image": "https://raw.githubusercontent.com/CodeClub/scratch-curriculum/master/en-GB/Term%202/Dodgeball/dodge-test-character.png", 
+                    "image": "Term_2/Dodgeball/dodge-test-character.png",
                     "text": "Test your character - can you climb the yellow poles and get to the end of your level?"
                 }
-            ], 
-            "description": "Let's start by creating a character that can move left and right, as well as climb up poles.", 
-            "number": "1", 
+            ],
+            "description": "Let's start by creating a character that can move left and right, as well as climb up poles.",
+            "number": "1",
             "title": "Character movement"
-        }, 
+        },
         {
-            "challenge": true, 
+            "challenge": true,
             "components": [
                 {
-                    "image": "https://raw.githubusercontent.com/CodeClub/scratch-curriculum/master/en-GB/Term%202/Dodgeball/dodge-win.png", 
+                    "image": "Term_2/Dodgeball/dodge-win.png",
                     "text": ""
                 }
-            ], 
-            "description": "Can you add more code to your character, so that they say something `if` {.blockcontrol} they get to the brown door?", 
-            "number": "", 
+            ],
+            "description": "Can you add more code to your character, so that they say something `if` {.blockcontrol} they get to the brown door?",
+            "number": "",
             "title": "Completing the level"
-        }, 
+        },
         {
             "components": [
                 {
-                    "image": "https://raw.githubusercontent.com/CodeClub/scratch-curriculum/master/en-GB/Term%202/Dodgeball/dodge-no-gravity.png", 
+                    "image": "Term_2/Dodgeball/dodge-no-gravity.png",
                     "text": "+ You may have noticed that your character can walk off a platform into mid-air. Try to walk off of a platform and see what happens."
-                }, 
+                },
                 {
-                    "image": "https://raw.githubusercontent.com/CodeClub/scratch-curriculum/master/en-GB/Term%202/Dodgeball/dodge-gravity.png", 
+                    "image": "Term_2/Dodgeball/dodge-gravity.png",
                     "text": "To fix this, let's add gravity to your game. Create a new variable called `gravity` . You can hide this variable from your stage if you want to."
-                }, 
+                },
                 {
-                    "blocks": "when flag clicked\n\t\tset [gravity v] to [-4]\n\t\tforever\n\t\t\tchange y by (gravity)\n\t\tend", 
+                    "blocks": "when flag clicked\n\t\tset [gravity v] to [-4]\n\t\tforever\n\t\t\tchange y by (gravity)\n\t\tend",
                     "text": "Add this new code block, which sets the gravity to a negative number, and then uses this to repeatedly change your character's y-coordinate."
-                }, 
+                },
                 {
-                    "image": "https://raw.githubusercontent.com/CodeClub/scratch-curriculum/master/en-GB/Term%202/Dodgeball/dodge-gravity-drag.png", 
+                    "image": "Term_2/Dodgeball/dodge-gravity-drag.png",
                     "text": "Click the flag, and then drag your character to the top of the stage. What happens? Does the gravity work as you expected?"
-                }, 
+                },
                 {
-                    "blocks": "when flag clicked\n\t\tset [gravity v] to [-4]\n\t\tforever\n\t\t\tif < not < <touching color [#0000FF]?> or <touching color [#FFFF00]?> > > then\n\t\t\t\tchange y by (gravity)\n\t\t\tend\n\t\tend", 
+                    "blocks": "when flag clicked\n\t\tset [gravity v] to [-4]\n\t\tforever\n\t\t\tif < not < <touching color [#0000FF]?> or <touching color [#FFFF00]?> > > then\n\t\t\t\tchange y by (gravity)\n\t\t\tend\n\t\tend",
                     "text": "Gravity shouldn't move your character through a platform or a pole! Add an `if` block to your code, so that the gravity only works when your character is in mid-air. The gravity code should now look like this:"
-                }, 
+                },
                 {
-                    "image": "https://raw.githubusercontent.com/CodeClub/scratch-curriculum/master/en-GB/Term%202/Dodgeball/dodge-gravity-test.png", 
+                    "image": "Term_2/Dodgeball/dodge-gravity-test.png",
                     "text": "Test the gravity again. Does your character stop when they are on a platform or a pole? Can you walk off the edge of platforms to the level below?"
-                }, 
+                },
                 {
-                    "blocks": "when [space v] key pressed\n\t\trepeat (10)\n\t\t\tchange y by (4)\n\t\tend", 
+                    "blocks": "when [space v] key pressed\n\t\trepeat (10)\n\t\t\tchange y by (4)\n\t\tend",
                     "text": "Let's also make your character jump when the player presses the space bar. One very easy way to do this is to move your character up a few times, using this code:\n\n\tAs gravity is constantly pushing your character down by 4 pixels, you need to choose a number greated than 4 in your `change y by (4)` block. Change this number until you're happy with the height your character jumps."
-                }, 
+                },
                 {
                     "text": "If you test out this code, you'll notice that it works, but the movement isn't very smooth. To make jumping look smoother, you'll need to move your character by smaller and smaller amounts, until they're not jumping anymore."
-                }, 
+                },
                 {
                     "text": "To do this, create another variable called `jump height` . Again, you can hide this variable if you prefer."
-                }, 
+                },
                 {
-                    "blocks": "when [space v] key pressed\n\t\tset [jump height v] to [8]\n\t\trepeat until < (jump height) = [0] >\n\t\t\tchange y by (jump height)\n\t\t\tchange [jump height v] by (-0.5)\n\t\tend", 
+                    "blocks": "when [space v] key pressed\n\t\tset [jump height v] to [8]\n\t\trepeat until < (jump height) = [0] >\n\t\t\tchange y by (jump height)\n\t\t\tchange [jump height v] by (-0.5)\n\t\tend",
                     "text": "Delete the jumping code you added to your character, and replace it with this code:\n\n\tThis code moves your character up by 8 pixels, then 7.5 pixels, then 7 pixels, and so on, until your character has finished jumping. This makes jumping look much smoother."
-                }, 
+                },
                 {
                     "text": "Change the starting value of your `jump height` variable and test it until you're happy with the height your character jumps."
                 }
-            ], 
-            "description": "Let's make your character move more realistically, by adding gravity and allowing them to jump.", 
-            "number": "2", 
+            ],
+            "description": "Let's make your character move more realistically, by adding gravity and allowing them to jump.",
+            "number": "2",
             "title": "Gravity and jumping"
-        }, 
+        },
         {
-            "challenge": true, 
-            "description": "Your character is able to jump whenever the spacebar is pressed, even if they're already in mid-air. You can test this by just holding down the spacebar. Can you fix this, so that your character can only jump `if` {.blockcontrol} they're touching a blue platform?", 
-            "number": "", 
+            "challenge": true,
+            "description": "Your character is able to jump whenever the spacebar is pressed, even if they're already in mid-air. You can test this by just holding down the spacebar. Can you fix this, so that your character can only jump `if` {.blockcontrol} they're touching a blue platform?",
+            "number": "",
             "title": "Improved jumping"
-        }, 
+        },
         {
             "components": [
                 {
-                    "image": "https://raw.githubusercontent.com/CodeClub/scratch-curriculum/master/en-GB/Term%202/Dodgeball/dodge-balls.png", 
+                    "image": "Term_2/Dodgeball/dodge-balls.png",
                     "text": "+ Create a new ball sprite. You can choose any type of ball you like."
-                }, 
+                },
                 {
-                    "image": "https://raw.githubusercontent.com/CodeClub/scratch-curriculum/master/en-GB/Term%202/Dodgeball/dodge-ball-resize.png", 
+                    "image": "Term_2/Dodgeball/dodge-ball-resize.png",
                     "text": "Resize your ball, so that your character can jump over it. Try jumping over the ball to test it."
-                }, 
+                },
                 {
-                    "image": "https://raw.githubusercontent.com/CodeClub/scratch-curriculum/master/en-GB/Term%202/Dodgeball/dodge-ball-motion.png", 
+                    "image": "Term_2/Dodgeball/dodge-ball-motion.png",
                     "text": "Add this code to your ball:\n\n\tThis code creates a new ball clone every 3 seconds. Each new clone moves along the top platform."
-                }, 
+                },
                 {
-                    "image": "https://raw.githubusercontent.com/CodeClub/scratch-curriculum/master/en-GB/Term%202/Dodgeball/dodge-ball-test.png", 
+                    "image": "Term_2/Dodgeball/dodge-ball-test.png",
                     "text": "Click the flag to test this out."
-                }, 
+                },
                 {
-                    "image": "https://raw.githubusercontent.com/CodeClub/scratch-curriculum/master/en-GB/Term%202/Dodgeball/dodge-ball-more-motion.png", 
+                    "image": "Term_2/Dodgeball/dodge-ball-more-motion.png",
                     "text": "Add more code to your ball sprite, so that they move across all 3 platforms."
-                }, 
+                },
                 {
-                    "blocks": "when I start as a clone\n\t\tforever\n\t\t\tif < touching [Pico walking v]? > then\n\t\t\t\tbroadcast [hit v]\n\t\t\tend\n\t\tend", 
+                    "blocks": "when I start as a clone\n\t\tforever\n\t\t\tif < touching [Pico walking v]? > then\n\t\t\t\tbroadcast [hit v]\n\t\t\tend\n\t\tend",
                     "text": "Finally, you'll need code for when your character gets hit by a ball! Add this code to your ball sprite:"
-                }, 
+                },
                 {
-                    "blocks": "when I receive [hit v]\n\t\tpoint in direction (90 v)\n\t\tgo to x: (-210) y: (-120)", 
+                    "blocks": "when I receive [hit v]\n\t\tpoint in direction (90 v)\n\t\tgo to x: (-210) y: (-120)",
                     "text": "You'll also need to add code to your character, to move back to the start when they're hit:"
-                }, 
+                },
                 {
                     "text": "Test out your character and see if they go back to the start when they've been hit by a ball."
                 }
-            ], 
-            "description": "Now that you've got your character moving around, let's add some balls for your character to avoid.", 
-            "number": "3", 
+            ],
+            "description": "Now that you've got your character moving around, let's add some balls for your character to avoid.",
+            "number": "3",
             "title": "Dodging balls"
-        }, 
+        },
         {
-            "challenge": true, 
+            "challenge": true,
             "components": [
                 {
                     "text": "+ don't all look the same?"
-                }, 
+                },
                 {
                     "text": "appear after a random amount of time?"
-                }, 
+                },
                 {
-                    "image": "https://raw.githubusercontent.com/CodeClub/scratch-curriculum/master/en-GB/Term%202/Dodgeball/dodge-ball-random.png", 
+                    "image": "Term_2/Dodgeball/dodge-ball-random.png",
                     "text": "are a random size?"
                 }
-            ], 
-            "description": "The balls your character has to dodge all look the same, and always appear every 3 seconds. Can you improve them, so that they:", 
-            "number": "", 
+            ],
+            "description": "The balls your character has to dodge all look the same, and always appear every 3 seconds. Can you improve them, so that they:",
+            "number": "",
             "title": "Random balls"
-        }, 
+        },
         {
             "components": [
                 {
-                    "image": "https://raw.githubusercontent.com/CodeClub/scratch-curriculum/master/en-GB/Term%202/Dodgeball/dodge-lasers-costume.png", 
+                    "image": "Term_2/Dodgeball/dodge-lasers-costume.png",
                     "text": "+ Add a new sprite to your game, called 'Laser'. It should have 2 costumes, called 'on' and 'off'."
-                }, 
+                },
                 {
-                    "image": "https://raw.githubusercontent.com/CodeClub/scratch-curriculum/master/en-GB/Term%202/Dodgeball/dodge-lasers-position.png", 
+                    "image": "Term_2/Dodgeball/dodge-lasers-position.png",
                     "text": "Place your new laser anywhere you like, between 2 platforms."
-                }, 
+                },
                 {
-                    "blocks": "when flag clicked\n\t\tforever\n\t\t\tswitch costume to [on v]\n\t\t\twait (2) secs\n\t\t\tswitch costume to [off v]\n\t\t\twait (2) secs\n\t\tend", 
+                    "blocks": "when flag clicked\n\t\tforever\n\t\t\tswitch costume to [on v]\n\t\t\twait (2) secs\n\t\t\tswitch costume to [off v]\n\t\t\twait (2) secs\n\t\tend",
                     "text": "Add code to your laser, to make it switch between the 2 costumes.\n\n\tIf you prefer, you can `wait` amount of time between costume changes."
-                }, 
+                },
                 {
                     "text": "Finally, add code to your laser, so that the 'hit' message is broadcast when the laser touches your character. This code will be the same as the code you added to your ball sprite.\n\n\tYou don't need to add any more code to your character - they already know what to do when they get hit!"
-                }, 
+                },
                 {
                     "text": "Test out your game to see if you can get past the laser. Change the `wait` times in your code if the lasers are too easy or too hard."
                 }
-            ], 
-            "description": "Let's make your game a little harder to complete, by adding lasers!", 
-            "number": "4", 
+            ],
+            "description": "Let's make your game a little harder to complete, by adding lasers!",
+            "number": "4",
             "title": "Lasers!"
-        }, 
+        },
         {
-            "challenge": true, 
+            "challenge": true,
             "components": [
                 {
                     "text": "+ A flying killer butterfly;"
-                }, 
+                },
                 {
                     "text": "Platforms that appear and disappear;"
-                }, 
+                },
                 {
-                    "image": "https://raw.githubusercontent.com/CodeClub/scratch-curriculum/master/en-GB/Term%202/Dodgeball/dodge-obstacles.png", 
+                    "image": "Term_2/Dodgeball/dodge-obstacles.png",
                     "text": "Falling tennis balls that must be avoided.\n\nYou could even create more than one backdrop, and move to the next level when your character reaches the brown door:\n\n```blocks\n\tif <touching color [#714300]?> then\n\t\tswitch backdrop to [next backdrop v]\n\t\tgo to x"
                 }
-            ], 
-            "description": "If you think your game is still too easy, you can add more obstacles to your level. You can add anything you like, but here are some ideas:", 
-            "number": "", 
+            ],
+            "description": "If you think your game is still too easy, you can add more obstacles to your level. You can add anything you like, but here are some ideas:",
+            "number": "",
             "title": "More obstacles"
-        }, 
+        },
         {
-            "challenge": true, 
+            "challenge": true,
             "components": [
                 {
-                    "image": "https://raw.githubusercontent.com/CodeClub/scratch-curriculum/master/en-GB/Term%202/Dodgeball/dodge-gravity-bug.png", 
+                    "image": "Term_2/Dodgeball/dodge-gravity-bug.png",
                     "text": "Can you fix this bug? To do this, you need to give your character different coloured trousers (on _all_ costumes)...\n\n...and then replace the code"
                 }
-            ], 
-            "description": "There's one other small bug in your game: gravity doesn't pull your character downwards if _any_ part of it is touching a blue platform - even it's head! You can test this out by climbing most of the way up a pole and then moving to the left.", 
-            "number": "", 
+            ],
+            "description": "There's one other small bug in your game: gravity doesn't pull your character downwards if _any_ part of it is touching a blue platform - even it's head! You can test this out by climbing most of the way up a pole and then moving to the left.",
+            "number": "",
             "title": "Improved gravity"
-        }, 
+        },
         {
-            "challenge": true, 
+            "challenge": true,
             "components": [
                 {
                     "text": "+ Your player starts with 3 lives;"
-                }, 
+                },
                 {
                     "text": "Whenever your player gets hit, one life is lost and they go back to the start;"
-                }, 
+                },
                 {
                     "text": "If there are no lives left, the game ends."
                 }
-            ], 
-            "description": "Can you give your player 3 `lives` {.blockdata}, instead of just sending them back to the beginning each time? Here's how your game could work:", 
-            "number": "", 
+            ],
+            "description": "Can you give your player 3 `lives` {.blockdata}, instead of just sending them back to the beginning each time? Here's how your game could work:",
+            "number": "",
             "title": "More lives"
         }
-    ], 
+    ],
     "title": "Dodgeball"
 }

@@ -1,189 +1,189 @@
 {
-    "description": "You are going to learn how to make a game, in which you'll use the mouse to navigate a boat to a desert island.\n\n<div class=\"scratch-preview\">\n  <iframe allowtransparency=\"true\" width=\"485\" height=\"402\" src=\"http://scratch.mit.edu/projects/embed/63957956/?autostart=false\" frameborder=\"0\"></iframe>\n  \n</div>", 
-    "image": "https://raw.githubusercontent.com/CodeClub/scratch-curriculum/master/en-GB/Term%201/Boat%20Race/boat-final.png", 
-    "link": "http://jumpto.cc/boatrace-resources", 
-    "name": "boat_race", 
-    "number": 7, 
-    "show": false, 
+    "description": "You are going to learn how to make a game, in which you'll use the mouse to navigate a boat to a desert island.\n\n<div class=\"scratch-preview\">\n  <iframe allowtransparency=\"true\" width=\"485\" height=\"402\" src=\"http://scratch.mit.edu/projects/embed/63957956/?autostart=false\" frameborder=\"0\"></iframe>\n  \n</div>",
+    "image": "Term_1/Boat_Race/boat-final.png",
+    "link": "http://jumpto.cc/boatrace-resources",
+    "name": "boat_race",
+    "number": 7,
+    "show": false,
     "steps": [
         {
             "components": [
                 {
                     "text": "+ Start a new Scratch project, and delete the cat sprite so that your project is empty. You can find the online Scratch editor at <a href=\"http://jumpto.cc/scratch-new\">jumpto.cc/scratch-new</a>."
-                }, 
+                },
                 {
-                    "image": "https://raw.githubusercontent.com/CodeClub/scratch-curriculum/master/en-GB/Term%201/Boat%20Race/boat-bg.png", 
+                    "image": "Term_1/Boat_Race/boat-bg.png",
                     "text": "Click on your stage backdrop and plan out your level. You should add:\n\t+ Wood that your boat has to avoid;\n\t+ A desert island that your boat has to get to.\n\n\tHere's how your game could look:"
                 }
-            ], 
-            "description": "", 
-            "number": "1", 
+            ],
+            "description": "",
+            "number": "1",
             "title": "Planning your game"
-        }, 
+        },
         {
             "components": [
                 {
-                    "image": "https://raw.githubusercontent.com/CodeClub/scratch-curriculum/master/en-GB/Term%201/Boat%20Race/boat-boat.png", 
+                    "image": "Term_1/Boat_Race/boat-boat.png",
                     "text": "+ If your club leader has given you a 'Resources' folder, click 'Upload sprite from file' and add the 'boat.png' image. You should shrink the sprite and put it in it's starting position.\n\n\tIf you don't have the boat.png image, you can draw your own boat instead!"
-                }, 
+                },
                 {
-                    "blocks": "when flag clicked\n\t\tpoint in direction (0 v)\n\t\tgo to x: (-190) y: (-150)\n\t\tforever\n\t\t\tpoint towards [mouse-pointer v]\n\t\t\tmove (1) steps\n\t\tend", 
+                    "blocks": "when flag clicked\n\t\tpoint in direction (0 v)\n\t\tgo to x: (-190) y: (-150)\n\t\tforever\n\t\t\tpoint towards [mouse-pointer v]\n\t\t\tmove (1) steps\n\t\tend",
                     "text": "You are going to control the boat with your mouse. Add this code to your boat:"
-                }, 
+                },
                 {
-                    "image": "https://raw.githubusercontent.com/CodeClub/scratch-curriculum/master/en-GB/Term%201/Boat%20Race/boat-mouse.png", 
+                    "image": "Term_1/Boat_Race/boat-mouse.png",
                     "text": "Test out your boat, by clicking the flag and moving the mouse. Does the boat sail towards the mouse?"
-                }, 
+                },
                 {
-                    "image": "https://raw.githubusercontent.com/CodeClub/scratch-curriculum/master/en-GB/Term%201/Boat%20Race/boat-pointer.png", 
+                    "image": "Term_1/Boat_Race/boat-pointer.png",
                     "text": "What happens if the boat reaches the mouse pointer?\n\n\tTo stop this happening, you'll need to add an `if` block to your code, so that the boat only moves if it is more than 5 pixels away from the mouse."
-                }, 
+                },
                 {
                     "text": "Test out your boat again, to check whether the problem has been fixed."
                 }
-            ], 
-            "description": "", 
-            "number": "2", 
+            ],
+            "description": "",
+            "number": "2",
             "title": "Controlling the boat"
-        }, 
+        },
         {
             "components": [
                 {
                     "text": "+ You'll need 2 costumes for your boat, one normal costume, and one for when the boat crashes. Duplicate your boat costume, and name them 'normal' and 'hit'."
-                }, 
+                },
                 {
-                    "image": "https://raw.githubusercontent.com/CodeClub/scratch-curriculum/master/en-GB/Term%201/Boat%20Race/boat-hit-costume.png", 
+                    "image": "Term_1/Boat_Race/boat-hit-costume.png",
                     "text": "Click on your 'hit' costume, and choose the 'Select' tool to grab bits of the boat and move and rotate them around. Make your boat look as if it's crashed."
-                }, 
+                },
                 {
-                    "blocks": "if <touching color [#603C15]?> then\n\t\t\tswitch costume to [hit v]\n\t\t\tsay [Noooooo!] for (1) secs\n\t\t\tswitch costume to [normal v]\n\t\t\tpoint in direction (0 v)\n\t\t\tgo to x: (-215) y: (-160)\n\t\tend", 
+                    "blocks": "if <touching color [#603C15]?> then\n\t\t\tswitch costume to [hit v]\n\t\t\tsay [Noooooo!] for (1) secs\n\t\t\tswitch costume to [normal v]\n\t\t\tpoint in direction (0 v)\n\t\t\tgo to x: (-215) y: (-160)\n\t\tend",
                     "text": "Add this code to your boat, inside the `forever` loop, so that it crashes when it touches any brown wooden bits:\n\n\tThis code is inside the `forever` loop, so that your code keeps checking if the boat has crashed."
-                }, 
+                },
                 {
                     "text": "You should also make sure that your boat always starts looking like it's 'normal'."
-                }, 
+                },
                 {
-                    "image": "https://raw.githubusercontent.com/CodeClub/scratch-curriculum/master/en-GB/Term%201/Boat%20Race/boat-crash.png", 
+                    "image": "Term_1/Boat_Race/boat-crash.png",
                     "text": "Now if you try to sail through a wooden barrier, you should see that your boat crashes and moves back to the start."
                 }
-            ], 
-            "description": "Your boat can sail through the wooden barriers! Let's fix that.", 
-            "number": "3", 
+            ],
+            "description": "Your boat can sail through the wooden barriers! Let's fix that.",
+            "number": "3",
             "title": "Crashing!"
-        }, 
+        },
         {
-            "challenge": true, 
+            "challenge": true,
             "components": [
                 {
-                    "blocks": "say [YEAH!] for (1) secs\n\tstop [all v]", 
-                    "image": "https://raw.githubusercontent.com/CodeClub/scratch-curriculum/master/en-GB/Term%201/Boat%20Race/boat-win.png", 
+                    "blocks": "say [YEAH!] for (1) secs\n\tstop [all v]",
+                    "image": "Term_1/Boat_Race/boat-win.png",
                     "text": "When the boat gets to the yellow desert island, it should say 'YEAH!' and then the game should stop. You'll need to use this code:"
                 }
-            ], 
-            "description": "Can you add another `if` {.blockcontrol} statement to your boat's code, so that the player wins when they get to the desert island?", 
-            "number": "", 
+            ],
+            "description": "Can you add another `if` {.blockcontrol} statement to your boat's code, so that the player wins when they get to the desert island?",
+            "number": "",
             "title": "Winning!"
-        }, 
+        },
         {
-            "challenge": true, 
-            "description": "Can you add sound effects to your game, for when the boat crashes, or reaches the island at the end. You could even add background music (see the previous 'Rock Band' project if you need help with this).", 
-            "number": "", 
+            "challenge": true,
+            "description": "Can you add sound effects to your game, for when the boat crashes, or reaches the island at the end. You could even add background music (see the previous 'Rock Band' project if you need help with this).",
+            "number": "",
             "title": "Sound effects"
-        }, 
+        },
         {
             "components": [
                 {
-                    "image": "https://raw.githubusercontent.com/CodeClub/scratch-curriculum/master/en-GB/Term%201/Boat%20Race/boat-variable.png", 
+                    "image": "Term_1/Boat_Race/boat-variable.png",
                     "text": "+ Add a new variable called `time` to your stage. You can also change the display of your new variable. If you need help, have a look at the 'Balloons' project."
-                }, 
+                },
                 {
-                    "blocks": "when flag clicked\n\t\tset [time v] to [0]\n\t\tforever\n\t\t\twait (0.1) secs\n\t\t\tchange [time v] by (0.1)\n\t\tend", 
+                    "blocks": "when flag clicked\n\t\tset [time v] to [0]\n\t\tforever\n\t\t\twait (0.1) secs\n\t\t\tchange [time v] by (0.1)\n\t\tend",
                     "text": "Add this code to your __stage__, so that the timer counts up until the boat reaches the desert island:"
-                }, 
+                },
                 {
-                    "image": "https://raw.githubusercontent.com/CodeClub/scratch-curriculum/master/en-GB/Term%201/Boat%20Race/boat-variable-test.png", 
+                    "image": "Term_1/Boat_Race/boat-variable-test.png",
                     "text": "That's it! Test out your game and see how quickly you can get to the desert island!"
                 }
-            ], 
-            "description": "Let's add a timer to your game, so that the player has to get to the desert island as fast as possible.", 
-            "number": "4", 
+            ],
+            "description": "Let's add a timer to your game, so that the player has to get to the desert island as fast as possible.",
+            "number": "4",
             "title": "Time Trial"
-        }, 
+        },
         {
             "components": [
                 {
-                    "image": "https://raw.githubusercontent.com/CodeClub/scratch-curriculum/master/en-GB/Term%201/Boat%20Race/boat-boost.png", 
+                    "image": "Term_1/Boat_Race/boat-boost.png",
                     "text": "+ First let's add some 'boosts' to your game, which will speed up the boat. Edit your stage backdrop and add in some white booster arrows."
-                }, 
+                },
                 {
-                    "blocks": "if <touching color [#FFFFFF]?> then\n\t\t\tmove (3) steps\n\t\tend", 
+                    "blocks": "if <touching color [#FFFFFF]?> then\n\t\t\tmove (3) steps\n\t\tend",
                     "text": "You can now add some code to your boat's `forever` loop, so that it moves 2 _extra_ steps when touching a white booster."
-                }, 
+                },
                 {
-                    "image": "https://raw.githubusercontent.com/CodeClub/scratch-curriculum/master/en-GB/Term%201/Boat%20Race/boat-gate.png", 
+                    "image": "Term_1/Boat_Race/boat-gate.png",
                     "text": "You can also add in a spinning gate, which your boat has to avoid. Add in a new sprite called 'gate', which looks like this:\n\n\tMake sure that the colour of the gate is the same as the other wooden barriers."
-                }, 
+                },
                 {
-                    "image": "https://raw.githubusercontent.com/CodeClub/scratch-curriculum/master/en-GB/Term%201/Boat%20Race/boat-center.png", 
+                    "image": "Term_1/Boat_Race/boat-center.png",
                     "text": "Set the center of the gate sprite."
-                }, 
+                },
                 {
                     "text": "Add code to your gate, to make it spin slowly `forever` ."
-                }, 
+                },
                 {
-                    "image": "https://raw.githubusercontent.com/CodeClub/scratch-curriculum/master/en-GB/Term%201/Boat%20Race/boat-gate-test.png", 
+                    "image": "Term_1/Boat_Race/boat-gate-test.png",
                     "text": "Test out your game. You should now have a spinning gate that you must avoid."
                 }
-            ], 
-            "description": "This game is _far_ too easy - let's add things to make it more interesting.", 
-            "number": "5", 
+            ],
+            "description": "This game is _far_ too easy - let's add things to make it more interesting.",
+            "number": "5",
             "title": "Obstacles and power-ups"
-        }, 
+        },
         {
-            "challenge": true, 
+            "challenge": true,
             "components": [
                 {
-                    "blocks": "wait (0.01) secs", 
-                    "image": "https://raw.githubusercontent.com/CodeClub/scratch-curriculum/master/en-GB/Term%201/Boat%20Race/boat-algae.png", 
+                    "blocks": "wait (0.01) secs",
+                    "image": "Term_1/Boat_Race/boat-algae.png",
                     "text": "+ You could add green slime to your backdrop, which slows the player down when they touch it. You can use a `wait` block to do this:"
-                }, 
+                },
                 {
-                    "blocks": "move (1) steps\n\tif on edge, bounce", 
-                    "image": "https://raw.githubusercontent.com/CodeClub/scratch-curriculum/master/en-GB/Term%201/Boat%20Race/boat-obstacles.png", 
+                    "blocks": "move (1) steps\n\tif on edge, bounce",
+                    "image": "Term_1/Boat_Race/boat-obstacles.png",
                     "text": "You could add a moving object, like a log or a shark!\n\nThese blocks may help you:\n\nIf your new object isn't brown, you'll need to add to your boat code:"
                 }
-            ], 
-            "description": "Can you add more obstacles to your game? Here are some ideas:", 
-            "number": "", 
+            ],
+            "description": "Can you add more obstacles to your game? Here are some ideas:",
+            "number": "",
             "title": "More obstacles!"
-        }, 
+        },
         {
-            "challenge": true, 
+            "challenge": true,
             "components": [
                 {
-                    "image": "https://raw.githubusercontent.com/CodeClub/scratch-curriculum/master/en-GB/Term%201/Boat%20Race/boat-p2.png", 
+                    "image": "Term_1/Boat_Race/boat-p2.png",
                     "text": "+ Duplicate the boat, rename it 'Player 2' and change its colour."
-                }, 
+                },
                 {
                     "text": "Change Player 2's starting position, by changing this code:\n\n```blocks\n\tgo to x"
                 }
-            ], 
-            "description": "Can you turn your game into a race between 2 players?", 
-            "number": "", 
+            ],
+            "description": "Can you turn your game into a race between 2 players?",
+            "number": "",
             "title": "More boats!"
-        }, 
+        },
         {
-            "challenge": true, 
+            "challenge": true,
             "components": [
                 {
-                    "blocks": "when [space v] key pressed\n\tnext backdrop", 
+                    "blocks": "when [space v] key pressed\n\tnext backdrop",
                     "text": ""
                 }
-            ], 
-            "description": "Can you create additional backdrops, and allow the player to choose between levels?", 
-            "number": "", 
+            ],
+            "description": "Can you create additional backdrops, and allow the player to choose between levels?",
+            "number": "",
             "title": "More levels!"
         }
-    ], 
+    ],
     "title": "Boat Race"
 }

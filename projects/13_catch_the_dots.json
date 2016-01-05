@@ -1,169 +1,169 @@
 {
-    "description": "In this project you'll learn how to create a game, in which you have to match up coloured dots with the correct part of the controller.\n\n<div class=\"scratch-preview\">\n  <iframe allowtransparency=\"true\" width=\"485\" height=\"402\" src=\"http://scratch.mit.edu/projects/embed/44942820/?autostart=false\" frameborder=\"0\"></iframe>\n  \n</div>", 
-    "image": "https://raw.githubusercontent.com/CodeClub/scratch-curriculum/master/en-GB/Term%202/Catch%20the%20Dots/dots-final.png", 
-    "link": "http://jumpto.cc/dots-resources", 
-    "name": "catch_the_dots", 
-    "number": 13, 
-    "show": false, 
+    "description": "In this project you'll learn how to create a game, in which you have to match up coloured dots with the correct part of the controller.\n\n<div class=\"scratch-preview\">\n  <iframe allowtransparency=\"true\" width=\"485\" height=\"402\" src=\"http://scratch.mit.edu/projects/embed/44942820/?autostart=false\" frameborder=\"0\"></iframe>\n  \n</div>",
+    "image": "Term_2/Catch_the_Dots/dots-final.png",
+    "link": "http://jumpto.cc/dots-resources",
+    "name": "catch_the_dots",
+    "number": 13,
+    "show": false,
     "steps": [
         {
             "components": [
                 {
                     "text": "+ Start a new Scratch project, and delete the cat sprite so that your project is empty. You can find the online Scratch editor at <a href=\"http://jumpto.cc/scratch-new\">jumpto.cc/scratch-new</a>."
-                }, 
+                },
                 {
-                    "image": "https://raw.githubusercontent.com/CodeClub/scratch-curriculum/master/en-GB/Term%202/Catch%20the%20Dots/dots-controller.png", 
+                    "image": "Term_2/Catch_the_Dots/dots-controller.png",
                     "text": "If your club leader has given you a 'Resources' folder, click 'Upload sprite from file' and add the 'controller.svg' image. You should move this sprite to the center of the stage.\n\n\tIf you don't have this image, you can draw it yourself!"
-                }, 
+                },
                 {
-                    "blocks": "when flag clicked\n\t\tforever\n\t\t\tif <key [right arrow v] pressed?> then\n\t\t\t\tturn right (3) degrees\n\t\t\tend\n\t\tend", 
+                    "blocks": "when flag clicked\n\t\tforever\n\t\t\tif <key [right arrow v] pressed?> then\n\t\t\t\tturn right (3) degrees\n\t\t\tend\n\t\tend",
                     "text": "Turn your controller to the right when the right arrow key is pressed:"
-                }, 
+                },
                 {
                     "text": "Test out your controller -- it should spin to the right."
                 }
-            ], 
-            "description": "Let's start by creating a controller, that will be used to collect dots.", 
-            "number": "1", 
+            ],
+            "description": "Let's start by creating a controller, that will be used to collect dots.",
+            "number": "1",
             "title": "Creating a controller"
-        }, 
+        },
         {
-            "challenge": true, 
-            "description": "Can you make your controller spin to the left when the left arrow key is pressed?", 
-            "number": "", 
+            "challenge": true,
+            "description": "Can you make your controller spin to the left when the left arrow key is pressed?",
+            "number": "",
             "title": "Spinning left"
-        }, 
+        },
         {
             "components": [
                 {
-                    "image": "https://raw.githubusercontent.com/CodeClub/scratch-curriculum/master/en-GB/Term%202/Catch%20the%20Dots/dots-red.png", 
+                    "image": "Term_2/Catch_the_Dots/dots-red.png",
                     "text": "+ Create a new sprite called 'red'. This sprite should be a small red dot."
-                }, 
+                },
                 {
-                    "blocks": "when flag clicked\n\t\twait (2) secs\n\t\tforever\n\t\t\tcreate clone of [myself v]\n\t\t\twait (pick random (5) to (10)) secs\n\t\tend", 
+                    "blocks": "when flag clicked\n\t\twait (2) secs\n\t\tforever\n\t\t\tcreate clone of [myself v]\n\t\t\twait (pick random (5) to (10)) secs\n\t\tend",
                     "text": "Add this script to your 'red' dot sprite, to create a new dot clone every few seconds:"
-                }, 
+                },
                 {
-                    "image": "https://raw.githubusercontent.com/CodeClub/scratch-curriculum/master/en-GB/Term%202/Catch%20the%20Dots/dots-start.png", 
+                    "image": "Term_2/Catch_the_Dots/dots-start.png",
                     "text": "When each clone is created, you want it to appear in one of the 4 corners of the stage.\n\n\tTo do this, first create a new list variable called `start positions` and click the `(+)` to add in the values `-180` and `180`."
-                }, 
+                },
                 {
-                    "blocks": "when I start as a clone\n\t\tgo to x: (item (random v) of [start positions v]) y: (item (random v) of [start positions v])\n\t\tpoint towards [controller v]\n\t\tshow\n\t\trepeat until <touching [controller v]?>\n\t\t\tmove (1) steps\n\t\tend", 
+                    "blocks": "when I start as a clone\n\t\tgo to x: (item (random v) of [start positions v]) y: (item (random v) of [start positions v])\n\t\tpoint towards [controller v]\n\t\tshow\n\t\trepeat until <touching [controller v]?>\n\t\t\tmove (1) steps\n\t\tend",
                     "text": "You can use these 2 list items to pick a random corner of the stage. Add this code to the 'dot' sprite, so that each new clone moves to a random corner and then slowly moves towards the controller.\n\n\tThe code above chooses either `-180` or `180` for the x _and_ y positions, meaning that each clone starts in one corner of the stage."
-                }, 
+                },
                 {
-                    "image": "https://raw.githubusercontent.com/CodeClub/scratch-curriculum/master/en-GB/Term%202/Catch%20the%20Dots/dots-red-test.png", 
+                    "image": "Term_2/Catch_the_Dots/dots-red-test.png",
                     "text": "Test your project. You should see lots of red dots appear in each corner of the screen, and move slowly towards the controller."
-                }, 
+                },
                 {
                     "text": "Create 2 new variables called `lives` ."
-                }, 
+                },
                 {
                     "text": "Add code to your stage to set the `lives` to 0 at the start of the game."
-                }, 
+                },
                 {
-                    "blocks": "move (5) steps\n\t\tif <touching color [#FF0000]?> then\n\t\t\tchange [score v] by (1)\n\t\t\tplay sound [pop v]\n\t\telse\n\t\t\tchange [lives v] by (-1)\n\t\t\tplay sound [laser1 v]\n\t\tend\n\t\tdelete this clone", 
+                    "blocks": "move (5) steps\n\t\tif <touching color [#FF0000]?> then\n\t\t\tchange [score v] by (1)\n\t\t\tplay sound [pop v]\n\t\telse\n\t\t\tchange [lives v] by (-1)\n\t\t\tplay sound [laser1 v]\n\t\tend\n\t\tdelete this clone",
                     "text": "You need to add code to the end of your red dot's `when I start as a clone` if the colours don't match."
-                }, 
+                },
                 {
-                    "blocks": "wait until <(lives) < [1]>\n\t\tstop [all v]", 
+                    "blocks": "wait until <(lives) < [1]>\n\t\tstop [all v]",
                     "text": "Add this code to the end of your stage's script, so that the game ends when the player loses all of their lives:"
-                }, 
+                },
                 {
                     "text": "Test your game to make sure this code works as expected."
                 }
-            ], 
-            "description": "Let's add some dots for the player to collect with their controller.", 
-            "number": "2", 
+            ],
+            "description": "Let's add some dots for the player to collect with their controller.",
+            "number": "2",
             "title": "Collecting dots"
-        }, 
+        },
         {
-            "challenge": true, 
+            "challenge": true,
             "components": [
                 {
-                    "image": "https://raw.githubusercontent.com/CodeClub/scratch-curriculum/master/en-GB/Term%202/Catch%20the%20Dots/dots-more-dots.png", 
+                    "image": "Term_2/Catch_the_Dots/dots-more-dots.png",
                     "text": "Edit these sprites (including their code), so that each coloured dot has to match the correct colour on the controller. Remember to test your project, making sure you gain points and lose lives at the right times, and that your game isn't too easy or too hard!"
                 }
-            ], 
-            "description": "Duplicate your 'red' dot sprite twice, and name the two new sprites 'yellow' and 'blue'.", 
-            "number": "", 
+            ],
+            "description": "Duplicate your 'red' dot sprite twice, and name the two new sprites 'yellow' and 'blue'.",
+            "number": "",
             "title": "More dots"
-        }, 
+        },
         {
             "components": [
                 {
                     "text": "+ Create a new variable called `delay` ."
-                }, 
+                },
                 {
-                    "blocks": "when flag clicked\n\t\tset [delay v] to (8)\n\t\trepeat until < (delay) = (2)>\n\t\t\twait (10) secs\n\t\t\tchange [delay v] by (-0.5)\n\t\tend", 
+                    "blocks": "when flag clicked\n\t\tset [delay v] to (8)\n\t\trepeat until < (delay) = (2)>\n\t\t\twait (10) secs\n\t\t\tchange [delay v] by (-0.5)\n\t\tend",
                     "text": "On your stage, create a new script that sets the delay to a high number, and then slowly reduces the delay time.\n\n\tNotice that this is very similar to how a game timer works!"
-                }, 
+                },
                 {
-                    "blocks": "wait (delay) secs", 
+                    "blocks": "wait (delay) secs",
                     "text": "Finally, you can use this `delay` variable:"
-                }, 
+                },
                 {
                     "text": "Test your new `delay` variable reducing?"
                 }
-            ], 
-            "description": "Let's make the game get more difficult the longer the player survives, by slowly reducing the delay between dots appearing.", 
-            "number": "3", 
+            ],
+            "description": "Let's make the game get more difficult the longer the player survives, by slowly reducing the delay between dots appearing.",
+            "number": "3",
             "title": "Increasing the difficulty"
-        }, 
+        },
         {
-            "challenge": true, 
-            "description": "Can you improve your game by adding a `speed` {.blockdata} variable, so that the dots start off moving 1 step at a time, and steadily get faster and faster? This will work in a very similar way to the `delay` {.blockdata} variable used above, and you can use this code to help you.", 
-            "number": "", 
+            "challenge": true,
+            "description": "Can you improve your game by adding a `speed` {.blockdata} variable, so that the dots start off moving 1 step at a time, and steadily get faster and faster? This will work in a very similar way to the `delay` {.blockdata} variable used above, and you can use this code to help you.",
+            "number": "",
             "title": "Faster moving dots"
-        }, 
+        },
         {
             "components": [
                 {
                     "text": "+ Create a new variable called `high score` ."
-                }, 
+                },
                 {
-                    "image": "https://raw.githubusercontent.com/CodeClub/scratch-curriculum/master/en-GB/Term%202/Catch%20the%20Dots/dots-custom-1.png", 
+                    "image": "Term_2/Catch_the_Dots/dots-custom-1.png",
                     "text": "Click on your stage, and create a new custom block called `check high score` ."
-                }, 
+                },
                 {
-                    "image": "https://raw.githubusercontent.com/CodeClub/scratch-curriculum/master/en-GB/Term%202/Catch%20the%20Dots/dots-custom-2.png", 
+                    "image": "Term_2/Catch_the_Dots/dots-custom-2.png",
                     "text": "Just before the end of the game, add in your new custom block."
-                }, 
+                },
                 {
-                    "blocks": "define [check high score]\n\t\tif <(score) > (high score)> then\n\t\t\tset [high score v] to (score)\n\t\tend", 
+                    "blocks": "define [check high score]\n\t\tif <(score) > (high score)> then\n\t\t\tset [high score v] to (score)\n\t\tend",
                     "text": "Add code to your custom block to store the current `score` it's the highest score so far:"
-                }, 
+                },
                 {
                     "text": "Test the code you've added. Play your game to check whether the `high score` is updated correctly."
                 }
-            ], 
-            "description": "Let's save the high score, so that players can see how well they're doing.", 
-            "number": "4", 
+            ],
+            "description": "Let's save the high score, so that players can see how well they're doing.",
+            "number": "4",
             "title": "High score"
-        }, 
+        },
         {
-            "challenge": true, 
+            "challenge": true,
             "components": [
                 {
                     "text": "+ double your score;"
-                }, 
+                },
                 {
                     "text": "slow down the dots;"
-                }, 
+                },
                 {
                     "text": "hide all the other dots on the screen!"
                 }
-            ], 
-            "description": "Can you think of ways to improve your game? For example, you could create special dots that:", 
-            "number": "", 
+            ],
+            "description": "Can you think of ways to improve your game? For example, you could create special dots that:",
+            "number": "",
             "title": "Improve your game!"
-        }, 
+        },
         {
-            "challenge": true, 
-            "description": "Can you add a menu (with buttons) to your game? You could add an instructions screen, or a separate screen for showing the high score. If you need help with this, the 'Brain Game' project will help you.", 
-            "number": "", 
+            "challenge": true,
+            "description": "Can you add a menu (with buttons) to your game? You could add an instructions screen, or a separate screen for showing the high score. If you need help with this, the 'Brain Game' project will help you.",
+            "number": "",
             "title": "Game menu"
         }
-    ], 
+    ],
     "title": "Catch the Dots"
 }

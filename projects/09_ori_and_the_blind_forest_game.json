@@ -1,118 +1,118 @@
 {
-    "description": "Platformer based on the game Ori and the Blind Forest by Moon Studios", 
-    "image": "https://s3-eu-west-1.amazonaws.com/turing-resources/Ori/overview.png", 
-    "link": "https://scratch.mit.edu/projects/81314842/#editor", 
-    "name": "ori_and_the_blind_forest_game", 
-    "number": 9, 
-    "show": false, 
+    "description": "Platformer based on the game Ori and the Blind Forest by Moon Studios",
+    "image": "Ori/overview.png",
+    "link": "https://scratch.mit.edu/projects/81314842/#editor",
+    "name": "ori_and_the_blind_forest_game",
+    "number": 9,
+    "show": false,
     "steps": [
         {
             "components": [
                 {
-                    "blocks": "set (Level) to [1]", 
-                    "image": "http://wiki.scratch.mit.edu/w/images/Make_a_var.png", 
+                    "blocks": "set (Level) to [1]",
+                    "image": "http://wiki.scratch.mit.edu/w/images/Make_a_var.png",
                     "text": "Create a variable called Level and set it to 1"
-                }, 
+                },
                 {
-                    "blocks": "set (Jumping) to [0]", 
-                    "image": "http://wiki.scratch.mit.edu/w/images/Make_a_var.png", 
+                    "blocks": "set (Jumping) to [0]",
+                    "image": "http://wiki.scratch.mit.edu/w/images/Make_a_var.png",
                     "text": "Create a variable called Jumping and set it to 0"
                 }
-            ], 
-            "description": "We will need 2 variables for this game at first, one to keep track of the level and one that tells us if Ori is jumping or not", 
-            "image": "https://s3-eu-west-1.amazonaws.com/turing-resources/Ori/vars3.png", 
+            ],
+            "description": "We will need 2 variables for this game at first, one to keep track of the level and one that tells us if Ori is jumping or not",
+            "image": "Ori/vars3.png",
             "title": "Create variables"
-        }, 
+        },
         {
             "components": [
                 {
-                    "blocks": "go to x:(-223) y:(-32)", 
+                    "blocks": "go to x:(-223) y:(-32)",
                     "text": "Make sprite start on the left"
-                }, 
+                },
                 {
-                    "blocks": "point in direction (90)", 
+                    "blocks": "point in direction (90)",
                     "text": "Make sprite face to the right"
                 }
-            ], 
-            "description": "make the Ori sprite start on the left and face to the right", 
-            "image": "https://s3-eu-west-1.amazonaws.com/turing-resources/Ori/Ori.png", 
+            ],
+            "description": "make the Ori sprite start on the left and face to the right",
+            "image": "Ori/Ori.png",
             "title": "Start Position"
-        }, 
+        },
         {
             "components": [
                 {
-                    "blocks": "when gf clicked\n go to x:(230) y:(-194)", 
+                    "blocks": "when gf clicked\n go to x:(230) y:(-194)",
                     "text": "Make **platform1** start in its correct position"
-                }, 
+                },
                 {
-                    "blocks": "when gf clicked\n go to x:(-188) y:(-165)", 
+                    "blocks": "when gf clicked\n go to x:(-188) y:(-165)",
                     "text": "Make **platform2** start in its correct position"
-                }, 
+                },
                 {
-                    "blocks": "when gf clicked\n go back (10) layers \n go to x:(-20) y:(-145)", 
+                    "blocks": "when gf clicked\n go back (10) layers \n go to x:(-20) y:(-145)",
                     "text": "Make **water** start in its correct position"
                 }
-            ], 
-            "description": "Move each platform and water object to the correct position for each level", 
-            "image": "https://s3-eu-west-1.amazonaws.com/turing-resources/Ori/Platform.png", 
+            ],
+            "description": "Move each platform and water object to the correct position for each level",
+            "image": "Ori/Platform.png",
             "title": "Object Positions"
-        }, 
+        },
         {
             "components": [
                 {
-                    "blocks": "if <key [up arrow] pressed?> then\n\tchange y by (40)\nend", 
+                    "blocks": "if <key [up arrow] pressed?> then\n\tchange y by (40)\nend",
                     "text": "Make Ori jump up"
-                }, 
+                },
                 {
-                    "blocks": "if <<not <touching [platform1]?>> and <not <touching [platform2]?>>> then\n\tchange y by (-10)\nend", 
+                    "blocks": "if <<not <touching [platform1]?>> and <not <touching [platform2]?>>> then\n\tchange y by (-10)\nend",
                     "text": "Make Ori jump fall when not on platforms"
-                }, 
+                },
                 {
-                    "blocks": "if <<key [up arrow] pressed> and <[Jumping] = [0]>> then\n\tset [Jumping] to [1]\n\tchange y by (40)\nend", 
+                    "blocks": "if <<key [up arrow] pressed> and <[Jumping] = [0]>> then\n\tset [Jumping] to [1]\n\tchange y by (40)\nend",
                     "text": "Use the jump variable to stop Ori jumping in the air, remember to set Jumping back to 0 when Ori has landed (hint: use an if else statement for falling!)"
                 }
-            ], 
-            "description": "Write the scipts to let Ori jump and fall", 
-            "image": "https://s3-eu-west-1.amazonaws.com/turing-resources/Ori/Jump.png", 
+            ],
+            "description": "Write the scipts to let Ori jump and fall",
+            "image": "Ori/Jump.png",
             "title": "Jumping and Falling"
-        }, 
+        },
         {
             "components": [
                 {
-                    "blocks": "if <key [right arrow] pressed?> then\n\tchange x by (10)\nend", 
+                    "blocks": "if <key [right arrow] pressed?> then\n\tchange x by (10)\nend",
                     "text": "If the right arrow key pressed. Make sprite move to the right"
-                }, 
+                },
                 {
-                    "blocks": "if <key [left arrow] pressed?> then\n\tchange x by (-10)\nend", 
+                    "blocks": "if <key [left arrow] pressed?> then\n\tchange x by (-10)\nend",
                     "text": "If the left arrow key pressed. Make sprite move to the left"
                 }
-            ], 
-            "description": "Write the scripts to let Ori move", 
-            "image": "https://s3-eu-west-1.amazonaws.com/turing-resources/Ori/Movement.png", 
+            ],
+            "description": "Write the scripts to let Ori move",
+            "image": "Ori/Movement.png",
             "title": "Movement"
-        }, 
+        },
         {
             "components": [
                 {
-                    "blocks": "if <touching [water]?> then\n\tswitch costume to [gameover]\nend", 
+                    "blocks": "if <touching [water]?> then\n\tswitch costume to [gameover]\nend",
                     "text": "Make it game over when Ori touches the water"
                 }
-            ], 
-            "description": "Make it game over if Ori goes in the water", 
-            "image": "https://s3-eu-west-1.amazonaws.com/turing-resources/Ori/Dead.png", 
+            ],
+            "description": "Make it game over if Ori goes in the water",
+            "image": "Ori/Dead.png",
             "title": "Game Over"
-        }, 
+        },
         {
             "components": [
                 {
-                    "blocks": "if <touching [sphere]?> then\n\tchange [level] by (1)\nend", 
+                    "blocks": "if <touching [sphere]?> then\n\tchange [level] by (1)\nend",
                     "text": "Make the level complete when Ori touches the sphere"
                 }
-            ], 
-            "description": "Level complete when Ori reaches the sphere", 
-            "image": "https://s3-eu-west-1.amazonaws.com/turing-resources/Ori/win.png", 
+            ],
+            "description": "Level complete when Ori reaches the sphere",
+            "image": "Ori/win.png",
             "title": "Winning"
         }
-    ], 
+    ],
     "title": "Ori and the Blind Forest game"
 }

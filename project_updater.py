@@ -19,11 +19,11 @@ def main():
 
     for project in project_finder.find_projects():
 
-        if (project['title'] not in config.projects):
+        if (project['name'] not in config.projects):
             print('  -  {title}'.format(**project))
             continue
 
-        updated = databaseWriter.update({ 'title' : project['title'] },project)
+        updated = databaseWriter.update({ 'number' : project['number'] },project)
         print('{title}'.format(**updated))
 
 if (__name__ == "__main__"):

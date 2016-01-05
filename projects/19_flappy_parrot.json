@@ -1,6 +1,6 @@
 {
-    "description": "__In this project we\u2019ll make our own version of the highly popular mobile game Flappy Bird. This project requires Scratch 2.0.__\n\nPress the space bar to flap and try to navigate through the gaps in the pipes!",
-    "image": "Additional_Projects/Flappy_Parrot/flappy_screenshot.png",
+    "description": "Create a Scratch version of Flappy Bird",
+    "image": "flappy_bird/flappy_screenshot.png",
     "name": "flappy_parrot",
     "number": 19,
     "show": false,
@@ -216,5 +216,5 @@
             "title": "fall off screen"
         }
     ],
-    "title": "Flappy Parrot"
+    "title": "Flappy Bird"
 }

@@ -1,0 +1,193 @@
+{
+    "description": "A random object is shown on the blackboard, all distorted. You have to guess what it is by clicking on the right picture below. The quicker you guess, the higher your score!", 
+    "image": "https://raw.githubusercontent.com/CodeClub/scratch-curriculum/master/en-GB/Archived%20Projects/What%27s%20That/whatsthat_screenshot.png", 
+    "name": "what_s_that", 
+    "number": 22, 
+    "steps": [
+        {
+            "components": [
+                {
+                    "text": "+ Start a new Scratch project and delete the cat sprite."
+                }, 
+                {
+                    "text": "Click Stage and then the Backdrops tab. `Choose Backdrop From Library` to change the backdrop to __indoors/chalkboard__."
+                }, 
+                {
+                    "text": "Create a new sprite from the library, and give it any costume you like. You can pick something from the things folder."
+                }, 
+                {
+                    "text": "Position the new sprite in the middle of the blackboard. Make it bigger or smaller if you need to."
+                }, 
+                {
+                    "text": "Click the Costumes tab and import four more things. They can be anything you want, yay!"
+                }, 
+                {
+                    "blocks": "when FLAG clicked\n    repeat (pick random (1) to (5)\n        next costume\n    end", 
+                    "text": "Let\u2019s now make a random picture appear. Create this script:"
+                }
+            ], 
+            "description": "__We want a few different pictures to show up on the blackboard.__", 
+            "number": "1", 
+            "tests": [
+                {
+                    "text": "__Click the green flag.__\n\nDoes the sprite show a different costume?\n\n__Click on it a few more times.__\n\n Do you get different costumes every time? Sometimes you\u2019ll get the same costume twice in a row, but that\u2019s OK. You\u2019ll also notice that you can see the sprite flicker as it changes costume. We\u2019ll fix that in the next step."
+                }
+            ], 
+            "title": "Make different things appear on the blackboard"
+        }, 
+        {
+            "components": [
+                {
+                    "text": "+ On the Data palette, create a variable called Score."
+                }, 
+                {
+                    "blocks": "when FLAG clicked\n    hide\n    repeat (pick random (1) to (5)\n        next costume\n    end\n    set [score v] to (110)\n    repeat until ((score) = (0)\n        change [score v] by [-10]\n        set [pixelate v] effect to (score)\n        set [colour v] effect to (score)\n        show\n        wait (1) secs\n    end", 
+                    "text": "Change the script to look like this:\nYou should add the `hide` block, and everything below it."
+                }
+            ], 
+            "description": "__Let\u2019s now make a picture distorted when it appears, and become clearer over a few seconds.__\n\nWe\u2019ll use a score variable to control how much distortion there is. If the score is high, there will be lots of distortion. As the score goes down, there will be less and less distortion. The score also acts as a timer, like on the __Timer Scratch Card.__", 
+            "extensions": [
+                {
+                    "text": "+ __Try changing the starting score and how much it changes each time around the loop.__ How does this change how the picture looks? Does it make it harder or easier to spot what the picture is?"
+                }, 
+                {
+                    "text": "__Try some different graphic effects from the pull-down lists.__ How do they change the difficulty?"
+                }
+            ], 
+            "number": "2", 
+            "tests": [
+                {
+                    "text": "__Click the green flag.__"
+                }, 
+                {
+                    "text": "Does a random and distorted picture appear?"
+                }, 
+                {
+                    "text": "Does the distortion get less in stages?"
+                }, 
+                {
+                    "text": "Does the score go down as the picture becomes less distorted?"
+                }, 
+                {
+                    "text": "Do you get an undistorted image when the score reaches zero?"
+                }, 
+                {
+                    "text": "Do you still get a different picture every time you click the green button?"
+                }
+            ], 
+            "title": "Make the pictures distorted"
+        }, 
+        {
+            "description": "So far we\u2019ve got our random picture appearing slowly, and a score which decreases over time, but how do you win the game? We\u2019ll add some sprites at the bottom of the screen for the player to click on. If they click on the right one, they win the game. If they click on the wrong one, that sprite disappears and the game carries on.\n\nFirst, we need to know what the right answer is.", 
+            "number": "3", 
+            "tests": [
+                {
+                    "text": "__Click the green flag.__"
+                }, 
+                {
+                    "text": "When you test the game, you can use the __answer monitor__ on the stage to tell what the right answer is. That\u2019s good for testing."
+                }, 
+                {
+                    "text": "What happens when you click on the __right answer__?"
+                }, 
+                {
+                    "text": "What happens when you click on the __wrong answer?__"
+                }, 
+                {
+                    "text": "What happens to the wrong answer when you __start a new game?__\n\nThe test shows up two problems. First, wrong guesses don\u2019t reappear when the next game starts. Second, the score doesn\u2019t stop going down when we get the right answer."
+                }, 
+                {
+                    "blocks": "when FLAG clicked\n        show", 
+                    "text": "To fix the first problem, add this script to each of the five answer sprites:\nTo fix the second problem, we need to stop the __question sprite__\u2019s repeat until loop when the player clicks on the right answer. We\u2019ll use a new variable to do that. We\u2019ll set it to __zero__ when the game starts and set it to __one__ when the game is won. We\u2019ll make the repeat until loop stop when either the score reaches __zero__ OR the __game-winning flag__ is set to __one.__"
+                }, 
+                {
+                    "text": "Create a new variable called won?"
+                }, 
+                {
+                    "blocks": "when FLAG clicked\n        hide\n        repeat (pick random (1) to (5)\n            next costume\n        end\n        set [right answer v] to (costume)\n        set [score v] to (110)\n        set [won v] to (0)\n        repeat until <<(score) = (0)> or <(won) = (1)>>\n            change [score v] by (-10)\n            set [pixelate effect v] to (score)\n            set [colour effect v] to (score)\n            show\n            wait (1) secs\n        end\n\n    when I receive [won v]\n        set [won v] to (1)\n        clear graphic effects\n        say (join [Congratulations! You scored] (score))", 
+                    "text": "Change the scripts so they look like this:"
+                }
+            ], 
+            "title": "Allow the player to guess the picture"
+        }, 
+        {
+            "challenge": true, 
+            "components": [
+                {
+                    "text": "* Try changing how fast the picture is revealed and how fast the score goes down.\n* Try changing the distortions on the picture.\n* Try changing the pictures being guessed, to make them either more similar or more different. If you do this, don\u2019t forget to change the answer sprite\u2019s costume."
+                }
+            ], 
+            "description": "Change how difficult the game is.", 
+            "number": "1", 
+            "title": "Make the game harder or easier"
+        }, 
+        {
+            "challenge": true, 
+            "components": [
+                {
+                    "text": "Find some different distortions that work well.\n\nChange the game so that each game uses a different distortion in the repeat until loop.\n\n__Hint:__ Try creating a new variable, called distortion to use. Set it to a random value at the start of the game. Use if blocks in the body of the repeat until loop to apply the correct distortion for this game."
+                }
+            ], 
+            "description": "At the moment, each play of the game uses the same distortion. In Step 2, you might have tried some different distortions that work at least as well as the colour + pixelation we used.", 
+            "number": "2", 
+            "title": "Distort the picture differently in each game"
+        }, 
+        {
+            "challenge": true, 
+            "components": [
+                {
+                    "text": "__Hint:__ You\u2019ll need an extra variable to store the grand total across all the rounds. You\u2019ll also need a loop to go through the different rounds.\n\n__Hint:__ You\u2019ll also have to make the wrong guesses reappear at the start of each round. Perhaps you could use a broadcast message to do that?"
+                }
+            ], 
+            "description": "At the moment, each game is independent. Change it so that the game proceeds in several rounds. For instance, have one game take three rounds, so the player has to guess three pictures and can score up to 300 points.", 
+            "number": "3", 
+            "title": "Make a game have a few rounds"
+        }, 
+        {
+            "challenge": true, 
+            "components": [
+                {
+                    "text": "Does each round need to score the same? Should you get more points for guessing quickly in the later, more difficult rounds?\n\n__Hint:__ How will you know which round you\u2019re in? How can you use that to change the difficulty and the score?"
+                }
+            ], 
+            "description": "As you go through different rounds, make the game harder each time.", 
+            "number": "4", 
+            "title": "Make later rounds more difficult"
+        }, 
+        {
+            "challenge": true, 
+            "description": "Instead of using a fixed number of rounds, keep playing the game until the player doesn\u2019t get a picture right. This probably only works if the game gets harder in later rounds.", 
+            "number": "5", 
+            "title": "Keep playing until the player gets it wrong"
+        }, 
+        {
+            "challenge": true, 
+            "components": [
+                {
+                    "text": "This idea only really works if you don\u2019t add up someone\u2019s score over several rounds."
+                }
+            ], 
+            "description": "Rather than always making the game harder, make the game adjust the difficulty depending on the skill of the player. If they get the right picture quickly, make the next game a bit harder. If they don\u2019t get the right picture, or only get it late, make the next game a bit easier.", 
+            "number": "6", 
+            "title": "Make the game harder or easier depending on how well the player does"
+        }, 
+        {
+            "challenge": true, 
+            "description": "Keep track of the highest score. If someone manages to beat it, ask for their name and update the highest score. Make sure the highest score, and the name of the person who scored it, are displayed.", 
+            "number": "7", 
+            "title": "Keep track of the highest score"
+        }, 
+        {
+            "challenge": true, 
+            "components": [
+                {
+                    "text": "Does this make the game better?"
+                }
+            ], 
+            "description": "At the moment, there\u2019s no penalty to just clicking on all the answer sprites as quickly as you can. Change the game so that the score goes down a bit every time you make an incorrect guess.", 
+            "number": "8", 
+            "title": "Make wrong guesses expensive"
+        }
+    ], 
+    "title": "What's That"
+}

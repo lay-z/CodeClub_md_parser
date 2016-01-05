@@ -1,0 +1,118 @@
+{
+    "description": "In this project you'll learn how to code your own musical instruments!\n\n<div class=\"scratch-preview\">\n  <iframe allowtransparency=\"true\" width=\"485\" height=\"402\" src=\"http://scratch.mit.edu/projects/embed/26741186/?autostart=false\" frameborder=\"0\"></iframe>\n  \n</div>", 
+    "image": "https://raw.githubusercontent.com/CodeClub/scratch-curriculum/master/en-GB/Term%201/Rock%20Band/band-final.png", 
+    "name": "rock_band", 
+    "number": 1, 
+    "steps": [
+        {
+            "components": [
+                {
+                    "image": "https://raw.githubusercontent.com/CodeClub/scratch-curriculum/master/en-GB/Term%201/Rock%20Band/band-scratch.png", 
+                    "text": "+ First, open up the Scratch editor. You can find the online Scratch editor at <a href=\"http://jumpto.cc/scratch-new\">jumpto.cc/scratch-new</a>. It looks like this:"
+                }, 
+                {
+                    "image": "https://raw.githubusercontent.com/CodeClub/scratch-curriculum/master/en-GB/Term%201/Rock%20Band/band-delete.png", 
+                    "text": "The cat sprite that you can see is the Scratch mascot. Let's get rid of it, by right-clicking and then clicking 'delete'."
+                }, 
+                {
+                    "image": "https://raw.githubusercontent.com/CodeClub/scratch-curriculum/master/en-GB/Term%201/Rock%20Band/band-sprite-library.png", 
+                    "text": "Next, click 'Choose sprite from library' to open up a list of all the Scratch sprites."
+                }, 
+                {
+                    "image": "https://raw.githubusercontent.com/CodeClub/scratch-curriculum/master/en-GB/Term%201/Rock%20Band/band-sprite-drum.png", 
+                    "text": "Scroll down until you see a drum sprite. Click on a drum, and click 'OK' to add it to your project."
+                }, 
+                {
+                    "image": "https://raw.githubusercontent.com/CodeClub/scratch-curriculum/master/en-GB/Term%201/Rock%20Band/band-shrink.png", 
+                    "text": "Click the 'shrink' icon, and then click on the drum a few times to make it smaller."
+                }
+            ], 
+            "description": "Before you can start animating, you'll need to add in a 'thing' to animate. In Scratch, these 'things' are called __sprites__.", 
+            "number": "1", 
+            "title": "Sprites"
+        }, 
+        {
+            "components": [
+                {
+                    "image": "https://raw.githubusercontent.com/CodeClub/scratch-curriculum/master/en-GB/Term%201/Rock%20Band/band-stage-choose.png", 
+                    "text": "+ At the moment, the stage is white, and looks pretty boring! Let's add a backdrop to the stage, by clicking 'Choose backdrop from library'."
+                }, 
+                {
+                    "image": "https://raw.githubusercontent.com/CodeClub/scratch-curriculum/master/en-GB/Term%201/Rock%20Band/band-backdrop.png", 
+                    "text": "Click 'Indoors' on the left, and then click on a stage backdrop and click 'OK'."
+                }, 
+                {
+                    "image": "https://raw.githubusercontent.com/CodeClub/scratch-curriculum/master/en-GB/Term%201/Rock%20Band/band-stage.png", 
+                    "text": "Your stage should now look like this:"
+                }
+            ], 
+            "description": "The __stage__ is the area on the left, and is where your project comes to life. Think of it as a performance area, just like a real stage!", 
+            "number": "2", 
+            "title": "The Stage"
+        }, 
+        {
+            "components": [
+                {
+                    "image": "https://raw.githubusercontent.com/CodeClub/scratch-curriculum/master/en-GB/Term%201/Rock%20Band/band-code.png", 
+                    "text": "+ You can find the code blocks in the 'Scripts' tab, and they are all colour-coded! \n\n\tClick on the drum sprite, and then drag these 2 blocks into the code area to the right, making sure that they are connected together (like Lego blocks):"
+                }, 
+                {
+                    "text": "Click the drum to try out your new instrument!"
+                }, 
+                {
+                    "image": "https://raw.githubusercontent.com/CodeClub/scratch-curriculum/master/en-GB/Term%201/Rock%20Band/band-drum-costume.png", 
+                    "text": "You can also change how the drum looks when it's clicked, by creating a new costume. Click the 'Costumes' tab, and you'll see the drum image."
+                }, 
+                {
+                    "image": "https://raw.githubusercontent.com/CodeClub/scratch-curriculum/master/en-GB/Term%201/Rock%20Band/band-drum-duplicate.png", 
+                    "text": "Right-click on the costume and click 'duplicate' to create a copy of the costume."
+                }, 
+                {
+                    "image": "https://raw.githubusercontent.com/CodeClub/scratch-curriculum/master/en-GB/Term%201/Rock%20Band/band-drum-hit.png", 
+                    "text": "Click on the new costume (called 'drum2') and then select the line tool and draw lines to make it look like the drum is making a sound."
+                }, 
+                {
+                    "image": "https://raw.githubusercontent.com/CodeClub/scratch-curriculum/master/en-GB/Term%201/Rock%20Band/band-drum-name.png", 
+                    "text": "The names of the costumes aren't very helpful at the moment. Rename the 2 costumes to 'not hit' and 'hit' by typing the new name of each costume into the text box."
+                }, 
+                {
+                    "image": "https://raw.githubusercontent.com/CodeClub/scratch-curriculum/master/en-GB/Term%201/Rock%20Band/band-looks.png", 
+                    "text": "Now that you have 2 different costumes for your drum, you can choose which costume is displayed! Add these 2 blocks to your drum:\n\n\tThe code block for changing the costume is in the `Looks` section."
+                }, 
+                {
+                    "text": "Test your drum. When clicked, your drum should now look like it's been hit!"
+                }
+            ], 
+            "description": "Let's code your drum to make a sound when it's hit.", 
+            "number": "3", 
+            "title": "Making a Drum"
+        }, 
+        {
+            "components": [
+                {
+                    "image": "https://raw.githubusercontent.com/CodeClub/scratch-curriculum/master/en-GB/Term%201/Rock%20Band/band-singer-mic.png", 
+                    "text": "+ Add another 2 sprites to your stage; a singer and a microphone."
+                }, 
+                {
+                    "image": "https://raw.githubusercontent.com/CodeClub/scratch-curriculum/master/en-GB/Term%201/Rock%20Band/band-import-sound.png", 
+                    "text": "Before you can make your singer sing, you need to add a sound to your sprite. Make sure that you have selected your singer, then click the 'Sounds' tab, and click 'Choose sound from library':"
+                }, 
+                {
+                    "image": "https://raw.githubusercontent.com/CodeClub/scratch-curriculum/master/en-GB/Term%201/Rock%20Band/band-choose-sound.png", 
+                    "text": "If you click 'Vocals' on the left hand side, you will then be able to choose a suitable sound to add to your sprite."
+                }, 
+                {
+                    "blocks": "when this sprite clicked\n\t\tplay sound [singer1 v] until done", 
+                    "text": "Now that the sound has been added, you can add this code to your singer:"
+                }, 
+                {
+                    "text": "Click on your singer, to make sure that she sings when clicked."
+                }
+            ], 
+            "description": "Let's add a singer to your band!", 
+            "number": "4", 
+            "title": "Making a Singer"
+        }
+    ], 
+    "title": "Rock Band"
+}

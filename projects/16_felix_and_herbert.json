@@ -1,0 +1,104 @@
+{
+    "description": "We are going to make a game of catch with __Felix the cat__ and __Herbert__ the mouse. You control Herbert with the mouse and try to avoid getting caught by Felix. The longer you avoid him the more points you score, but don\u2019t get caught because your score will go down!", 
+    "image": "https://raw.githubusercontent.com/CodeClub/scratch-curriculum/master/en-GB/Archived%20Projects/Felix%20and%20Herbert/felixherbert_screenshot.png", 
+    "name": "felix_and_herbert", 
+    "number": 16, 
+    "steps": [
+        {
+            "components": [
+                {
+                    "text": "+ Start a new project."
+                }, 
+                {
+                    "text": "Click on the **stage** next to the sprite and switch to the `Backdrops` tab, and then click the `Choose Backdrop from library` button and choose the backdrop indoors/hall. Delete the original blank backdrop."
+                }, 
+                {
+                    "text": "Click on the sprite, and then click on the `i` button to the top left of the Sprite. Change the name of the sprite to **Felix**."
+                }, 
+                {
+                    "text": "Make sure Felix only points left-right by clicking this button: <img alt=\"\" class=\"inline\" src=\"flip_arrows.png\">"
+                }, 
+                {
+                    "blocks": "when FLAG clicked\n    forever\n        point towards [mouse-pointer v]\n        move (10) steps\n        next costume\n        play drum (3 v) for (0.3) beats\n    end", 
+                    "text": "Create this script:"
+                }
+            ], 
+            "description": "", 
+            "number": "1", 
+            "title": "Felix follows the mouse pointer"
+        }, 
+        {
+            "components": [
+                {
+                    "text": "+ Create another sprite using the `choose sprite from library` button and selecting **animals/mouse1**."
+                }, 
+                {
+                    "text": "Change the name of the sprite to **Herbert**."
+                }, 
+                {
+                    "text": "Switch to the __Costumes__ tab, then click on the costume in the Paint Editor. A box will appear around the costume. Drag a corner of the box to make Herbert smaller than Felix."
+                }, 
+                {
+                    "text": "Make sure Herbert only points left-right by clicking this button: <img alt=\"\" class=\"inline\" src=\"flip_arrows.png\">"
+                }, 
+                {
+                    "blocks": "when FLAG clicked\n    forever\n        go to [mouse-pointer v]\n        point towards [Felix v]\n    end", 
+                    "text": "**Give Herbert this script:**"
+                }
+            ], 
+            "description": "Next, we want Felix to chase Herbert the mouse, rather than the mouse pointer.", 
+            "number": "2", 
+            "title": "Felix chases Herbert"
+        }, 
+        {
+            "components": [
+                {
+                    "blocks": "when FLAG clicked\n    forever\n        point towards [mouse-pointer v]\n        move (10) steps\n        next costume\n        play drum (3 v) for (0.3) beats\n        if <touching [herbert v]?>\n            say [Caught you!] for (1) secs\n        end\n    end", 
+                    "text": "+ Change Felix\u2019s script to be this:"
+                }
+            ], 
+            "description": "We want Felix to know when he\u2019s caught Herbert, and tell us.", 
+            "number": "3", 
+            "title": "Felix says when he\u2019s caught Herbert"
+        }, 
+        {
+            "components": [
+                {
+                    "blocks": "when FLAG clicked\n    forever\n        point towards [mouse-pointer v]\n        move (10) steps\n        move (20) steps\n        next costume\n        play drum [3 v] for (0.3) beats\n        if <touching [herbert v]?> then\n            broadcast [caught v]\n            play drum [17 v] for (0.2) beats\n            wait (1) secs\n        end\n    end", 
+                    "text": "+ Change Felix\u2019s script to send this message when he catches Herbert:"
+                }, 
+                {
+                    "text": "Add a new costume into Herbert by selecting Herbert, going into the Costumes section, and clicking the `Choose costume from Library button ` . Select the **fantasy/ghost2-a** costume."
+                }, 
+                {
+                    "text": "Make the costume smaller by clicking on it in the Paint Editor, and dragging the box that appears, to resize it."
+                }, 
+                {
+                    "text": "Change the names of Herbert\u2019s costumes so the mouse costume is called \u2018alive\u2019 and the ghost costume is called \u2018dead\u2019."
+                }, 
+                {
+                    "blocks": "when I receive [caught v]\n        switch costume to [dead v]\n        wait (1) secs\n        switch costume to [alive v]", 
+                    "text": "Create a new script for Herbert to turn him into a ghost:"
+                }
+            ], 
+            "description": "Instead of Felix saying something, we want Herbert to turn into a ghost when he\u2019s caught.", 
+            "number": "4", 
+            "title": "Herbert turns into a ghost when he\u2019s caught"
+        }, 
+        {
+            "components": [
+                {
+                    "text": "+ Make a variable, for all sprites, called Score. Click on `Data` , ensuring that \"For all sprites\" is selected."
+                }, 
+                {
+                    "blocks": "when gf clicked\n        set [score v] to [0]\n        forever\n            change [score v] by (1)\n            wait (1) secs\n        end\n\n    when I receive [caught v]\n        change [score v] by (-100)", 
+                    "text": "On the stage, create these two scripts:"
+                }
+            ], 
+            "description": "Let\u2019s add a score so we know how well we do at keeping Herbert alive.\n\nWe\u2019ll start the score at zero and increase it by one every second. If Felix catches Herbert, we\u2019ll reduce the score by one hundred.", 
+            "number": "5", 
+            "title": "Keep score"
+        }
+    ], 
+    "title": "Felix and Herbert"
+}

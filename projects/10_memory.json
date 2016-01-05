@@ -1,0 +1,183 @@
+{
+    "description": "In this project, you will create a memory game where you have to memorise and repeat a sequence of random colours!\n\n<div class=\"scratch-preview\">\n  <iframe allowtransparency=\"true\" width=\"485\" height=\"402\" src=\"http://scratch.mit.edu/projects/embed/34874510/?autostart=false\" frameborder=\"0\"></iframe>\n  \n</div>", 
+    "image": "https://raw.githubusercontent.com/CodeClub/scratch-curriculum/master/en-GB/Term%202/Memory/colour-final.png", 
+    "name": "memory", 
+    "number": 10, 
+    "steps": [
+        {
+            "components": [
+                {
+                    "text": "+ Start a new Scratch project, and delete the cat sprite so that your project is empty. You can find the online Scratch editor at <a href=\"http://jumpto.cc/scratch-new\">jumpto.cc/scratch-new</a>."
+                }, 
+                {
+                    "image": "https://raw.githubusercontent.com/CodeClub/scratch-curriculum/master/en-GB/Term%202/Memory/colour-sprite.png", 
+                    "text": "Choose a character and a backdrop. Your character doesn't have to be a person, but it needs to be able to show different colours."
+                }, 
+                {
+                    "image": "https://raw.githubusercontent.com/CodeClub/scratch-curriculum/master/en-GB/Term%202/Memory/colour-costume.png", 
+                    "text": "In your game, you'll use a different number to represent each colour:\n\n\t+ 1 = red;\n\t+ 2 = blue;\n\t+ 3 = green;\n\t+ 4 = yellow.\n\n\tGive your character 4 different colour costumes, one for each of the 4 colours above. Make sure that your coloured costumes are in the right order."
+                }, 
+                {
+                    "image": "https://raw.githubusercontent.com/CodeClub/scratch-curriculum/master/en-GB/Term%202/Memory/colour-list.png", 
+                    "text": "To create a random sequence, you need to create a __list__. A list is just a variable that stores lots of data __in order__. Create a new list called `sequence` . As only your character needs to see the list, we can also click 'For this sprite only'.\n\n\tYou should now see your empty list in the top-left of your stage, as well as lots of new blocks for using lists."
+                }, 
+                {
+                    "blocks": "when flag clicked\n\t\tdelete (all v) of [sequence v]\n\t\trepeat (5)\n\t\t\tadd (pick random (1) to (4)) to [sequence v]\n\t\t\tswitch costume to (item (last v) of [sequence v]\n\t\t\twait (1) secs\n\t\tend", 
+                    "text": "Add this code to your character, to add a random number to your list (and show the correct costume) 5 times:\n\n\tNotice that you have also emptied the list to begin with."
+                }
+            ], 
+            "description": "First, let's create a character that can change to a random sequence of colours for the player to memorise.", 
+            "number": "1", 
+            "title": "Random colours"
+        }, 
+        {
+            "challenge": true, 
+            "components": [
+                {
+                    "text": "Can you make a different drum sound play depending on the random number chosen? This will be _very_ similar to your code to change the character's costume."
+                }
+            ], 
+            "description": "Test your project a few times. You may notice that sometimes the same number is chosen twice (or more) in a row, making the sequence harder to memorise. Can you make a drum sound play each time the character changes costume?", 
+            "number": "", 
+            "title": "Adding sound"
+        }, 
+        {
+            "components": [
+                {
+                    "image": "https://raw.githubusercontent.com/CodeClub/scratch-curriculum/master/en-GB/Term%202/Memory/colour-drums.png", 
+                    "text": "+ Add 4 sprites to your project, that will become buttons. Edit your 4 sprites, so that there's 1 for each of the 4 colours."
+                }, 
+                {
+                    "blocks": "when this sprite clicked\n\t\tbroadcast [red v]", 
+                    "text": "When the red drum is clicked, you'll need to broadcast a message to your character, letting them know that the red button has been clicked. Add this code to your red drum:"
+                }, 
+                {
+                    "blocks": "when I receive [red v]\n\t\tif <(item (1 v) of [sequence v])=[1]> then\n\t\t\tdelete (1 v) of [sequence v]\n\t\telse\n\t\t\tsay [Game over!] for (1) secs\n\t\t\tstop [all v]\n\t\tend", 
+                    "text": "When your character receives this message, they should check whether the number 1 is at the start of the list (which means that red is the next colour in the sequence). If it is, you can remove the number from the list, as it's been guessed correctly. Otherwise it's game over!"
+                }, 
+                {
+                    "blocks": "wait until < (length of [sequence v]) = [0]>\n\t\tbroadcast [won v] and wait", 
+                    "text": "You could also display some flashing lights once the list is empty, as it means the entire sequence has been guessed correctly. Add this code to the end of your character's `when flag clicked` script:"
+                }, 
+                {
+                    "blocks": "when I receive [won v]\n\t\tplay sound [drum machine v]\n\t\trepeat (50)\n\t\t\tchange [color v] effect by (25)\n\t\t\twait (0.1) secs\n\t\tend\n\t\tclear graphic effects", 
+                    "text": "Click on your stage, and add this code to make the backdrop change colour once the player has won."
+                }
+            ], 
+            "description": "Let's add 4 buttons, for the player to repeat the sequence they've remembered.", 
+            "number": "2", 
+            "title": "Repeating the sequence"
+        }, 
+        {
+            "challenge": true, 
+            "components": [
+                {
+                    "text": "You can also add sounds for when the buttons are pressed.\n\nRemember to test the code you've added! Can you memorise a sequence of 5 colours? Is the sequence different each time?"
+                }
+            ], 
+            "description": "Repeat the steps above for your blue, green and yellow buttons. Which code will stay the same, and which code will change for each button?", 
+            "number": "", 
+            "title": "Creating 4 buttons"
+        }, 
+        {
+            "components": [
+                {
+                    "image": "https://raw.githubusercontent.com/CodeClub/scratch-curriculum/master/en-GB/Term%202/Memory/colour-score.png", 
+                    "text": "+ Create a new variable called `score` ."
+                }, 
+                {
+                    "blocks": "set [score v] to [3]", 
+                    "text": "This `score` code:"
+                }, 
+                {
+                    "blocks": "repeat (score)\n\t\tend", 
+                    "text": "Instead of always creating a sequence of 5 colours, you now want the `score` loop (for creating the sequence) to:"
+                }, 
+                {
+                    "blocks": "change [score v] by (1)", 
+                    "text": "If the sequence is guessed correctly, you should add 1 to the score, to increase the length of the sequence."
+                }, 
+                {
+                    "blocks": "when flag clicked\n\t\tset [score v] to [3]\n\t\tforever\n\t\t\tdelete (all v) of [sequence v]\n\t\t\trepeat (score)\n\t\t\t\tadd (pick random (1) to (4)) to [sequence v]\n\t\t\t\tswitch costume to (item (last v) of [sequence v]\n\t\t\t\twait (1) secs\n\t\t\tend\n\t\t\twait until < (length of [sequence v]) = [0]>\n\t\t\tbroadcast [won v] and wait\n\t\t\tchange [score v] by (1)\n\t\tend", 
+                    "text": "Finally, you need to add a `forever` loop around the code to generate the sequence, so that a new sequence is created for each level. This is how your character's code should look:"
+                }, 
+                {
+                    "text": "Get your friends to test out your game. Remember to hide the `sequence` list before they play it!"
+                }
+            ], 
+            "description": "So far, the player only has to remember 5 colours. Let's improve your game, so that the length of the sequence increases.", 
+            "number": "3", 
+            "title": "Multiple levels"
+        }, 
+        {
+            "components": [
+                {
+                    "text": "+ Add 2 new variables to your project, called `high score` ."
+                }, 
+                {
+                    "blocks": "when I receive [red v]\n\t\tif <(item (1 v) of [sequence v])=[1]> then\n\t\t\tdelete (1 v) of [sequence v]\n\t\telse\n\t\t\tsay [Game over!] for (1) secs\n\t\t\tif < (score) > (high score) > then\n\t\t\t\tset [high score v] to (score)\n\t\t\t\task [High score! What is your name?] and wait\n\t\t\t\tset [name v] to (answer)\n\t\t\tend\n\t\t\tstop [all v]\n\t\tend", 
+                    "text": "If ever the game ends (by pressing the wrong button), you need to check whether the player's score is higher than the current high score. If it is, you need to save the score as the high score, and store the name of the player. Here's how your red button should look:"
+                }, 
+                {
+                    "image": "https://raw.githubusercontent.com/CodeClub/scratch-curriculum/master/en-GB/Term%202/Memory/colour-same.png", 
+                    "text": "You'll need to add this new code to the other 3 buttons too! Have you noticed that the 'Game over' code in each of the 4 buttons is exactly the same?"
+                }, 
+                {
+                    "image": "https://raw.githubusercontent.com/CodeClub/scratch-curriculum/master/en-GB/Term%202/Memory/colour-more.png", 
+                    "text": "If ever you need to change any of this code, such as adding a sound or changing the 'Game over!' message, you'd have to change it 4 times! That could get annoying, and waste a lot of time.\n\n\tInstead, you can define your own blocks, and reuse them in your project! To do this, click `more blocks` , and then 'Make a block'. Call this new block 'Game over'."
+                }, 
+                {
+                    "image": "https://raw.githubusercontent.com/CodeClub/scratch-curriculum/master/en-GB/Term%202/Memory/colour-make-block.png", 
+                    "text": "Add the code from the `else` block from the red button to the new block that appears:"
+                }, 
+                {
+                    "image": "https://raw.githubusercontent.com/CodeClub/scratch-curriculum/master/en-GB/Term%202/Memory/colour-use-block.png", 
+                    "text": "You've now made a new _function_ called `Game over` block onto the 4 scripts for the buttons."
+                }, 
+                {
+                    "image": "https://raw.githubusercontent.com/CodeClub/scratch-curriculum/master/en-GB/Term%202/Memory/colour-cough.png", 
+                    "text": "Now add a sound for when the wrong button is pressed. You only need to add this code _once_ in the `Game over` block that you made, and not 4 separate times!"
+                }
+            ], 
+            "description": "Let's save the high score, so that you can play against your friends.", 
+            "number": "4", 
+            "title": "High score"
+        }, 
+        {
+            "challenge": true, 
+            "components": [
+                {
+                    "image": "https://raw.githubusercontent.com/CodeClub/scratch-curriculum/master/en-GB/Term%202/Memory/colour-more-blocks.png", 
+                    "text": "Can you make another custom block, that is used by each button?"
+                }
+            ], 
+            "description": "Do you notice any other code that is the same for all 4 buttons?", 
+            "number": "", 
+            "title": "Making more blocks"
+        }, 
+        {
+            "challenge": true, 
+            "components": [
+                {
+                    "image": "https://raw.githubusercontent.com/CodeClub/scratch-curriculum/master/en-GB/Term%202/Memory/colour-white.png", 
+                    "text": "Can you add another plain white costume to your character, which is displayed at the start of your game, and when the player is trying to copy the sequence?"
+                }
+            ], 
+            "description": "Have you noticed that your game starts with your character showing one of the 4 colours, and that they always display the last colour in the sequence while the player is repeating the sequence?", 
+            "number": "", 
+            "title": "Another costume"
+        }, 
+        {
+            "challenge": true, 
+            "components": [
+                {
+                    "text": "You could even add a 'hard' mode, which makes use of a 5th drum!"
+                }
+            ], 
+            "description": "Can you allow your player to choose between 'easy mode' (using just the red and blue drums) and 'normal mode' (which uses all 4 drums)?", 
+            "number": "", 
+            "title": "Difficulty level"
+        }
+    ], 
+    "title": "Memory"
+}

@@ -41,11 +41,11 @@
         {
             "number": 3,
             "title": "Add the pipes",
-            "image": "flappy_bird/filled_pipe.png",
+            "image": "flappy_bird/pipe_filled.png",
             "description": "Next we'll add some obstacles for Flappy to fly through",
             "components": [
                 {
-                    "text": "Click on the **Paint new sprite** button.",
+                    "text": "Click on the **Paint new sprite** button",
                     "image" : "scratch/paint_new_sprite.png"
                 },
                 {
@@ -66,7 +66,7 @@
                 },
                 {
                     "text": "Click and drag two boxes to create the pipe shown",
-                    "image": "flappy_bird/basic_pipe.png"
+                    "image": "flappy_bird/pipe_basic.png"
                 },
                 {
                     "text": "Select a **Light Green** from the color pallet",
@@ -74,7 +74,31 @@
                 },
                 {
                     "text": "Click and drag two inner boxes to create the pipe shown",
-                    "image": "flappy_bird/filled_pipe.png"
+                    "image": "flappy_bird/pipe_filled.png"
+                },
+                {
+                    "text": "Click **Select** button",
+                    "image": "scratch/vector_select.png"
+                },
+                {
+                    "text": "Drag a box around the pipe to **select it**",
+                    "image": "flappy_bird/pipe_selected.png"
+                },
+                {
+                    "text": "Click **Group** button to group the rectangles",
+                    "image": "scratch/vector_group.png"
+                },
+                {
+                    "text": "Click **Duplicate** button then click the pipe",
+                    "image": "scratch/vector_duplicate.png"
+                },
+                {
+                    "text": "**Rotate the new pipe** by clicking and dragging the top handle",
+                    "image": "flappy_bird/pipe_selected.png"
+                },
+                {
+                    "text": "Position the second pipe to look like the picture shown",
+                    "image": "flappy_bird/pipe_double.png"
                 },
                 {
                     "text": "Click the **i** button on your sprite to name it",
@@ -89,11 +113,16 @@
         {
             "components": [
                 {
-                    "text": "+ Click on your **Pipe** sprite and select the `Scripts` tab."
+                    "text": "Select the `Scripts` tab of your **Pipe** sprite",
+                    "image": "scratch/scripts_tab.png"
                 },
                 {
-                    "blocks": "when FLAG clicked\n        hide\n        set size to (200)%\n        forever\n            create clone of [myself v]\n            wait (2) secs\n\n    when I start as a clone\n        go to x: (240) y: (pick random (-80) to (80))\n        show\n        repeat (120)\n            change x by (-4)\n        end\n        delete this clone",
-                    "text": "Add the following scripts:"
+                    "blocks": "when FLAG clicked\nhide\nforever\n\tcreate clone of [myself v]\n\twait (2) secs\nend",
+                    "text": "Hide the Pipe sprite and start making clones"
+                },
+                {
+                    "blocks": "when I start as a clone\ngo to x: (240) y: (pick random (-240) to (80))\nshow\nrepeat (120)\n\tchange x by (-4)\nend\ndelete this clone",
+                    "text": "When the sprite starts as a clone move across the screen"
                 }
             ],
             "description": "Next we'll make the pipes move and arrange them randomly to provide an obstacle course for Flappy.",

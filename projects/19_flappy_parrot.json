@@ -111,60 +111,61 @@
             ]
         },
         {
+            "number": 4,
+            "title": "Make the pipes move",
+            "image": "flappy_bird/pipes_move.png",
+            "description": "Next we'll make the pipes move and arrange them randomly to provide an obstacle course for Flappy.",
             "components": [
                 {
                     "text": "Select the `Scripts` tab of your **Pipe** sprite",
                     "image": "scratch/scripts_tab.png"
                 },
                 {
-                    "blocks": "when FLAG clicked\nhide\nforever\n\tcreate clone of [myself v]\n\twait (2) secs\nend",
-                    "text": "Hide the Pipe sprite and start making clones"
+                    "text": "Hide the Pipe sprite and start making clones",
+                    "blocks": "when FLAG clicked\nhide\nforever\n\tcreate clone of [myself v]\n\twait (2) secs\nend"
                 },
                 {
-                    "blocks": "when I start as a clone\ngo to x: (240) y: (pick random (-240) to (80))\nshow\nrepeat (120)\n\tchange x by (-4)\nend\ndelete this clone",
-                    "text": "When the sprite starts as a clone move across the screen"
-                }
-            ],
-            "description": "Next we'll make the pipes move and arrange them randomly to provide an obstacle course for Flappy.",
-            "number": 4,
-            "tests": [
+                    "text": "When the sprite starts as a clone move across the screen",
+                    "blocks": "when I start as a clone\ngo to x: (240) y: (pick random (-240) to (80))\nshow\nrepeat (120)\n\tchange x by (-4)\nend\ndelete this clone"
+                },
                 {
-                    "text": "__Click the green flag__, do pipes appear with gaps to fly through at different heights? If you find it difficult to navigate Flappy through the pipes without touching them, you can make the gap bigger in the **pipe** sprite by editing the costume."
+                    "text": "If the pipes are not big enough select the **Grow** tool and click the pipes",
+                    "image": "scratch/grow.png"
+                },
+                {
+                    "text": "**Click the green flag** - Do pipes appear with gaps to fly through at different heights?"
+                },
+                {
+                    "text" : "If the gap between the pipes is too small you can make the gap bigger in the **Pipe** sprite by editing the costume"
                 }
-            ],
-            "title": "Make the pipes move"
+            ]
         },
         {
+            "number": 5,
+            "title": "Detect collision with the pipes",
+            "image": "flappy_bird/pipe_collision.png",
+            "description": "To make the game a challenge, the player needs to guide Flappy through the gaps without touching the pipes or the edges of the screen",
             "components": [
                 {
-                    "text": "+ Let's add a sound to play when Flappy collides. Click on the **Flappy** sprite then on the `Sounds` tab."
+                    "text": "Select the **Flappy** sprite and click on the **Scripts** tab",
+                    "image": "scratch/scripts_tab.png"
                 },
                 {
-                    "text": "Click the `Choose sound from library` button."
+                    "text": "Add some blocks to detect if Flappy hits something",
+                    "blocks": "when FLAG clicked\nwait until ((touching [edge v]?) or (touching [Pipe v]?))\nsay [Game Over!]\nbroadcast [GameOver v]\nstop [other scripts in sprite v]"
                 },
                 {
-                    "text": "Pick a collision sound for **Flappy**. The **screech** sound is good."
+                    "text": "Select the **Pipe** sprite and click on the **Scripts** tab",
+                    "image": "scratch/scripts_tab.png"
                 },
                 {
-                    "text": "Now click back on the `Scripts` tab."
+                    "text": "Add some blocks to stop scripts when the game is over",
+                    "blocks": "when I receive [GameOver v]\n        stop [other scripts in sprite v]"
                 },
                 {
-                    "blocks": "when FLAG clicked\n        wait until ((touching [edge v]?) or (touching [Pipe v]?))\n        play sound [screech v]\n        say [Game Over!]\n        broadcast [GameOver v]\n        stop [other scripts in sprite v]",
-                    "text": "Add the following script:"
-                },
-                {
-                    "blocks": "when I receive [GameOver v]\n        stop [other scripts in sprite v]",
-                    "text": "Click on the **Pipe** sprite and add a script:"
+                    "text": "**Click the green flag** - Does the game end when Flappy touches a pipe or the edge of the screen?"
                 }
-            ],
-            "description": "To make the game a challenge, the player needs to guide Flappy through the gaps without touching the pipes or the edges of the screen. Now we'll add some blocks to detect if Flappy hits something.",
-            "number": 5,
-            "tests": [
-                {
-                    "text": "__Click the green flag__, does the game end when Flappy touches a pipe or the edge of the screen?"
-                }
-            ],
-            "title": "Detect collision with the pipes"
+            ]
         },
         {
             "components": [

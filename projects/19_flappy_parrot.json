@@ -1,220 +1,236 @@
 {
-    "description": "__In this project we\u2019ll make our own version of the highly popular mobile game Flappy Bird. This project requires Scratch 2.0.__\n\nPress the space bar to flap and try to navigate through the gaps in the pipes!",
-    "image": "Additional_Projects/Flappy_Parrot/flappy_screenshot.png",
-    "name": "flappy_parrot",
     "number": 19,
-    "show": false,
+    "show": true,
+    "title": "Flappy Bird",
+    "description": "Create a Scratch version of Flappy Bird",
+    "image": "flappy_bird/flappy_bird.png",
+    "link": "https://scratch.mit.edu/projects/93151378/#editor",
+    "name": "flappy_bird",
     "steps": [
         {
-            "components": [
-                {
-                    "text": "+ Start a new Scratch project. Delete the cat by right-clicking it and selecting Delete"
-                },
-                {
-                    "text": "Replace the background with an outdoor landscape. **desert** is a good choice."
-                },
-                {
-                    "text": "Add the Flappy character. You'll need a sprite with costumes for wings up and wings down. **parrot** is a good choice."
-                },
-                {
-                    "text": "Change the name of your sprite to __Flappy__."
-                },
-                {
-                    "blocks": "when FLAG clicked\n        go to x: (-50) y: (0)\n        forever\n            change y by (-3)",
-                    "text": "Give Flappy the following script:"
-                }
-            ],
-            "description": "",
+            "title": "Make Flappy Bird fall",
             "number": "1",
-            "tests": [
-                {
-                    "text": "__Click the green flag__, does Flappy start in the middle of the screen and then fall to the bottom?"
-                }
-            ],
-            "title": "Make Flappy fall"
-        },
-        {
+            "image" : "flappy_bird/falling.png",
+            "description": "Use a forever loop to make Flappy Bird fall",
             "components": [
                 {
-                    "text": "+ Click on the __Costumes__ tab and name the costumes **wings up** and **wings down**."
+                    "text": "Open the **Scratch Starter Project**"
                 },
                 {
-                    "blocks": "when [space v] key pressed\n        switch costume to [wings down v]\n        repeat (10)\n            change y by (6)\n        end\n        switch costume to [wings up v]\n        repeat (10)\n            change y by (6)\n        end",
-                    "text": "Now switch back to the __Scripts__ tab and add this script:"
+                    "text": "Add the following script to your Flappy sprite"
+                },
+                {
+                    "blocks": "when FLAG clicked\ngo to x: (-50) y: (0)\nforever\n\tchange y by (-3)\n\tpoint in direction [100 v]\nend"
+                },
+                {
+                    "text": "**Click the Green Flag** - Does Flappy Bird start in the middle of the screen and then fall to the bottom?"
                 }
-            ],
-            "description": "Next, we want Flappy to flap upwards when you press the space bar.",
+            ]
+        },
+        {
+            "title": "Make Flappy Bird flap",
             "number": "2",
-            "tests": [
-                {
-                    "text": "__Click the green flag__, are you able to control Flappy with the space bar? Do you notice that sometimes you press the space bar but Flappy doesn't move? We'll fix that next..."
-                }
-            ],
-            "title": "Make Flappy fly"
-        },
-        {
+            "image" : "flappy_bird/flapping.png",
+            "description": "Make Flappy flap upwards when you press the space bar",
             "components": [
                 {
-                    "text": "+ Click on the `Paint new sprite` button."
+                    "text": "Change your **Flappy falling script** to the following"
                 },
                 {
-                    "text": "Name your costume **pipe**."
+                    "blocks": "when FLAG clicked\ngo to x: (-50) y: (0)\nforever\n\tif <key [space v] pressed?> then\n\t\tnext costume\n\t\tchange y by (9)\n\t\tpoint in direction [80 v]\n\telse\n\t\tchange y by (-3)\n\t\tpoint in direction [100 v]\n\tend\nend"
                 },
                 {
-                    "text": "If the costume is in `Bitmap Mode` button."
-                },
-                {
-                    "text": "Click on the `Zoom -` so that you can see the entire drawing area."
-                },
-                {
-                    "text": "Click on the `Rectangle` button."
-                },
-                {
-                    "image": "Additional_Projects/Flappy_Parrot/pipe_design.png",
-                    "text": "Click and drag two boxes, one from the top middle and one from the bottom middle as shown:"
-                },
-                {
-                    "text": "You can shade your pipes by clicking on the `Color a shape` button. Choose two shades of the same colour one for the foreground and one for the background. When you click to fill the shapes, the colours will fade between your chosen colours."
-                },
-                {
-                    "text": "Name your sprite **Pipe**."
+                    "text": "**Click the Green Flag** - Does Flappy Bird fly when you press the space bar?"
                 }
-            ],
-            "description": "Next we'll add some obstacles for Flappy to fly through.",
+            ]
+        },
+        {
             "number": 3,
-            "title": "Add the pipes"
-        },
-        {
+            "title": "Add the pipes",
+            "image": "flappy_bird/pipe_filled.png",
+            "description": "Next we'll add some obstacles for Flappy to fly through",
             "components": [
                 {
-                    "text": "+ Click on your **Pipe** sprite and select the `Scripts` tab."
+                    "text": "Click on the **Paint new sprite** button",
+                    "image" : "scratch/paint_new_sprite.png"
                 },
                 {
-                    "blocks": "when FLAG clicked\n        hide\n        set size to (200)%\n        forever\n            create clone of [myself v]\n            wait (2) secs\n\n    when I start as a clone\n        go to x: (240) y: (pick random (-80) to (80))\n        show\n        repeat (120)\n            change x by (-4)\n        end\n        delete this clone",
-                    "text": "Add the following scripts:"
+                    "text": "If the costume is in `Bitmap Mode` click **Convert to vector**",
+                    "image" : "scratch/convert_to_vector.png"
+                },
+                {
+                    "text": "Click on the **Rectangle** button",
+                    "image": "scratch/vector_rectangle.png"
+                },
+                {
+                    "text": "Click **Solid Fill** button to draw a solid rectangle",
+                    "image": "scratch/rectangle_fill.png"
+                },
+                {
+                    "text": "Select a **Dark Green** from the color pallet",
+                    "image": "scratch/color_pallet.png"
+                },
+                {
+                    "text": "Click and drag two boxes to create the pipe shown",
+                    "image": "flappy_bird/pipe_basic.png"
+                },
+                {
+                    "text": "Select a **Light Green** from the color pallet",
+                    "image": "scratch/color_pallet.png"
+                },
+                {
+                    "text": "Click and drag two inner boxes to create the pipe shown",
+                    "image": "flappy_bird/pipe_filled.png"
+                },
+                {
+                    "text": "Click **Select** button",
+                    "image": "scratch/vector_select.png"
+                },
+                {
+                    "text": "Drag a box around the pipe to **select it**",
+                    "image": "flappy_bird/pipe_selected.png"
+                },
+                {
+                    "text": "Click **Group** button to group the rectangles",
+                    "image": "scratch/vector_group.png"
+                },
+                {
+                    "text": "Click **Duplicate** button then click the pipe",
+                    "image": "scratch/vector_duplicate.png"
+                },
+                {
+                    "text": "**Rotate the new pipe** by clicking and dragging the top handle",
+                    "image": "flappy_bird/pipe_selected.png"
+                },
+                {
+                    "text": "Position the second pipe to look like the picture shown",
+                    "image": "flappy_bird/pipe_double.png"
+                },
+                {
+                    "text": "Click the **i** button on your sprite to name it",
+                    "image": "scratch/sprite_information.png"
+                },
+                {
+                    "text": "Name your sprite **Pipe**",
+                    "image": "scratch/sprite_settings.png"
                 }
-            ],
-            "description": "Next we'll make the pipes move and arrange them randomly to provide an obstacle course for Flappy.",
+            ]
+        },
+        {
             "number": 4,
-            "tests": [
-                {
-                    "text": "__Click the green flag__, do pipes appear with gaps to fly through at different heights? If you find it difficult to navigate Flappy through the pipes without touching them, you can make the gap bigger in the **pipe** sprite by editing the costume."
-                }
-            ],
-            "title": "Make the pipes move"
-        },
-        {
+            "title": "Make the pipes move",
+            "image": "flappy_bird/pipes_move.png",
+            "description": "Next we'll make the pipes move and arrange them randomly to provide an obstacle course for Flappy.",
             "components": [
                 {
-                    "text": "+ Let's add a sound to play when Flappy collides. Click on the **Flappy** sprite then on the `Sounds` tab."
+                    "text": "Select the `Scripts` tab of your **Pipe** sprite",
+                    "image": "scratch/scripts_tab.png"
                 },
                 {
-                    "text": "Click the `Choose sound from library` button."
+                    "text": "Hide the Pipe sprite and start making clones"
                 },
                 {
-                    "text": "Pick a collision sound for **Flappy**. The **screech** sound is good."
+                    "blocks": "when FLAG clicked\nhide\nforever\n\tcreate clone of [myself v]\n\twait (2) secs\nend"
                 },
                 {
-                    "text": "Now click back on the `Scripts` tab."
+                    "text": "When the sprite starts as a clone move across the screen"
                 },
                 {
-                    "blocks": "when FLAG clicked\n        wait until ((touching [edge v]?) or (touching [Pipe v]?))\n        play sound [screech v]\n        say [Game Over!]\n        broadcast [GameOver v]\n        stop [other scripts in sprite v]",
-                    "text": "Add the following script:"
+                    "blocks": "when I start as a clone\ngo to x: (240) y: (pick random (-240) to (80))\nshow\nrepeat (120)\n\tchange x by (-4)\nend\ndelete this clone"
                 },
                 {
-                    "blocks": "when I receive [GameOver v]\n        stop [other scripts in sprite v]",
-                    "text": "Click on the **Pipe** sprite and add a script:"
+                    "text": "If the pipes are not big enough select the **Grow** tool and click the pipes",
+                    "image": "scratch/grow.png"
+                },
+                {
+                    "text": "**Click the green flag** - Do pipes appear with gaps to fly through at different heights?"
+                },
+                {
+                    "text" : "If the gap between the pipes is too small you can make the gap bigger in the **Pipe** sprite by editing the costume"
                 }
-            ],
-            "description": "To make the game a challenge, the player needs to guide Flappy through the gaps without touching the pipes or the edges of the screen. Now we'll add some blocks to detect if Flappy hits something.",
+            ]
+        },
+        {
             "number": 5,
-            "tests": [
-                {
-                    "text": "__Click the green flag__, does the game end when Flappy touches a pipe or the edge of the screen?"
-                }
-            ],
-            "title": "Detect collision with the pipes"
-        },
-        {
+            "title": "Detect collision with the pipes",
+            "image": "flappy_bird/pipe_collision.png",
+            "description": "To make the game a challenge, the player needs to guide Flappy through the gaps without touching the pipes or the edges of the screen",
             "components": [
                 {
-                    "text": "+ Let's add a sound to play when Flappy scores a point. Click on the **Pipe** sprite add a score sound. **bird** is a good choice."
+                    "text": "Select the **Flappy** sprite and click on the **Scripts** tab",
+                    "image": "scratch/scripts_tab.png"
                 },
                 {
-                    "text": "Now click back on the `Scripts` tab."
+                    "text": "Add some blocks to detect if Flappy hits something"
                 },
                 {
-                    "text": "Make a new variable `For all sprites` ."
+                    "blocks": "when FLAG clicked\nwait until ((touching [edge v]?) or (touching [Pipe v]?))\nsay [Game Over!]\nbroadcast [GameOver v]\nstop [other scripts in sprite v]"
                 },
                 {
-                    "text": "Add a block to set the score to 0 when the flag is clicked."
+                    "text": "Select the **Pipe** sprite and click on the **Scripts** tab",
+                    "image": "scratch/scripts_tab.png"
                 },
                 {
-                    "blocks": "when I start as a clone\n        wait until <(x position) < ([x position v] of [Flappy v])>\n        change [score v] by (1)\n        play sound [bird v]",
-                    "text": "Add the following block:"
+                    "text": "Add some blocks to stop scripts when the game is over",
+                    "blocks": "when I receive [GameOver v]\n        stop [other scripts in sprite v]"
+                },
+                {
+                    "text": "**Click the green flag** - Does the game end when Flappy touches a pipe or the edge of the screen?"
                 }
-            ],
-            "description": "The player should score a point every time Flappy makes it though a pipe. Let's add that next.",
-            "extensions": [
-                {
-                    "text": "+ __How many ways can you make this game easier or harder?__"
-                },
-                {
-                    "text": "__Well done you\u2019ve finished the basic game. There are more things you can do to your game though. Have a go at these challenges!__"
-                }
-            ],
+            ]
+        },
+        {
             "number": 6,
-            "tests": [
-                {
-                    "text": "__Click the green flag__, does the player score points for flying Flappy through the pipes?"
-                }
-            ],
-            "title": "Add scoring"
-        },
-        {
-            "challenge": true,
+            "title": "Add scoring",
+            "image": "flappy_bird/flappy_score.png",
+            "description": "The player should score a point every time Flappy makes it though a pipe",
             "components": [
                 {
-                    "blocks": "when I receive [GameOver v]\n        if <(score) > (hi-score)> then\n            set [hi-score v] to (score)\n        end\n        stop [other scripts in sprite v]",
-                    "text": "+ when the game is over check if you need to set a new high score:"
+                    "text": "Select the **Pipe** sprite and click on the **Scripts** tab",
+                    "image": "scratch/scripts_tab.png"
+                },
+                {
+                    "text": "**Make a variable** called score *for all sprites*",
+                    "image": "scratch/make_a_variable.png",
+                    "blocks": "(score)"
+                },
+                {
+                    "text": "Add a block to set the score to 0 when the flag is clicked",
+                    "blocks": "when FLAG clicked\nset (score) to (0)"
+                },
+                {
+                    "text": "Add blocks to detect when Flappy has passed the pipes"
+                },
+                {
+                    "blocks": "when I start as a clone\nwait until <(x position) < ([x position v] of [Flappy v])>\nchange [score v] by (1)"
+                },
+                {
+                    "text": "**Click the green flag** - Does the player score points for flying Flappy through the pipes?"
                 }
-            ],
-            "description": "+ Make a new variable and tick the `Cloud variable (stored on server)` {.blockgrey} box. Call the variable `hi-score` {.blockorange}",
-            "number": "1",
-            "title": "add a high score"
+            ]
         },
         {
+            "number": 1,
             "challenge": true,
+            "title": "Add a high score",
+            "image": "flappy_bird/high_score.png",
+            "description": "Record players high score online",
             "components": [
                 {
-                    "text": "+ Add a new variable `For this sprite only` ."
+                    "text": "**Make a variable**",
+                    "image": "scratch/make_a_variable.png"
                 },
                 {
-                    "text": "Change Flappy's falling script:\n```blocks\n    when FLAG clicked\n        set [rise v] to [0]\n        go to x"
+                    "text": "Call the variable hi-score and tick the `Cloud variable (stored on server)`",
+                    "blocks": "(hi-score)"
+                },
+                {
+                    "text": "When the game is over check if you need to set a new high score"
+                },
+                {
+                    "blocks": "when I receive [GameOver v]\nif <(score) > (hi-score)> then\n\tset [hi-score v] to (score)\nend\nstop [other scripts in sprite v]"
                 }
-            ],
-            "description": "When something falls under gravity it doesn't usually fall at a fixed rate. For this challenge we will make Flappy fall as if under gravity.",
-            "number": "2",
-            "title": "add gravity"
-        },
-        {
-            "challenge": true,
-            "components": [
-                {
-                    "text": "+ Replace the `broadcast GameOver` "
-                },
-                {
-                    "blocks": "when I receive [Fall v]\n        repeat (10)\n            turn ccw (5) degrees\n\n    when I receive [Fall v]\n        repeat until <(y position) < [-180]>\n            change y by (rise)\n            change [rise v] by (-0.4)\n        end\n        hide\n        broadcast [GameOver v]",
-                    "text": "Now add the following scripts:"
-                },
-                {
-                    "text": "Don't forget to add a `show` block and reset Flappy's direction when the game restarts."
-                }
-            ],
-            "description": "When the player loses make Flappy fall off the bottom of the screen before ending the game.",
-            "number": "3",
-            "title": "fall off screen"
+            ]
         }
-    ],
-    "title": "Flappy Parrot"
+    ]
 }

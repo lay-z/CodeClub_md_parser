@@ -3,8 +3,8 @@
     "show": true,
     "name": "castle_siege",
     "title": "Castle Siege",
-    "description": "In this project you're going to make a game in which you have to throw fireballs at a target. You'll use the mouse pointer to angle the fireball and the spacebar to choose the fireball's power.\n\n<div class=\"scratch-preview\">\n  <iframe allowtransparency=\"true\" width=\"485\" height=\"402\" src=\"http://scratch.mit.edu/projects/embed/35172420/?autostart=true\" frameborder=\"0\"></iframe>\n  \n</div>",
-    "image": "Additional_Projects/Snowball_Fight/snow-final.png",
+    "image": "castle_siege/screenshot.png",
+    "description": "Throw fireballs at a target, use the mouse pointer to aim and the spacebar to choose the power",
     "steps": [
         {
             "number": 1,
@@ -93,44 +93,72 @@
         },
         {
             "number": 4,
-            "title": "Realistic movement",
-            "description": "You now have a fireball, but let's make it move a bit more realistically.",
+            "title": "Limit throw power",
+            "image": "castle_siege/limit.png",
+            "description": "Limit your fileball power throw power",
             "components": [
                 {
-                    "text": "Change your fireball code to look like the following, so that the fireball can't be thrown with a power greater than 20"
+                    "text": "Change your fireball code so that the fireball can't be thrown with a power greater than 20"
                 },
                 {
                     "blocks": "repeat until< not <key [space v] pressed?> >\n\t\t\tif < (power) < [20] > then\n\t\t\t\tchange [power v] by (1)\n\t\t\t\twait (0.1) secs\n\t\t\tend\n\t\tend"
-                },
-                {
-                    "text": "Test out your fireball again, and you'll see that the power never gets above 20."
                 },
                 {
                     "text": "Right-click on your power variable, and click 'set slider min and max' to **set the maximum value for the variable's slider**",
                     "image": "scratch/set_slider_min_max.png"
                 },
                 {
-                    "text": "Add this code block to your fireball's `when I receive [throw]` code You can also slow down the fireball, by reducing the power slightly as it flies through the air. "
-                },
-                {
-                    "blocks": "change [power v] by (-0.25)"
-                },
-                {
-                    "blocks": "if < (power) > (0) > then\n\t\t\tchange [power v] by (-0.25)\n\t\tend",
-                    "text": "Test this new code - does it work as you expected? You may notice that the power keeps reducing, and eventually the fireball moves backwards!\n\n\tTo fix this, you can add an `if` block to your code, so that the power is only lowered if it is above 0:"
-                },
-                {
-                    "blocks": "when I receive [throw v]\n\t\trepeat until <touching [edge v]?>\n\t\t\tchange y by (-5)\n\t\tend",
-                    "text": "You're nearly there, but you also need to add some gravity to your fireball, so that it falls to the ground. You can add gravity by just moving the fireball down continuously with this script:"
-                },
-                {
-                    "text": "Test out your fireball again, and you should see that your fireball moves much more realistically."
+                    "text": "**Click the green flag** - Check that the power never gets above 20"
                 }
             ]
         },
         {
             "number": 5,
+            "title": "Reduce power during flight",
+            "image": "castle_siege/limit.png",
+            "description": "Make your fireball power reduce during flight",
+            "components": [
+                {
+                    "text": "**Change your fireballs flight code** to slow down the fireball as it flies through the air"
+                },
+                {
+                    "blocks": "when I receive [throw v]\n\t\tswitch costume to [fireball v]\n\t\trepeat until < touching [edge v]? >\n\t\t\tmove (power) steps\n\t\tchange [power v] by (-0.25)\n\t\tend\n\t\thide"
+                },
+                {
+                    "text": "**Click the green flag** - Does your fireball eventually move backwards?"
+                },
+                {
+                    "text": "To stop your fireball travelling backwards change the code so that the power is only lowered if it is above 0"
+                },
+                {
+                    "blocks": "if < (power) > (0) > then\n\t\t\tchange [power v] by (-0.25)\n\t\tend"
+                },
+                {
+                    "text": "**Click the green flag** - Check that the fireball flies and does not move backwards"
+                }
+            ]
+        },
+        {
+            "number": 6,
+            "title": "Add Gravity",
+            "image": "castle_siege/gravity.png",
+            "description": "Make your fileball fall towards the ground",
+            "components": [
+                {
+                    "text": "Add gravity by moving the fireball down continuously during flight with the following script"
+                },
+                {
+                    "blocks": "when I receive [throw v]\n\t\trepeat until <touching [edge v]?>\n\t\t\tchange y by (-5)\n\t\tend"
+                },
+                {
+                    "text": "**Click the green flag** - Does your fireball move much more realistically?"
+                }
+            ]
+        },
+        {
+            "number": 7,
             "title": "The target",
+            "image": "castle_siege/castle.png",
             "description": "Let's add in a target for your fireballs!",
             "components": [
                 {

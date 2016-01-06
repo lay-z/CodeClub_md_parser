@@ -66,26 +66,27 @@
         {
             "number": 3,
             "title": "Throwing the snowball",
+            "image": "snowball_fight/throw.png",
             "description": "Allow the player to throw the snowball once its direction and power are selected",
             "components": [
                 {
-                    "blocks": "broadcast [throw v] and wait",
-                    "text": "+ Add this code to the _end_ of your snowball script, to broadcast that you're throwing a snowball:\n\n\tHere's how your snowball code should look:"
+                    "text": "Add the following code to the end of your snowball script to broadcast that you're throwing a snowball"
                 },
                 {
-                    "blocks": "when I receive [throw v]\n\t\tswitch costume to [snowball v]\n\t\trepeat until < touching [edge v]? >\n\t\t\tmove (power) steps\n\t\tend\n\t\thide",
-                    "text": "Add this script to your snowball, to move until it reaches the edge of the stage:\n\n\tThe script uses the `power` variable to decide how fast to move."
+                    "blocks": "broadcast [throw v] and wait"
                 },
                 {
-                    "image": "Additional_Projects/Snowball_Fight/snow-show.png",
-                    "text": "Now that you're hiding the snowball when it touches the edge, add code to `show` costume."
+                    "text": "Add the following script to your snowball, to move until it reaches the edge of the stage"
                 },
                 {
-                    "text": "Test out your snowball a few times. Does it move at different angles and different speeds?"
+                    "blocks": "when I receive [throw v]\n\t\tswitch costume to [snowball v]\n\t\trepeat until < touching [edge v]? >\n\t\t\tmove (power) steps\n\t\tend\n\t\thide"
                 },
                 {
-                    "image": "Additional_Projects/Snowball_Fight/snow-throw.png",
-                    "text": "If you want to be able to throw your snowball lots of times, just add a `forever` code."
+                    "text": "Add this block to the begining of your snowball script to `show` the snowball",
+                    "blocks": "show"
+                },
+                {
+                    "text": "**Click the green flag** - Can you make your snowball move at different angles and different speeds?"
                 }
             ]
         },
@@ -95,15 +96,17 @@
             "description": "You now have a snowball, but let's make it move a bit more realistically.",
             "components": [
                 {
-                    "blocks": "repeat until< not <key [space v] pressed?> >\n\t\t\tif < (power) < [20] > then\n\t\t\t\tchange [power v] by (1)\n\t\t\t\twait (0.1) secs\n\t\t\tend\n\t\tend",
-                    "text": "+ First, let's set a maximum power level, so that the snowball can't be thrown too hard.\n\n\tIn your snowball's `when flag clicked` code, we need to increase the power only if it's less than 20. Change your code to:"
+                    "text": "Change your snowball code to look like the following, so that the snowball can't be thrown with a power greater than 20"
+                },
+                {
+                    "blocks": "repeat until< not <key [space v] pressed?> >\n\t\t\tif < (power) < [20] > then\n\t\t\t\tchange [power v] by (1)\n\t\t\t\twait (0.1) secs\n\t\t\tend\n\t\tend"
                 },
                 {
                     "text": "Test out your snowball again, and you'll see that the power never gets above 20."
                 },
                 {
-                    "image": "Additional_Projects/Snowball_Fight/snow-minmax.png",
-                    "text": "Now that your snowball's maximum power is 20, you can set this as the maximum value for the variable's slider too. Right-click on your power variable, and click 'set slider min and max'."
+                    "text": "Right-click on your power variable, and click 'set slider min and max' to **set the maximum value for the variable's slider**",
+                    "image": "scratch/set_slider_min_max.png"
                 },
                 {
                     "blocks": "change [power v] by (-0.25)",

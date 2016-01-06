@@ -2,7 +2,7 @@
 port = 2000
 
 projects = {
-    'development': ['flappy_parrot'],
+    'development': ['flappy_bird'],
     'production': []
     }
 

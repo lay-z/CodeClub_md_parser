@@ -4,6 +4,7 @@
     "name": "castle_siege",
     "title": "Castle Siege",
     "image": "castle_siege/screenshot.png",
+    "link": "https://scratch.mit.edu/projects/93215630/#editor",
     "description": "Throw fireballs at a target, use the mouse pointer to aim and the spacebar to choose the power",
     "steps": [
         {
@@ -187,10 +188,60 @@
                     "text": "Add this code to your castle, so that it says \"Hit\" when it gets hit"
                 },
                 {
-                    "blocks": "when flag clicked\n\t\tforever\n\t\t\tif < touching [fireball v]? > then\n\t\t\t\tsay [Hit] for (1) secs\n\t\t\tend\n\t\tend"
+                    "blocks": "when flag clicked\n\t\tforever\n\t\t\tif < touching [fireball v]? > then\n\t\t\t\tbroadcast [hit]\n\t\t\tsay [Hit] for (1) secs\n\t\t\tend\n\t\tend"
                 },
                 {
                     "text": "**Click the green flag** - Does your castle know when its been hit?"
+                }
+            ]
+        },
+        {
+            "number": 8,
+            "title": "Burning buildings",
+            "image": "castle_siege/burning.png",
+            "description": "Make flame appear where your building has been hit",
+            "components": [
+                {
+                    "text": "Select the `Scripts` tab of your **Flame** sprite",
+                    "image": "scratch/scripts_tab.png"
+                },
+                {
+                    "text": "Add the following code blocks to your sprite"
+                },
+                {
+                    "blocks": "when FLAG clicked\nhide"
+                },
+                {
+                    "blocks": "when I receive [hit v]\ncreate clone of [myself v]"
+                },
+                {
+                    "blocks": "when I start as a clone\ngo to[fireball v]\nshow"
+                },
+                {
+                    "text": "**Click the green flag** - Does flame appear where your buildings are hit?"
+                }
+            ]
+        },
+        {
+            "number": 2,
+            "challenge": true,
+            "title": "Keeping score",
+            "image": "castle_siege/score.png",
+            "description": "Can you keep score of how many times each building has been hit?",
+            "components": [
+                {
+                    "text": "Create a new variable called `score`",
+                    "image": "scratch/make_a_variable.png",
+                    "blocks": "(score)"
+                },
+                {
+                    "text": "Increase the score each time a building is hit"
+                },
+                {
+                    "text": "Could you count the hits per building and make it collapse after 3 hits?"
+                },
+                {
+                    "text": "**Click the green flag** - Does your score increase when you hit buildings?"
                 }
             ]
         }

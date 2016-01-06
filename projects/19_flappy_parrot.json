@@ -3,7 +3,7 @@
     "image": "flappy_bird/flappy_screenshot.png",
     "name": "flappy_parrot",
     "number": 19,
-    "show": false,
+    "show": true,
     "steps": [
         {
             "title": "Make Flappy Bird fall",
@@ -19,7 +19,7 @@
                     "text": "Add this script to your Flappy sprite"
                 },
                 {
-                    "text": "When you click the green flag does Flappy Bird start in the middle of the screen and then fall to the bottom?"
+                    "text": "**Click the Green Flag** - Does Flappy Bird start in the middle of the screen and then fall to the bottom?"
                 }
             ]
         },
@@ -34,41 +34,57 @@
                     "text": "Add this script to your Flappy sprite"
                 },
                 {
-                    "text": "**Click the Green Flag**  Does Flappy fly when you press the space bar?"
+                    "text": "**Click the Green Flag** - Does Flappy Bird fly when you press the space bar?"
                 }
             ]
         },
         {
+            "number": 3,
+            "title": "Add the pipes",
+            "image": "flappy_bird/filled_pipe.png",
+            "description": "Next we'll add some obstacles for Flappy to fly through",
             "components": [
                 {
-                    "text": "Click on the **Paint new sprite** button."
+                    "text": "Click on the **Paint new sprite** button.",
+                    "image" : "scratch/paint_new_sprite.png"
                 },
                 {
-                    "text": "Name your costume **pipe**."
+                    "text": "If the costume is in `Bitmap Mode` click **Convert to vector**",
+                    "image" : "scratch/convert_to_vector.png"
                 },
                 {
-                    "text": "If the costume is in `Bitmap Mode` button."
+                    "text": "Click on the **Rectangle** button",
+                    "image": "scratch/vector_rectangle.png"
                 },
                 {
-                    "text": "Click on the `Zoom -` so that you can see the entire drawing area."
+                    "text": "Click **Solid Fill** button to draw a solid rectangle",
+                    "image": "scratch/rectangle_fill.png"
                 },
                 {
-                    "text": "Click on the `Rectangle` button."
+                    "text": "Select a **Dark Green** from the color pallet",
+                    "image": "scratch/color_pallet.png"
                 },
                 {
-                    "image": "Additional_Projects/Flappy_Parrot/pipe_design.png",
-                    "text": "Click and drag two boxes, one from the top middle and one from the bottom middle as shown:"
+                    "text": "Click and drag two boxes to create the pipe shown",
+                    "image": "flappy_bird/basic_pipe.png"
                 },
                 {
-                    "text": "You can shade your pipes by clicking on the `Color a shape` button. Choose two shades of the same colour one for the foreground and one for the background. When you click to fill the shapes, the colours will fade between your chosen colours."
+                    "text": "Select a **Light Green** from the color pallet",
+                    "image": "scratch/color_pallet.png"
                 },
                 {
-                    "text": "Name your sprite **Pipe**."
+                    "text": "Click and drag two inner boxes to create the pipe shown",
+                    "image": "flappy_bird/filled_pipe.png"
+                },
+                {
+                    "text": "Click the **i** button on your sprite to name it",
+                    "image": "scratch/sprite_information.png"
+                },
+                {
+                    "text": "Name your sprite **Pipe**",
+                    "image": "scratch/sprite_settings.png"
                 }
-            ],
-            "description": "Next we'll add some obstacles for Flappy to fly through.",
-            "number": 3,
-            "title": "Add the pipes"
+            ]
         },
         {
             "components": [

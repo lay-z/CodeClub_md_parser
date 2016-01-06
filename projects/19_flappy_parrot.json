@@ -6,56 +6,42 @@
     "show": false,
     "steps": [
         {
-            "components": [
-                {
-                    "text": "+ Start a new Scratch project. Delete the cat by right-clicking it and selecting Delete"
-                },
-                {
-                    "text": "Replace the background with an outdoor landscape. **desert** is a good choice."
-                },
-                {
-                    "text": "Add the Flappy character. You'll need a sprite with costumes for wings up and wings down. **parrot** is a good choice."
-                },
-                {
-                    "text": "Change the name of your sprite to __Flappy__."
-                },
-                {
-                    "blocks": "when FLAG clicked\n        go to x: (-50) y: (0)\n        forever\n            change y by (-3)",
-                    "text": "Give Flappy the following script:"
-                }
-            ],
-            "description": "",
+            "title": "Make Flappy Bird fall",
             "number": "1",
-            "tests": [
-                {
-                    "text": "__Click the green flag__, does Flappy start in the middle of the screen and then fall to the bottom?"
-                }
-            ],
-            "title": "Make Flappy fall"
-        },
-        {
+            "image" : "flappy_bird/falling.png",
+            "description": "Use a forever loop to make Flappy Bird fall",
             "components": [
                 {
-                    "text": "+ Click on the __Costumes__ tab and name the costumes **wings up** and **wings down**."
+                    "text": "Open the **Scratch Starter Project**"
                 },
                 {
-                    "blocks": "when [space v] key pressed\n        switch costume to [wings down v]\n        repeat (10)\n            change y by (6)\n        end\n        switch costume to [wings up v]\n        repeat (10)\n            change y by (6)\n        end",
-                    "text": "Now switch back to the __Scripts__ tab and add this script:"
-                }
-            ],
-            "description": "Next, we want Flappy to flap upwards when you press the space bar.",
-            "number": "2",
-            "tests": [
+                    "blocks": "when FLAG clicked\ngo to x: (-50) y: (0)\nforever\n\tchange y by (-3)\n\tpoint in direction [100 v]\nend",
+                    "text": "Add this script to your Flappy sprite"
+                },
                 {
-                    "text": "__Click the green flag__, are you able to control Flappy with the space bar? Do you notice that sometimes you press the space bar but Flappy doesn't move? We'll fix that next..."
+                    "text": "When you click the green flag does Flappy Bird start in the middle of the screen and then fall to the bottom?"
                 }
-            ],
-            "title": "Make Flappy fly"
+            ]
+        },
+        {
+            "title": "Make Flappy Bird flap",
+            "number": "2",
+            "image" : "flappy_bird/flapping.png",
+            "description": "Make Flappy flap upwards when you press the space bar",
+            "components": [
+                {
+                    "blocks": "when [space v] key pressed\nrepeat (10)\n\tnext costume\n\tchange y by (9)\n\tpoint in direction [80 v]\nend",
+                    "text": "Add this script to your Flappy sprite"
+                },
+                {
+                    "text": "**Click the Green Flag**  Does Flappy fly when you press the space bar?"
+                }
+            ]
         },
         {
             "components": [
                 {
-                    "text": "+ Click on the `Paint new sprite` button."
+                    "text": "Click on the **Paint new sprite** button."
                 },
                 {
                     "text": "Name your costume **pipe**."

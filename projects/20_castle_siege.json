@@ -92,6 +92,24 @@
             ]
         },
         {
+            "number": 1,
+            "challenge": true,
+            "title": "Multiple throws",
+            "image": "castle_siege/slider.png",
+            "description": "Can you change your game so you dont have to click the green flag each time you throw a fireball",
+            "components": [
+                {
+                    "text": "Make use of a forever loop to throw another fireball after the first"
+                },
+                {
+                    "blocks": "when FLAG clicked\nforever\n\tSOME CODE HERE"
+                },
+                {
+                    "text": "**Click the green flag** - Can you throw more fireballs after the first?"
+                }
+            ]
+        },
+        {
             "number": 4,
             "title": "Limit throw power",
             "image": "castle_siege/limit.png",
@@ -162,39 +180,17 @@
             "description": "Let's add in a target for your fireballs!",
             "components": [
                 {
-                    "image": "Additional_Projects/Snowball_Fight/snow-bear.png",
-                    "text": "+ Add in another sprite to your project."
+                    "text": "Select the `Scripts` tab of your **Castle** sprite",
+                    "image": "scratch/scripts_tab.png"
                 },
                 {
-                    "blocks": "when flag clicked\n\t\tforever\n\t\t\tif < touching [fireball v]? > then\n\t\t\t\tsay [You got me!] for (1) secs\n\t\t\tend\n\t\tend",
-                    "text": "Add this code to your new sprite, so that it says \"You got me!\" when it gets hit:"
+                    "text": "Add this code to your castle, so that it says \"Hit\" when it gets hit"
                 },
                 {
-                    "image": "Additional_Projects/Snowball_Fight/snow-hit.png",
-                    "text": "Test out your new code."
+                    "blocks": "when flag clicked\n\t\tforever\n\t\t\tif < touching [fireball v]? > then\n\t\t\t\tsay [Hit] for (1) secs\n\t\t\tend\n\t\tend"
                 },
                 {
-                    "blocks": "broadcast [new shot v]",
-                    "text": "Let's do a couple of things to make the game harder. First, let's move the bear each time the player throws the fireball.\n\n\tTo do this, first add a `broadcast` loop. This will let your bear know that a new shot is about to be taken."
-                },
-                {
-                    "blocks": "when I receive [new shot v]\n\t\tset x to (pick random (0) to (200))",
-                    "text": "When your bear receives this message, move it to a new random position with this code:"
-                },
-                {
-                    "text": "Test your project by throwing a few fireballs. Does your bear move position each time?"
-                },
-                {
-                    "image": "Additional_Projects/Snowball_Fight/snow-rock.png",
-                    "text": "You can also make your game harder by adding a rock in front of your fireball."
-                },
-                {
-                    "image": "Additional_Projects/Snowball_Fight/snow-ball.png",
-                    "text": "You can now change your fireball code, to stop when it touches the edge of the screen _or_ when it touches the rock. Here's how your fireball code should look:"
-                },
-                {
-                    "image": "Additional_Projects/Snowball_Fight/snow-small.png",
-                    "text": "Finally, you can make your game harder by making your fireball and your bear smaller."
+                    "text": "**Click the green flag** - Does your castle know when its been hit?"
                 }
             ]
         }

@@ -1,2 +1,3 @@
+source venv/bin/activate
 export PYTHON_ENV=production
-./update_development.sh
+python project_updater.py

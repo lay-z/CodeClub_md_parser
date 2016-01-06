@@ -32,7 +32,7 @@ def change_image_path(dictionary,url):
                 change_image_path(item,url)
 
 
-def find_projects():
+def find_projects(environment):
     """Find all projects in the given folder
     """
 
@@ -47,7 +47,7 @@ def find_projects():
         project = json.load(open(projectFilename))
 
         # Change all image references to include full source
-        change_image_path(project,config.imageRoot)
+        change_image_path(project,config.imageRoot[environment])
 
         # Add to list of projects
         projects.append(project)

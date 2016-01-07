@@ -24,10 +24,13 @@
                     "image": "download.png"
                 },
                 {
-                    "text": "When the download finishes double click on the downloaded file"
-                },
-                {
-                    "text": "If any warning message appears about opening the file select `Run` or `Continue`"
+                    "text": "**Open the downloaded file** when the download finishes",
+                    "hidden": {
+                        "lines": [
+                            "**Double click on the file to open it**",
+                            "If any warning message appears about opening the file select `Run` or `Continue`"
+                        ]
+                    }
                 },
                 {
                     "text": "On a Windows computer **Tick Add Python 3.5 to PATH** then click 'Install Now'",
@@ -41,10 +44,13 @@
                     "text": "Follow the on screen instructions to install Python on your computer"
                 },
                 {
-                    "text": "On Windows **Press Windows + S** and type 'IDLE'"
-                },
-                {
-                    "text": "On Mac **Press cmd + S** and type 'IDLE'"
+                    "text": "Search your computer for 'IDLE'",
+                    "hidden": {
+                        "lines": [
+                            "On Windows **Press Windows + S** and type 'idle'",
+                            "On Mac **Press cmd + S** and type 'idle'"
+                        ]
+                    }
                 },
                 {
                     "text": "Open IDLE and a 'Python Shell' window should appear",
@@ -176,7 +182,7 @@
             "number": 4,
             "title": "Using the Command Line",
             "image": "python/terminal.png",
-            "description": "Learn how to use the IDLE interactive Python shell",
+            "description": "Python can be run from the command line which is how its mostly used by developers",
             "components": [
                 {
                     "text": "Make sure you have opened IDLE and you can see a 'Python Shell' window",
@@ -200,6 +206,59 @@
                 },
                 {
                     "text": "This error means that the code is missing a `'` after the string"
+                }
+            ]
+        },
+        {
+            "number": 5,
+            "title": "Install Sublime Text",
+            "image": "sublime/logo.png",
+            "description": "Sublime Text is an advanced text editor used to write computer code",
+            "components": [
+                {
+                    "text": "Open your prefered internet browser and go to <a href=\"http://www.sublimetext.com/3\" target=\"_blank\">http://www.sublimetext.com/3</a>"
+                },
+                {
+                    "text": "Download either the Windows or Mac installer",
+                    "image": "sublime/download.png"
+                },
+                {
+                    "text": "Confirm the download, if asked save the download on your Desktop",
+                    "image": "download.png"
+                },
+                {
+                    "text": "**Open the downloaded file** when the download finishes",
+                    "hidden": {
+                        "lines": [
+                            "**Double click on the file to open it**",
+                            "If any warning message appears about opening the file select `Run` or `Continue`"
+                        ]
+                    }
+                },
+                {
+                    "text": "On a Mac computer drag the Sublime icon into your application folder",
+                    "image": "sublime/mac_install.png"
+                },
+                {
+                    "text": "Follow the on screen instructions to install Sublime on your computer",
+                    "image": "sublime/windows_install.png"
+                },
+                {
+                    "text": "Search your computer for 'Sublime Text'",
+                    "hidden": {
+                        "lines": [
+                            "On Windows **Press Windows + S** and type 'sublime'",
+                            "On Mac **Press cmd + S** and type 'sublime'"
+                        ]
+                    }
+                },
+                {
+                    "text": "Open Sublime Text and a 'Sublime Text' window should appear",
+                    "image": "sublime/window.png"
+                },
+                {
+                    "text": "Did Sublime Text successfully open on your computer?",
+                    "checkmark": true
                 }
             ]
         }

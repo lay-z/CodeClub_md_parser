@@ -48,7 +48,7 @@
                     "hidden": {
                         "lines": [
                             "On Windows **Press Windows + S** and type 'idle'",
-                            "On Mac **Press cmd + S** and type 'idle'"
+                            "On Mac **Press cmd + space** and type 'idle'"
                         ]
                     }
                 },
@@ -152,14 +152,14 @@
                     }
                 },
                 {
-                    "text": "Choose where to save your file and call it `my_first_script.py`",
+                    "text": "Save your Python file on the Desktop and call it `my_first_script.py`",
                     "image": "python/save_file.png",
                     "hidden" : {
                         "text": "When saving Python files only use **letters, numbers and underscrores** as the computer find spaces difficult"
                         }
                 },
                 {
-                    "text": "Did your script sucessfully run and pring out 'Hello Your Name Here'?",
+                    "text": "Did your script sucessfully run and print out 'Hello Your Name Here'?",
                     "checkmark": true
                 },
                 {
@@ -179,33 +179,72 @@
             ]
         },
         {
-            "number": 4,
+            "number": 1,
+            "challenge": true,
             "title": "Using the Command Line",
             "image": "python/terminal.png",
             "description": "Python can be run from the command line which is how its mostly used by developers",
             "components": [
                 {
-                    "text": "Make sure you have opened IDLE and you can see a 'Python Shell' window",
-                    "image": "python/windows_idle.png"
+                    "text": "Open up the command line (click the question mark to see how)",
+                    "hidden": {
+                        "lines": [
+                            "On Windows **Press Windows + S** and type 'cmd'",
+                            "On Mac **Press cmd + space** and type 'terminal'",
+                            "Open either 'CMD.exe' or 'Terminal'"
+                        ]
+                    }
                 },
                 {
-                    "text": "Type the following line where you see `>>>` then press enter",
-                    "code": "print('Hello World!')"
+                    "text": "With the command line open type 'python3' on a mac or 'python' on windows",
+                    "code": "    mac$ python3\nwindows> python"
                 },
                 {
-                    "text": "Did the Python Shell print 'Hello World!' when your pressed enter?",
+                    "text": "Did the Python interpreter start? It should look something like bellow",
+                    "code": "Python 3.5.1 (v3.5.1:37a07cee5969, Dec  5 2015, 21:12:44)\n[GCC 4.2.1 (Apple Inc. build 5666) (dot 3)] on darwin\nType \"help\", \"copyright\", \"credits\" or \"license\" for more information.",
                     "checkmark": true
                 },
                 {
-                    "text": "Type this code into the Python Shell, can you spot the mistake?",
-                    "code": "print('Hello World!)"
+                    "text": "Type this code into the command line and press enter",
+                    "code": ">>> print('Hello World!')"
                 },
                 {
-                    "text": "The following error message should be displayed",
-                    "code": "  File \"<stdin>\", line 1\n    print('hello)\n                ^\nSyntaxError: EOL while scanning string literal"
+                    "text": "Did the Python interpreter print 'Hello World!' when your pressed enter?",
+                    "checkmark": true
                 },
                 {
-                    "text": "This error means that the code is missing a `'` after the string"
+                    "text": "To exit the Python interpreter type this code into the command line and press enter",
+                    "code": ">>> exit()"
+                },
+                {
+                    "text": "Python files can be using the command line, but you need to find the file first",
+                    "image": "python/file.jpg"
+                },
+                {
+                    "text": "To run your Python file navigate to the desktop using this code in the command line",
+                    "code": "    mac$ cd ~/Desktop\nwindows> cd c:\\Users\\YOUR_USERNAME\\Desktop",
+                    "hidden": {
+                        "lines": [
+                            "The `cd` command stands for 'Change Directory'",
+                            "When you start typing a folder address use the `tab` key to automatically complete"
+                        ]
+                    }
+                },
+                {
+                    "text": "Check that 'my_first_script.py' is on the Desktop using the following commands",
+                    "code": "    mac$ ls\nwindows> dir"
+                },
+                {
+                    "text": "Is 'my_first_script.py' on the Desktop? If not save the file again using IDLE",
+                    "checkmark": true
+                },
+                {
+                    "text": "Run your Python file by typing this code into the command line",
+                    "code": "    mac$ python3 my_first_script.py\nwindows> python my_first_script.py"
+                },
+                {
+                    "text": "Does your script run and greet you by the name you provide?",
+                    "checkmark": true
                 }
             ]
         },
@@ -216,7 +255,7 @@
             "description": "Sublime Text is an advanced text editor used to write computer code",
             "components": [
                 {
-                    "text": "Open your prefered internet browser and go to <a href=\"http://www.sublimetext.com/3\" target=\"_blank\">http://www.sublimetext.com/3</a>"
+                    "text": "Open your preferred Internet browser and go to <a href=\"http://www.sublimetext.com/3\" target=\"_blank\">http://www.sublimetext.com/3</a>"
                 },
                 {
                     "text": "Download either the Windows or Mac installer",
@@ -248,7 +287,7 @@
                     "hidden": {
                         "lines": [
                             "On Windows **Press Windows + S** and type 'sublime'",
-                            "On Mac **Press cmd + S** and type 'sublime'"
+                            "On Mac **Press cmd + space** and type 'sublime'"
                         ]
                     }
                 },
@@ -258,6 +297,37 @@
                 },
                 {
                     "text": "Did Sublime Text successfully open on your computer?",
+                    "checkmark": true
+                }
+            ]
+        },
+        {
+            "number": 6,
+            "title": "Python Turtle program",
+            "image": "python/simple_pinwheel.png",
+            "description": "Create a simple pinwheel using the Python Turtle",
+            "components": [
+                {
+                    "text": "Open Sublime Text and a 'Sublime Text' window should appear",
+                    "image": "sublime/window.png"
+                },
+                {
+                    "text": "Does your output look like this?",
+                    "image": "python/simple_pinwheel.png",
+                    "checkmark": true
+                }
+            ]
+        },
+        {
+            "number": 2,
+            "challenge": true,
+            "title": "Colorful Python Turtle",
+            "image": "python/color_pinwheel.png",
+            "description": "Create different colored pinwheels using the Python Turtle",
+            "components": [
+                {
+                    "text": "Does your output look like this?",
+                    "image": "python/color_pinwheel.png",
                     "checkmark": true
                 }
             ]

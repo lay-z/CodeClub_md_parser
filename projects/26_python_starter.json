@@ -9,6 +9,7 @@
         {
             "number": 1,
             "title": "Download and Install Python",
+            "image": "download.png",
             "description": "Download and install Python onto your computer",
             "components": [
                 {
@@ -52,6 +53,153 @@
                 {
                     "text": "Did IDLE successfully open on your computer?",
                     "checkmark": true
+                }
+            ]
+        },
+        {
+            "number": 2,
+            "title": "Using IDLE",
+            "image": "python/logo.png",
+            "description": "Learn how to use the IDLE interactive Python shell",
+            "components": [
+                {
+                    "text": "Make sure you have opened IDLE and you can see a 'Python Shell' window",
+                    "image": "python/windows_idle.png"
+                },
+                {
+                    "text": "Type the following line where you see `>>>` then press enter",
+                    "code": "print('Hello World!')"
+                },
+                {
+                    "text": "Did the Python Shell print 'Hello World!' when your pressed enter?",
+                    "checkmark": true
+                },
+                {
+                    "text": "Type this code into the Python Shell and press enter, can you spot the mistake?",
+                    "code": "prints('Hello World!)"
+                },
+                {
+                    "text": "The following error message should be displayed",
+                    "code": "Traceback (most recent call last):\n  File \"<pyshell#5>\", line 1, in <module>\n    prints\nNameError: name 'prints' is not defined"
+                },
+                {
+                    "text": "This error means Python does not understand the **prints on line 1**"
+                },
+                {
+                    "text": "Can you make the Python Shell print out your name?",
+                    "hidden": {
+                        "text": "If you were called Henry your line should read",
+                        "code": "print('Henry')"
+                    }
+                },
+                {
+                    "text": "The Python Shell works as a powerful calculator, type this code and press enter",
+                    "code": "2 * 10 + 100"
+                },
+                {
+                    "text": "Can you work out hold old you will be in 2048?",
+                    "hidden": {
+                        "text": "If you were 12 your line should read",
+                        "code": "12 + (2048 - 2016)"
+                    }
+                },
+                {
+                    "text": "Did you manage to calculate your age in 2048?",
+                    "checkmark": true
+                }
+            ]
+        },
+        {
+            "number": 3,
+            "title": "Creating Python files",
+            "image": "python/file.jpg",
+            "description": "Python script can be written in a file so you can write more code and save your work",
+            "components": [
+                {
+                    "text": "Make sure you have opened IDLE and you can see a 'Python Shell' window",
+                    "image": "python/windows_idle.png"
+                },
+                {
+                    "text": "Click `File -> New File` to create a new Python file",
+                    "image": "python/new_file.png"
+                },
+                {
+                    "text": "Type the following code into the new file",
+                    "image": "python/first_script.png",
+                    "code": "myName = 'Your Name Here'\nprint('Hello',myName)"
+                },
+                {
+                    "text": "To run the file click `Run -> Run Module`",
+                    "image": "python/run_file.png"
+                },
+                {
+                    "text": "When you run a file it will ask if you want to save, **Click OK** to save the file",
+                    "image": "python/run_save.png",
+                    "hidden" : {
+                        "lines": [
+                            "**To stop Python asking you each time you save**",
+                            "Open IDLE preferences",
+                            "Select the 'General' tab",
+                            "Check 'No Prompt' on Autosave preferences"
+                            ],
+                        "image": "python/save_check.png"
+                    }
+                },
+                {
+                    "text": "Choose where to save your file and call it `my_first_script.py`",
+                    "image": "python/save_file.png",
+                    "hidden" : {
+                        "text": "When saving Python files only use **letters, numbers and underscrores** as the computer find spaces difficult"
+                        }
+                },
+                {
+                    "text": "Did your script sucessfully run and pring out 'Hello Your Name Here'?",
+                    "checkmark": true
+                },
+                {
+                    "text": "Now we can get the computer to ask what your name is, edit your code to look like the following",
+                    "code": "myName = input('What is your name?')\nprint('Hello',myName)"
+                },
+                {
+                    "text": "Now run your code, on Windows **Press F5** on a Mac **Press fn + F5**"
+                },
+                {
+                    "text": "When your script runs **type your name** into the Python Shell then **press enter**"
+                },
+                {
+                    "text": "Does your script now greet you by the name you provide?",
+                    "checkmark": true
+                }
+            ]
+        },
+        {
+            "number": 4,
+            "title": "Using the Command Line",
+            "image": "python/terminal.png",
+            "description": "Learn how to use the IDLE interactive Python shell",
+            "components": [
+                {
+                    "text": "Make sure you have opened IDLE and you can see a 'Python Shell' window",
+                    "image": "python/windows_idle.png"
+                },
+                {
+                    "text": "Type the following line where you see `>>>` then press enter",
+                    "code": "print('Hello World!')"
+                },
+                {
+                    "text": "Did the Python Shell print 'Hello World!' when your pressed enter?",
+                    "checkmark": true
+                },
+                {
+                    "text": "Type this code into the Python Shell, can you spot the mistake?",
+                    "code": "print('Hello World!)"
+                },
+                {
+                    "text": "The following error message should be displayed",
+                    "code": "  File \"<stdin>\", line 1\n    print('hello)\n                ^\nSyntaxError: EOL while scanning string literal"
+                },
+                {
+                    "text": "This error means that the code is missing a `'` after the string"
                 }
             ]
         }

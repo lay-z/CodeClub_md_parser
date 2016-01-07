@@ -1,0 +1,59 @@
+{
+    "number": 26,
+    "show": true,
+    "name": "python_starter",
+    "title": "Python Starter",
+    "description": "Get started with Python on your computer, learn how to install Python and create a simple programme",
+    "image": "python/logo.png",
+    "steps": [
+        {
+            "number": 1,
+            "title": "Download and Install Python",
+            "description": "Download and install Python onto your computer",
+            "components": [
+                {
+                    "text": "Open your prefered internet browser and go to <a href=\"https://www.python.org/downloads/\" target=\"_blank\">https://www.python.org/downloads/</a>"
+                },
+                {
+                    "text": "**Click** download Python 3",
+                    "image": "python/download.png"
+                },
+                {
+                    "text": "Confirm the download, if asked save the download on your Desktop",
+                    "image": "download.png"
+                },
+                {
+                    "text": "When the download finishes double click on the downloaded file"
+                },
+                {
+                    "text": "If any warning message appears about opening the file select `Run` or `Continue`"
+                },
+                {
+                    "text": "On a Windows computer **Tick Add Python 3.5 to PATH** then click 'Install Now'",
+                    "image": "python/windows_installer.png"
+                },
+                {
+                    "text": "On a Mac computer click 'Continue'",
+                    "image": "python/mac_installer.png"
+                },
+                {
+                    "text": "Follow the on screen instructions to install Python on your computer"
+                },
+                {
+                    "text": "On Windows **Press Windows + S** and type 'IDLE'"
+                },
+                {
+                    "text": "On Mac **Press cmd + S** and type 'IDLE'"
+                },
+                {
+                    "text": "Open IDLE and a 'Python Shell' window should appear",
+                    "image": "python/windows_idle.png"
+                },
+                {
+                    "text": "Did IDLE successfully open on your computer?",
+                    "checkmark": true
+                }
+            ]
+        }
+    ]
+}

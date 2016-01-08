@@ -179,8 +179,7 @@
             ]
         },
         {
-            "number": 1,
-            "challenge": true,
+            "number": 4,
             "title": "Using the Command Line",
             "image": "python/terminal.png",
             "description": "Python can be run from the command line which is how its mostly used by developers",
@@ -312,6 +311,10 @@
                     "image": "sublime/window.png"
                 },
                 {
+                    "text": "Type the following code into the Sublime window",
+                    "code": "import turtle\nturtle.circle(100)"
+                },
+                {
                     "text": "Does your output look like this?",
                     "image": "python/simple_pinwheel.png",
                     "checkmark": true
@@ -319,8 +322,7 @@
             ]
         },
         {
-            "number": 2,
-            "challenge": true,
+            "number": 7,
             "title": "Colorful Python Turtle",
             "image": "python/color_pinwheel.png",
             "description": "Create different colored pinwheels using the Python Turtle",

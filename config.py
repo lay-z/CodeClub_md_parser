@@ -3,7 +3,7 @@ port = 2000
 
 projects = {
     'development': ['flappy_bird','castle_siege'],
-    'production': []
+    'production': ['flappy_bird','castle_siege']
     }
 
 imageRoot = {

@@ -1,0 +1,176 @@
+{
+    "number": 3,
+    "show": true,
+    "title": "Starship Destroyer",
+    "name": "starship_destroyer",
+    "image": "starship_destroyer/starship_destroyer.gif",
+    "link": "https://scratch.mit.edu/projects/93404382/#editor",
+    "description": "In this project you get points for destroying the spaceships that appear on the screen. The aim is to get as many points as possible in 30 seconds!",
+    "steps": [
+        {
+            "title": "Create a flying spaceship",
+            "number": "1",
+            "image" : "starship_destroyer/forward_back.gif",
+            "description": "Use a forever loop to make the spaceship fly from side to side forever",
+            "components": [
+                {
+                    "text": "Open the **Scratch Starter Project**"
+                },
+                {
+                    "text": "Make the spaceship move forever forward"
+                },
+                {
+                    "blocks": "when FLAG clicked\nforever\nmove (10) steps\nend"
+                },
+                {
+                    "text": "Move back and forward across the screen. Try: ",
+                    "blocks": "if on edge, bounce"
+                },
+                {
+                    "text": "Create a variable to control spaceships speed"
+                },
+                {
+                    "text": "You'll need to add these to your code:",
+                    "blocks": "set [speed v] to [5]\n\n (speed)"
+                },
+                {
+                    "text": "Stop the spaceship flipping upside down\nThis block will help:",
+                    "blocks": "set rotation style to [left-right v] :: motion"
+                }
+            ]
+        },
+        {
+            "title": "Change the speed of your ship",
+            "number": "2",
+            "challenge": true,
+            "image" : "starship_destroyer/faster.gif",
+            "description": "Manipulating variables",
+            "components": [
+                {
+                    "text": "Make the spaceship fly FASTER"
+                },
+                {
+                    "text": "Make the spaceship fly SLOWER"
+                },
+                {
+                    "text": "Make the spaceship faster or slower as time passes. Try: ",
+                    "blocks": "change [speed v] by (1)"
+                }
+            ]
+        },
+        {
+            "title": "Allow spaceships to hide",
+            "number": "3",
+            "image" : "starship_destroyer/hide.gif",
+            "description": "Add cloacking to the spaceships so the appear and vanish at random",
+            "components": [
+                {
+                    "text": "Make the spaceship show and hide, adding to this:",
+                    "blocks": "when FLAG clicked \n forever \n hide \n show \n end"
+                },
+                {
+                    "text": "If you haven't already, slow it down so you can see. Try use: ",
+                    "blocks": "wait (1) secs"
+                },
+                {
+                    "text": "Now make it show and hide randomly. Try use: ",
+                    "blocks": "pick random (1) to (2.5)"
+                },
+                {
+                    "blocks": "when FLAG clicked\n\tforever\n\t hide \n\t wait (pick random (1) to (2.5)) secs\n\t show \n\t wait (pick random (1) to (2.5)) secs"
+                }
+            ]
+        },
+        {
+            "title": "Explode the spaceship when clicked",
+            "number": "4",
+            "image" : "starship_destroyer/explode.gif",
+            "description": "We also want to add a score each time you do!",
+            "components": [
+                {
+                    "text": "Change the spaceship costume to the explosion costume when it's clicked"
+                },
+                {
+                    "text": "Make the exploded spaceship hide really quickly"
+                },
+                {
+                    "blocks": "when this sprite clicked \n switch costume to [explode v] \n wait (0.1) secs \n hide \n "
+                },
+                {
+                    "text": "Change back to the starship once hidden. Try: ", 
+                    "blocks": "switch costume to [starship v]"
+                },
+                {
+                    "text": "Make sure you get a point for destroying it. Creating a new 'global' variable 'score' ",
+                    "blocks": "change [score v] by (1)"
+                }
+            ]
+        },
+        {
+            "title": "Create the game starting point",
+            "number": "5",
+            "image" : "starship_destroyer/score.gif",
+            "description": "Adding a timer, and resetting the score",
+            "components": [
+                {
+                    "text": "switch to the **Stage** and create a new variable called **time_left**"
+                },
+                {
+                    "text": "Start the game by giving **time_left** and **score** initial values",
+                    "blocks": "when FLAG clicked \n set [time-left v] to (30) \n set [score v] to (0)"
+                },
+                {
+                    "text": "Create a counter, by reducing the time every second"
+                },
+                {
+                    "blocks": "repeat until ((time_left)=(0)) \n wait (1) secs \n change [time_left v] by (-1)"
+                },
+                {
+                    "text": "clice the green flag to see if the countdown works"
+                }
+            ]
+        },
+        {
+            "title": "Make your game harder",
+            "number": "6",
+            "challenge": true,
+            "image" : "starship_destroyer/harder.gif",
+            "description": "Add more spaceships, change their speeds and sizes, change how many points you get",
+            "components": [
+                {
+                    "text": "Duplicate a spaceship by **right-clicking** or **shift-clicking** it in the sprite list"
+                },
+                {
+                    "text": "Change spaceship speeds"
+                },
+                {
+                    "text": "Change spaceship sizes. Try use: ",
+                    "blocks": "set size to ( 50% )"
+                },
+                {
+                    "text": "Change how many points you get. Think about how hard each spaceship is to click on"
+                }
+            ]
+        },
+        {
+            "title": "Gameover",
+            "number": "6",
+            "image" : "starship_destroyer/end.gif",
+            "description": "End the game, telling the player what their score is",
+            "components": [
+                {
+                    "text": "Go to the **stage** scripts, and add this to tell all sprites the game is over",
+                    "blocks": "broadcast [game_over v]"
+                },
+                {
+                    "text": "Go into each sprite and tell them to hide when the game is over",
+                    "blocks": "when I recieve [game_over v] :: events hat \n hide \n stop [all v]"
+                },
+                {
+                    "text": "Create a new sprite to say the score. Have the sprite initially hidden.",
+                    "blocks": "when FLAG clicked \n hide \n\n when I recieve [game_over v] :: events hat \n show \n say (join[Well done, your score is](score))"
+                }
+            ]
+        }
+    ]
+}

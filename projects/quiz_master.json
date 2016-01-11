@@ -1,0 +1,174 @@
+{
+    "number": 5,
+    "show": true,
+    "title": "Quiz Master",
+    "name": "quiz_master",
+    "description": "You are going to be the quizmaster in a quiz game!",
+    "image": "quiz_master/quiz_master.gif",
+    "link": "",
+    "steps": [
+        {
+            "title": "Choose a Quiz Master",
+            "number": "1",
+            "image" : "quiz_master/start.jpg",
+            "description": "Select from the Scratch library of characters and backdrops",
+            "components": [
+                {
+                    "text": "Choose your quiz master from the Scratch Sprite Library",
+                    "image": "scratch/choose_sprite_from_library.png"
+                },
+                {
+                    "text": "Go to the **Stage** and select a backdrop for the quiz",
+                    "image": "scratch/backdrop_library.png"
+                }
+            ]
+        },
+        {
+            "title": "Introduce the contestant",
+            "number": "2",
+            "image": "quiz_master/name_ask.gif",
+            "description": "Now that you have a quiz master, let's find out who the contestant is",
+            "components": [
+                {
+                    "text": "Click on your quiz master character, and ask for the contestants name",
+                    "image": "quiz_master/name.jpg"
+                },
+                {
+                    "blocks": "when FLAG clicked \n\t\task [So contestant! What's your name?] and wait"
+                },
+                {
+                    "text": "Now introduce the contestant to the crowd, try these code blocks:"
+                },
+                {
+                    "blocks": "say [...use your join code here...] for (2) secs \n\n join [Great! We have a new contestant called ] (answer) "
+                },
+                {
+                    "image": "quiz_master/name_ask.gif",
+                    "text": "Click your quiz master to test it out. Type your name into the box. Do you need to add a space somewhere?"
+                },
+                {
+                    "text": "We want to remember your name, so need to create a **variable** called 'name'.",
+                    "blocks": "(name)"
+                },
+                {
+                    "text": "Make name be the answer to your question",
+                    "blocks": "set [name v] to (answer)"
+                }
+            ]
+        },
+        {   
+            "title": "Time for the first question",
+            "number": "3",
+            "image": "quiz_master/question_one.jpg",
+            "description": "Now that you have a quiz master and contestant, let's program them ask questions.",
+            "components": [
+                {
+                    "text": "Ask the first question",
+                    "blocks": "ask [So, Question 1: Which is the odd one out: Car, Plane or Bus?] and wait"
+                },
+                {
+                    "text": "This time we need to check if the answer is right, or wrong. Try:"
+                },
+                {
+                    "blocks": "if ( (answer) = [Plane]) then \n\t say [well done! Plane is correct!] for (2) secs \n\t else \n\t say [unlucky, that's incorrect] for (2) secs"
+                },
+                {
+                    "text": "If you get it right",
+                    "image":"quiz_master/right.gif"
+                },
+                {
+                    "text": "if you get it wrong",
+                    "image":"quiz_master/wrong.gif"
+                },
+                {
+                    "text": "Now get the quiz master to use your name when replying. You might need the following:",
+                    "blocks": "join [join this...] [..with this] \n\n (name)"
+                }
+            ]
+        },
+        {
+            "title": "Add a score",
+            "number": "4",
+            "image": "quiz_master/quiz_score.gif",
+            "description": "There's no fun getting it right if you don't get a score!",
+            "components": [
+                {
+                    "text": "first create a variable called **score**",
+                    "blocks": "(score)"
+                },
+                {
+                    "text": "now we have to use the score. Add the following to your code, so **if** you get it right, you also get a point!",
+                    "blocks": "change [score v] by (1)" 
+                },
+                {
+                    "text": "You need to make sure the score always starts from zero!",
+                    "blocks": "set [score v] to (0)"
+                },
+                {
+                    "text": "double click on the score display to make it look more like a score",
+                    "image": "quiz_master/quiz_score_change.gif"
+                },
+                {
+                    "text":"You should have something that looks like this:"
+                },
+                {
+                    "blocks": "if ( (answer) = [Plane]) then \n\t say [well done! Plane is correct!] for (2) secs \n\t change [score v] by (1) \n\t  else \n\t say [unlucky, that's incorrect] for (2) secs"
+                }
+            ]
+        },
+        {
+            "title": "More questions",
+            "number": "5",
+            "image": "quiz_master/more_questions.jpg",
+            "description": "There's no fun getting it right if you don't get a score!",
+            "components": [
+                {
+                    "text": "Can you think of other questions to ask your contestant? For example:"
+                },
+                {
+                    "blocks": "ask [Question 2: which of the following is not a plant? Saturn, Mars, Milky Way] and wait"
+                }
+            ]
+        }, 
+        {
+            "title": "Prize giving",
+            "number": "6",
+            "image": "quiz_master/welldone.jpg",
+            "description": "Now that we have points, you can actually get a prize!",
+            "components": [
+                {
+                    "text": "Can you use an _if_ block to check if the contestant get's a prize?"
+                },
+                {
+                    "text": "Perhaps if you get at least one point you get a prize",
+                    "blocks": "if ((score) > (0)) \n\n ..."
+                },
+                {
+                    "text": "When you win, you want to go to the prize giving background",
+                    "blocks": "switch backdrop to [prize giving v]"
+                },
+                {
+                    "text": "Say congratulations. Use Joins to make a clever sentence"
+                },
+                {
+                "blocks": "say (join [Well done!] (join (name) (join [you won] (join (score) [ points]))))"
+                }
+            ]
+        }, 
+        {
+            "title": "More contestants",
+            "number": "6",
+            "image": "quiz_master/more_contestants.gif",
+            "challenge": true,
+            "description": "Now that you have it working with one contestant, can you add more?",
+            "components": [
+                {
+                    "text": "You might want to consider adding other sprites"
+                },
+                {
+                    "text": "You might need to have a _score_ for each sprite. Using _just for this sprite_"
+                }
+            ]
+        }
+    ]
+}

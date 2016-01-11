@@ -133,7 +133,7 @@
                     "text": "When the sprite starts as a clone move across the screen"
                 },
                 {
-                    "blocks": "when I start as a clone\ngo to x: (240) y: (pick random (-240) to (80))\nshow\nrepeat (120)\n\tchange x by (-4)\nend\ndelete this clone"
+                    "blocks": "when I start as a clone\ngo to x: (240) y: (pick random (-80) to (80))\nshow\nrepeat (120)\n\tchange x by (-4)\nend\ndelete this clone"
                 },
                 {
                     "text": "If the pipes are not big enough select the **Grow** tool and click the pipes",

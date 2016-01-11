@@ -49,14 +49,3 @@ class DatabaseWriter:
         """
 
         return self.collection.find({})
-
-if (__name__ == "__main__"):
-    databaseWriter = DatabaseWriter('projects')
-
-    # for project in databaseWriter.query():
-    #     print(project['title'])
-
-    print(databaseWriter.update({'title':'Boat Race'},{'link':'LINKEY'}))
-
-    # for project in databaseWriter.query():
-    #     print(project.get('link',''))

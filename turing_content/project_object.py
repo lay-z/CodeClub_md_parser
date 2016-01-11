@@ -1,3 +1,5 @@
+import project_formatter
+
 class Project:
 
     def __init__(self,collection):
@@ -8,28 +10,33 @@ class Project:
             collection - interface to communicate with mongo collection
         """
 
-        pass
+        self.project = {}
+        self.collection = collection
 
     def load(self,project):
         """Load a project from a dictionary object into memory
         """
 
-        pass
+        self.project = project
 
     def update(self,project):
         """Update the internal representation of the project
         """
 
-        pass
+        for key, value in project.items():
+            self.project[key] = value
 
-    def format(self):
+    def format(self,url):
         """Format the project to ensure the image paths are correct
         """
 
-        pass
+        project_formatter.changeImagePath(self.project,url)
 
     def save(self):
         """Save the given project using the mongo collection interface
         """
 
-        pass
+        self.project = self.collection.update(
+            { "Title" : self.project['Title'] },
+            self.project
+            )

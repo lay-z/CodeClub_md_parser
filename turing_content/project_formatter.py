@@ -4,9 +4,7 @@ import glob
 import json
 import urllib.parse
 
-import config
-
-def build_root_url(url,filename):
+def buildRootUrl(url,filename):
     """Build a root url from the base url and a directory
     """
 
@@ -15,7 +13,7 @@ def build_root_url(url,filename):
 
     return url + urllib.parse.quote(filename)
 
-def change_image_path(dictionary,url):
+def changeImagePath(dictionary,url):
     """Recusrively look into dictionary to chagne the image keys to prepend a root url
     """
 
@@ -24,9 +22,10 @@ def change_image_path(dictionary,url):
 
     for key in dictionary:
         if ((key == 'image') and (dictionary[key] is not None)):
-            dictionary[key] = build_root_url(url,dictionary[key])
+            dictionary[key] = buildRootUrl(url,dictionary[key])
         elif (type(dictionary[key]) == dict):
-            change_image_path(dictionary[key],url)
+            changeImagePath(dictionary[key],url)
         elif (type(dictionary[key]) == list):
             for item in dictionary[key]:
-                change_image_path(item,url)
+                changeImagePath(item,url)
+

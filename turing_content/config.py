@@ -6,7 +6,7 @@ projects = {
     'production': ['flappy_bird','castle_siege']
     }
 
-imageRoot = {
+turingResources = {
     'development': 'http://localhost:2000/resources/',
     'production': 'https://s3-eu-west-1.amazonaws.com/turing-resources/'
     }

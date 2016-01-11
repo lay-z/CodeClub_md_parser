@@ -1,10 +1,8 @@
 {
     "title": "Ori and the Blind Forest game",
-    "description": "Platformer based on the game Ori and the Blind Forest by Moon Studios",
     "image": "Ori/overview.png",
     "link": "https://scratch.mit.edu/projects/81314842/#editor",
-    "name": "ori_and_the_blind_forest",
-    "number": 9,
+    "description": "Platformer based on the game Ori and the Blind Forest by Moon Studios",
     "steps": [
         {
             "components": [

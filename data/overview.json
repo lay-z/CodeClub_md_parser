@@ -1,0 +1,127 @@
+{
+    "Rock Band" : {
+            "provider" : "CodeClub",
+            "module" : 1,
+            "number" : 1
+    },
+    "Lost in Space" : {
+            "provider" : "CodeClub",
+            "module" : 1,
+            "number" : 2
+    },
+    "Ghostbusters" : {
+            "provider" : "CodeClub",
+            "module" : 1,
+            "number" : 3
+    },
+    "Chatbot" : {
+            "provider" : "CodeClub",
+            "module" : 1,
+            "number" : 4
+    },
+    "Paint Box" : {
+            "provider" : "CodeClub",
+            "module" : 1,
+            "number" : 5
+    },
+    "Boat Race" : {
+            "provider" : "CodeClub",
+            "module" : 1,
+            "number" : 6
+    },
+    "Memory" : {
+            "provider" : "CodeClub",
+            "module" : 2,
+            "number" : 1
+    },
+    "Dodgeball" : {
+            "provider" : "CodeClub",
+            "module" : 2,
+            "number" : 2
+    },
+    "Brain Game" : {
+            "provider" : "CodeClub",
+            "module" : 2,
+            "number" : 3
+    },
+    "Catch the Dots" : {
+            "provider" : "CodeClub",
+            "module" : 2,
+            "number" : 4
+    },
+    "Clone Wars" : {
+            "provider" : "CodeClub",
+            "module" : 2,
+            "number" : 5
+    },
+    "Create your own world" : {
+            "provider" : "CodeClub",
+            "module" : 2,
+            "number" : 6
+    },
+    "Ada's Poetry Generator" : {
+            "provider" : "CodeClub",
+            "module" : 3,
+            "number" : 1
+    },
+    "Balloons" : {
+            "provider" : "CodeClub",
+            "module" : 3,
+            "number" : 2
+    },
+    "Space Junk" : {
+            "provider" : "CodeClub",
+            "module" : 3,
+            "number" : 3
+    },
+    "Flappy Parrot" : {
+            "provider" : "CodeClub",
+            "module" : 3,
+            "number" : 4
+    },
+    "Snowball Fight" : {
+            "provider" : "CodeClub",
+            "module" : 3,
+            "number" : 5
+    },
+    "ANIMATION?" : {
+        "provider" : "TuringLab",
+        "module" : 1,
+        "number" : 1
+    },
+    "Starship Destroyer" : {
+        "provider" : "TuringLab",
+        "module" : 1,
+        "number" : 2
+    },
+    "Escape Game" : {
+        "provider" : "TuringLab",
+        "module" : 1,
+        "number" : 3
+    },
+    "Crossy Road" : {
+        "provider" : "TuringLab",
+        "module" : 1,
+        "number" : 4
+    },
+    "Flappy Bird" : {
+        "provider" : "TuringLab",
+        "module" : 1,
+        "number" : 5
+    },
+    "Space Race" : {
+        "provider" : "TuringLab",
+        "module" : 1,
+        "number" : 6
+    },
+    "Castle Siege" : {
+        "provider" : "TuringLab",
+        "module" : 2,
+        "number" : 1
+    },
+    "Ori And The Blind Forest" : {
+        "provider" : "TuringLab",
+        "module" : 2,
+        "number" : 2
+    }
+}

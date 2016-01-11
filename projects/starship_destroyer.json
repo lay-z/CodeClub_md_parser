@@ -1,8 +1,5 @@
 {
-    "number": 3,
-    "show": true,
     "title": "Starship Destroyer",
-    "name": "starship_destroyer",
     "image": "starship_destroyer/starship_destroyer.gif",
     "link": "https://scratch.mit.edu/projects/93404382/#editor",
     "description": "In this project you get points for destroying the spaceships that appear on the screen. The aim is to get as many points as possible in 30 seconds!",

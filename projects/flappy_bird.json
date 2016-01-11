@@ -1,11 +1,8 @@
 {
-    "number": 19,
-    "show": true,
     "title": "Flappy Bird",
-    "description": "Create a Scratch version of Flappy Bird",
     "image": "flappy_bird/flappy_bird.png",
     "link": "https://scratch.mit.edu/projects/93151378/#editor",
-    "name": "flappy_bird",
+    "description": "Create a Scratch version of Flappy Bird",
     "steps": [
         {
             "title": "Make Flappy Bird fall",

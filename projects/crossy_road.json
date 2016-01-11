@@ -1,10 +1,8 @@
 {
-    "description": "Help a minion cross a busy road",
+    "title": "Crossy Road",
     "image": "crossy_road/cover.png",
     "link": "https://scratch.mit.edu/projects/80071110/#editor",
-    "name": "crossy_road",
-    "number": 8,
-    "show": false,
+    "description": "Help a minion cross a busy road",
     "steps": [
         {
             "components": [
@@ -114,6 +112,5 @@
             "image": "crossy_road/score.png",
             "title": "Scoring Points"
         }
-    ],
-    "title": "Crossy Road"
+    ]
 }

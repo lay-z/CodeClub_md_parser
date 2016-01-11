@@ -8,7 +8,7 @@ def buildRootUrl(url,filename):
     """Build a root url from the base url and a directory
     """
 
-    if (filename.startswith('data:image') or filename.startswith('http://')):
+    if (filename.startswith('data:image') or filename.startswith('http')):
         return filename
 
     return url + urllib.parse.quote(filename)

@@ -1,6 +1,6 @@
 {
     "title": "Ori and the Blind Forest",
-    "image": "Ori/overview.png",
+    "image": "ori_and_the_blind_forest/overview.png",
     "link": "https://scratch.mit.edu/projects/81314842/#editor",
     "description": "Platformer based on the game Ori and the Blind Forest by Moon Studios",
     "steps": [
@@ -18,7 +18,7 @@
                 }
             ],
             "description": "We will need 2 variables for this game at first, one to keep track of the level and one that tells us if Ori is jumping or not",
-            "image": "Ori/vars3.png",
+            "image": "ori_and_the_blind_forest/vars3.png",
             "title": "Create variables"
         },
         {
@@ -33,7 +33,7 @@
                 }
             ],
             "description": "make the Ori sprite start on the left and face to the right",
-            "image": "Ori/Ori.png",
+            "image": "ori_and_the_blind_forest/Ori.png",
             "title": "Start Position"
         },
         {
@@ -52,7 +52,7 @@
                 }
             ],
             "description": "Move each platform and water object to the correct position for each level",
-            "image": "Ori/Platform.png",
+            "image": "ori_and_the_blind_forest/Platform.png",
             "title": "Object Positions"
         },
         {
@@ -71,7 +71,7 @@
                 }
             ],
             "description": "Write the scipts to let Ori jump and fall",
-            "image": "Ori/Jump.png",
+            "image": "ori_and_the_blind_forest/Jump.png",
             "title": "Jumping and Falling"
         },
         {
@@ -86,7 +86,7 @@
                 }
             ],
             "description": "Write the scripts to let Ori move",
-            "image": "Ori/Movement.png",
+            "image": "ori_and_the_blind_forest/Movement.png",
             "title": "Movement"
         },
         {
@@ -97,7 +97,7 @@
                 }
             ],
             "description": "Make it game over if Ori goes in the water",
-            "image": "Ori/Dead.png",
+            "image": "ori_and_the_blind_forest/Dead.png",
             "title": "Game Over"
         },
         {
@@ -108,7 +108,7 @@
                 }
             ],
             "description": "Level complete when Ori reaches the sphere",
-            "image": "Ori/win.png",
+            "image": "ori_and_the_blind_forest/win.png",
             "title": "Winning"
         }
     ]

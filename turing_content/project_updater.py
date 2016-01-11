@@ -48,6 +48,7 @@ def main():
         project = project_object.Project(collection)
         project.load(_project)
         project.update(overview[_project['title']])
+        project.format(config.turingResources[environment])
         project.save()
 
     if (environment == 'development'):

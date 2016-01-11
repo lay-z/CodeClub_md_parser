@@ -1,28 +1,26 @@
 import os
+import glob
 import json
 import http.server
 
 import config
-import project_finder
+import project_object
 import database_writer
 
 
-def find_projects(environment):
+def findProjects():
     """Find all projects in the given folder
     """
 
     # Create a list to collect projects
-    projects = []
-    projectFilenames = glob.glob('projects/*.json')
+    projects = json.load(open('data/projects_codeclub.json'))
+    filenames = glob.glob('projects/*.json')
 
     # For all project files 
-    for projectFilename in projectFilenames:
+    for filename in filenames:
 
         # Access the project
-        project = json.load(open(projectFilename))
-
-        # Change all image references to include full source
-        change_image_path(project,config.imageRoot[environment])
+        project = json.load(open(filename))
 
         # Add to list of projects
         projects.append(project)
@@ -32,21 +30,25 @@ def find_projects(environment):
 
 def main():
     environment = os.environ.get('PYTHON_ENV','development')
+    print('Updating {} Database'.format(environment.title()),'\n','='*80)
+
     mongolabUri = config.mongolabUri[environment]
+    collection = database_writer.DatabaseWriter('projects',mongolabUri)
 
-    databaseWriter = database_writer.DatabaseWriter('projects',mongolabUri)
+    overview = json.load(open('data/overview.json'))
 
-    print('Updating {} Database'.format(environment.title()))
-    print('='*80)
+    for _project in findProjects():
 
-    for project in project_finder.find_projects(environment):
-
-        if (project['name'] not in config.projects[environment]):
-            print('  -  {title}'.format(**project))
+        if (_project['title'] in overview):
+            print(_project['title'])
+        else:
+            print('\t',_project['title'],'not found in overview')
             continue
 
-        updated = databaseWriter.update({ 'number' : project['number'] },project)
-        print('{title}'.format(**updated))
+        project = project_object.Project(collection)
+        project.load(_project)
+        project.update(overview[_project['title']])
+        project.save()
 
     if (environment == 'development'):
         http.server.test(HandlerClass=http.server.SimpleHTTPRequestHandler,port=config.port)

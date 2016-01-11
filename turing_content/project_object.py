@@ -37,6 +37,6 @@ class Project:
         """
 
         self.project = self.collection.update(
-            { "Title" : self.project['Title'] },
+            { "title" : self.project['title'] },
             self.project
             )

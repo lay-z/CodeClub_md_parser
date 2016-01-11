@@ -1,11 +1,6 @@
 
 port = 2000
 
-projects = {
-    'development': ['flappy_bird','castle_siege','space_race','starship_destroyer'],
-    'production': ['flappy_bird','castle_siege']
-    }
-
 turingResources = {
     'development': 'http://localhost:2000/resources/',
     'production': 'https://s3-eu-west-1.amazonaws.com/turing-resources/'

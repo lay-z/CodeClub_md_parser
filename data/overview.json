@@ -84,8 +84,8 @@
             "module" : 3,
             "number" : 5
     },
-    "ANIMATION?" : {
-        "publish" : false,
+    "Star Wars" : {
+        "publish" : true,
         "provider" : "TuringLab",
         "module" : 1,
         "number" : 1
@@ -138,4 +138,5 @@
         "module" : 2,
         "number" : 3
     }
+
 }

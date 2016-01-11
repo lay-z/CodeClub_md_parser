@@ -1,0 +1,106 @@
+{
+    "title": "Star Wars",
+    "image": "star_wars/title.png",
+    "link": "https://scratch.mit.edu/projects/93669827/#editor",
+    "description": "Create a Star Wars animation",
+    "steps": [
+        {
+            "title": "Make Star Wars into",
+            "number": "1",
+            "image" : "star_wars/title.png",
+            "description": "Use a loop to make the Star Wars title shrink",
+            "components": [
+                {
+                    "text": "Open the **Scratch Starter Project**"
+                },
+                {
+                    "text": "Add the following script to your **title** sprite",
+                    "blocks": "when FLAG clicked\n show \n set size to (100) %\n   go to x: (0) y: (0)\n point in direction [0 v] \n repeat (100) \n\t move (0.001) steps \n\t change size by (-1) \n\t wait (0.01) secs \nend \n broadcast [start v] \n go to x: (0) y: (0)\nhide"
+                },
+                {
+                    "text": "**Click the Green Flag** - Does Star Wars start in the middle of the screen and then disappear into the distance?"
+                }
+            ]
+        },
+        {
+            "title": "Zoom in on planet",
+            "number": "2",
+            "image" : "star_wars/planet.png",
+            "description": "We will make it look like we are zooming in on a desert planet",
+            "components": [
+                {
+                    "text": "Add this code to the **planet** sprite:",
+                    "blocks": "when FLAG clicked\ngo to x: (-100) y: (100)\n set size to (0) %\n hide"
+                },
+                {
+                    "text": "Now also add the code to make the planet zoom in:",
+                    "blocks": "when I receive [planet v] \npoint towards [title v] \n repeat (100) \n\t move (1) steps \n\t change size by (1) \n end \n hide \n switch backdrop to [desert v] \n broadcast [desert v]"
+                },
+                {
+                    "text": "**Click the Green Flag** - Does it look like we are zooming in on the planet?"
+                }
+            ]
+        },
+        {
+            "number": 3,
+            "title": "Add a droid",
+            "image": "star_wars/bb8.png",
+            "description": "BB8 has lost his master, let's make an animation to show this",
+            "components": [
+                {
+                    "text": "Add this code to the **BB8** sprite:",
+                    "blocks": "when FLAG clicked \ngo to x: (-100) y: (100)  \n hide"
+                },
+                {
+                    "text": "Now lets make BB8 move and talk using this code:",
+                    "blocks": "when I receive [desert v] \n show \n say [Where is my master?] for (2) secs \n set rotation style [left-right v] \n repeat (50) \n\t repeat (3) \n\t\t move (3) steps \n\t\t if on edge bounce \n\t end \n\t  next costume \n end \n broadcast [tie v]"
+                }
+            ]
+        },
+        {
+            "number": 4,
+            "title": "TIE Fighter!",
+            "image": "star_wars/tie.png",
+            "description": "Now we will get the TIE fighter to fly around and shoot at BB8 ",
+            "components": [
+                {
+                    "text": "Add this code to the **TIE** sprite:",
+                    "blocks": "when FLAG clicked \n set rotation style [left-right v] \n go to x: (-200) y: (130) \n hide"
+                },
+                {
+                    "text": "Now lets make the TIE fighter fly and shoot using this code:",
+                    "blocks": "when I receive [tie v] \n show \n point in direction (90 v) \n repeat (100) \n\t move (10) steps \n\t if on edge bounce \n end \n point towards [BB8 v] \n broadcast [fire v]"
+                }
+            ]
+        },
+        {
+            "number": 5,
+            "title": "Lasers!",
+            "image": "star_wars/laser.png",
+            "description": "The TIE fighter shoots lasers, we need to make the laser shoot at BB8",
+            "components": [
+                {
+                    "text": "Select the **laser** sprite and click on the **Scripts** tab and add this code:",
+                    "blocks": "when FLAG clicked \n hide"
+                },
+                {
+                    "text": "Now lets make the laser fly towards BB8, add the code:",
+                    "blocks": "when I receive [fire v] \n go to [TIE v] \n point towards [BB8 v] \n show \n set size to (0) %\n repeat until < touching [BB8 v] ?> \n\t move (10) steps \n\t change size by (1) \n end \n broadcast [hit v]"
+                }
+            ]
+        },
+        {
+            "number": 6,
+            "title": "Run away!",
+            "image": "star_wars/run.png",
+            "description": "BB8 gets scared, let's make him run away",
+            "components": [
+                 {
+                    "text": "Go back to the **BB8** sprite and add this code:",
+                    "blocks": "when I receive [hit v] \n say [Ahhhh....] for (2) secs \n repeat (80) \n\t repeat (2) \n\t\t move (5) steps \n\t end \n\t  next costume \n end \n hide"
+                    
+                }
+            ]
+        }
+    ]
+}

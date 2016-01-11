@@ -85,7 +85,6 @@
             "number" : 5
     },
     "Star Wars" : {
-        "publish" : true,
         "provider" : "TuringLab",
         "module" : 1,
         "number" : 1
@@ -94,46 +93,39 @@
         "publish": true,
         "provider": "TuringLab",
         "module": 1,
-        "number": 2,
+        "number": 2
     },
     "Starship Destroyer" : {
-        "publish" : true,
         "provider" : "TuringLab",
         "module" : 1,
         "number" : 3
     },
     "Escape Game" : {
-        "publish" : true,
         "provider" : "TuringLab",
         "module" : 1,
         "number" : 4
     },
     "Crossy Road" : {
-        "publish" : true,
         "provider" : "TuringLab",
         "module" : 1,
         "number" : 5
     },
     "Flappy Bird" : {
-        "publish" : true,
         "provider" : "TuringLab",
         "module" : 1,
         "number" : 6
     },
     "Space Race" : {
-        "publish" : true,
         "provider" : "TuringLab",
         "module" : 2,
         "number" : 1
     },
     "Castle Siege" : {
-        "publish" : true,
         "provider" : "TuringLab",
         "module" : 2,
         "number" : 2
     },
     "Ori and the Blind Forest" : {
-        "publish" : true,
         "provider" : "TuringLab",
         "module" : 2,
         "number" : 3

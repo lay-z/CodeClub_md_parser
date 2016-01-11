@@ -46,11 +46,6 @@ def main():
             print('\t',_project['title'],'not found in overview')
             continue
 
-        # Check project is eligible to be updated
-        if ((environment == "production") and not _project['publish']):
-            print('\t',_project['title'],'cannot be published')
-            continue
-
         project = project_object.Project(collection)
         project.load(_project)
         project.update(overview[_project['title']])

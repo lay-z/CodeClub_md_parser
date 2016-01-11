@@ -1,0 +1,82 @@
+{
+    "title": "Escape Game",
+    "image": "escape_game/screenshot.png",
+    "link": "https://scratch.mit.edu/projects/81434280/#editor",
+    "description": "Run away from other sprites!!",
+    "steps": [
+        {
+            "components": [
+                {
+                    "blocks": "go to x:(0) y:(0)",
+                    "text": "Place sprite in the center of the screen"
+                },
+                {
+                    "blocks": "point in direction (pick random [1] to [360])",
+                    "text": "Use the pick random operator to face a random direction"
+                }
+            ],
+            "description": "Make the witch start at the center of the screen facing a random direction",
+            "image": "escape_game/witch.png",
+            "title": "Witch start position"
+        },
+        {
+            "components": [
+                {
+                    "blocks": "forever\n\tmove (5) steps\nend",
+                    "text": "Move forward forever"
+                },
+                {
+                    "blocks": "if on edge, bounce",
+                    "text": "If sprite is touching the edge, then bounce"
+                }
+            ],
+            "description": "Make the witch move to the edge and the bounce back once she touches it",
+            "image": "escape_game/witch.png",
+            "title": "Make Witch Move"
+        },
+        {
+            "components": [
+                {
+                    "blocks": "forever\n\tpoint towards [mouse-pointer]\n\tmove (10) steps\nend",
+                    "text": "Try varying the number of steps it moves forward and see what happens"
+                },
+                {
+                    "blocks": "if <not <touching [mouse-pointer]>> then\n\tpoint towards [mouse-pointer]\n\tmove (10) steps\nend",
+                    "text": "Check if the sprite is touching the mouse before it does anything"
+                }
+            ],
+            "description": "Get the spaceship to follow your mouse",
+            "image": "escape/spaceship.png",
+            "title": "Follow your mouse"
+        },
+        {
+            "components": [
+                {
+                    "blocks": "if <touching [spaceship]> then\n\tsay (timer) for (2) secs\n\tend",
+                    "text": "When touching another sprite, call out the time"
+                },
+                {
+                    "blocks": "reset timer",
+                    "text": "Timers can be reset"
+                },
+                {
+                    "blocks": "(highscore)",
+                    "text": "Create a variable called highscore to store the highscore"
+                },
+                {
+                    "blocks": "if ((timer) > (highscore)) then\n\tset [highscore] to (timer)",
+                    "text": "If highscore is smaller than timer set highscore to timer"
+                }
+            ],
+            "description": "Use the timer as a way to create a high score",
+            "image": "escape/high_score.png",
+            "title": "Create a High Score!!"
+        },
+        {
+            "components": [],
+            "description": "Duplicate the witches to make it harder! (hint use right click or shift click)",
+            "image": "escape/duplicate.png",
+            "title": "Duplicate the witches"
+        }
+    ]
+}

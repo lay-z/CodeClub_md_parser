@@ -1,1 +1,2 @@
-python3 -m unittest discover tests
+source venv/bin/activate
+python -m unittest discover tests

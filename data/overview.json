@@ -14,7 +14,7 @@
             "module" : 1,
             "number" : 3
     },
-    "Chatbot" : {
+    "ChatBot" : {
             "provider" : "CodeClub",
             "module" : 1,
             "number" : 4

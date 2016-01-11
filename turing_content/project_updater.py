@@ -39,10 +39,16 @@ def main():
 
     for _project in findProjects():
 
+        # Check if project exists in overview
         if (_project['title'] in overview):
             print(_project['title'])
         else:
             print('\t',_project['title'],'not found in overview')
+            continue
+
+        # Check project is eligible to be updated
+        if ((environment == "production") and not _project['publish']):
+            print('\t',_project['title'],'cannot be published')
             continue
 
         project = project_object.Project(collection)

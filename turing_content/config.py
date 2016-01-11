@@ -1,6 +1,11 @@
 
 port = 2000
 
+aws = {
+    'accessKeyId': 'AKIAIRNBRPBJGFKX5S2Q',
+    'secretAccessKey': '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'
+}
+
 turingResources = {
     'development': 'http://localhost:2000/resources/',
     'production': 'https://s3-eu-west-1.amazonaws.com/turing-resources/'

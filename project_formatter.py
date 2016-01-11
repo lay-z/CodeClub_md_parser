@@ -30,33 +30,3 @@ def change_image_path(dictionary,url):
         elif (type(dictionary[key]) == list):
             for item in dictionary[key]:
                 change_image_path(item,url)
-
-
-def find_projects(environment):
-    """Find all projects in the given folder
-    """
-
-    # Create a list to collect projects
-    projects = []
-    projectFilenames = glob.glob('projects/*.json')
-
-    # For all project files 
-    for projectFilename in projectFilenames:
-
-        # Access the project
-        project = json.load(open(projectFilename))
-
-        # Change all image references to include full source
-        change_image_path(project,config.imageRoot[environment])
-
-        # Add to list of projects
-        projects.append(project)
-
-    return projects
-
-if (__name__ == "__main__"):
-
-    projects = find_projects()
-
-    with open('data/projects_output.json','w') as openFile:
-        json.dump(projects,openFile,indent=4)

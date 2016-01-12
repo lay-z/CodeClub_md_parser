@@ -10,12 +10,21 @@ def main():
 
     environment = os.environ.get('PYTHON_ENV','development')
     pythonMongolabUri = config.pythonMongolabUri[environment]
-    collection = database_writer.DatabaseWriter(
-                                                'challenges',
-                                                pythonMongolabUri
-                                                )
+    users = database_writer.DatabaseWriter('users',pythonMongolabUri)
+    challenges = database_writer.DatabaseWriter('challenges',pythonMongolabUri)
+    environments = database_writer.DatabaseWriter('environments',pythonMongolabUri)
 
-    for challenge in collection.query():
+    # Download all the users
+    for user in users.query():
+        os.makedirs('downloaded/users', exist_ok=True)
+        filename = 'downloaded/users/{_id}.json'.format(**user)
+        user = collections.OrderedDict(
+            [(key, user[key]) for key in ['name','email']]
+            )
+        json.dump(user,open(filename,'w'),indent=4)        
+
+    # Download all the challenges
+    for challenge in challenges.query():
 
         components = []
         if (challenge['script']['format'] == 'markdown'):
@@ -35,15 +44,31 @@ def main():
         ])
 
         # If needed create a folder
-        os.makedirs('downloaded/{name}'.format(**project), exist_ok=True)
+        os.makedirs('downloaded/projects/{name}'.format(**project), exist_ok=True)
 
         # Save the project definition
-        filename = 'downloaded/{name}/{name}.json'.format(**project)
+        filename = 'downloaded/projects/{name}/{name}.json'.format(**project)
         json.dump(project,open(filename,'w'),indent=4)
 
         # Save the template file
-        filename = 'downloaded/{name}/{name}.py'.format(**project)
+        filename = 'downloaded/projects/{name}/{name}.py'.format(**project)
         open(filename,'w').write(challenge['code'])
+
+        # Remove this line to download environments for users
+        continue
+
+        # Download all environments
+        for environment in environments.query({'challenge':challenge['_id']}):
+
+            data = {
+                'project': project['name'],
+                'user': environment['user']
+            }
+
+            os.makedirs('downloaded/projects/{project}/environments'.format(**data), exist_ok=True)
+            filename = 'downloaded/projects/{project}/environments/{user}.py'.format(**data)
+            open(filename,'w').write(environment['code'])
+
 
 def parseScript(script):
     """Split script into components"""

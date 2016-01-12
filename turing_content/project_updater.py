@@ -7,7 +7,10 @@ import config
 import project_object
 import database_writer
 import directory_watcher
+import resource_uploader
 
+class Resource:
+    pass
 
 def findProjects():
     """Find all projects in the given folder
@@ -28,8 +31,30 @@ def findProjects():
 
     return projects
     
+def findResources():
+    """Find all resources in resources folder
+    """
+
+    resources = []
+
+    root = 'resources/'
+    filenames = glob.glob(root + '**/*')
+
+    for filename in filenames:
+
+        if (root not in filename):
+            print('Error {} does not contain {}'.format(filename,root))
+            continue
+
+        resource = Resource()
+        resource.localFilePath = filename
+        resource.awsFilePath = filename[len(root):]
+        resources.append(resource)
+
+    return resources
 
 def update():
+
     environment = os.environ.get('PYTHON_ENV','development')
     print('Updating {} Database'.format(environment.title()),'\n','='*80)
 
@@ -56,14 +81,41 @@ def update():
 def main():
 
     update()
-
     environment = os.environ.get('PYTHON_ENV','development')
+
     if (environment == 'development'):
 
+        # Create a server function
         def server():
             http.server.test(HandlerClass=http.server.SimpleHTTPRequestHandler,port=config.port)
 
+        # Watch the directory for changed
         directory_watcher.eventLoop(update,server)
+
+    elif (environment == 'production'):
+
+        # Construct the resource uploader
+        uploader = resource_uploader.ResourceUploader()
+        uploader.setBucket(config.bucketName)
+
+        # Find all the resources in the resources folder
+        resources = findResources()
+        print('Uploading {} files to \'{}\''.format(len(resources),config.bucketName),'\n','='*80)
+
+        # For all resources found upload to s3
+        for i,resource in enumerate(resources):
+            uploader.uploadFile(resource.awsFilePath,resource.localFilePath)
+            if (i%10 == 0): print('{}/{}'.format(i,len(resources)))
+
+        print('Upload Complete')
+
+    else:
+        raise RuntimeError(
+            'PYTHON_ENV must be production or development not {}'.format(
+                environment
+                )
+            )
+
 
 if (__name__ == "__main__"):
     main()

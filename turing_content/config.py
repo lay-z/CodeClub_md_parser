@@ -1,9 +1,17 @@
 
 port = 2000
 
+aws = {
+    'region_name': 'eu-west-1',
+    'aws_access_key_id': 'AKIAIRNBRPBJGFKX5S2Q',
+    'aws_secret_access_key': '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'
+}
+
+bucketName = 'turing-resources'
+
 turingResources = {
     'development': 'http://localhost:2000/resources/',
-    'production': 'https://s3-eu-west-1.amazonaws.com/turing-resources/'
+    'production': 'https://s3-eu-west-1.amazonaws.com/{}/'.format(bucketName)
     }
 
 mongolabUri = {

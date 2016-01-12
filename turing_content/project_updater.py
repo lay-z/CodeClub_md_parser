@@ -6,6 +6,7 @@ import http.server
 import config
 import project_object
 import database_writer
+import directory_watcher
 
 
 def findProjects():
@@ -28,7 +29,7 @@ def findProjects():
     return projects
     
 
-def main():
+def update():
     environment = os.environ.get('PYTHON_ENV','development')
     print('Updating {} Database'.format(environment.title()),'\n','='*80)
 
@@ -52,8 +53,17 @@ def main():
         project.format(config.turingResources[environment])
         project.save()
 
+def main():
+
+    update()
+
+    environment = os.environ.get('PYTHON_ENV','development')
     if (environment == 'development'):
-        http.server.test(HandlerClass=http.server.SimpleHTTPRequestHandler,port=config.port)
+
+        def server():
+            http.server.test(HandlerClass=http.server.SimpleHTTPRequestHandler,port=config.port)
+
+        directory_watcher.eventLoop(update,server)
 
 if (__name__ == "__main__"):
     main()

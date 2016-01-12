@@ -22,7 +22,7 @@ def main():
             components = parseScript(challenge['script']['content'])
 
         project = collections.OrderedDict([
-            ('name', re.sub(r'\W+','_',challenge['name'].lower())),
+            ('name', re.sub(r'\W+','_',challenge['name'].strip().lower())),
             ('title', challenge['name']),
             ('description', challenge['summary']),
             ('steps', [
@@ -35,14 +35,14 @@ def main():
         ])
 
         # If needed create a folder
-        os.makedirs('projects/python/{name}'.format(**project), exist_ok=True)
+        os.makedirs('downloaded/{name}'.format(**project), exist_ok=True)
 
         # Save the project definition
-        filename = 'projects/python/{name}/{name}.json'.format(**project)
+        filename = 'downloaded/{name}/{name}.json'.format(**project)
         json.dump(project,open(filename,'w'),indent=4)
 
         # Save the template file
-        filename = 'projects/python/{name}/{name}.py'.format(**project)
+        filename = 'downloaded/{name}/{name}.py'.format(**project)
         open(filename,'w').write(challenge['code'])
 
 def parseScript(script):

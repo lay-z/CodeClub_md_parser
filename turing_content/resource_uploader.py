@@ -1,5 +1,9 @@
+import logging
 import boto3
+
 import config
+
+boto3.set_stream_logger('boto3.resources', logging.WARNING)
 
 class ResourceUploader:
 

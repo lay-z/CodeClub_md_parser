@@ -1,26 +1,26 @@
-import boto
+import boto3
+import config
 
 class ResourceUploader:
 
-    def __init__(self,s3Connection):
+    def __init__(self,session=boto3.session.Session(**config.aws)):
         """Contruct the resource uploader class with a instanciated s3
         connection
         """
 
-        self.s3Connection = s3Connection
+        self.s3 = session.resource('s3')
 
 
     def setBucket(self,bucketName):
-        """Set the bucket using the s3 connection and bucket name
+        """Set the aws bucket being uploaded to
 
-        @params:
-            bucketName - name of aws bucket
+        @params
+            bucketName - name of aws bucket    
         """
 
-        self.bucket = self.s3Connection.get_bucket(bucketName)
+        self.bucketName = bucketName
 
-
-    def uploadFile(self,filePath,fileObject):
+    def uploadFile(self,awsFilePath,localFilePath):
         """Upload a given file to the amazon s3 bucket
 
         @params
@@ -28,22 +28,15 @@ class ResourceUploader:
             fileObject - opened file object to be uploaded to s3
         """
 
-        key = boto.s3.key.Key(self.bucket, filePath)
-        key.send_file(fileObject)
-        fileObject.close()
+        key = self.s3.Object(self.bucketName, awsFilePath)
+        key.put(Body=open(localFilePath, 'rb'))
+        key.put(ACL='public-read')
 
 
 if (__name__ == "__main__"):
 
-    import config
-
-    resourceUploader = ResourceUploader(
-        boto.connect_s3(
-            config.aws['accessKeyId'],
-            config.aws['secretAccessKey']
-            )
-        )
+    resourceUploader = ResourceUploader()
     resourceUploader.setBucket('turing-resources')
-    resourceUploader.uploadFile('temp/test.txt',open('resources/test.txt'))
+    resourceUploader.uploadFile('temp/test.txt','resources/test.txt')
 
 

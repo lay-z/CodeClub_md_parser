@@ -2,8 +2,9 @@
 port = 2000
 
 aws = {
-    'accessKeyId': 'AKIAIRNBRPBJGFKX5S2Q',
-    'secretAccessKey': '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'
+    'region_name': 'eu-west-1',
+    'aws_access_key_id': 'AKIAIRNBRPBJGFKX5S2Q',
+    'aws_secret_access_key': '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'
 }
 
 turingResources = {

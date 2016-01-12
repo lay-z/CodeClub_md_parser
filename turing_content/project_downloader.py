@@ -1,6 +1,7 @@
 import os
 import re
 import json
+import collections
 
 import config
 import database_writer
@@ -14,33 +15,40 @@ def main():
                                                 pythonMongolabUri
                                                 )
 
-    challenges = collection.query()
-
-    for challenge in challenges[:2]:
-
-        project = {}
-        project['name'] = challenge['name']
-        project['description'] = challenge['summary']
+    for challenge in collection.query():
 
         components = []
         if (challenge['script']['format'] == 'markdown'):
             components = parseScript(challenge['script']['content'])
 
-        project['steps'] = [
-            {
-                'name': 'Imported Steps',
-                'description': 'These steps have been imported from Python Challenges',
-                'components': components
-            }
-        ]
+        project = collections.OrderedDict([
+            ('name', re.sub(r'\W+','_',challenge['name'].lower())),
+            ('title', challenge['name']),
+            ('description', challenge['summary']),
+            ('steps', [
+                collections.OrderedDict([
+                    ('name', 'Imported Steps'),
+                    ('description', 'These steps have been imported from Python Challenges'),
+                    ('components', components)
+                ])
+            ])
+        ])
 
-        print(json.dumps(project,indent=4))
+        # If needed create a folder
+        os.makedirs('projects/python/{name}'.format(**project), exist_ok=True)
+
+        # Save the project definition
+        filename = 'projects/python/{name}/{name}.json'.format(**project)
+        json.dump(project,open(filename,'w'),indent=4)
+
+        # Save the template file
+        filename = 'projects/python/{name}/{name}.py'.format(**project)
+        open(filename,'w').write(challenge['code'])
 
 def parseScript(script):
     """Split script into components"""
 
     components = []
-    print(script)
     matches = re.findall(r'#+([^#]*)', script)
 
     for match in matches:
@@ -65,7 +73,6 @@ def parseComponent(text):
     imagePattern = re.compile(r"""<img src=['"](.+)['"]>""")
     match = imagePattern.search(text)
     if (match is not None):
-        print(match.group(0))
         component['image'] = match.group(1).strip()
 
     text  = imagePattern.sub('',text)

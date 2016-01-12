@@ -18,7 +18,7 @@ def findProjects():
 
     # Create a list to collect projects
     projects = json.load(open('data/projects_codeclub.json'))
-    filenames = glob.glob('projects/*.json')
+    filenames = glob.glob('projects/**/*.json')
 
     # For all project files 
     for filename in filenames:

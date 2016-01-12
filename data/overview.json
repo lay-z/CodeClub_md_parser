@@ -129,6 +129,10 @@
         "provider" : "TuringLab",
         "module" : 2,
         "number" : 3
+    },
+    "Python Starter" : {
+        "provider" : "TuringLab",
+        "module" : 2,
+        "number" : 4
     }
-
 }

@@ -1,6 +1,6 @@
 {
     "title": "Escape Game",
-    "image": "escape_game/screenshot.png",
+    "image": "scratch/escape_game/screenshot.png",
     "link": "https://scratch.mit.edu/projects/81434280/#editor",
     "description": "Run away from other sprites!!",
     "steps": [
@@ -16,7 +16,7 @@
                 }
             ],
             "description": "Make the witch start at the center of the screen facing a random direction",
-            "image": "escape_game/witch.png",
+            "image": "scratch/escape_game/witch.png",
             "title": "Witch start position"
         },
         {
@@ -31,7 +31,7 @@
                 }
             ],
             "description": "Make the witch move to the edge and the bounce back once she touches it",
-            "image": "escape_game/witch.png",
+            "image": "scratch/escape_game/witch.png",
             "title": "Make Witch Move"
         },
         {

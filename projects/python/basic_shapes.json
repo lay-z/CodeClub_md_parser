@@ -4,7 +4,7 @@
     "description": "Draw basic shapes with the python turtle",
     "steps": [
         {
-            "name": "Draw a Line",
+            "title": "Draw a Line",
             "description": "These steps have been imported from Python Challenges",
             "components": [
                 {
@@ -35,7 +35,7 @@
             ]
         },
         {
-            "name": "Draw a Square",
+            "title": "Draw a Square",
             "description": "These steps have been imported from Python Challenges",
             "components": [
                 {
@@ -61,7 +61,7 @@
             ]
         },
         {
-            "name": "Draw Polygon",
+            "title": "Draw Polygon",
             "description": "These steps have been imported from Python Challenges",
             "components": [
                 {
@@ -95,7 +95,7 @@
             ]
         },
         {
-            "name": "Draw Circle",
+            "title": "Draw Circle",
             "description": "These steps have been imported from Python Challenges",
             "components": [
                 {

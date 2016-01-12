@@ -1,23 +1,42 @@
 import sys
 import time
 import logging
-from watchdog.observers import Observer
-from watchdog.events import LoggingEventHandler
+import watchdog.observers
+import watchdog.events
 
-# class watchdog.events.FileSystemEventHandler
+class UpdateEventHandler(watchdog.events.FileSystemEventHandler):
+    """Event Handler to call a function on file system update"""
 
-if __name__ == "__main__":
-    logging.basicConfig(level=logging.INFO,
-                        format='%(asctime)s - %(message)s',
-                        datefmt='%Y-%m-%d %H:%M:%S')
-    path = sys.argv[1] if len(sys.argv) > 1 else '.'
-    event_handler = LoggingEventHandler()
-    observer = Observer()
-    observer.schedule(event_handler, path, recursive=True)
+    def __init__(self, function):
+        super(UpdateEventHandler, self).__init__()
+        self.function = function
+
+    def on_any_event(self,event):
+        """When any change in filesystem is observed print event and
+        call function"""
+
+        print(event)
+        self.function()
+
+def updating():
+    print('Updating')
+        
+def blocking():
+    while True:
+        time.sleep(1)
+
+def eventLoop(watchPath='.',updatingFunction=updating,blockingFunction=blocking):
+
+    eventHandler = UpdateEventHandler(updatingFunction)
+    observer = watchdog.observers.Observer()
+    observer.schedule(eventHandler, watchPath, recursive=True)
     observer.start()
     try:
-        while True:
-            time.sleep(1)
+        blockingFunction()
     except KeyboardInterrupt:
         observer.stop()
     observer.join()
+
+
+if (__name__ == "__main__"):
+    eventLoop()

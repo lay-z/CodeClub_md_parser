@@ -25,7 +25,11 @@ def blocking():
     while True:
         time.sleep(1)
 
-def eventLoop(watchPath='.',updatingFunction=updating,blockingFunction=blocking):
+def eventLoop(
+              updatingFunction=updating,
+              blockingFunction=blocking,
+              watchPath='.'
+              ):
 
     eventHandler = UpdateEventHandler(updatingFunction)
     observer = watchdog.observers.Observer()

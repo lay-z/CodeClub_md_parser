@@ -36,21 +36,10 @@ class ResourceUploader:
             fileObject - opened file object to be uploaded to s3
         """
 
+        print('Updating {}'.format(localFilePath))
+        
         # Construct amazon bucket and check last modified
         key = self.s3.Object(self.bucketName, awsFilePath)
-        awsModified = key.last_modified
-
-        # Check last modified of local file
-        status = os.stat(localFilePath)
-        localModified = datetime.datetime.fromtimestamp(status.st_mtime)
-        localModified = pytz.utc.localize(localModified)
-
-        # Check if file has been modified locally
-        if (awsModified < localModified):
-            print(awsModified, localModified)
-            return
-
-        print('Updating {} - ({},{})'.format(localFilePath,awsModified, localModified))
         key.put(ACL='public-read',Body=open(localFilePath, 'rb'))
 
 

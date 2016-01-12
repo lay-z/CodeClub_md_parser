@@ -38,7 +38,7 @@ def findResources():
     resources = []
 
     root = 'resources/'
-    filenames = glob.glob(root + '**/*')
+    filenames = glob.glob(root + '**/*.*', recursive=True)
 
     for filename in filenames:
 

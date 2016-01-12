@@ -31,6 +31,7 @@ def main():
             components = parseScript(challenge['script']['content'])
 
         project = collections.OrderedDict([
+            ('id', str(challenge['_id'])),
             ('name', re.sub(r'\W+','_',challenge['name'].strip().lower())),
             ('title', challenge['name']),
             ('description', challenge['summary']),

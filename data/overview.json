@@ -134,5 +134,10 @@
         "provider" : "TuringLab",
         "module" : 2,
         "number" : 4
+    },
+    "Basic Shapes" : {
+        "provider" : "TuringLab",
+        "module" : 2,
+        "number" : 5
     }
 }

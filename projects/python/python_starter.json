@@ -2,6 +2,7 @@
     "name": "python_starter",
     "title": "Python Starter",
     "description": "Get started with Python on your computer, learn how to install Python and create a simple programme",
+    "link": "https://trinket.io/embed/python/c8d94b1f6d",
     "image": "python/logo.png",
     "steps": [
         {

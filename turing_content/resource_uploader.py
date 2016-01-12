@@ -51,8 +51,7 @@ class ResourceUploader:
             return
 
         print('Updating {} - ({},{})'.format(localFilePath,awsModified, localModified))
-        key.put(Body=open(localFilePath, 'rb'))
-        key.put(ACL='public-read')
+        key.put(ACL='public-read',Body=open(localFilePath, 'rb'))
 
 
 if (__name__ == "__main__"):

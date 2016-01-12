@@ -1,13 +1,13 @@
 {
     "title": "Castle Siege",
-    "image": "castle_siege/screenshot.png",
+    "image": "scratch/castle_siege/screenshot.png",
     "link": "https://scratch.mit.edu/projects/93215630/#editor",
     "description": "Throw fireballs at a target, use the mouse pointer to aim and the spacebar to choose the power",
     "steps": [
         {
             "number": 1,
             "title": "Making a fireball",
-            "image": "castle_siege/fireball.png",
+            "image": "scratch/castle_siege/fireball.png",
             "description": "Make a fireball to throw around your stage",
             "components": [
                 {
@@ -15,7 +15,7 @@
                 },
                 {
                     "text": "Make the fireball point towards the players mouse until they press the space bar using the following code",
-                    "image": "castle_siege/aim.png"
+                    "image": "scratch/castle_siege/aim.png"
                 },
                 {
                     "blocks": "when flag clicked\n\t\twait (0.5) secs\n\t\tgo to x:(-200) y:(-100)\n\t\tpoint in direction (90 v)\n\t\tswitch costume to [fireball-aim v]\n\t\trepeat until <key [space v] pressed?>\n\t\t\tpoint towards [mouse-pointer v]\n\t\tend"
@@ -28,7 +28,7 @@
         {
             "number": 2,
             "title": "Setting the fireball power",
-            "image": "castle_siege/slider.png",
+            "image": "scratch/castle_siege/slider.png",
             "description": "Allow the player to deicde on how powerful the fireball should be thrown",
             "components": [
                 {
@@ -42,7 +42,7 @@
                 },
                 {
                     "text": "Drag the variable display to the bottom of the stage, near the fireball",
-                    "image": "castle_siege/slider.png"
+                    "image": "scratch/castle_siege/slider.png"
                 },
                 {
                     "text": "Add this line to your existing code to set your new `power` variable to 0 when the flag is clicked",
@@ -65,7 +65,7 @@
         {
             "number": 3,
             "title": "Throwing the fireball",
-            "image": "castle_siege/throw.png",
+            "image": "scratch/castle_siege/throw.png",
             "description": "Allow the player to throw the fireball once its direction and power are selected",
             "components": [
                 {
@@ -93,7 +93,7 @@
             "number": 1,
             "challenge": true,
             "title": "Multiple throws",
-            "image": "castle_siege/slider.png",
+            "image": "scratch/castle_siege/slider.png",
             "description": "Can you change your game so you dont have to click the green flag each time you throw a fireball",
             "components": [
                 {
@@ -110,7 +110,7 @@
         {
             "number": 4,
             "title": "Limit throw power",
-            "image": "castle_siege/limit.png",
+            "image": "scratch/castle_siege/limit.png",
             "description": "Limit your fileball power throw power",
             "components": [
                 {
@@ -131,7 +131,7 @@
         {
             "number": 5,
             "title": "Reduce power during flight",
-            "image": "castle_siege/limit.png",
+            "image": "scratch/castle_siege/limit.png",
             "description": "Make your fireball power reduce during flight",
             "components": [
                 {
@@ -157,7 +157,7 @@
         {
             "number": 6,
             "title": "Add Gravity",
-            "image": "castle_siege/gravity.png",
+            "image": "scratch/castle_siege/gravity.png",
             "description": "Make your fileball fall towards the ground",
             "components": [
                 {
@@ -174,7 +174,7 @@
         {
             "number": 7,
             "title": "The target",
-            "image": "castle_siege/castle.png",
+            "image": "scratch/castle_siege/castle.png",
             "description": "Let's add in a target for your fireballs!",
             "components": [
                 {
@@ -195,7 +195,7 @@
         {
             "number": 8,
             "title": "Burning buildings",
-            "image": "castle_siege/burning.png",
+            "image": "scratch/castle_siege/burning.png",
             "description": "Make flame appear where your building has been hit",
             "components": [
                 {
@@ -223,7 +223,7 @@
             "number": 2,
             "challenge": true,
             "title": "Keeping score",
-            "image": "castle_siege/score.png",
+            "image": "scratch/castle_siege/score.png",
             "description": "Can you keep score of how many times each building has been hit?",
             "components": [
                 {

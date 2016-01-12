@@ -1,6 +1,6 @@
 {
     "title": "Crossy Road",
-    "image": "crossy_road/cover.png",
+    "image": "scratch/crossy_road/cover.png",
     "link": "https://scratch.mit.edu/projects/80071110/#editor",
     "description": "Help a minion cross a busy road",
     "steps": [
@@ -20,7 +20,7 @@
                 }
             ],
             "description": "make the sprite start at the top and face to the right",
-            "image": "crossy_road/minion.jpg",
+            "image": "scratch/crossy_road/minion.jpg",
             "title": "Starting Position"
         },
         {
@@ -37,7 +37,7 @@
                 }
             ],
             "description": "Track the score with a variable",
-            "image": "crossy_road/variables.png",
+            "image": "scratch/crossy_road/variables.png",
             "title": "Create Variables"
         },
         {
@@ -64,7 +64,7 @@
                 }
             ],
             "description": "Make your minion move across the road. Check which keys are pressed within a forever loop",
-            "image": "crossy_road/moving.jpg",
+            "image": "scratch/crossy_road/moving.jpg",
             "title": "Player Movement"
         },
         {
@@ -79,7 +79,7 @@
                 }
             ],
             "description": "Make the cars drive along the road. When the cars reach the end of the road make them reset position",
-            "image": "crossy_road/car.png",
+            "image": "scratch/crossy_road/car.png",
             "title": "Moving the Cars"
         },
         {
@@ -98,7 +98,7 @@
                 }
             ],
             "description": "Add scripts to the car to check if the car is hitting your minion. When any car hits the minion set the hit to 1 and seset the minion when hit is 1",
-            "image": "crossy_road/hit.png",
+            "image": "scratch/crossy_road/hit.png",
             "title": "Hitting Car"
         },
         {
@@ -109,7 +109,7 @@
                 }
             ],
             "description": "If the player reaches the other side then score a point",
-            "image": "crossy_road/score.png",
+            "image": "scratch/crossy_road/score.png",
             "title": "Scoring Points"
         }
     ]

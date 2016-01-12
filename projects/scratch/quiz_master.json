@@ -4,13 +4,13 @@
     "title": "Quiz Master",
     "name": "quiz_master",
     "description": "You are going to be the quizmaster in a quiz game!",
-    "image": "quiz_master/quiz_master.gif",
+    "image": "scratch/quiz_master/quiz_master.gif",
     "link": "",
     "steps": [
         {
             "title": "Choose a Quiz Master",
             "number": "1",
-            "image" : "quiz_master/start.jpg",
+            "image" : "scratch/quiz_master/start.jpg",
             "description": "Select from the Scratch library of characters and backdrops",
             "components": [
                 {
@@ -26,12 +26,12 @@
         {
             "title": "Introduce the contestant",
             "number": "2",
-            "image": "quiz_master/name_ask.gif",
+            "image": "scratch/quiz_master/name_ask.gif",
             "description": "Now that you have a quiz master, let's find out who the contestant is",
             "components": [
                 {
                     "text": "Click on your quiz master character, and ask for the contestants name",
-                    "image": "quiz_master/name.jpg"
+                    "image": "scratch/quiz_master/name.jpg"
                 },
                 {
                     "blocks": "when FLAG clicked \n\t\task [So contestant! What's your name?] and wait"
@@ -43,7 +43,7 @@
                     "blocks": "say [...use your join code here...] for (2) secs \n\n join [Great! We have a new contestant called ] (answer) "
                 },
                 {
-                    "image": "quiz_master/name_ask.gif",
+                    "image": "scratch/quiz_master/name_ask.gif",
                     "text": "Click your quiz master to test it out. Type your name into the box. Do you need to add a space somewhere?"
                 },
                 {
@@ -59,7 +59,7 @@
         {   
             "title": "Time for the first question",
             "number": "3",
-            "image": "quiz_master/question_one.jpg",
+            "image": "scratch/quiz_master/question_one.jpg",
             "description": "Now that you have a quiz master and contestant, let's program them ask questions.",
             "components": [
                 {
@@ -74,11 +74,11 @@
                 },
                 {
                     "text": "If you get it right",
-                    "image":"quiz_master/right.gif"
+                    "image":"scratch/quiz_master/right.gif"
                 },
                 {
                     "text": "if you get it wrong",
-                    "image":"quiz_master/wrong.gif"
+                    "image":"scratch/quiz_master/wrong.gif"
                 },
                 {
                     "text": "Now get the quiz master to use your name when replying. You might need the following:",
@@ -89,7 +89,7 @@
         {
             "title": "Add a score",
             "number": "4",
-            "image": "quiz_master/quiz_score.gif",
+            "image": "scratch/quiz_master/quiz_score.gif",
             "description": "There's no fun getting it right if you don't get a score!",
             "components": [
                 {
@@ -106,7 +106,7 @@
                 },
                 {
                     "text": "double click on the score display to make it look more like a score",
-                    "image": "quiz_master/quiz_score_change.gif"
+                    "image": "scratch/quiz_master/quiz_score_change.gif"
                 },
                 {
                     "text":"You should have something that looks like this:"
@@ -119,7 +119,7 @@
         {
             "title": "More questions",
             "number": "5",
-            "image": "quiz_master/more_questions.jpg",
+            "image": "scratch/quiz_master/more_questions.jpg",
             "description": "There's no fun getting it right if you don't get a score!",
             "components": [
                 {
@@ -133,7 +133,7 @@
         {
             "title": "Prize giving",
             "number": "6",
-            "image": "quiz_master/welldone.jpg",
+            "image": "scratch/quiz_master/welldone.jpg",
             "description": "Now that we have points, you can actually get a prize!",
             "components": [
                 {
@@ -158,7 +158,7 @@
         {
             "title": "More contestants",
             "number": "6",
-            "image": "quiz_master/more_contestants.gif",
+            "image": "scratch/quiz_master/more_contestants.gif",
             "challenge": true,
             "description": "Now that you have it working with one contestant, can you add more?",
             "components": [

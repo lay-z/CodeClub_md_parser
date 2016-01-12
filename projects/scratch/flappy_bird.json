@@ -1,13 +1,13 @@
 {
     "title": "Flappy Bird",
-    "image": "flappy_bird/flappy_bird.png",
+    "image": "scratch/flappy_bird/flappy_bird.png",
     "link": "https://scratch.mit.edu/projects/93151378/#editor",
     "description": "Create a Scratch version of Flappy Bird",
     "steps": [
         {
             "title": "Make Flappy Bird fall",
             "number": "1",
-            "image" : "flappy_bird/falling.png",
+            "image" : "scratch/flappy_bird/falling.png",
             "description": "Use a forever loop to make Flappy Bird fall",
             "components": [
                 {
@@ -27,7 +27,7 @@
         {
             "title": "Make Flappy Bird flap",
             "number": "2",
-            "image" : "flappy_bird/flapping.png",
+            "image" : "scratch/flappy_bird/flapping.png",
             "description": "Make Flappy flap upwards when you press the space bar",
             "components": [
                 {
@@ -44,7 +44,7 @@
         {
             "number": 3,
             "title": "Add the pipes",
-            "image": "flappy_bird/pipe_filled.png",
+            "image": "scratch/flappy_bird/pipe_filled.png",
             "description": "Next we'll add some obstacles for Flappy to fly through",
             "components": [
                 {
@@ -69,7 +69,7 @@
                 },
                 {
                     "text": "Click and drag two boxes to create the pipe shown",
-                    "image": "flappy_bird/pipe_basic.png"
+                    "image": "scratch/flappy_bird/pipe_basic.png"
                 },
                 {
                     "text": "Select a **Light Green** from the color pallet",
@@ -77,7 +77,7 @@
                 },
                 {
                     "text": "Click and drag two inner boxes to create the pipe shown",
-                    "image": "flappy_bird/pipe_filled.png"
+                    "image": "scratch/flappy_bird/pipe_filled.png"
                 },
                 {
                     "text": "Click **Select** button",
@@ -85,7 +85,7 @@
                 },
                 {
                     "text": "Drag a box around the pipe to **select it**",
-                    "image": "flappy_bird/pipe_selected.png"
+                    "image": "scratch/flappy_bird/pipe_selected.png"
                 },
                 {
                     "text": "Click **Group** button to group the rectangles",
@@ -97,11 +97,11 @@
                 },
                 {
                     "text": "**Rotate the new pipe** by clicking and dragging the top handle",
-                    "image": "flappy_bird/pipe_selected.png"
+                    "image": "scratch/flappy_bird/pipe_selected.png"
                 },
                 {
                     "text": "Position the second pipe to look like the picture shown",
-                    "image": "flappy_bird/pipe_double.png"
+                    "image": "scratch/flappy_bird/pipe_double.png"
                 },
                 {
                     "text": "Click the **i** button on your sprite to name it",
@@ -116,7 +116,7 @@
         {
             "number": 4,
             "title": "Make the pipes move",
-            "image": "flappy_bird/pipes_move.png",
+            "image": "scratch/flappy_bird/pipes_move.png",
             "description": "Next we'll make the pipes move and arrange them randomly to provide an obstacle course for Flappy.",
             "components": [
                 {
@@ -150,7 +150,7 @@
         {
             "number": 5,
             "title": "Detect collision with the pipes",
-            "image": "flappy_bird/pipe_collision.png",
+            "image": "scratch/flappy_bird/pipe_collision.png",
             "description": "To make the game a challenge, the player needs to guide Flappy through the gaps without touching the pipes or the edges of the screen",
             "components": [
                 {
@@ -179,7 +179,7 @@
         {
             "number": 6,
             "title": "Add scoring",
-            "image": "flappy_bird/flappy_score.png",
+            "image": "scratch/flappy_bird/flappy_score.png",
             "description": "The player should score a point every time Flappy makes it though a pipe",
             "components": [
                 {
@@ -210,7 +210,7 @@
             "number": 1,
             "challenge": true,
             "title": "Add a high score",
-            "image": "flappy_bird/high_score.png",
+            "image": "scratch/flappy_bird/high_score.png",
             "description": "Record players high score online",
             "components": [
                 {

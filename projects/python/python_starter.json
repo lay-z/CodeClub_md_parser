@@ -1,0 +1,338 @@
+{
+    "number": 26,
+    "show": true,
+    "name": "python_starter",
+    "title": "Python Starter",
+    "description": "Get started with Python on your computer, learn how to install Python and create a simple programme",
+    "image": "python/logo.png",
+    "steps": [
+        {
+            "number": 1,
+            "title": "Download and Install Python",
+            "image": "download.png",
+            "description": "Download and install Python onto your computer",
+            "components": [
+                {
+                    "text": "Open your prefered internet browser and go to <a href=\"https://www.python.org/downloads/\" target=\"_blank\">https://www.python.org/downloads/</a>"
+                },
+                {
+                    "text": "**Click** download Python 3",
+                    "image": "python/download.png"
+                },
+                {
+                    "text": "Confirm the download, if asked save the download on your Desktop",
+                    "image": "download.png"
+                },
+                {
+                    "text": "**Open the downloaded file** when the download finishes",
+                    "hidden": {
+                        "lines": [
+                            "**Double click on the file to open it**",
+                            "If any warning message appears about opening the file select `Run` or `Continue`"
+                        ]
+                    }
+                },
+                {
+                    "text": "On a Windows computer **Tick Add Python 3.5 to PATH** then click 'Install Now'",
+                    "image": "python/windows_installer.png"
+                },
+                {
+                    "text": "On a Mac computer click 'Continue'",
+                    "image": "python/mac_installer.png"
+                },
+                {
+                    "text": "Follow the on screen instructions to install Python on your computer"
+                },
+                {
+                    "text": "Search your computer for 'IDLE'",
+                    "hidden": {
+                        "lines": [
+                            "On Windows **Press Windows + S** and type 'idle'",
+                            "On Mac **Press cmd + space** and type 'idle'"
+                        ]
+                    }
+                },
+                {
+                    "text": "Open IDLE and a 'Python Shell' window should appear",
+                    "image": "python/windows_idle.png"
+                },
+                {
+                    "text": "Did IDLE successfully open on your computer?",
+                    "checkmark": true
+                }
+            ]
+        },
+        {
+            "number": 2,
+            "title": "Using IDLE",
+            "image": "python/logo.png",
+            "description": "Learn how to use the IDLE interactive Python shell",
+            "components": [
+                {
+                    "text": "Make sure you have opened IDLE and you can see a 'Python Shell' window",
+                    "image": "python/windows_idle.png"
+                },
+                {
+                    "text": "Type the following line where you see `>>>` then press enter",
+                    "code": "print('Hello World!')"
+                },
+                {
+                    "text": "Did the Python Shell print 'Hello World!' when your pressed enter?",
+                    "checkmark": true
+                },
+                {
+                    "text": "Type this code into the Python Shell and press enter, can you spot the mistake?",
+                    "code": "prints('Hello World!)"
+                },
+                {
+                    "text": "The following error message should be displayed",
+                    "code": "Traceback (most recent call last):\n  File \"<pyshell#5>\", line 1, in <module>\n    prints\nNameError: name 'prints' is not defined"
+                },
+                {
+                    "text": "This error means Python does not understand the **prints on line 1**"
+                },
+                {
+                    "text": "Can you make the Python Shell print out your name?",
+                    "hidden": {
+                        "text": "If you were called Henry your line should read",
+                        "code": "print('Henry')"
+                    }
+                },
+                {
+                    "text": "The Python Shell works as a powerful calculator, type this code and press enter",
+                    "code": "2 * 10 + 100"
+                },
+                {
+                    "text": "Can you work out hold old you will be in 2048?",
+                    "hidden": {
+                        "text": "If you were 12 your line should read",
+                        "code": "12 + (2048 - 2016)"
+                    }
+                },
+                {
+                    "text": "Did you manage to calculate your age in 2048?",
+                    "checkmark": true
+                }
+            ]
+        },
+        {
+            "number": 3,
+            "title": "Creating Python files",
+            "image": "python/file.jpg",
+            "description": "Python script can be written in a file so you can write more code and save your work",
+            "components": [
+                {
+                    "text": "Make sure you have opened IDLE and you can see a 'Python Shell' window",
+                    "image": "python/windows_idle.png"
+                },
+                {
+                    "text": "Click `File -> New File` to create a new Python file",
+                    "image": "python/new_file.png"
+                },
+                {
+                    "text": "Type the following code into the new file",
+                    "image": "python/first_script.png",
+                    "code": "myName = 'Your Name Here'\nprint('Hello',myName)"
+                },
+                {
+                    "text": "To run the file click `Run -> Run Module`",
+                    "image": "python/run_file.png"
+                },
+                {
+                    "text": "When you run a file it will ask if you want to save, **Click OK** to save the file",
+                    "image": "python/run_save.png",
+                    "hidden" : {
+                        "lines": [
+                            "**To stop Python asking you each time you save**",
+                            "Open IDLE preferences",
+                            "Select the 'General' tab",
+                            "Check 'No Prompt' on Autosave preferences"
+                            ],
+                        "image": "python/save_check.png"
+                    }
+                },
+                {
+                    "text": "Save your Python file on the Desktop and call it `my_first_script.py`",
+                    "image": "python/save_file.png",
+                    "hidden" : {
+                        "text": "When saving Python files only use **letters, numbers and underscrores** as the computer find spaces difficult"
+                        }
+                },
+                {
+                    "text": "Did your script sucessfully run and print out 'Hello Your Name Here'?",
+                    "checkmark": true
+                },
+                {
+                    "text": "Now we can get the computer to ask what your name is, edit your code to look like the following",
+                    "code": "myName = input('What is your name?')\nprint('Hello',myName)"
+                },
+                {
+                    "text": "Now run your code, on Windows **Press F5** on a Mac **Press fn + F5**"
+                },
+                {
+                    "text": "When your script runs **type your name** into the Python Shell then **press enter**"
+                },
+                {
+                    "text": "Does your script now greet you by the name you provide?",
+                    "checkmark": true
+                }
+            ]
+        },
+        {
+            "number": 4,
+            "title": "Using the Command Line",
+            "image": "python/terminal.png",
+            "description": "Python can be run from the command line which is how its mostly used by developers",
+            "components": [
+                {
+                    "text": "Open up the command line (click the question mark to see how)",
+                    "hidden": {
+                        "lines": [
+                            "On Windows **Press Windows + S** and type 'cmd'",
+                            "On Mac **Press cmd + space** and type 'terminal'",
+                            "Open either 'CMD.exe' or 'Terminal'"
+                        ]
+                    }
+                },
+                {
+                    "text": "With the command line open type 'python3' on a mac or 'python' on windows",
+                    "code": "    mac$ python3\nwindows> python"
+                },
+                {
+                    "text": "Did the Python interpreter start? It should look something like bellow",
+                    "code": "Python 3.5.1 (v3.5.1:37a07cee5969, Dec  5 2015, 21:12:44)\n[GCC 4.2.1 (Apple Inc. build 5666) (dot 3)] on darwin\nType \"help\", \"copyright\", \"credits\" or \"license\" for more information.",
+                    "checkmark": true
+                },
+                {
+                    "text": "Type this code into the command line and press enter",
+                    "code": ">>> print('Hello World!')"
+                },
+                {
+                    "text": "Did the Python interpreter print 'Hello World!' when your pressed enter?",
+                    "checkmark": true
+                },
+                {
+                    "text": "To exit the Python interpreter type this code into the command line and press enter",
+                    "code": ">>> exit()"
+                },
+                {
+                    "text": "Python files can be using the command line, but you need to find the file first",
+                    "image": "python/file.jpg"
+                },
+                {
+                    "text": "To run your Python file navigate to the desktop using this code in the command line",
+                    "code": "    mac$ cd ~/Desktop\nwindows> cd c:\\Users\\YOUR_USERNAME\\Desktop",
+                    "hidden": {
+                        "lines": [
+                            "The `cd` command stands for 'Change Directory'",
+                            "When you start typing a folder address use the `tab` key to automatically complete"
+                        ]
+                    }
+                },
+                {
+                    "text": "Check that 'my_first_script.py' is on the Desktop using the following commands",
+                    "code": "    mac$ ls\nwindows> dir"
+                },
+                {
+                    "text": "Is 'my_first_script.py' on the Desktop? If not save the file again using IDLE",
+                    "checkmark": true
+                },
+                {
+                    "text": "Run your Python file by typing this code into the command line",
+                    "code": "    mac$ python3 my_first_script.py\nwindows> python my_first_script.py"
+                },
+                {
+                    "text": "Does your script run and greet you by the name you provide?",
+                    "checkmark": true
+                }
+            ]
+        },
+        {
+            "number": 5,
+            "title": "Install Sublime Text",
+            "image": "sublime/logo.png",
+            "description": "Sublime Text is an advanced text editor used to write computer code",
+            "components": [
+                {
+                    "text": "Open your preferred Internet browser and go to <a href=\"http://www.sublimetext.com/3\" target=\"_blank\">http://www.sublimetext.com/3</a>"
+                },
+                {
+                    "text": "Download either the Windows or Mac installer",
+                    "image": "sublime/download.png"
+                },
+                {
+                    "text": "Confirm the download, if asked save the download on your Desktop",
+                    "image": "download.png"
+                },
+                {
+                    "text": "**Open the downloaded file** when the download finishes",
+                    "hidden": {
+                        "lines": [
+                            "**Double click on the file to open it**",
+                            "If any warning message appears about opening the file select `Run` or `Continue`"
+                        ]
+                    }
+                },
+                {
+                    "text": "On a Mac computer drag the Sublime icon into your application folder",
+                    "image": "sublime/mac_install.png"
+                },
+                {
+                    "text": "Follow the on screen instructions to install Sublime on your computer",
+                    "image": "sublime/windows_install.png"
+                },
+                {
+                    "text": "Search your computer for 'Sublime Text'",
+                    "hidden": {
+                        "lines": [
+                            "On Windows **Press Windows + S** and type 'sublime'",
+                            "On Mac **Press cmd + space** and type 'sublime'"
+                        ]
+                    }
+                },
+                {
+                    "text": "Open Sublime Text and a 'Sublime Text' window should appear",
+                    "image": "sublime/window.png"
+                },
+                {
+                    "text": "Did Sublime Text successfully open on your computer?",
+                    "checkmark": true
+                }
+            ]
+        },
+        {
+            "number": 6,
+            "title": "Python Turtle program",
+            "image": "python/python_starter/simple_pinwheel.png",
+            "description": "Create a simple pinwheel using the Python Turtle",
+            "components": [
+                {
+                    "text": "Open Sublime Text and a 'Sublime Text' window should appear",
+                    "image": "sublime/window.png"
+                },
+                {
+                    "text": "Type the following code into the Sublime window",
+                    "code": "import turtle\nturtle.circle(100)"
+                },
+                {
+                    "text": "Does your output look like this?",
+                    "image": "python/python_starter/simple_pinwheel.png",
+                    "checkmark": true
+                }
+            ]
+        },
+        {
+            "number": 7,
+            "title": "Colorful Python Turtle",
+            "image": "python/python_starter/color_pinwheel.png",
+            "description": "Create different colored pinwheels using the Python Turtle",
+            "components": [
+                {
+                    "text": "Does your output look like this?",
+                    "image": "python/python_starter/color_pinwheel.png",
+                    "checkmark": true
+                }
+            ]
+        }
+    ]
+}

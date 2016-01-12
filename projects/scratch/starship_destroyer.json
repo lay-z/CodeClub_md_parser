@@ -1,13 +1,13 @@
 {
     "title": "Starship Destroyer",
-    "image": "starship_destroyer/starship_destroyer.gif",
+    "image": "scratch/starship_destroyer/starship_destroyer.gif",
     "link": "https://scratch.mit.edu/projects/93404382/#editor",
     "description": "In this project you get points for destroying the spaceships that appear on the screen. The aim is to get as many points as possible in 30 seconds!",
     "steps": [
         {
             "title": "Create a flying spaceship",
             "number": "1",
-            "image" : "starship_destroyer/forward_back.gif",
+            "image" : "scratch/starship_destroyer/forward_back.gif",
             "description": "Use a forever loop to make the spaceship fly from side to side forever",
             "components": [
                 {
@@ -40,7 +40,7 @@
             "title": "Change the speed of your ship",
             "number": "2",
             "challenge": true,
-            "image" : "starship_destroyer/faster.gif",
+            "image" : "scratch/starship_destroyer/faster.gif",
             "description": "Manipulating variables",
             "components": [
                 {
@@ -58,7 +58,7 @@
         {
             "title": "Allow spaceships to hide",
             "number": "3",
-            "image" : "starship_destroyer/hide.gif",
+            "image" : "scratch/starship_destroyer/hide.gif",
             "description": "Add cloacking to the spaceships so the appear and vanish at random",
             "components": [
                 {
@@ -81,7 +81,7 @@
         {
             "title": "Explode the spaceship when clicked",
             "number": "4",
-            "image" : "starship_destroyer/explode.gif",
+            "image" : "scratch/starship_destroyer/explode.gif",
             "description": "We also want to add a score each time you do!",
             "components": [
                 {
@@ -106,7 +106,7 @@
         {
             "title": "Create the game starting point",
             "number": "5",
-            "image" : "starship_destroyer/score.gif",
+            "image" : "scratch/starship_destroyer/score.gif",
             "description": "Adding a timer, and resetting the score",
             "components": [
                 {
@@ -131,7 +131,7 @@
             "title": "Make your game harder",
             "number": "6",
             "challenge": true,
-            "image" : "starship_destroyer/harder.gif",
+            "image" : "scratch/starship_destroyer/harder.gif",
             "description": "Add more spaceships, change their speeds and sizes, change how many points you get",
             "components": [
                 {
@@ -152,7 +152,7 @@
         {
             "title": "Gameover",
             "number": "6",
-            "image" : "starship_destroyer/end.gif",
+            "image" : "scratch/starship_destroyer/end.gif",
             "description": "End the game, telling the player what their score is",
             "components": [
                 {

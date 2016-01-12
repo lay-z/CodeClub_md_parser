@@ -1,13 +1,13 @@
 {
     "title": "Star Wars",
-    "image": "star_wars/title.png",
+    "image": "scratch/star_wars/title.png",
     "link": "https://scratch.mit.edu/projects/93669827/#editor",
     "description": "Create a Star Wars animation",
     "steps": [
         {
             "title": "Make Star Wars into",
             "number": "1",
-            "image" : "star_wars/title.png",
+            "image" : "scratch/star_wars/title.png",
             "description": "Use a loop to make the Star Wars title shrink",
             "components": [
                 {
@@ -25,7 +25,7 @@
         {
             "title": "Zoom in on planet",
             "number": "2",
-            "image" : "star_wars/planet.png",
+            "image" : "scratch/star_wars/planet.png",
             "description": "We will make it look like we are zooming in on a desert planet",
             "components": [
                 {
@@ -44,7 +44,7 @@
         {
             "number": 3,
             "title": "Add a droid",
-            "image": "star_wars/bb8.png",
+            "image": "scratch/star_wars/bb8.png",
             "description": "BB8 has lost his master, let's make an animation to show this",
             "components": [
                 {
@@ -60,7 +60,7 @@
         {
             "number": 4,
             "title": "TIE Fighter!",
-            "image": "star_wars/tie.png",
+            "image": "scratch/star_wars/tie.png",
             "description": "Now we will get the TIE fighter to fly around and shoot at BB8 ",
             "components": [
                 {
@@ -76,7 +76,7 @@
         {
             "number": 5,
             "title": "Lasers!",
-            "image": "star_wars/laser.png",
+            "image": "scratch/star_wars/laser.png",
             "description": "The TIE fighter shoots lasers, we need to make the laser shoot at BB8",
             "components": [
                 {
@@ -92,7 +92,7 @@
         {
             "number": 6,
             "title": "Run away!",
-            "image": "star_wars/run.png",
+            "image": "scratch/star_wars/run.png",
             "description": "BB8 gets scared, let's make him run away",
             "components": [
                  {

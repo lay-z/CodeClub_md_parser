@@ -1,6 +1,6 @@
 {
     "title": "Space Race",
-    "image": "space_race/complete.png",
+    "image": "scratch/space_race/complete.png",
     "link": "https://scratch.mit.edu/projects/93330014/#editor",
     "description": "Welcome to the TuringLab Space Race!",
     "steps": [
@@ -10,14 +10,14 @@
                     "text": "Open the **Scratch Starter Project**"
                 },
                 {
-                    "image": "space_race/level1.png",
+                    "image": "scratch/space_race/level1.png",
                     "text": "The starter project contains three basic levels, we can add more later"
                 }
             ],
             "description": "First lets get the level set up by opening a starter project",
             "number": "1",
             "title": "Setting up the race",
-            "image": "space_race/level1.png"
+            "image": "scratch/space_race/level1.png"
         },
         {
             "components": [
@@ -31,7 +31,7 @@
             ],
             "description": "We will use our mouse to guide the spaceship",
             "number": "2",
-            "img": "space_race/controls.png",
+            "img": "scratch/space_race/controls.png",
             "title": "controls"
         },
         {
@@ -40,7 +40,7 @@
                     "text": "+ We need a a second costume for when the spaceship is destroyed. **Clone** the spaceship costume and call one 'spaceship' and the other 'destroyed'"
                 },
                 {
-                    "image": "space_race/destroyed.png",
+                    "image": "scratch/space_race/destroyed.png",
                     "text": "Click on your 'destroyed' costume, add some flames to the spaceship, you can use the select tool to break up the costume so it looks more destroyed"
                 },
                 {
@@ -54,7 +54,7 @@
             ],
             "description": "Let's make the spaceship explode when it crashes into a laser wall",
             "number": "3",
-            "image": "space_race/destroyed_thumb.png",
+            "image": "scratch/space_race/destroyed_thumb.png",
             "title": "Losing the game"
         },
         {
@@ -62,7 +62,7 @@
             "components": [
                 {
                     "blocks": "broadcast [complete v] \n\t say [Wooo!] for (1) secs\n\tpoint in direction (90 v)\n\tgo to x: (-190) y: (-150)\n\t wait (1) secs\n\t",
-                    "image": "space_race/level_complete.png",
+                    "image": "scratch/space_race/level_complete.png",
                     "text": "When the shaceship reaches the end of the level, reset it to the beginning of the next level"
                 }, 
                 {
@@ -72,27 +72,27 @@
             ],
             "description": "Add code so that if the spaceship is touching the purple landing area, the next level is started. It will be similar to the code you have written that checks if the spaceship is touching a laser wall. ",
             "number": "",
-            "image": "space_race/level_complete.png",
+            "image": "scratch/space_race/level_complete.png",
             "title": "Completeing a level"
         },
         {
             "components": [
                 {
                     "blocks": "say [I Win!] for (2) secs\n\tstop [all v]\n\t",
-                    "image": "space_race/game_complete.png",
+                    "image": "scratch/space_race/game_complete.png",
                     "text": "When the shaceship the final landing zone, the game is over"
                 }
                 
             ],
             "description": "The race is over when the spaceship reaches the final landing zone which is pink.",
             "number": "4",
-            "image": "space_race/game_complete.png",
+            "image": "scratch/space_race/game_complete.png",
             "title": "Winning the game"
         },
         {
             "components": [
                 {
-                    "image": "space_race/time.png",
+                    "image": "scratch/space_race/time.png",
                     "text": "+ Add a new variable called `time` to your stage."
                 },
                 {
@@ -102,13 +102,13 @@
             ],
             "description": "Adding a timer to the game will let us keep track of our score",
             "number": "5",
-            "image": "space_race/time_thumb.png",
+            "image": "scratch/space_race/time_thumb.png",
             "title": "Timer"
         },
         {   
             "components": [
                 {
-                    "image": "space_race/boost.png",
+                    "image": "scratch/space_race/boost.png",
                     "text": "+ Lets add some boosts to make the spaceship go faster. Edit your stage backdrop and add in some red booster arrows."
                 },
                 {
@@ -116,11 +116,11 @@
                     "text": "Add this to the spaceship `forever` loop, so that it moves _extra_ steps when touching a red booster."
                 },
                 {
-                    "image": "space_race/gate3.png",
+                    "image": "scratch/space_race/gate3.png",
                     "text": "Try adding a moving laser gate. This should be the same colours as the walls. You can make it **spin** or move **side to side**"
                 },
                 {
-                    "image": "space_race/gate.png",
+                    "image": "scratch/space_race/gate.png",
                     "text": "Set the center of the gate sprite."
                 },
                 {
@@ -129,18 +129,18 @@
             ],
             "description": "Lets make the game harder by some moving obstacles.",
             "number": "6",
-            "image": "space_race/boost_thumb.png",
+            "image": "scratch/space_race/boost_thumb.png",
             "title": "Extensions"
         },
         {
             "challenge": true,
             "components": [               
                 {                
-                    "image": "space_race/blackhole.png",   
+                    "image": "scratch/space_race/blackhole.png",   
                     "text": "Add a new blackhole sprite by drawing spirals in different colors."                    
                 },
                 {
-                    "image": "space_race/whirl.png",
+                    "image": "scratch/space_race/whirl.png",
                     "text": "Give the blackhole a wirl effect, write this code in the **blackhole** sprite:"
                 },
                 {
@@ -150,7 +150,7 @@
             ],
             "description": "Can you add more things to your game, you could add power ups or even black holes!",
             "number": "",
-            "image": "space_race/blackhole.png",  
+            "image": "scratch/space_race/blackhole.png",  
             "title": "More obstacles!"
         },
         {

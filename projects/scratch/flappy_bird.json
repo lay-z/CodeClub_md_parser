@@ -14,9 +14,7 @@
                     "text": "Open the **Scratch Starter Project**"
                 },
                 {
-                    "text": "Add the following script to your Flappy sprite"
-                },
-                {
+                    "text": "Add the following script to your Flappy sprite",
                     "blocks": "when FLAG clicked\ngo to x: (-50) y: (0)\nforever\n\tchange y by (-3)\n\tpoint in direction [100 v]\nend"
                 },
                 {
@@ -31,9 +29,7 @@
             "description": "Make Flappy flap upwards when you press the space bar",
             "components": [
                 {
-                    "text": "Change your **Flappy falling script** to the following"
-                },
-                {
+                    "text": "Change your **Flappy falling script** to the following",
                     "blocks": "when FLAG clicked\ngo to x: (-50) y: (0)\nforever\n\tif <key [space v] pressed?> then\n\t\tnext costume\n\t\tchange y by (9)\n\t\tpoint in direction [80 v]\n\telse\n\t\tchange y by (-3)\n\t\tpoint in direction [100 v]\n\tend\nend"
                 },
                 {
@@ -124,15 +120,11 @@
                     "image": "scratch/scripts_tab.png"
                 },
                 {
-                    "text": "Hide the Pipe sprite and start making clones"
-                },
-                {
+                    "text": "Hide the Pipe sprite and start making clones",
                     "blocks": "when FLAG clicked\nhide\nforever\n\tcreate clone of [myself v]\n\twait (2) secs\nend"
                 },
                 {
-                    "text": "When the sprite starts as a clone move across the screen"
-                },
-                {
+                    "text": "When the sprite starts as a clone move across the screen",
                     "blocks": "when I start as a clone\ngo to x: (240) y: (pick random (-80) to (80))\nshow\nrepeat (120)\n\tchange x by (-4)\nend\ndelete this clone"
                 },
                 {
@@ -158,9 +150,7 @@
                     "image": "scratch/scripts_tab.png"
                 },
                 {
-                    "text": "Add some blocks to detect if Flappy hits something"
-                },
-                {
+                    "text": "Add some blocks to detect if Flappy hits something",
                     "blocks": "when FLAG clicked\nwait until ((touching [edge v]?) or (touching [Pipe v]?))\nsay [Game Over!]\nbroadcast [GameOver v]\nstop [other scripts in sprite v]"
                 },
                 {
@@ -196,9 +186,7 @@
                     "blocks": "when FLAG clicked\nset (score) to (0)"
                 },
                 {
-                    "text": "Add blocks to detect when Flappy has passed the pipes"
-                },
-                {
+                    "text": "Add blocks to detect when Flappy has passed the pipes",
                     "blocks": "when I start as a clone\nwait until <(x position) < ([x position v] of [Flappy v])>\nchange [score v] by (1)"
                 },
                 {
@@ -222,9 +210,7 @@
                     "blocks": "(hi-score)"
                 },
                 {
-                    "text": "When the game is over check if you need to set a new high score"
-                },
-                {
+                    "text": "When the game is over check if you need to set a new high score",
                     "blocks": "when I receive [GameOver v]\nif <(score) > (hi-score)> then\n\tset [hi-score v] to (score)\nend\nstop [other scripts in sprite v]"
                 }
             ]

@@ -1,7 +1,7 @@
 {
+    "draft": false,
     "name": "python_starter",
     "title": "Python Starter",
-    "language": "Python",
     "description": "Get started with Python on your computer, learn how to install Python and create a simple programme",
     "link": "https://trinket.io/embed/python/c8d94b1f6d",
     "image": "python/logo.png",
@@ -25,6 +25,7 @@
                 },
                 {
                     "text": "**Open the downloaded file** when the download finishes",
+                    "checkmark": true,
                     "hidden": {
                         "lines": [
                             "**Double click on the file to open it**",
@@ -74,7 +75,10 @@
                 },
                 {
                     "text": "Type the following line where you see `>>>` then press enter",
-                    "code": "print('Hello World!')"
+                    "code": {
+                        "language": "python",
+                        "content": "print('Hello World!')"
+                    }
                 },
                 {
                     "text": "Did the Python Shell print 'Hello World!' when your pressed enter?",
@@ -82,11 +86,17 @@
                 },
                 {
                     "text": "Type this code into the Python Shell and press enter, can you spot the mistake?",
-                    "code": "prints('Hello World!)"
+                    "code": {
+                        "language": "python",
+                        "content": "prints('Hello World!)"
+                    }
                 },
                 {
                     "text": "The following error message should be displayed",
-                    "code": "Traceback (most recent call last):\n  File \"<pyshell#5>\", line 1, in <module>\n    prints\nNameError: name 'prints' is not defined"
+                    "code": {
+                        "language": "",
+                        "content": "Traceback (most recent call last):\n  File \"<pyshell#5>\", line 1, in <module>\n    prints\nNameError: name 'prints' is not defined"
+                    }
                 },
                 {
                     "text": "This error means Python does not understand the **prints on line 1**"
@@ -95,18 +105,27 @@
                     "text": "Can you make the Python Shell print out your name?",
                     "hidden": {
                         "text": "If you were called Henry your line should read",
-                        "code": "print('Henry')"
+                        "code": {
+                            "language": "python",
+                            "content": "print('Henry')"
+                        }
                     }
                 },
                 {
                     "text": "The Python Shell works as a powerful calculator, type this code and press enter",
-                    "code": "2 * 10 + 100"
+                    "code": {
+                        "language": "python",
+                        "content": "2 * 10 + 100"
+                    }
                 },
                 {
                     "text": "Can you work out hold old you will be in 2048?",
                     "hidden": {
                         "text": "If you were 12 your line should read",
-                        "code": "12 + (2048 - 2016)"
+                        "code": {
+                            "language": "python",
+                            "content": "12 + (2048 - 2016)"
+                        }
                     }
                 },
                 {
@@ -196,16 +215,25 @@
                 },
                 {
                     "text": "With the command line open type 'python3' on a mac or 'python' on windows",
-                    "code": "    mac$ python3\nwindows> python"
+                    "code": {
+                        "language": "",
+                        "content": "    mac$ python3\nwindows> python"
+                    }
                 },
                 {
                     "text": "Did the Python interpreter start? It should look something like bellow",
-                    "code": "Python 3.5.1 (v3.5.1:37a07cee5969, Dec  5 2015, 21:12:44)\n[GCC 4.2.1 (Apple Inc. build 5666) (dot 3)] on darwin\nType \"help\", \"copyright\", \"credits\" or \"license\" for more information.",
+                    "code": {
+                        "language": "",
+                        "content": "Python 3.5.1 (v3.5.1:37a07cee5969, Dec  5 2015, 21:12:44)\n[GCC 4.2.1 (Apple Inc. build 5666) (dot 3)] on darwin\nType \"help\", \"copyright\", \"credits\" or \"license\" for more information."
+                        },
                     "checkmark": true
                 },
                 {
                     "text": "Type this code into the command line and press enter",
-                    "code": ">>> print('Hello World!')"
+                    "code": {
+                        "language": "",
+                        "content": ">>> print('Hello World!')"
+                    }
                 },
                 {
                     "text": "Did the Python interpreter print 'Hello World!' when your pressed enter?",
@@ -213,7 +241,10 @@
                 },
                 {
                     "text": "To exit the Python interpreter type this code into the command line and press enter",
-                    "code": ">>> exit()"
+                    "code": {
+                        "language": "",
+                        "content": ">>> exit()"
+                    }
                 },
                 {
                     "text": "Python files can be using the command line, but you need to find the file first",
@@ -221,7 +252,10 @@
                 },
                 {
                     "text": "To run your Python file navigate to the desktop using this code in the command line",
-                    "code": "    mac$ cd ~/Desktop\nwindows> cd c:\\Users\\YOUR_USERNAME\\Desktop",
+                    "code": {
+                        "language": "",
+                        "content": "    mac$ cd ~/Desktop\nwindows> cd c:\\Users\\YOUR_USERNAME\\Desktop"
+                    },
                     "hidden": {
                         "lines": [
                             "The `cd` command stands for 'Change Directory'",
@@ -231,7 +265,10 @@
                 },
                 {
                     "text": "Check that 'my_first_script.py' is on the Desktop using the following commands",
-                    "code": "    mac$ ls\nwindows> dir"
+                    "code": {
+                        "language": "",
+                        "content": "    mac$ ls\nwindows> dir"
+                    }
                 },
                 {
                     "text": "Is 'my_first_script.py' on the Desktop? If not save the file again using IDLE",
@@ -239,7 +276,10 @@
                 },
                 {
                     "text": "Run your Python file by typing this code into the command line",
-                    "code": "    mac$ python3 my_first_script.py\nwindows> python my_first_script.py"
+                    "code": {
+                        "language": "",
+                        "content": "    mac$ python3 my_first_script.py\nwindows> python my_first_script.py"
+                    }
                 },
                 {
                     "text": "Does your script run and greet you by the name you provide?",
@@ -312,7 +352,10 @@
                 },
                 {
                     "text": "Type the following code into the Sublime window",
-                    "code": "import turtle\nturtle.circle(100)"
+                    "code": {
+                        "language": "python",
+                        "content": "import turtle\nturtle.circle(100)"
+                    }
                 },
                 {
                     "text": "Does your output look like this?",

@@ -92,7 +92,10 @@ def parseComponent(text):
     codePattern = re.compile(r'```([^`]*)```')
     match = codePattern.search(text)
     if (match is not None):
-        component['code'] = match.group(1).strip()
+        component['code'] = {
+            'language': 'python',
+            'content': match.group(1).strip()
+            }
 
     text = codePattern.sub('',text)
 

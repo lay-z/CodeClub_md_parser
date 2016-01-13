@@ -85,7 +85,7 @@ def update():
         project.load(_project)
         project.update(overview[_project['title']])
         project.format(config.turingResources[environment])
-        project.save()
+        project.save(environment)
 
 def main():
 

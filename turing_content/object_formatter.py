@@ -29,3 +29,11 @@ def changeImagePath(dictionary,url):
             for item in dictionary[key]:
                 changeImagePath(item,url)
 
+
+def addCheckmark(project):
+    """Add a checkmark to all project components
+    """
+
+    for step in project.get('steps',[]):
+        for component in step.get('components',[]):
+            component['checkmark'] = True

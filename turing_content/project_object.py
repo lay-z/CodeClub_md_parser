@@ -32,9 +32,15 @@ class Project:
 
         object_formatter.changeImagePath(self.project,url)
 
-    def save(self):
+        if (self.project.get('language','') == 'Scratch'):
+            object_formatter.addCheckmark(self.project)
+
+    def save(self,environment="development"):
         """Save the given project using the mongo collection interface
         """
+
+        if (self.project.get('draft',False) and (environment == "production")):
+            return
 
         self.project = self.collection.update(
             { "title" : self.project['title'] },

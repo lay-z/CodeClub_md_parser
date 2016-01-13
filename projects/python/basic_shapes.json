@@ -1,4 +1,5 @@
 {
+    "draft": true,
     "name": "basic_shapes",
     "title": "Basic Shapes",
     "description": "Draw basic shapes with the python turtle",
@@ -14,15 +15,24 @@
                     "text": "Steps"
                 },
                 {
-                    "code": "import turtle",
+                    "code": {
+                        "language": "python",
+                        "content": "import turtle"
+                    },
                     "text": "Make Turtle commands available\nThis line has been done for you"
                 },
                 {
-                    "code": "myTurtle = turtle.Turtle()",
+                    "code": {
+                        "language": "python",
+                        "content": "myTurtle = turtle.Turtle()"
+                    },
                     "text": "Create a Turtle called bob"
                 },
                 {
-                    "code": "myTurtle.forward(50)",
+                    "code": {
+                        "language": "python",
+                        "content": "myTurtle.forward(50)"
+                    },
                     "text": "Make bob move the 50 pixels"
                 },
                 {
@@ -48,7 +58,10 @@
                     "text": "Run the code\nUse the `Run Code` button to see what the code does\n\nCan you see what is happening?"
                 },
                 {
-                    "code": "myTurtle.forward(10)\n\tmyTurtle.write(i)",
+                    "code": {
+                        "language": "python",
+                        "content": "myTurtle.forward(10)\n\tmyTurtle.write(i)"
+                    },
                     "text": "Add the code below\nChange this code ...\n\n\n\nWith this code\n\n\nHow could you make a 5 sided shape?"
                 },
                 {
@@ -71,22 +84,34 @@
                     "text": "Steps"
                 },
                 {
-                    "code": "for i in range(4):\n    myTurtle.forward(100)\n    myTurtle.right(90)",
+                    "code": {
+                        "language": "python",
+                        "content": "for i in range(4):\n    myTurtle.forward(100)\n    myTurtle.right(90)"
+                    },
                     "text": "This code can be used to draw a square"
                 },
                 {
-                    "code": "sides = 4",
+                    "code": {
+                        "language": "python",
+                        "content": "sides = 4"
+                    },
                     "text": "Create a `variable` for number of sides"
                 },
                 {
-                    "code": "angle = ??/sides",
+                    "code": {
+                        "language": "python",
+                        "content": "angle = ??/sides"
+                    },
                     "text": "Calculate the angle to turtle must change"
                 },
                 {
                     "text": "Add the `sides` and `angle` variable\n\nAdd the variables sides and angle into the draw square code"
                 },
                 {
-                    "code": "sides = 6",
+                    "code": {
+                        "language": "python",
+                        "content": "sides = 6"
+                    },
                     "text": "Change the number of sides\n\nChange the number of sides and check the polygon changes"
                 },
                 {
@@ -106,19 +131,31 @@
                 },
                 {
                     "text": "Circles can be drawn easily using the `circle` command",
-                    "code": "pen = turtle.Turtle()\npen.circle()"
+                    "code": {
+                        "language": "python",
+                        "content": "pen = turtle.Turtle()\npen.circle()"
+                    }
                 },
                 {
                     "text": "Circles can also be drawn by making a shape with many sides\n\nHere is the code to draw a square",
-                    "code": "for i in range(4):\n    pen.forward(100)\n    pen.right(90)"
+                    "code": {
+                        "language": "python",
+                        "content": "for i in range(4):\n    pen.forward(100)\n    pen.right(90)"
+                    }
                 },
                 {
                     "text": "Create a `variable` for number of sides",
-                    "code": "sides = 4"
+                    "code": {
+                        "language": "python",
+                        "content": "sides = 4"
+                    }
                 },
                 {
                     "text": "Calculate the angle to turtle must change",
-                    "code": "angle = ??/sides"
+                    "code": {
+                        "language": "python",
+                        "content": "angle = ??/sides"
+                    }
                 },
                 {
                     "text": "Edit the code to draw a square\n\nAdd the variables sides and angle into the draw square code"

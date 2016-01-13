@@ -46,7 +46,7 @@
                 }
             ],
             "description": "Get the spaceship to follow your mouse",
-            "image": "escape/spaceship.png",
+            "image": "scratch/escape_game/spaceship.png",
             "title": "Follow your mouse"
         },
         {
@@ -69,13 +69,13 @@
                 }
             ],
             "description": "Use the timer as a way to create a high score",
-            "image": "escape/high_score.png",
+            "image": "scratch/escape_game/high_score.png",
             "title": "Create a High Score!!"
         },
         {
             "components": [],
             "description": "Duplicate the witches to make it harder! (hint use right click or shift click)",
-            "image": "escape/duplicate.png",
+            "image": "scratch/escape_game/duplicate.png",
             "title": "Duplicate the witches"
         }
     ]

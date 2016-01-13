@@ -2,11 +2,13 @@
     "draft": false,
     "name": "web_introduction",
     "title": "Web Introduction",
+    "image": "web/logo.png",
     "link": "https://trinket.io/embed/html/7441ec6e9a",
     "description": "Introduction to web development",
     "steps": [
         {
             "title": "HTML Structure",
+            "image": "web/logo.png",
             "description": "Basic HTML structure",
             "components": [
                 {

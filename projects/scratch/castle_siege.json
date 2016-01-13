@@ -184,11 +184,11 @@
                 },
                 {
                     "text": "Make the flame hide when the green flag is clicked",
-                    "blocks": "when FLAG clicked\nhide",
+                    "blocks": "when FLAG clicked\nhide"
                 },
                 {
                     "text": "When a building is hit **create a clone** of the flame",
-                    "blocks": "when I receive [hit v]\ncreate clone of [myself v]",
+                    "blocks": "when I receive [hit v]\ncreate clone of [myself v]"
                 },
                 {
                     "text": "Move the clone to where the fireball is and show",

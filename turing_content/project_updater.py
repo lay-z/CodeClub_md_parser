@@ -25,7 +25,11 @@ def findProjects():
     for filename in filenames:
 
         # Access the project
-        project = json.load(open(filename))
+        try:
+            project = json.load(open(filename))
+        except:
+            print(filename)
+            raise 
 
         # Add to list of projects
         projects.append(project)

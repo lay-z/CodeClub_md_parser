@@ -44,8 +44,8 @@ class DatabaseWriter:
 
         return updated
 
-    def query(self):
+    def query(self,query={}):
         """Find a list of the items in the collection
         """
 
-        return self.collection.find({})
+        return self.collection.find(query)

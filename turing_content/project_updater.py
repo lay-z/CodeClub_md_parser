@@ -5,6 +5,7 @@ import http.server
 
 import config
 import project_object
+import language_object
 import database_writer
 import directory_watcher
 import resource_uploader
@@ -59,10 +60,18 @@ def update():
     print('Updating {} Database'.format(environment.title()),'\n','='*80)
 
     mongolabUri = config.mongolabUri[environment]
-    collection = database_writer.DatabaseWriter('projects',mongolabUri)
+    
+    # Update languages
+    languages = database_writer.DatabaseWriter('languages',mongolabUri)
+    for _language in json.load(open('data/languages.json')):
+        language = language_object.Language(languages)
+        language.load(_language)
+        language.format(config.turingResources[environment])
+        language.save()
 
+    # Update projects
+    projects = database_writer.DatabaseWriter('projects',mongolabUri)
     overview = json.load(open('data/overview.json'))
-
     for _project in findProjects():
 
         # Check if project exists in overview
@@ -72,11 +81,11 @@ def update():
             print('\t',_project['title'],'not found in overview')
             continue
 
-        project = project_object.Project(collection)
+        project = project_object.Project(projects)
         project.load(_project)
         project.update(overview[_project['title']])
         project.format(config.turingResources[environment])
-        project.save()
+        project.save(environment)
 
 def main():
 

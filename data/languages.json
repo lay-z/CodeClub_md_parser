@@ -1,0 +1,23 @@
+[
+    {
+        "name": "Scratch",
+        "number": 1,
+        "image": "scratch/logo.png",
+        "description": "Scratch is a visual programming language",
+        "link": "https://scratch.mit.edu/"
+    },
+    {
+        "name": "Python",
+        "number": 2,
+        "image": "python/logo.png",
+        "description": "Python is a syntax programming language",
+        "link": "https://www.python.org/"
+    },
+    {
+        "name": "Web",
+        "number": 3,
+        "image": "web/logo.png",
+        "description": "Web technologies include HTML, CSS and JavaScript",
+        "link": "http://www.w3schools.com/"
+    }
+]

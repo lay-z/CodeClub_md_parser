@@ -1,138 +1,186 @@
 {
     "Rock Band" : {
             "provider" : "CodeClub",
+            "language" : "Scratch",
             "module" : 1,
             "number" : 1
     },
     "Lost in Space" : {
             "provider" : "CodeClub",
+            "language" : "Scratch",
             "module" : 1,
             "number" : 2
     },
     "Ghostbusters" : {
             "provider" : "CodeClub",
+            "language" : "Scratch",
             "module" : 1,
             "number" : 3
     },
     "ChatBot" : {
             "provider" : "CodeClub",
+            "language" : "Scratch",
             "module" : 1,
             "number" : 4
     },
     "Paint Box" : {
             "provider" : "CodeClub",
+            "language" : "Scratch",
             "module" : 1,
             "number" : 5
     },
     "Boat Race" : {
             "provider" : "CodeClub",
+            "language" : "Scratch",
             "module" : 1,
             "number" : 6
     },
     "Memory" : {
             "provider" : "CodeClub",
+            "language" : "Scratch",
             "module" : 2,
             "number" : 1
     },
     "Dodgeball" : {
             "provider" : "CodeClub",
+            "language" : "Scratch",
             "module" : 2,
             "number" : 2
     },
     "Brain Game" : {
             "provider" : "CodeClub",
+            "language" : "Scratch",
             "module" : 2,
             "number" : 3
     },
     "Catch the Dots" : {
             "provider" : "CodeClub",
+            "language" : "Scratch",
             "module" : 2,
             "number" : 4
     },
     "Clone Wars" : {
             "provider" : "CodeClub",
+            "language" : "Scratch",
             "module" : 2,
             "number" : 5
     },
     "Create your own world" : {
             "provider" : "CodeClub",
+            "language" : "Scratch",
             "module" : 2,
             "number" : 6
     },
     "Ada's Poetry Generator" : {
             "provider" : "CodeClub",
+            "language" : "Scratch",
             "module" : 3,
             "number" : 1
     },
     "Balloons" : {
             "provider" : "CodeClub",
+            "language" : "Scratch",
             "module" : 3,
             "number" : 2
     },
     "Space Junk" : {
             "provider" : "CodeClub",
+            "language" : "Scratch",
             "module" : 3,
             "number" : 3
     },
     "Flappy Parrot" : {
             "provider" : "CodeClub",
+            "language" : "Scratch",
             "module" : 3,
             "number" : 4
     },
     "Snowball Fight" : {
             "provider" : "CodeClub",
+            "language" : "Scratch",
             "module" : 3,
             "number" : 5
     },
     "Star Wars" : {
         "provider" : "TuringLab",
+        "language" : "Scratch",
         "module" : 1,
         "number" : 1
     },
     "Quiz Master": {
         "publish": true,
         "provider": "TuringLab",
+        "language" : "Scratch",
         "module": 1,
         "number": 2
     },
     "Starship Destroyer" : {
         "provider" : "TuringLab",
+        "language" : "Scratch",
         "module" : 1,
         "number" : 3
     },
     "Escape Game" : {
         "provider" : "TuringLab",
+        "language" : "Scratch",
         "module" : 1,
         "number" : 4
     },
     "Crossy Road" : {
         "provider" : "TuringLab",
+        "language" : "Scratch",
         "module" : 1,
         "number" : 5
     },
     "Flappy Bird" : {
         "provider" : "TuringLab",
+        "language" : "Scratch",
         "module" : 1,
         "number" : 6
     },
     "Space Race" : {
         "provider" : "TuringLab",
+        "language" : "Scratch",
         "module" : 2,
         "number" : 1
     },
     "Castle Siege" : {
         "provider" : "TuringLab",
+        "language" : "Scratch",
         "module" : 2,
         "number" : 2
     },
     "Ori and the Blind Forest" : {
         "provider" : "TuringLab",
+        "language" : "Scratch",
         "module" : 2,
         "number" : 3
     },
+
+
     "Python Starter" : {
         "provider" : "TuringLab",
+        "language" : "Python",
+        "module" : 1,
+        "number" : 1
+    },
+    "Basic Shapes" : {
+        "provider" : "TuringLab",
+        "language" : "Python",
         "module" : 2,
-        "number" : 4
+        "number" : 1
+    },
+    "Fractal Snowflake" : {
+        "provider" : "TuringLab",
+        "language" : "Python",
+        "module" : 3,
+        "number" : 1
+    },
+
+    "Web Introduction" : {
+        "provider" : "TuringLab",
+        "language" : "Web",
+        "module" : 1,
+        "number" : 1
     }
 }

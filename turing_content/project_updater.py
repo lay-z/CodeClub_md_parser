@@ -59,10 +59,15 @@ def update():
     print('Updating {} Database'.format(environment.title()),'\n','='*80)
 
     mongolabUri = config.mongolabUri[environment]
-    collection = database_writer.DatabaseWriter('projects',mongolabUri)
+    
+    # Update languages
+    languages = database_writer.DatabaseWriter('languages',mongolabUri)
+    for language in json.load(open('data/languages.json')):
+        languages.update({'name': language['name']},language)
 
+    # Update projects
+    projects = database_writer.DatabaseWriter('projects',mongolabUri)
     overview = json.load(open('data/overview.json'))
-
     for _project in findProjects():
 
         # Check if project exists in overview
@@ -72,7 +77,7 @@ def update():
             print('\t',_project['title'],'not found in overview')
             continue
 
-        project = project_object.Project(collection)
+        project = project_object.Project(projects)
         project.load(_project)
         project.update(overview[_project['title']])
         project.format(config.turingResources[environment])

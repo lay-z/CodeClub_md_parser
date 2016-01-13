@@ -21,7 +21,7 @@ def changeImagePath(dictionary,url):
         return
 
     for key in dictionary:
-        if ((key == 'image') and (dictionary[key] is not None)):
+        if ((key in ['image','display']) and (dictionary[key] is not None)):
             dictionary[key] = buildRootUrl(url,dictionary[key])
         elif (type(dictionary[key]) == dict):
             changeImagePath(dictionary[key],url)

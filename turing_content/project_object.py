@@ -1,4 +1,4 @@
-import project_formatter
+import object_formatter
 
 class Project:
 
@@ -30,7 +30,7 @@ class Project:
         """Format the project to ensure the image paths are correct
         """
 
-        project_formatter.changeImagePath(self.project,url)
+        object_formatter.changeImagePath(self.project,url)
 
     def save(self):
         """Save the given project using the mongo collection interface

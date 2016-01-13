@@ -5,6 +5,7 @@ import http.server
 
 import config
 import project_object
+import language_object
 import database_writer
 import directory_watcher
 import resource_uploader
@@ -62,8 +63,11 @@ def update():
     
     # Update languages
     languages = database_writer.DatabaseWriter('languages',mongolabUri)
-    for language in json.load(open('data/languages.json')):
-        languages.update({'name': language['name']},language)
+    for _language in json.load(open('data/languages.json')):
+        language = language_object.Language(languages)
+        language.load(_language)
+        language.format(config.turingResources[environment])
+        language.save()
 
     # Update projects
     projects = database_writer.DatabaseWriter('projects',mongolabUri)

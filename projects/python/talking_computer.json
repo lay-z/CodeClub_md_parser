@@ -1,0 +1,14 @@
+{
+    "draft": true,
+    "name": "talking_computer",
+    "title": "Talking Computer",
+    "image": "talking_computer/speech_bubble.png",
+    "description": "Make the computer speak to you and learn the basics of Python and sytax programming",
+    "steps": [
+        {
+            "title": "Hello World",
+            "description": "Get Python to print out 'Hello World!'",
+            "components": []
+        }
+    ]
+}

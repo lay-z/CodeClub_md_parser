@@ -27,9 +27,12 @@ def findProjects():
         # Access the project
         try:
             project = json.load(open(filename))
-        except:
+        except Exception as error:
+            print('='*35,'  ERROR  ','='*35)
             print(filename)
-            raise 
+            print(error)
+            print('='*80)
+            continue 
 
         # Add to list of projects
         projects.append(project)

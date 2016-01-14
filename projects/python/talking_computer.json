@@ -57,22 +57,26 @@
             "image": "python/talking_computer/hello_world.png",
             "description": "Get Python to print out `'Hello World!'`",
             "components": [{
-                "text": "'Hello World' is an example of a string in Python",
+                "text": "'Hello World' is an example of a string in Python. _Strings are used to store text_",
                 "code": {
                     "language": "python",
                     "content": "'Hello World'"
                 }
             },
             {
-                "text": "Type 'Hello World' into the Trinket editor, then **click Run**",
-                "image": "trinket/run.png"
-            },
-            {
-                "text": "Print the 'Hello World' string using this code",
+                "text": "Use Python to print the 'Hello World' string using this code",
                 "code": {
                     "language": "python",
                     "content": "print('Hello World')"
+                },
+                "hidden": {
+                    "text": "Here is a equivalent Scratch Block",
+                    "blocks": "say [Hello World]"
                 }
+            },
+            {
+                "text": "Type 'Hello World' into the Trinket editor, then **click Run**",
+                "image": "trinket/run.png"
             },
             {
                 "text": "**Run your code** - Did Python print out `Hello World`?",
@@ -83,27 +87,143 @@
             "image": "python/talking_computer/value_container.jpg",
             "description": "Use variables to remember the value of a message",
             "components": [{
-                "text": "Add this code bellow your previous",
+                "text": "Add this code to the bottom of your editor",
                 "code": {
                     "language": "python",
                     "content": "message = 'Hello World'\nprint(message)"
                 }
-            },{
+            },
+            {
                 "text": "**Run your code** - Did Python print out `Hello World` twice?",
                 "checkmark": true
+            },
+            {
+                "text": "In your code `message` is string which is a type of variable",
+                "hidden": {
+                    "lines": [
+                        "Variables are used to store data",
+                        "Setting a variable is called assignment",
+                        "**The following lines are equivalent**"
+                    ],
+                    "blocks": "set [message] to [hello]",
+                    "code": {
+                        "language": "python",
+                        "content": "message = 'hello'"
+                    }
+                }
+            },
+            {
+                "text": "Add this code to the bottom of your editor",
+                "code": {
+                    "language": "python",
+                    "content": "message = 'Greetings'\nprint(message)"
+                }
+            },
+            {
+                "text": "What do you think Python will print out?",
+                "hidden": {
+                    "lines": [
+                        "Python reads code from the top to the bottom",
+                        "The `message` variable was changed to 'Greetings'"
+                    ],
+                    "code": {
+                        "language": "text",
+                        "content": "Hello World\nHello World\nGreetings"
+                    }
+                }
             }]
+        },
+        {
+            "title": "Change your message",
+            "image": "python/talking_computer/nodepad.png",
+            "description": "Use string operations to change your `message` variable",
+            "components": [
+            {
+                "text": "In Python you can add strings together",
+                "code": {
+                    "language": "python",
+                    "content": "'Hello' + 'World'"
+                }
+            },
+            {
+                "text": "Add this line to the bottom of your editor, what do you think the output will be?",
+                "code": {
+                    "language": "python",
+                    "content": "print(message + ' my friend')"
+                },
+                "hidden": {
+                    "code": {
+                        "language": "text",
+                        "content": "Greetings my friend"
+                    }
+                }
+            },
+            {
+                "text": "**Run your code** - Did Python print what you expected?",
+                "checkmark": true
+            },
+            {
+                "text": "In Python you can assign a variable to itself",
+                "code": {
+                    "language": "python",
+                    "content": "message = message + ' human'\nprint(message)"
+                }
+            },
+            {
+                "text": "**Run your code** - Did Python print out `Greetings my friend` at the end?",
+                "checkmark": true
+            }
+            ]
         },{
             "title": "Personal Greeting",
             "image": "python/talking_computer/keyboard.jpeg",
-            "description": "Use 'input' to make the computer give you a personal greeting",
+            "description": "Use `input` to make the computer give you a personal greeting",
             "components": [{
-                "text": "Use this line to get the computer to ask your name",
+                "text": "Add this line to your code to get the computer to ask your name",
                 "code": {
                     "language": "python",
                     "content": "input('What is your name?')"
                 }
-            },{
-                "text": "**Run your code** - Does the runner on the left ask for your name?",
+            },
+            {
+                "text": "**Run your code** - Does the computer ask for your name?",
+                "checkmark": true
+            },
+            {
+                "text": "When Python asks 'What is your name?' type your name where the blinking box is",
+                "image": "python/talking_computer/keyboard.jpeg"
+            },
+            {
+                "text": "We can make Python print your name by changing the line to this",
+                "code": {
+                    "language": "python",
+                    "content": "print(input('What is your name?'))"
+                }
+            },
+            {
+                "text": "**Run your code again** - Does the computer print your name?",
+                "checkmark": true
+            },
+            {
+                "text": "How do you think we can get Python to remember your input?",
+                "hidden": {
+                    "code": {
+                        "language": "python",
+                        "content": "name = input('What is your name?')"
+                    }
+                }
+            },
+            {
+                "text": "How can we make Python give a personal greeting?",
+                "hidden": {
+                    "code": {
+                        "language": "python",
+                        "content": "print('hello '+name)"
+                    }
+                }
+            },
+            {
+                "text": "**Run your code again** - Does the computer print a personal greeting?",
                 "checkmark": true
             }
             ]

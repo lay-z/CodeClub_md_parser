@@ -11,12 +11,46 @@
             "image": "trinket/logo.png",
             "description": "To create a talking computer we will be using Trinket",
             "components": [{
+                "text": "Trinket is an online Python editor",
+                "display": "trinket/interface.png"
+            },
+            {
                 "text": "**On the previous screen** click 'Open Starter Python Project' to open a Trinket window",
                 "image": "python/open_starter.png"
-            },{
-                "text": "Has a Trinket window opened on the left?",
+            },
+            {
+                "text": "Has a Trinket window opened on the right?",
                 "checkmark": true
-            }]
+            },
+            {
+                "text": "On the left of the Trinket screen is the code editor",
+                "display": "trinket/editor.png"
+            },
+            {
+                "text": "On the right is the Trinket screen is where your code output is shown",
+                "display": "trinket/runner.png"
+            },
+            {
+                "text": "To save your work you need a Trinket account, **click the login button**",
+                "image": "trinket/login.png"                
+            },
+            {
+                "text": "Enter your email address and password then **click Create Account**",
+                "image": "trinket/login_details.png"
+            },
+            {
+                "text": "Have you managed to create a Trinket account?",
+                "checkmark": true
+            },
+            {
+                "text": "Now **click Remix** to make your own copy of the Trinket",
+                "image": "trinket/remix.png"
+            },
+            {
+                "text": "Did you successfully remix the Trinket project?",
+                "checkmark": true
+            }
+            ]
         },
         {
             "title": "Hello World",
@@ -28,13 +62,19 @@
                     "language": "python",
                     "content": "'Hello World'"
                 }
-            },{
+            },
+            {
+                "text": "Type 'Hello World' into the Trinket editor, then **click Run**",
+                "image": "trinket/run.png"
+            },
+            {
                 "text": "Print the 'Hello World' string using this code",
                 "code": {
                     "language": "python",
                     "content": "print('Hello World')"
                 }
-            },{
+            },
+            {
                 "text": "**Run your code** - Did Python print out `Hello World`?",
                 "checkmark": true
             }]

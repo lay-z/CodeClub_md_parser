@@ -2,13 +2,71 @@
     "draft": true,
     "name": "talking_computer",
     "title": "Talking Computer",
-    "image": "talking_computer/speech_bubble.png",
+    "image": "python/talking_computer/speech_bubble.jpg",
+    "link": "https://trinket.io/embed/python/f6f09f40dc",
     "description": "Make the computer speak to you and learn the basics of Python and sytax programming",
     "steps": [
         {
+            "title": "Trinket",
+            "image": "trinket/logo.png",
+            "description": "To create a talking computer we will be using Trinket",
+            "components": [{
+                "text": "**On the previous screen** click 'Open Starter Python Project' to open a Trinket window",
+                "image": "python/open_starter.png"
+            },{
+                "text": "Has a Trinket window opened on the left?",
+                "checkmark": true
+            }]
+        },
+        {
             "title": "Hello World",
-            "description": "Get Python to print out 'Hello World!'",
-            "components": []
+            "image": "python/talking_computer/hello_world.png",
+            "description": "Get Python to print out `'Hello World!'`",
+            "components": [{
+                "text": "'Hello World' is an example of a string in Python",
+                "code": {
+                    "language": "python",
+                    "content": "'Hello World'"
+                }
+            },{
+                "text": "Print the 'Hello World' string using this code",
+                "code": {
+                    "language": "python",
+                    "content": "print('Hello World')"
+                }
+            },{
+                "text": "**Run your code** - Did Python print out `Hello World`?",
+                "checkmark": true
+            }]
+        },{
+            "title": "Remember a Message",
+            "image": "python/talking_computer/value_container.jpg",
+            "description": "Use variables to remember the value of a message",
+            "components": [{
+                "text": "Add this code bellow your previous",
+                "code": {
+                    "language": "python",
+                    "content": "message = 'Hello World'\nprint(message)"
+                }
+            },{
+                "text": "**Run your code** - Did Python print out `Hello World` twice?",
+                "checkmark": true
+            }]
+        },{
+            "title": "Personal Greeting",
+            "image": "python/talking_computer/keyboard.jpeg",
+            "description": "Use 'input' to make the computer give you a personal greeting",
+            "components": [{
+                "text": "Use this line to get the computer to ask your name",
+                "code": {
+                    "language": "python",
+                    "content": "input('What is your name?')"
+                }
+            },{
+                "text": "**Run your code** - Does the runner on the left ask for your name?",
+                "checkmark": true
+            }
+            ]
         }
     ]
 }

@@ -7,13 +7,13 @@
     "description": "Create your own personal website using Bootstrap",
     "steps": [
         {
-            "title": "Trinket",
+            "title": "Trinket Starter Project",
             "image": "trinket/logo.png",
             "description": "To create a personal website we will be using Trinket",
             "components": [
                 {
                     "text": "Trinket is an online HTML editor",
-                    "display": "trinket/interface.png"
+                    "display": "web/advanced_web_starter_interface.png"
                 },
                 {
                     "text": "**On the previous screen** click 'Open Starter Web Project' to open a Trinket window",
@@ -25,11 +25,48 @@
                 },
                 {
                     "text": "On the left of the Trinket screen is the code editor",
-                    "display": "trinket/editor.png"
+                    "display": "web/advanced_web_starter_editor.png"
+                },
+                {
+                    "text": "When the Trinket window opened did an alert saying 'Hello World' open?",
+                    "checkmark": true
+                },
+                {
+                    "text": "Select the 'script.js' file tab and comment out the `alert` using `//` at the beginning",
+                    "code": {
+                        "language": "javascript",
+                        "content": "//alert('Hello World')"
+                    },
+                    "hidden": {
+                        "lines": [
+                            "In JavaScript `//` comments out a line",
+                            "Commenting a line stops the computer executing it"
+                        ]
+                    }
                 },
                 {
                     "text": "On the right is the Trinket screen is where your code output is shown",
-                    "display": "trinket/runner.png"
+                    "display": "web/advanced_web_starter_display.png"
+                },
+                {
+                    "text": "Is your website display completely blue?",
+                    "checkmark": true
+                },
+                {
+                    "text": "Edit the 'style.css' file to stop the `body` element being blue",
+                    "code": {
+                        "language": "css",
+                        "content": "/*\nbody {\n\tbackground-color: blue;\n}\n*/"
+                    },
+                    "hidden": {
+                        "lines": [
+                            "In CSS code between `/*` and '*/' will be commented",
+                            "To comment any code quickly",
+                            "1 - Select the code",
+                            "2 - On Windows press `Ctrl + ?`",
+                            "2 - On Mac press `cmd + ?`"
+                        ]
+                    }
                 },
                 {
                     "text": "To save your work you need a Trinket account, **click the login button**",

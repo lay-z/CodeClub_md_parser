@@ -34,7 +34,7 @@
                 },
                 {
                     "text": "Now also add the code to make the planet zoom in:",
-                    "blocks": "when I receive [planet v] \npoint towards [title v] \n repeat (100) \n\t move (1) steps \n\t change size by (1) \n end \n hide \n switch backdrop to [desert v] \n broadcast [desert v]"
+                    "blocks": "when I receive [start v] \nshow\npoint towards [title v] \n repeat (100) \n\t move (1) steps \n\t change size by (1) \n end \n hide \n switch backdrop to [desert v] \n broadcast [desert v]"
                 },
                 {
                     "text": "**Click the Green Flag** - Does it look like we are zooming in on the planet?"
@@ -49,7 +49,7 @@
             "components": [
                 {
                     "text": "Add this code to the **BB8** sprite:",
-                    "blocks": "when FLAG clicked \ngo to x: (-100) y: (100)  \n hide"
+                    "blocks": "when FLAG clicked \ngo to x: (-100) y: (-100)  \n hide"
                 },
                 {
                     "text": "Now lets make BB8 move and talk using this code:",

@@ -1,0 +1,501 @@
+{
+    "name": "personal_website",
+    "title": "Personal Website",
+    "image": "web/personal_website/screenshot.png",
+    "link": "https://trinket.io/embed/html/bfc2896c07",
+    "description": "Create your own personal website using Bootstrap",
+    "steps": [
+        {
+            "title": "Trinket Starter Project",
+            "image": "trinket/logo.png",
+            "description": "To create a personal website we will be using Trinket",
+            "components": [
+                {
+                    "text": "Trinket is an online HTML editor",
+                    "display": "web/advanced_web_starter_interface.png"
+                },
+                {
+                    "text": "**On the previous screen** click 'Open Starter Web Project' to open a Trinket window",
+                    "image": "web/open_starter.png"
+                },
+                {
+                    "text": "Has a Trinket window opened on the right?",
+                    "checkmark": true
+                },
+                {
+                    "text": "On the left of the Trinket screen is the code editor",
+                    "display": "web/advanced_web_starter_editor.png"
+                },
+                {
+                    "text": "When the Trinket window opened did an alert saying 'Hello World' open?",
+                    "checkmark": true
+                },
+                {
+                    "text": "Select the 'script.js' file tab and comment out the `alert` using `//` at the beginning",
+                    "code": {
+                        "language": "javascript",
+                        "content": "//alert('Hello World')"
+                    },
+                    "hidden": {
+                        "lines": [
+                            "In JavaScript `//` comments out a line",
+                            "Commenting a line stops the computer executing it"
+                        ]
+                    }
+                },
+                {
+                    "text": "On the right is the Trinket screen is where your code output is shown",
+                    "display": "web/advanced_web_starter_display.png"
+                },
+                {
+                    "text": "Is your website display completely blue?",
+                    "checkmark": true
+                },
+                {
+                    "text": "Edit the 'style.css' file to stop the `body` element being blue",
+                    "code": {
+                        "language": "css",
+                        "content": "/*\nbody {\n\tbackground-color: blue;\n}\n*/"
+                    },
+                    "hidden": {
+                        "lines": [
+                            "In CSS code between `/*` and '*/' will be commented",
+                            "To comment any code quickly",
+                            "1 - Select the code",
+                            "2 - On Windows press `Ctrl + ?`",
+                            "2 - On Mac press `cmd + ?`"
+                        ]
+                    }
+                },
+                {
+                    "text": "To save your work you need a Trinket account, **click the login button**",
+                    "image": "trinket/login.png"                
+                },
+                {
+                    "text": "Enter your email address and password then **click Create Account**",
+                    "image": "trinket/login_details.png"
+                },
+                {
+                    "text": "Have you managed to create a Trinket account?",
+                    "checkmark": true
+                },
+                {
+                    "text": "Now **click Remix** to make your own copy of the Trinket",
+                    "image": "trinket/remix.png"
+                },
+                {
+                    "text": "Did you successfully remix the Trinket project?",
+                    "checkmark": true
+                }
+            ]
+        },
+        {
+            "title": "Make your Site Mobile Friendly",
+            "image": "bootstrap/responsive.png",
+            "description": "Bootstrap is a CSS library that means we can easily design websites for mobile devices",
+            "components": [
+                {
+                    "text": "Click on the `index.html` tab to open the HTML file"
+                },
+                {
+                    "text": "The Trinket project has bootstrap imported already where you see this line",
+                    "code": {
+                        "language": "html",
+                        "content": "<!-- Import Styles here -->\n<link rel=\"stylesheet\" href=\"link\">"
+                    }
+                },
+                {
+                    "text": "Bootstrap uses a grid system to arrange elements on the page - **add this code** where you see `add your content here`",
+                    "code": {
+                        "language": "html",
+                        "content": "<div class=\"container\">\n  <div class=\"row\">\n    <div class=\"col-sm-4\">\n      One of three columns\n    </div>\n    <div class=\"col-sm-4\">\n      One of three columns\n    </div>\n    <div class=\"col-sm-4\">\n      One of three columns\n    </div>\n  </div>\n</div>"
+                    },
+                    "hidden": {
+                        "text": "Add your code bellow this comment",
+                        "code" : {
+                            "language": "html",
+                            "content": "<!-- Add your content here -->"
+                        }
+                    }
+                },
+                {
+                    "text": "Try resizing the display using by dragging the middle bar",
+                    "image": "trinket/resize.png"
+                },
+                {
+                    "checkmark": true,
+                    "text": "Can you make your display window have 3 columns like this?",
+                    "display": "bootstrap/cols_horizontal.png"
+                },
+                {
+                    "checkmark": true,
+                    "text": "Can you make your display window have 3 columns like this?",
+                    "image": "bootstrap/cols_vertical.png"
+                },
+                {
+                    "text": "This grid system allows you to design a website for a **desktop computer** and a **mobile phone** on the same website",
+                    "display": "bootstrap/devices.jpg"
+                },
+                {
+                    "text": "The bootstrap grid system uses _rows_ and _columns_ to arrange the HTML elements",
+                    "display": "bootstrap/grid.png",
+                    "hidden": {
+                        "lines": [
+                            "To create this grid layout you would use this code",
+                            "**Don't put this in your application**"
+                            ],
+                        "code": {
+                            "language": "html",
+                            "content": "<div class=\"row\">\n  <div class=\"col-md-1\">col-1</div>\n  <div class=\"col-md-1\">col-1</div>\n  <div class=\"col-md-1\">col-1</div>\n  <div class=\"col-md-1\">col-1</div>\n  <div class=\"col-md-1\">col-1</div>\n  <div class=\"col-md-1\">col-1</div>\n  <div class=\"col-md-1\">col-1</div>\n  <div class=\"col-md-1\">col-1</div>\n  <div class=\"col-md-1\">col-1</div>\n  <div class=\"col-md-1\">col-1</div>\n  <div class=\"col-md-1\">col-1</div>\n  <div class=\"col-md-1\">col-1</div>\n</div>\n<div class=\"row\">\n  <div class=\"col-md-8\">col-8</div>\n  <div class=\"col-md-4\">col-4</div>\n</div>\n<div class=\"row\">\n  <div class=\"col-md-4\">col-4</div>\n  <div class=\"col-md-4\">col-4</div>\n  <div class=\"col-md-4\">col-4</div>\n</div>\n<div class=\"row\">\n  <div class=\"col-md-6\">col-6</div>\n  <div class=\"col-md-6\">col-6</div>\n</div>"
+                        }
+                    }
+                },
+                {
+                    "text": "Change your code in Trinket to have a **heading** and **content** in each column",
+                    "hidden": {
+                        "code": {
+                            "language": "html",
+                            "content": "<div class=\"col-sm-4\">\n  <h1>Heading</h1>\n  <p>Here is some content</p>\n</div>"
+                        }
+                    }
+                },
+                {
+                    "checkmark": true,
+                    "text": "Does your website have three columns with headings?"
+                }
+            ]
+        },
+        {
+            "title": "Add a Welcome Message",
+            "image": "web/personal_website/welcome.png",
+            "description": "Add a welcome message to your website to let visitors know what the purpose of the site is",
+            "components": [
+                {
+                    "text": "Add a simple heading and message to the top of your page",
+                    "code": {
+                        "language": "html",
+                        "content": "<section>\n    <h1>Welcome to my site</h1>\n    <p>Add a message here</p>\n</section>"
+                    },
+                    "hidden": {
+                        "lines": [
+                            "Add your code bellow this comment",
+                            "Make sure your heading is above your columns",
+                            "Using a `<section>` tag is good practice"
+                            ],
+                        "code" : {
+                            "language": "html",
+                            "content": "<!-- Add your content here -->"
+                        }
+                    }
+                },
+                {
+                    "text": "Does your site not have 'Welcome to my site' at the top?",
+                    "checkmark": true
+                },
+                {
+                    "text": "To format your heading in a nice way - add a `jumbotron` class to your `<section>` tag",
+                    "code": {
+                        "language": "html",
+                        "content": "<section class=\"jumbotron\">"
+                    }
+                },
+                {
+                    "text": "Make your `<p>` tag text bigger by adding a `lead` class",
+                    "hidden": {
+                        "code": {
+                            "language": "html",
+                            "content": "<p class=\"lead\">"
+                        }
+                    }
+                },
+                {
+                    "text": "Try resizing the display using by dragging the middle bar",
+                    "image": "trinket/resize.png"
+                },
+                {
+                    "checkmark": true,
+                    "text": "Does your heading text adjust to the display size?"
+                },
+                {
+                    "text": "Make you text better spaced by putting the `<h1>` and `<p>` tags within a `<div>`",
+                    "code": {
+                        "language": "html",
+                        "content": "<div class=\"container\">\n  <h1>Welcome to my site</h1>\n  <p class=\"lead\">Text</p>\n</div>"
+                    }
+                },
+                {
+                    "checkmark": true,
+                    "text": "Can you see how your welcome message has changed?"
+                },
+                {
+                    "text": "Add a button to the bottom of you `<div>` for visitors to interact with",
+                    "code": {
+                        "language": "html",
+                        "content": "<button href=\"#\">Click to like</button>"
+                    }
+                },
+                {
+                    "text": "Add a `btn` and `btn-primary` class to your button to use Bootstrap formatting",
+                    "hidden": {
+                        "text": "To make the button a different color replace `btn-primary` with one of these",
+                        "lines": [
+                            "`btn-secondary`",
+                            "`btn-success`",
+                            "`btn-info`",
+                            "`btn-warning`",
+                            "`btn-danger`"
+                            ],
+                        "code": {
+                            "language": "html",
+                            "content": "<button href=\"#\" class=\"btn btn-primary\">Click to like</button>"
+                        }
+                    }
+                },
+                {
+                    "text": "Add a `text-xs-center` class to your `<section>` tag",
+                    "code": {
+                        "language": "html",
+                        "content": "<section class=\"jumbotron text-xs-center\">"
+                    }
+                },
+                {
+                    "text": "Does your welcome message look like this?",
+                    "display": "web/personal_website/welcome_display.png",
+                    "checkmark": true
+                }
+            ]
+        },
+        {
+            "title": "Give your site some content",
+            "image": "web/personal_website/card.png",
+            "description": "Add content to your website so that you can suggest websites people might like",
+            "components": [
+                {
+                    "text": "Add a Bootstrap card to one of your columns",
+                    "code": "<div class=\"card\">\n  <div class=\"card-block\">\n    <h1>Heading</h1>\n    <p>Here is some content</p>\n  </div>\n</div>",
+                    "hidden": {
+                        "text": "Your columns code should look like this when you have added a card to the first",
+                        "code": {
+                            "language": "html",
+                            "content": "<div class=\"container\">\n  <div class=\"row\">\n    <div class=\"col-sm-4\">\n      <div class=\"card\">\n        <div class=\"card-block\">\n          <h1>Heading</h1>\n          <p>Here is some content</p>\n        </div>\n      </div>\n    </div>\n    <div class=\"col-sm-4\">\n      <h1>Heading</h1>\n      <p>Here is some content</p>\n    </div>\n    <div class=\"col-sm-4\">\n      <h1>Heading</h1>\n      <p>Here is some content</p>\n    </div>\n  </div>\n</div>"
+                        }
+                    }
+                },
+                {
+                    "text": "Does your page content look like this?",
+                    "display": "web/personal_website/column_card.png",
+                    "checkmark": true
+                },
+                {
+                    "text": "Add an image to your card using this code above the `<div>` with the `card-block` class",
+                    "code": {
+                        "language": "html",
+                        "content": "<img class=\"card-img-top\" src=\"...\">"
+                    },
+                    "hidden": {
+                        "text": "This is how your card code should look",
+                        "code": {
+                            "language": "html",
+                            "code": "<div class=\"card\">\n  <img class=\"card-img-top\" src=\"...\">\n  <div class=\"card-block\">\n    <h1>Heading</h1>\n    <p>Here is some content</p>\n  </div>\n</div>"
+                        }
+                    }
+                },
+                {
+                    "text": "Find an image on the Internet which you would like to use for your content",
+                    "display": "google/images.png"
+                },
+                {
+                    "text": "Right click on the image you would like and select **Copy Image Address**",
+                    "display": "google/image_address.png"
+                },
+                {
+                    "text": "Add your image address to the `src` attribute of your `img` tag",
+                    "hidden": {                    
+                        "code": {
+                            "language": "html",
+                            "content": "<img class=\"card-img-top\" src=\"http://link.to/your.image\">"
+                        }
+                    }
+                },
+                {
+                    "text": "Have you now got a **really big** image on your website?",
+                    "checkmark": true
+                },
+                {
+                    "text": "Click on the `style.css` tab to open the CSS file"
+                },
+                {
+                    "text": "Add this code to the bottom of your stylesheet",
+                    "code": {
+                        "language": "css",
+                        "content": ".full-width {\n  max-width: 100%;\n}"
+                    },
+                    "hidden": {
+                        "lines": [
+                            "This is used to reduce your image width",
+                            "Your image will now not be bigger than your card"
+                        ]
+                    }
+                },
+                {
+                    "text": "Click on the `index.html` tab to open the HTML file"
+                },
+                {
+                    "text": "Add the `full-width` class to your `<img>` tag",
+                    "hidden": {
+                        "text": "Your `<img>` tag shoud look like this",
+                        "code": {
+                            "language": "html",
+                            "content": "<img class=\"card-img-top full-width\" src=\"...\">"
+                        }
+                    }
+                },
+                {
+                    "text": "Does your first column look like this?",
+                    "display": "web/personal_website/card.png",
+                    "checkmark": true
+                }
+            ]
+        },
+        {
+            "challenge": true,
+            "title": "Customize your content",
+            "image": "web/personal_website/custom.png",
+            "description": "Make some changes to your website to give it custom look and feel",
+            "components": [
+                {
+                    "text": "Can you add cards with images for all the columns?",
+                    "display": "web/personal_website/multiple.png",
+                    "checkmark": true
+                },
+                {
+                    "text": "Resize the window display section",
+                    "image": "trinket/resize.png"
+                },
+                {
+                    "text": "Do your cards get crushed when you make your website small?",
+                    "display": "web/personal_website/crushed.png"
+                },
+                {
+                    "text": "Try changing your `col-sm-4` class names to `col-md-4`",
+                    "hidden": {                    
+                        "code": {
+                            "language": "html",
+                            "content": "<!-- From This -->\n<div class=\"col-sm-4\">\n<!-- To This -->\n<div class=\"col-md-4\">"
+                        }
+                    }
+                },
+                {
+                    "text": "Resize the window - have your cards stopped getting crushed?",
+                    "image": "trinket/resize.png",
+                    "checkmark": true
+                },
+                {
+                    "text": "Change your column `<div>` tags to look like this",
+                    "code": {
+                        "language": "html",
+                        "content": "<div class=\"col-md-4 col-lg-3\">"
+                    }
+                },
+                {
+                    "text": "Hide this sidebar then **resize the display window** - What happens to the image cards when the **display is large**?",
+                    "image": "turing/hide.png"
+                },
+                {
+                    "text": "When you have finished **show this sidebar** again"
+                },
+                {
+                    "text": "Can you think of a way to make your site look like this when the **display is large**?",
+                    "display": "web/personal_website/large.png",
+                    "hidden": {
+                        "lines": [
+                            "All columns in a row should add up to 12",
+                            "Larger number make a column wider"
+                        ]
+                    }
+                },
+                {
+                    "text": "Are you happy with your custom site?",
+                    "checkmark": true
+                }
+            ]
+        },
+        {
+            "title": "Hidden greeting",
+            "image": "web/personal_website/like_button.png",
+            "description": "Add a special hidden greeting to your website",
+            "components": [
+                {
+                    "text": "Copy your welcome text paragraph `<p>` and paste it on a new line bellow",
+                    "code": {
+                        "language": "html",
+                        "content": "<p class=\"lead\">...</p>"
+                    },
+                    "hidden": {
+                        "text": "You should end up with two lines like this",
+                        "code": {
+                            "language": "html",
+                            "content": "<p class=\"lead\">...</p>\n<p class=\"lead\">...</p>"
+                        } 
+                    }
+                },
+                {
+                    "text": "Change the text in your second paragraph to be a special greeting",
+                    "code": {
+                        "language": "html",
+                        "content": "<p class=\"lead\">Special Greeting</p>"
+                    }
+                },
+                {
+                    "text": "Add a `hidden` class to your second paragraph",
+                    "hidden": {
+                        "text": "This is how your second paragraph should look",
+                        "code": {
+                            "language": "html",
+                            "content": "<p class=\"lead hidden\">...</p>"
+                        } 
+                    }
+                },
+                {
+                    "text": "Click on the `style.css` tab to open your stylesheet"
+                },
+                {
+                    "text": "Add styling to your `hidden` class using this code",
+                    "code": {
+                        "language": "css",
+                        "content": ".hidden {\n    display: none;\n}"
+                    }
+                },
+                {
+                    "text": "Is your special greeting hidden on the display page?",
+                    "checkmark": true
+                },
+                {
+                    "text": "Click on the `script.js` tab to open your JavaScript file"
+                },
+                {
+                    "text": "Add this code to the bottom of your JavaScript file",
+                    "code": {
+                        "language": "javascript",
+                        "content": "function greeting(){\n    $('.hidden').toggle();\n}"
+                    }
+                },
+                {
+                    "text": "Change your `button` tag in your welcome message to look like this",
+                    "code": {
+                        "language": "html",
+                        "content": "<button href=\"#\" onclick=\"greeting()\" class=\"btn btn-primary\">Click to like</button>"
+                    }
+                },
+                {
+                    "text": "When your display reloads try clicking the 'Click to like' button",
+                    "image": "web/personal_website/like_button.png"
+                },
+                {
+                    "text": "Does your special message appear when you click the button?",
+                    "checkmark": true
+                }
+            ]
+        }
+    ]
+}

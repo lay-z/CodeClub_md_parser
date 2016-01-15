@@ -357,6 +357,69 @@
                     "checkmark": true
                 }
             ]
+        },
+        {
+            "challenge": true,
+            "title": "Customize your content",
+            "image": "web/personal_website/custom.png",
+            "description": "Make some changes to your website to give it custom look and feel",
+            "components": [
+                {
+                    "text": "Can you add cards with images for all the columns?",
+                    "display": "web/personal_website/multiple.png",
+                    "checkmark": true
+                },
+                {
+                    "text": "Resize the window display section",
+                    "image": "trinket/resize.png"
+                },
+                {
+                    "text": "Do your cards get crushed when you make your website small?",
+                    "display": "web/personal_website/crushed.png"
+                },
+                {
+                    "text": "Try changing your `col-sm-4` class names to `col-md-4`",
+                    "hidden": {                    
+                        "code": {
+                            "language": "html",
+                            "content": "<!-- From This -->\n<div class=\"col-sm-4\">\n<!-- To This -->\n<div class=\"col-md-4\">"
+                        }
+                    }
+                },
+                {
+                    "text": "Resize the window - have your cards stopped getting crushed?",
+                    "image": "trinket/resize.png",
+                    "checkmark": true
+                },
+                {
+                    "text": "Change your column `<div>` tags to look like this",
+                    "code": {
+                        "language": "html",
+                        "content": "<div class=\"col-md-4 col-lg-3\">"
+                    }
+                },
+                {
+                    "text": "Hide this sidebar then **resize the display window** - What happens to the image cards when the **display is large**?",
+                    "image": "turing/hide.png"
+                },
+                {
+                    "text": "When you have finished **show this sidebar** again"
+                },
+                {
+                    "text": "Can you think of a way to make your site look like this when the **display is large**?",
+                    "display": "web/personal_website/large.png",
+                    "hidden": {
+                        "lines": [
+                            "All columns in a row should add up to 12",
+                            "Larger number make a column wider"
+                        ]
+                    }
+                },
+                {
+                    "text": "Are you happy with your custom site?",
+                    "checkmark": true
+                }
+            ]
         }
     ]
 }

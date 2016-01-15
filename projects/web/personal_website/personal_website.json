@@ -149,7 +149,7 @@
                     }
                 },
                 {
-                    "text": "Change your code in Trinket to have a **heading** and **content** in each row",
+                    "text": "Change your code in Trinket to have a **heading** and **content** in each column",
                     "hidden": {
                         "code": {
                             "language": "html",
@@ -160,6 +160,106 @@
                 {
                     "checkmark": true,
                     "text": "Does your website have three columns with headings?"
+                }
+            ]
+        },
+        {
+            "title": "Add a Welcome Message",
+            "image": "web/personal_website/welcome.png",
+            "description": "Add a welcome message to your website to let visitors know what the purpose of the site is",
+            "components": [
+                {
+                    "text": "Add a simple heading and message to the top of your page",
+                    "code": {
+                        "language": "html",
+                        "content": "<section>\n    <h1>Welcome to my site</h1>\n    <p>Add a message here</p>\n</section>"
+                    },
+                    "hidden": {
+                        "lines": [
+                            "Add your code bellow this comment",
+                            "Make sure your heading is above your columns",
+                            "Using a `<section>` tag is good practice"
+                            ],
+                        "code" : {
+                            "language": "html",
+                            "content": "<!-- Add your content here -->"
+                        }
+                    }
+                },
+                {
+                    "text": "Does your site not have 'Welcome to my site' at the top?",
+                    "checkmark": true
+                },
+                {
+                    "text": "To format your heading in a nice way - add a `jumbotron` class to your `<section>` tag",
+                    "code": {
+                        "language": "html",
+                        "content": "<section class=\"jumbotron\">"
+                    }
+                },
+                {
+                    "text": "Make your `<p>` tag text bigger by adding a `lead` class",
+                    "hidden": {
+                        "code": {
+                            "language": "html",
+                            "content": "<p class=\"lead\">"
+                        }
+                    }
+                },
+                {
+                    "text": "Try resizing the display using by dragging the middle bar",
+                    "image": "trinket/resize.png"
+                },
+                {
+                    "checkmark": true,
+                    "text": "Does your heading text adjust to the display size?"
+                },
+                {
+                    "text": "Make you text better spaced by putting the `<h1>` and `<p>` tags within a `<div>`",
+                    "code": {
+                        "language": "html",
+                        "content": "<div class=\"container\">\n  <h1>Welcome to my site</h1>\n  <p class=\"lead\">Text</p>\n</div>"
+                    }
+                },
+                {
+                    "checkmark": true,
+                    "text": "Can you see how your welcome message has changed?"
+                },
+                {
+                    "text": "Add a button to the bottom of you `<div>` for visitors to interact with",
+                    "code": {
+                        "language": "html",
+                        "content": "<button href=\"#\">Click to like</button>"
+                    }
+                },
+                {
+                    "text": "Add a `btn` and `btn-primary` class to your button to use Bootstrap formatting",
+                    "hidden": {
+                        "text": "To make the button a different color replace `btn-primary` with one of these",
+                        "lines": [
+                            "`btn-secondary`",
+                            "`btn-success`",
+                            "`btn-info`",
+                            "`btn-warning`",
+                            "`btn-danger`"
+                            ],
+                        "code": {
+                            "language": "html",
+                            "content": "<button href=\"#\" class=\"btn btn-primary\">Click to like</button>"
+                        }
+                    }
+                },
+                {
+                    "text": "Add a `text-xs-center` class to your `<section>` tag",
+                    "code": {
+                        "language": "html",
+                        "content": "<section class=\"jumbotron text-xs-center\">"
+                    }
+                },
+                {
+                    "text": "Does your welcome message look like this?",
+                    "display": "web/personal_website/welcome_display.png",
+                    "checkmark": true
                 }
             ]
         }

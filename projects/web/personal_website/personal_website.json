@@ -89,6 +89,79 @@
                     "checkmark": true
                 }
             ]
+        },
+        {
+            "title": "Make your Site Mobile Friendly",
+            "image": "bootstrap/responsive.png",
+            "description": "Bootstrap is a CSS library that means we can easily design websites for mobile devices",
+            "components": [
+                {
+                    "text": "The Trinket project has bootstrap imported already where you see this line",
+                    "code": {
+                        "language": "html",
+                        "content": "<!-- Import Styles here -->\n<link rel=\"stylesheet\" href=\"link\">"
+                    }
+                },
+                {
+                    "text": "Bootstrap uses a grid system to arrange elements on the page - **add this code to** `index.html`",
+                    "code": {
+                        "language": "html",
+                        "content": "<div class=\"container\">\n  <div class=\"row\">\n    <div class=\"col-sm-4\">\n      One of three columns\n    </div>\n    <div class=\"col-sm-4\">\n      One of three columns\n    </div>\n    <div class=\"col-sm-4\">\n      One of three columns\n    </div>\n  </div>\n</div>"
+                    },
+                    "hidden": {
+                        "text": "Add your code bellow this comment",
+                        "code" : {
+                            "language": "html",
+                            "content": "<!-- Add your content here -->"
+                        }
+                    }
+                },
+                {
+                    "text": "Try resizing the display using by dragging the middle bar",
+                    "image": "trinket/resize.png"
+                },
+                {
+                    "checkmark": true,
+                    "text": "Can you make your display window have 3 columns like this?",
+                    "display": "bootstrap/cols_horizontal.png"
+                },
+                {
+                    "checkmark": true,
+                    "text": "Can you make your display window have 3 columns like this?",
+                    "image": "bootstrap/cols_vertical.png"
+                },
+                {
+                    "text": "This grid system allows you to design a website for a **desktop computer** and a **mobile phone** on the same website",
+                    "display": "bootstrap/devices.jpg"
+                },
+                {
+                    "text": "The bootstrap grid system uses _rows_ and _columns_ to arrange the HTML elements",
+                    "display": "bootstrap/grid.png",
+                    "hidden": {
+                        "lines": [
+                            "To create this grid layout you would use this code",
+                            "**Don't put this in your application**"
+                            ],
+                        "code": {
+                            "language": "html",
+                            "content": "<div class=\"row\">\n  <div class=\"col-md-1\">col-1</div>\n  <div class=\"col-md-1\">col-1</div>\n  <div class=\"col-md-1\">col-1</div>\n  <div class=\"col-md-1\">col-1</div>\n  <div class=\"col-md-1\">col-1</div>\n  <div class=\"col-md-1\">col-1</div>\n  <div class=\"col-md-1\">col-1</div>\n  <div class=\"col-md-1\">col-1</div>\n  <div class=\"col-md-1\">col-1</div>\n  <div class=\"col-md-1\">col-1</div>\n  <div class=\"col-md-1\">col-1</div>\n  <div class=\"col-md-1\">col-1</div>\n</div>\n<div class=\"row\">\n  <div class=\"col-md-8\">col-8</div>\n  <div class=\"col-md-4\">col-4</div>\n</div>\n<div class=\"row\">\n  <div class=\"col-md-4\">col-4</div>\n  <div class=\"col-md-4\">col-4</div>\n  <div class=\"col-md-4\">col-4</div>\n</div>\n<div class=\"row\">\n  <div class=\"col-md-6\">col-6</div>\n  <div class=\"col-md-6\">col-6</div>\n</div>"
+                        }
+                    }
+                },
+                {
+                    "text": "Change your code in Trinket to have a **heading** and **content** in each row",
+                    "hidden": {
+                        "code": {
+                            "language": "html",
+                            "content": "<div class=\"col-sm-4\">\n  <h1>Heading</h1>\n  <p>Here is some content</p>\n</div>"
+                        }
+                    }
+                },
+                {
+                    "checkmark": true,
+                    "text": "Does your website have three columns with headings?"
+                }
+            ]
         }
     ]
 }

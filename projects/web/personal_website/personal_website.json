@@ -2,7 +2,7 @@
     "draft": true,
     "name": "personal_website",
     "title": "Personal Website",
-    "image": "bootstrap/logo.png",
+    "image": "web/personal_website/screenshot.png",
     "link": "https://trinket.io/embed/html/bfc2896c07",
     "description": "Create your own personal website using Bootstrap",
     "steps": [
@@ -96,6 +96,9 @@
             "description": "Bootstrap is a CSS library that means we can easily design websites for mobile devices",
             "components": [
                 {
+                    "text": "Click on the `index.html` tab to open the HTML file"
+                },
+                {
                     "text": "The Trinket project has bootstrap imported already where you see this line",
                     "code": {
                         "language": "html",
@@ -103,7 +106,7 @@
                     }
                 },
                 {
-                    "text": "Bootstrap uses a grid system to arrange elements on the page - **add this code to** `index.html`",
+                    "text": "Bootstrap uses a grid system to arrange elements on the page - **add this code** where you see `add your content here`",
                     "code": {
                         "language": "html",
                         "content": "<div class=\"container\">\n  <div class=\"row\">\n    <div class=\"col-sm-4\">\n      One of three columns\n    </div>\n    <div class=\"col-sm-4\">\n      One of three columns\n    </div>\n    <div class=\"col-sm-4\">\n      One of three columns\n    </div>\n  </div>\n</div>"
@@ -259,6 +262,98 @@
                 {
                     "text": "Does your welcome message look like this?",
                     "display": "web/personal_website/welcome_display.png",
+                    "checkmark": true
+                }
+            ]
+        },
+        {
+            "title": "Give your site some content",
+            "image": "web/personal_website/card.png",
+            "description": "Add content to your website so that you can suggest websites people might like",
+            "components": [
+                {
+                    "text": "Add a Bootstrap card to one of your columns",
+                    "code": "<div class=\"card\">\n  <div class=\"card-block\">\n    <h1>Heading</h1>\n    <p>Here is some content</p>\n  </div>\n</div>",
+                    "hidden": {
+                        "text": "Your columns code should look like this when you have added a card to the first",
+                        "code": {
+                            "language": "html",
+                            "content": "<div class=\"container\">\n  <div class=\"row\">\n    <div class=\"col-sm-4\">\n      <div class=\"card\">\n        <div class=\"card-block\">\n          <h1>Heading</h1>\n          <p>Here is some content</p>\n        </div>\n      </div>\n    </div>\n    <div class=\"col-sm-4\">\n      <h1>Heading</h1>\n      <p>Here is some content</p>\n    </div>\n    <div class=\"col-sm-4\">\n      <h1>Heading</h1>\n      <p>Here is some content</p>\n    </div>\n  </div>\n</div>"
+                        }
+                    }
+                },
+                {
+                    "text": "Does your page content look like this?",
+                    "display": "web/personal_website/column_card.png",
+                    "checkmark": true
+                },
+                {
+                    "text": "Add an image to your card using this code above the `<div>` with the `card-block` class",
+                    "code": {
+                        "language": "html",
+                        "content": "<img class=\"card-img-top\" src=\"...\">"
+                    },
+                    "hidden": {
+                        "text": "This is how your card code should look",
+                        "code": {
+                            "language": "html",
+                            "code": "<div class=\"card\">\n  <img class=\"card-img-top\" src=\"...\">\n  <div class=\"card-block\">\n    <h1>Heading</h1>\n    <p>Here is some content</p>\n  </div>\n</div>"
+                        }
+                    }
+                },
+                {
+                    "text": "Find an image on the Internet which you would like to use for your content",
+                    "display": "google/images.png"
+                },
+                {
+                    "text": "Right click on the image you would like and select **Copy Image Address**",
+                    "display": "google/image_address.png"
+                },
+                {
+                    "text": "Add your image address to the `src` attribute of your `img` tag",
+                    "hidden": {                    
+                        "code": {
+                            "language": "html",
+                            "content": "<img class=\"card-img-top\" src=\"http://link.to/your.image\">"
+                        }
+                    }
+                },
+                {
+                    "text": "Have you now got a **really big** image on your website?",
+                    "checkmark": true
+                },
+                {
+                    "text": "Click on the `style.css` tab to open the CSS file"
+                },
+                {
+                    "text": "Add this code to the bottom of your stylesheet",
+                    "code": {
+                        "language": "css",
+                        "content": ".full-width {\n  max-width: 100%;\n}"
+                    },
+                    "hidden": {
+                        "lines": [
+                            "This is used to reduce your image width",
+                            "Your image will now not be bigger than your card"
+                        ]
+                    }
+                },
+                {
+                    "text": "Click on the `index.html` tab to open the HTML file"
+                },
+                {
+                    "text": "Add the `full-width` class to your `<img>` tag",
+                    "hidden": {
+                        "text": "Your `<img>` tag shoud look like this",
+                        "code": {
+                            "language": "html",
+                            "content": "<img class=\"card-img-top full-width\" src=\"...\">"
+                        }
+                    }
+                },
+                {
+                    "text": "Does your first column look like this?",
+                    "display": "web/personal_website/card.png",
                     "checkmark": true
                 }
             ]

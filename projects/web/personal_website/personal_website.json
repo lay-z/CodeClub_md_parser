@@ -1,5 +1,4 @@
 {
-    "draft": true,
     "name": "personal_website",
     "title": "Personal Website",
     "image": "web/personal_website/screenshot.png",
@@ -417,6 +416,83 @@
                 },
                 {
                     "text": "Are you happy with your custom site?",
+                    "checkmark": true
+                }
+            ]
+        },
+        {
+            "title": "Hidden greeting",
+            "image": "web/personal_website/like_button.png",
+            "description": "Add a special hidden greeting to your website",
+            "components": [
+                {
+                    "text": "Copy your welcome text paragraph `<p>` and paste it on a new line bellow",
+                    "code": {
+                        "language": "html",
+                        "content": "<p class=\"lead\">...</p>"
+                    },
+                    "hidden": {
+                        "text": "You should end up with two lines like this",
+                        "code": {
+                            "language": "html",
+                            "content": "<p class=\"lead\">...</p>\n<p class=\"lead\">...</p>"
+                        } 
+                    }
+                },
+                {
+                    "text": "Change the text in your second paragraph to be a special greeting",
+                    "code": {
+                        "language": "html",
+                        "content": "<p class=\"lead\">Special Greeting</p>"
+                    }
+                },
+                {
+                    "text": "Add a `hidden` class to your second paragraph",
+                    "hidden": {
+                        "text": "This is how your second paragraph should look",
+                        "code": {
+                            "language": "html",
+                            "content": "<p class=\"lead hidden\">...</p>"
+                        } 
+                    }
+                },
+                {
+                    "text": "Click on the `style.css` tab to open your stylesheet"
+                },
+                {
+                    "text": "Add styling to your `hidden` class using this code",
+                    "code": {
+                        "language": "css",
+                        "content": ".hidden {\n    display: none;\n}"
+                    }
+                },
+                {
+                    "text": "Is your special greeting hidden on the display page?",
+                    "checkmark": true
+                },
+                {
+                    "text": "Click on the `script.js` tab to open your JavaScript file"
+                },
+                {
+                    "text": "Add this code to the bottom of your JavaScript file",
+                    "code": {
+                        "language": "javascript",
+                        "content": "function greeting(){\n    $('.hidden').toggle();\n}"
+                    }
+                },
+                {
+                    "text": "Change your `button` tag in your welcome message to look like this",
+                    "code": {
+                        "language": "html",
+                        "content": "<button href=\"#\" onclick=\"greeting()\" class=\"btn btn-primary\">Click to like</button>"
+                    }
+                },
+                {
+                    "text": "When your display reloads try clicking the 'Click to like' button",
+                    "image": "web/personal_website/like_button.png"
+                },
+                {
+                    "text": "Does your special message appear when you click the button?",
                     "checkmark": true
                 }
             ]

@@ -1,0 +1,57 @@
+{
+    "draft": true,
+    "name": "personal_website",
+    "title": "Personal Website",
+    "image": "bootstrap/logo.png",
+    "link": "https://trinket.io/embed/html/bfc2896c07",
+    "description": "Create your own personal website using Bootstrap",
+    "steps": [
+        {
+            "title": "Trinket",
+            "image": "trinket/logo.png",
+            "description": "To create a personal website we will be using Trinket",
+            "components": [
+                {
+                    "text": "Trinket is an online HTML editor",
+                    "display": "trinket/interface.png"
+                },
+                {
+                    "text": "**On the previous screen** click 'Open Starter Web Project' to open a Trinket window",
+                    "image": "web/open_starter.png"
+                },
+                {
+                    "text": "Has a Trinket window opened on the right?",
+                    "checkmark": true
+                },
+                {
+                    "text": "On the left of the Trinket screen is the code editor",
+                    "display": "trinket/editor.png"
+                },
+                {
+                    "text": "On the right is the Trinket screen is where your code output is shown",
+                    "display": "trinket/runner.png"
+                },
+                {
+                    "text": "To save your work you need a Trinket account, **click the login button**",
+                    "image": "trinket/login.png"                
+                },
+                {
+                    "text": "Enter your email address and password then **click Create Account**",
+                    "image": "trinket/login_details.png"
+                },
+                {
+                    "text": "Have you managed to create a Trinket account?",
+                    "checkmark": true
+                },
+                {
+                    "text": "Now **click Remix** to make your own copy of the Trinket",
+                    "image": "trinket/remix.png"
+                },
+                {
+                    "text": "Did you successfully remix the Trinket project?",
+                    "checkmark": true
+                }
+            ]
+        }
+    ]
+}

@@ -496,6 +496,114 @@
                     "checkmark": true
                 }
             ]
+        },
+        {
+            "challenge": true,
+            "title": "Random Images",
+            "description": "Add random images to your page so that the content is new each time",
+            "image": "https://unsplash.it/300/300",
+            "components": [
+                {
+                    "text": "Open this link in your browser",
+                    "link": "https://unsplash.it/200/300"
+                },
+                {
+                    "text": "Try refreshing the page and changing the numbers in the address",
+                    "checkmark": true
+                },    
+                {
+                    "text": "Change the `src` attribute of one of your images to point to the random images",
+                    "hidden": {                    
+                        "code": {
+                            "language": "html",
+                            "content": "<img class=\"card-img-top full-width\" src=\"https://unsplash.it/200/300\">"
+                        }
+                    }
+
+                }
+            ]
+        },
+        {
+            "challenge": true,
+            "title": "Leave a Comment",
+            "description": "Add a comment box so that users can leave a message for you on the page",
+            "image": "web/personal_website/post.png",
+            "components": [
+                {
+                    "text": "Add a new section bellow your image cards",
+                    "code": {
+                        "language": "html",
+                        "content": "<section class=\"container\">\n\t<!-- Comment Section -->\n</section>"
+                    }
+                },  
+                {
+                    "text": "Open this link, and find the button addons section",
+                    "link": "http://v4-alpha.getbootstrap.com/components/input-group/#button-addons",
+                    "display": "bootstrap/button_addons.png"
+                },   
+                {
+                    "text": "Copy one of the `<div>` tags with an `input-group` class",
+                    "image": "bootstrap/copy.png",
+                    "code": {
+                        "language": "html",
+                        "content": "<div class=\"input-group\">\n  <input type=\"text\" class=\"form-control\" placeholder=\"Search for...\">\n  <span class=\"input-group-btn\">\n    <button class=\"btn btn-secondary\" type=\"button\">Go!</button>\n  </span>\n</div>"
+                    }
+                },  
+                {
+                    "text": "Paste the copied code into your comment section",
+                   "code": {
+                        "language": "html",
+                        "content": "<!-- Comment Section -->"
+                    }
+                },
+                {
+                    "text": "Add an `id` attribute to the `<input>` tag",
+                    "code": {
+                        "language": "html",
+                        "content": "<input id=\"comment\" type=\"text\" class=\"form-control\" placeholder=\"Add a comment\">"
+                    }
+                },
+                {
+                    "text": "Add an `onclick` attribute to the `<button>` tag",
+                    "code": {
+                        "language": "html",
+                        "content": "<button class=\"btn btn-secondary\" type=\"button\" onclick=\"post()\">Post</button>"
+                    }
+                },
+                {
+                    "text": "Add this code to the bottom of your JavaScript file",
+                    "code": {
+                        "language": "javascript",
+                        "content": "function post(){\n    var comment = $('#comment').val();\n    alert(comment);\n}"
+                    }
+                },
+                {
+                    "text": "Write something in your comment box and **click Post**",
+                    "display": "web/personal_website/comment.png"
+                },
+                {
+                    "text": "Does an alert display with your comment text?",
+                    "checkmark": true
+                },
+                {
+                    "text": "Add a comments `<div>` tag",
+                    "code": {
+                        "language": "html",
+                        "content": "<div id=\"comments\"></div>"
+                    }     
+                },
+                {
+                    "text": "Add this line to your JavaScript file",
+                    "code": {
+                        "language": "javascript",
+                        "content": "$('#comments').append('<p>' + comment + '</p>');"
+                    }     
+                },
+                {
+                    "text": "Does a new comment get added when you click post?",
+                    "checkmark": true
+                }
+            ]
         }
     ]
 }

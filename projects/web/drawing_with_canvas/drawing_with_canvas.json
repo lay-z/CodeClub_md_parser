@@ -117,11 +117,11 @@
 		},
 		{
 			"title": "Make a drawing loop",
-			"image": "web/draw_with_canvas/red_square.png",
-			"description": "Get access to the canvas and draw a Square",
+			"image": "web/draw_with_canvas/blue_ball.png",
+			"description": "Make a drawing loop to draw a blue ball",
 			"components": [
 				{
-					"text": "**Delete all the JavaScript** you currently have inside your HTML file **except for the first two lines**"
+					"text": "**Delete all the JavaScript** you currently have inside your _script.js_ file **except for the first two lines**"
 				},
 				{
 					"text": "Add the following code bellow your existing",
@@ -132,7 +132,14 @@
 				},
 				{
 					"text": "Does your console print out 'drawing' loads of times?",
-					"checkmark": true
+					"checkmark": true,
+					"hidden": {
+						"lines": [
+							"To open your browser console",
+							"On a mac computer press **cmd + shift + j**",
+							"On a windows computer press **ctrl + shift + j**"
+							]
+					}
 				},
 				{
 					"text": "Draw a ball in the body of your draw function",
@@ -147,8 +154,66 @@
 							"content": "function draw() {\n\tctx.beginPath();\n\tctx.arc(50, 50, 10, 0, Math.PI*2);\n\tctx.fillStyle = \"#0095DD\";\n\tctx.fill();\n\tctx.closePath();\n}\nsetInterval(draw, 10);"
 						}
 					}
+				},
+				{
+					"text": "Have you got a blue ball like this on your canvas?",
+					"image": "web/draw_with_canvas/blue_ball.png",
+					"checkmark": true
 				}
 			]
+		},
+		{
+			"title": "Make your ball move",
+			"image": "web/draw_with_canvas/ball_trail.png",
+			"description": "Make your ball move with the draw loop",
+			"components": [
+				{
+					"text": "Create varaibles for your balls position",
+					"code": {
+						"language": "javascript",
+						"content": "var x = canvas.width/2;\nvar y = canvas.height-30;"
+					}
+				},
+				{
+					"text": "Change your arc code to draw the ball at position `(x,y)`",
+					"code": {
+						"language": "javascript",
+						"content": "ctx.arc(x, y, 10, 0, Math.PI*2);"
+					},
+					"hidden": {
+						"text": "Your code should look like this",
+						"code": {
+							"language": "javascript",
+							"content": "function draw() {\n\tctx.beginPath();\n\tctx.arc(x, y, 10, 0, Math.PI*2);\n\tctx.fillStyle = \"#0095DD\";\n\tctx.fill();\n\tctx.closePath();\n}"
+						}
+					}
+				},
+				{
+					"text": "Make variables for how much your ball moves by each step",
+					"code": {
+						"language": "javascript",
+						"content": "var xStep = 2;var yStep = -2;"
+					}
+				},
+				{
+					"text": "At the bottom of your ",
+					"code": {
+						"language": "javascript",
+						"content": "x += xStep;\ny += yStep;"
+					}
+				},
+				{
+					"text": "Does your ball move accross the screen?",
+					"checkmark": true
+				}
+
+			]
+		},
+		{
+			"title": "Make your ball bounce",
+			"image": "",
+			"description": "",
+			"components": []
 		}
 	]
 }

@@ -229,18 +229,49 @@
 					}
 				},
 				{
-					"text": "At the bottom of your ",
+					"text": "At the bottom of your draw function use this code to make your ball move",
 					"code": {
 						"language": "javascript",
 						"content": "x += xStep;\ny += yStep;"
+					},
+					"hidden": {
+						"text": "Your draw function should end like this",
+						"code": {
+							"language": "javascript",
+							"content": "\t// ...\n\tctx.closePath();\n\tx += xStep;\n\ty += yStep;\n}"
+						}
 					}
 				},
 				{
 					"text": "Does your ball move accross the screen?",
 					"checkmark": true
+				},
+				{
+					"text": "Clear your canvas at the top of your draw function",
+					"code": {
+						"language": "javascript",
+						"content": "ctx.clearRect(0, 0, canvas.width, canvas.height);"
+					},
+					"hidden": {
+						"text": "Your draw function should start like this",
+						"code": {
+							"language": "javascript",
+							"content": "function draw() {\n\tctx.clearRect(0, 0, canvas.width, canvas.height);\n\tctx.beginPath();\n\t// ..."
+						}
+					}
+				},
+				{
+					"text": "Does your ball move across the screen without a trail?",
+					"checkmark": true
 				}
-
 			]
+		},
+		{
+			"challenge": true,
+			"title": "Change movement and refactor code",
+			"image": "",
+			"description": "",
+			"components": []
 		},
 		{
 			"title": "Make your ball bounce",

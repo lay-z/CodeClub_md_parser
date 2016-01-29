@@ -2,7 +2,7 @@
 	"name": "Draw with Canvas",
 	"title": "Draw with Canvas",
 	"image": "web/draw_with_canvas/draw_with_canvas.png",
-	"link": "TBP",
+	"link": "https://trinket.io/embed/html/846ac26a5d",
 	"description": "Start to draw your own shapes and animations in Javascript",
 	"steps": [
 		{
@@ -110,6 +110,41 @@
 						"code": {
 							"language": "javascript",
 							"content": "ctx.rect(0, 0, 100, 100)"
+						}
+					}
+				}
+			]
+		},
+		{
+			"title": "Make a drawing loop",
+			"image": "web/draw_with_canvas/red_square.png",
+			"description": "Get access to the canvas and draw a Square",
+			"components": [
+				{
+					"text": "**Delete all the JavaScript** you currently have inside your HTML file **except for the first two lines**"
+				},
+				{
+					"text": "Add the following code bellow your existing",
+					"code": {
+						"language": "javascript",
+						"content": "function draw() {\n    console.log('drawing')\n}\nsetInterval(draw, 10);"
+					}
+				},
+				{
+					"text": "Does your console print out 'drawing' loads of times?",
+					"checkmark": true
+				},
+				{
+					"text": "Draw a ball in the body of your draw function",
+					"code": {
+						"language": "javascript",
+						"content": "ctx.beginPath();\nctx.arc(50, 50, 10, 0, Math.PI*2);\nctx.fillStyle = \"#0095DD\";\nctx.fill();\nctx.closePath();"
+					},
+					"hidden": {
+						"text": "Your code should look like this",
+						"code": {
+							"language": "javascript",
+							"content": "function draw() {\n\tctx.beginPath();\n\tctx.arc(50, 50, 10, 0, Math.PI*2);\n\tctx.fillStyle = \"#0095DD\";\n\tctx.fill();\n\tctx.closePath();\n}\nsetInterval(draw, 10);"
 						}
 					}
 				}

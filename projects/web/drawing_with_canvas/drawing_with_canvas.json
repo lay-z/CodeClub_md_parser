@@ -1,0 +1,119 @@
+{
+	"name": "Draw with Canvas",
+	"title": "Draw with Canvas",
+	"image": "web/draw_with_canvas/draw_with_canvas.png",
+	"link": "TBP",
+	"description": "Start to draw your own shapes and animations in Javascript",
+	"steps": [
+		{
+				"title": "Set up your canvas",
+				"image": "web/draw_with_canvas/canvas_logo.jpg",
+				"description": "Get your canvas ready to start drawing on",
+				"components": [
+					{
+						"text": "Canvas is a html element that you can draw on with javascript",
+						"code": {
+							"language": "html",
+							"content": "<canvas></canvas>"
+						}
+					},
+					{
+						"text": "Create the HTML for your canvas element, don't forget the **width**, **height** and **id**",
+						"code": {
+							"language": "html",
+							"content": "<canvas id='myCanvas' width='480' height='320'></canvas>"
+						}
+					},
+					{
+						"text": "Lets style up that canvas! (so we can see it on the page)",
+						"code": {
+							"language": "css",
+							"content": "canvas {\n\tbackground: orange\n}"
+						},
+						"hidden": {
+							"lines": [
+								"feel free to try and use different background colours,",
+								"or even to add a nice border.",
+								"Border styles can be found here:",
+								"http://www.w3schools.com/cssref/pr_border-style.asp"
+							]
+						}
+					},
+					{
+						"checkmark": true,
+						"text": "Does your webpage have a big coloured square in it like this?",
+						"display": "web/draw_with_canvas/blank_canvas.png"
+					}
+				]
+		},
+		{
+			"title": "Draw a shape!",
+			"image": "web/draw_with_canvas/red_square.png",
+			"description": "Get access to the canvas and draw a Square",
+			"components": [
+				{
+					"text": "Access canvas element in javascript, using getElementById()",
+					"code": {
+						"language": "javascript",
+						"content": "var canvas = document.getElementById('myCanvas')"
+					}
+				},
+				{
+					"text": "to start drawing on the canvas we need to get the 2d context!!",
+					"code": {
+						"language": "javascript",
+						"content": "var ctx = canvas.getContext('2d')"
+					}
+				},
+				{
+					"text": "Alright now its time to draw our Square!!"
+				},
+				{
+					"text": "We use the **begin_path**, **end_path**, **rect** and **fill** methods",
+					"code": {
+						"language": "javascript",
+						"content": "ctx.beginPath();\nctx.rect(50, 50, 50, 50);\nctx.fillStyle = '#FF0000';\nctx.fill();\nctx.closePath();"
+					}
+				},
+				{
+					"checkmark" : true,
+					"text": "Does your  canvas now have a red square like this?",
+					"display": "web/draw_with_canvas/red_square.png"
+				},
+				{
+					"text": "The colour of the square is set by the **ctx.fillStyle** method. See if you can change it to **orange**",
+					"hidden": {
+						"text": "You can use colour names (all in lower case)",
+						"code": {
+							"language": "javascript",
+							"content": "ctx.fillStyle('orange')"
+						}
+					}
+				},
+				{
+					"checkmark" : true,
+					"text": "Does your  canvas now have a orange square like this?",
+					"display": "web/draw_with_canvas/orange_square.png"
+				},
+				{
+					"text": "Notice that the **ctx.rect** method takes 4 arguments. The first 2 arguments are the x and y positions, the second two are the width and height of the square",
+					"code": {
+						"language": "javascript",
+						"content": "ctx.rect(x_position, y_position, width, height)"
+					}
+				},
+				{
+					"checkmark": true,
+					"text": "can you draw the square in the top left corner of the screen, and also make it bigger?",
+					"hidden": {
+						"text": "simply modify the relevant arguments (e.g. x_position) in the **ctx.rect** method",
+						"code": {
+							"language": "javascript",
+							"content": "ctx.rect(0, 0, 100, 100)"
+						}
+					}
+				}
+			]
+		}
+	]
+}

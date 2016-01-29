@@ -188,6 +188,12 @@
         "language" : "Web",
         "module" : 1,
         "number" : 2
+    },
+    "Draw with Canvas" : {
+        "provider" : "TuringLab",
+        "language" : "Web",
+        "module" : 1,
+        "number" : 3
     }
 
 }

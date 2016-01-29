@@ -1,0 +1,345 @@
+{
+	"name": "Draw with Canvas",
+	"title": "Draw with Canvas",
+	"image": "web/draw_with_canvas/draw_with_canvas.png",
+	"link": "https://trinket.io/embed/html/846ac26a5d",
+	"description": "Start to draw your own shapes and animations in Javascript",
+	"steps": [
+		{
+				"title": "Set up your canvas",
+				"image": "web/draw_with_canvas/canvas_logo.jpg",
+				"description": "Get your canvas ready to start drawing on",
+				"components": [
+					{
+						"text": "Canvas is a html element that you can draw on with javascript",
+						"code": {
+							"language": "html",
+							"content": "<canvas></canvas>"
+						}
+					},
+					{
+						"text": "Create the HTML for your canvas element, don't forget the **width**, **height** and **id**",
+						"code": {
+							"language": "html",
+							"content": "<canvas id='myCanvas' width='480' height='320'></canvas>"
+						}
+					},
+					{
+						"text": "Lets style up that canvas! (so we can see it on the page)",
+						"code": {
+							"language": "css",
+							"content": "canvas {\n\tbackground: orange\n}"
+						},
+						"hidden": {
+							"lines": [
+								"feel free to try and use different background colours,",
+								"or even to add a nice border.",
+								"Border styles can be found here:",
+								"http://www.w3schools.com/cssref/pr_border-style.asp"
+							]
+						}
+					},
+					{
+						"checkmark": true,
+						"text": "Does your webpage have a big coloured square in it like this?",
+						"display": "web/draw_with_canvas/blank_canvas.png"
+					}
+				]
+		},
+		{
+			"title": "Draw a shape!",
+			"image": "web/draw_with_canvas/red_square.png",
+			"description": "Get access to the canvas and draw a Square",
+			"components": [
+				{
+					"text": "Access canvas element in javascript, using getElementById()",
+					"code": {
+						"language": "javascript",
+						"content": "var canvas = document.getElementById('myCanvas')"
+					}
+				},
+				{
+					"text": "to start drawing on the canvas we need to get the 2d context!!",
+					"code": {
+						"language": "javascript",
+						"content": "var ctx = canvas.getContext('2d')"
+					}
+				},
+				{
+					"text": "Alright now its time to draw our Square!!"
+				},
+				{
+					"text": "We use the **begin_path**, **end_path**, **rect** and **fill** methods",
+					"code": {
+						"language": "javascript",
+						"content": "ctx.beginPath();\nctx.rect(50, 50, 50, 50);\nctx.fillStyle = '#FF0000';\nctx.fill();\nctx.closePath();"
+					}
+				},
+				{
+					"checkmark" : true,
+					"text": "Does your  canvas now have a red square like this?",
+					"display": "web/draw_with_canvas/red_square.png"
+				},
+				{
+					"text": "The colour of the square is set by the **ctx.fillStyle** method. See if you can change it to **orange**",
+					"hidden": {
+						"text": "You can use colour names (all in lower case)",
+						"code": {
+							"language": "javascript",
+							"content": "ctx.fillStyle('orange')"
+						}
+					}
+				},
+				{
+					"checkmark" : true,
+					"text": "Does your  canvas now have a orange square like this?",
+					"display": "web/draw_with_canvas/orange_square.png"
+				},
+				{
+					"text": "Notice that the **ctx.rect** method takes 4 arguments. The first 2 arguments are the x and y positions, the second two are the width and height of the square",
+					"code": {
+						"language": "javascript",
+						"content": "ctx.rect(x_position, y_position, width, height)"
+					}
+				},
+				{
+					"checkmark": true,
+					"text": "can you draw the square in the top left corner of the screen, and also make it bigger?",
+					"hidden": {
+						"text": "simply modify the relevant arguments (e.g. x_position) in the **ctx.rect** method",
+						"code": {
+							"language": "javascript",
+							"content": "ctx.rect(0, 0, 100, 100)"
+						}
+					}
+				}
+			]
+		},
+		{
+			"title": "Make a sphere",
+			"image": "web/draw_with_canvas/green_ball.png",
+			"description": "Make a ball that we shall animate",
+			"components": [
+				{
+					"text": "To draw a ball we need to use the **ctx.arc** function, remove the code to draw the square and replace it with this:",
+					"code": {
+						"language": "javascript",
+						"content": "ctx.beginPath();\nctx.arc(canvas.width/2, canvas.height/2, 50, 0, Math.PI*2, false\n);\nctx.fillStyle = 'green';\nctx.fill();\nctx.closePath();"
+					}
+				},
+				{
+					"checkmark": true,
+					"text": "Do you have a green ball in the middle of the canvas that looks like this?",
+					"display": "web/draw_with_canvas/green_ball.png"
+				},
+				{
+					"text": "Can you find out what the first three **arguments** do for the **ctx.arc** function?",
+					"checkmark": true,
+					"hidden": {
+						"lines": [
+							"The first argument is for the x position on the screen, the second is the y position (just like in the **ctx.rect**).",
+							"The third is the **radius** or size of the ball. (don't worry about the last two for the time being)"
+						],
+						"code": {
+							"language": "javascript",
+							"content": "ctx.arc(x_position, y_position, radius)"
+						}
+					}
+				}
+			]
+		},
+		{
+			"title": "Make a drawing loop",
+			"image": "web/draw_with_canvas/blue_ball.png",
+			"description": "Make a drawing loop to draw a blue ball",
+			"components": [
+				{
+					"text": "**Delete all the JavaScript** you currently have inside your _script.js_ file **except for the first two lines**"
+				},
+				{
+					"text": "Add the following code bellow your existing",
+					"code": {
+						"language": "javascript",
+						"content": "function draw() {\n    console.log('drawing')\n}\nsetInterval(draw, 10);"
+					}
+				},
+				{
+					"text": "Does your console print out 'drawing' loads of times?",
+					"checkmark": true,
+					"hidden": {
+						"lines": [
+							"To open your browser console",
+							"On a mac computer press **cmd + shift + j**",
+							"On a windows computer press **ctrl + shift + j**"
+							]
+					}
+				},
+				{
+					"text": "Draw a ball in the body of your draw function",
+					"code": {
+						"language": "javascript",
+						"content": "ctx.beginPath();\nctx.arc(50, 50, 10, 0, Math.PI*2);\nctx.fillStyle = \"#0095DD\";\nctx.fill();\nctx.closePath();"
+					},
+					"hidden": {
+						"text": "Your code should look like this",
+						"code": {
+							"language": "javascript",
+							"content": "function draw() {\n\tctx.beginPath();\n\tctx.arc(50, 50, 10, 0, Math.PI*2);\n\tctx.fillStyle = \"#0095DD\";\n\tctx.fill();\n\tctx.closePath();\n}\nsetInterval(draw, 10);"
+						}
+					}
+				},
+				{
+					"text": "Have you got a blue ball like this on your canvas?",
+					"image": "web/draw_with_canvas/blue_ball.png",
+					"checkmark": true
+				}
+			]
+		},
+		{
+			"title": "Make your ball move",
+			"image": "web/draw_with_canvas/ball_trail.png",
+			"description": "Make your ball move with the draw loop",
+			"components": [
+				{
+					"text": "Create varaibles for your balls position",
+					"code": {
+						"language": "javascript",
+						"content": "var x = canvas.width/2;\nvar y = canvas.height/2;"
+					}
+				},
+				{
+					"text": "Change your arc code to draw the ball at position `(x,y)`",
+					"code": {
+						"language": "javascript",
+						"content": "ctx.arc(x, y, 10, 0, Math.PI*2);"
+					},
+					"hidden": {
+						"text": "Your code should look like this",
+						"code": {
+							"language": "javascript",
+							"content": "function draw() {\n\tctx.beginPath();\n\tctx.arc(x, y, 10, 0, Math.PI*2);\n\tctx.fillStyle = \"#0095DD\";\n\tctx.fill();\n\tctx.closePath();\n}"
+						}
+					}
+				},
+				{
+					"text": "Make variables for how much your ball moves by each step",
+					"code": {
+						"language": "javascript",
+						"content": "var xSpeed = 0;var ySpeed = 2;"
+					}
+				},
+				{
+					"text": "At the bottom of your draw function use this code to make your ball move",
+					"code": {
+						"language": "javascript",
+						"content": "x += xSpeed;\ny += ySpeed;"
+					},
+					"hidden": {
+						"text": "Your draw function should end like this",
+						"code": {
+							"language": "javascript",
+							"content": "\t// ...\n\tctx.closePath();\n\tx += xSpeed;\n\ty += ySpeed;\n}"
+						}
+					}
+				},
+				{
+					"text": "Does your ball move accross the screen?",
+					"checkmark": true
+				},
+				{
+					"text": "Clear your canvas at the top of your draw function",
+					"code": {
+						"language": "javascript",
+						"content": "ctx.clearRect(0, 0, canvas.width, canvas.height);"
+					},
+					"hidden": {
+						"text": "Your draw function should start like this",
+						"code": {
+							"language": "javascript",
+							"content": "function draw() {\n\tctx.clearRect(0, 0, canvas.width, canvas.height);\n\tctx.beginPath();\n\t// ..."
+						}
+					}
+				},
+				{
+					"text": "Does your ball move across the screen without a trail?",
+					"checkmark": true
+				}
+			]
+		},
+		{
+			"challenge": true,
+			"title": "Refactor your code",
+			"image": "web/draw_with_canvas/ball_move.png",
+			"description": "Change your code to move the ball at a differnt speed",
+			"components": [
+				{
+					"text": "Try changing your variables to make the ball move slower",
+					"hidden": {
+						"code": {
+							"language": "javascript",
+							"content": "var ySpeed = 1;"
+						}
+					}
+				},
+				{
+					"text": "Make your ball move sideways",
+					"hidden": {
+						"code": {
+							"language": "javascript",
+							"content": "var xSpeed = 1;"
+						}
+					}
+				},
+				{
+					"text": "Create a `drawBall` function to use in your draw function like this",
+					"code": {
+						"language": "javascript",
+						"content": "function draw() {\n\tctx.clearRect(0, 0, canvas.width, canvas.height);\n\tdrawBall();\n\tx += xSpeed;\n\ty += ySpeed;\n}"
+					},
+					"hidden": {
+						"code": {
+							"language": "javascript",
+							"content": "function drawBall() {\n\tctx.beginPath();\n\tctx.arc(x, y, 10, 0, Math.PI*2);\n\tctx.fillStyle = \"#0095DD\";\n\tctx.fill();\n\tctx.closePath();\n}"
+						}
+					}
+				},
+				{
+					"text": "Does your ball still move with the new function?",
+					"checkmark": true
+				}
+			]
+		},
+		{
+			"title": "Make your ball bounce",
+			"image": "web/draw_with_canvas/green_ball.png",
+			"description": "Its no fun when your ball just goes off the screen, lets have it bounce around",
+			"components": [
+				{
+					"checkmark": true,
+					"text": "Make sure that your ball is moving upwards, towards the top wall"
+				},
+				{
+					"text": "Bouncing of walls is a little tricky. We need to check if the balls position (either x or y) is out of the canvas screen"
+				},
+				{
+					"text": "Place the following code into your drawing function",
+					"code": {
+						"language": "javascript",
+						"content": "if(y + ySpeed < 0) {\n\tySpeed = -ySpeed;\n}"
+					}
+				},
+				{
+					"checkmark": true,
+					"text": "Does your Ball now bounce of the top wall? (it will only do it on the top wall"
+				},
+				{
+					"text": "for the bottom wall, we need to check if the balls y position is greater than the canvas size",
+					"code": {
+						"language": "javascript",
+						"content": "if(y - ySpeed < canvas.length) {\n\tySpeed = -ySpeed;\n}"
+					}
+				}
+			]
+		}
+	]
+}

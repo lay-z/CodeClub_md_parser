@@ -244,9 +244,35 @@
 		},
 		{
 			"title": "Make your ball bounce",
-			"image": "",
-			"description": "",
-			"components": []
+			"image": "web/draw_with_canvas/green_ball.png",
+			"description": "Its no fun when your ball just goes off the screen, lets have it bounce around",
+			"components": [
+				{
+					"checkmark": true,
+					"text": "Make sure that your ball is moving upwards, towards the top wall"
+				},
+				{
+					"text": "Bouncing of walls is a little tricky. We need to check if the balls position (either x or y) is out of the canvas screen"
+				},
+				{
+					"text": "Place the following code into your drawing function",
+					"code": {
+						"language": "javascript",
+						"content": "if(y + ySpeed < 0) {\n\tySpeed = -ySpeed;\n}"
+					}
+				},
+				{
+					"checkmark": true,
+					"text": "Does your Ball now bounce of the top wall? (it will only do it on the top wall"
+				},
+				{
+					"text": "for the bottom wall, we need to check if the balls y position is greater than the canvas size",
+					"code": {
+						"language": "javascript",
+						"content": "if(y - ySpeed < canvas.length) {\n\tySpeed = -ySpeed;\n}"
+					}
+				}
+			]
 		}
 	]
 }

@@ -116,6 +116,39 @@
 			]
 		},
 		{
+			"title": "Make a sphere",
+			"image": "web/draw_with_canvas/green_ball.png",
+			"description": "Make a ball that we shall animate",
+			"components": [
+				{
+					"text": "To draw a ball we need to use the **ctx.arc** function, remove the code to draw the square and replace it with this:",
+					"code": {
+						"language": "javascript",
+						"content": "ctx.beginPath();\nctx.arc(canvas.width/2, canvas.height/2, 50, 0, Math.PI*2, false\n);\nctx.fillStyle = 'green';\nctx.fill();\nctx.closePath();"
+					}
+				},
+				{
+					"checkmark": true,
+					"text": "Do you have a green ball in the middle of the canvas that looks like this?",
+					"display": "web/draw_with_canvas/green_ball.png"
+				},
+				{
+					"text": "Can you find out what the first three **arguments** do for the **ctx.arc** function?",
+					"checkmark": true,
+					"hidden": {
+						"lines": [
+							"The first argument is for the x position on the screen, the second is the y position (just like in the **ctx.rect**).",
+							"The third is the **radius** or size of the ball. (don't worry about the last two for the time being)"
+						],
+						"code": {
+							"language": "javascript",
+							"content": "ctx.arc(x_position, y_position, radius)"
+						}
+					}
+				}
+			]
+		},
+		{
 			"title": "Make a drawing loop",
 			"image": "web/draw_with_canvas/blue_ball.png",
 			"description": "Make a drawing loop to draw a blue ball",

@@ -204,7 +204,7 @@
 					"text": "Create varaibles for your balls position",
 					"code": {
 						"language": "javascript",
-						"content": "var x = canvas.width/2;\nvar y = canvas.height-30;"
+						"content": "var x = canvas.width/2;\nvar y = canvas.height/2;"
 					}
 				},
 				{
@@ -225,20 +225,20 @@
 					"text": "Make variables for how much your ball moves by each step",
 					"code": {
 						"language": "javascript",
-						"content": "var xStep = 2;var yStep = -2;"
+						"content": "var xSpeed = 0;var ySpeed = 2;"
 					}
 				},
 				{
 					"text": "At the bottom of your draw function use this code to make your ball move",
 					"code": {
 						"language": "javascript",
-						"content": "x += xStep;\ny += yStep;"
+						"content": "x += xSpeed;\ny += ySpeed;"
 					},
 					"hidden": {
 						"text": "Your draw function should end like this",
 						"code": {
 							"language": "javascript",
-							"content": "\t// ...\n\tctx.closePath();\n\tx += xStep;\n\ty += yStep;\n}"
+							"content": "\t// ...\n\tctx.closePath();\n\tx += xSpeed;\n\ty += ySpeed;\n}"
 						}
 					}
 				},
@@ -268,10 +268,46 @@
 		},
 		{
 			"challenge": true,
-			"title": "Change movement and refactor code",
-			"image": "",
-			"description": "",
-			"components": []
+			"title": "Refactor your code",
+			"image": "web/draw_with_canvas/ball_move.png",
+			"description": "Change your code to move the ball at a differnt speed",
+			"components": [
+				{
+					"text": "Try changing your variables to make the ball move slower",
+					"hidden": {
+						"code": {
+							"language": "javascript",
+							"content": "var ySpeed = 1;"
+						}
+					}
+				},
+				{
+					"text": "Make your ball move sideways",
+					"hidden": {
+						"code": {
+							"language": "javascript",
+							"content": "var xSpeed = 1;"
+						}
+					}
+				},
+				{
+					"text": "Create a `drawBall` function to use in your draw function like this",
+					"code": {
+						"language": "javascript",
+						"content": "function draw() {\n\tctx.clearRect(0, 0, canvas.width, canvas.height);\n\tdrawBall();\n\tx += xSpeed;\n\ty += ySpeed;\n}"
+					},
+					"hidden": {
+						"code": {
+							"language": "javascript",
+							"content": "function drawBall() {\n\tctx.beginPath();\n\tctx.arc(x, y, 10, 0, Math.PI*2);\n\tctx.fillStyle = \"#0095DD\";\n\tctx.fill();\n\tctx.closePath();\n}"
+						}
+					}
+				},
+				{
+					"text": "Does your ball still move with the new function?",
+					"checkmark": true
+				}
+			]
 		},
 		{
 			"title": "Make your ball bounce",

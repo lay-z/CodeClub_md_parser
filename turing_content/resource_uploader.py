@@ -9,6 +9,21 @@ import config
 
 boto3.set_stream_logger('boto3.resources', logging.WARNING)
 
+def exists(key):
+    exists = False
+
+    try:
+        key.load()
+    except botocore.exceptions.ClientError as error:
+        if (error.response['Error']['Code'] == "404"):
+            exists = False
+        else:
+            raise error
+    else:
+        exists = True
+
+    return exists
+
 class ResourceUploader:
 
     def __init__(self,session=boto3.session.Session(**config.aws)):
@@ -36,10 +51,16 @@ class ResourceUploader:
             fileObject - opened file object to be uploaded to s3
         """
 
-        print('Updating {}'.format(localFilePath))
         
         # Construct amazon bucket and check last modified
         key = self.s3.Object(self.bucketName, awsFilePath)
+
+        # Check if key exists and return
+        if (exists(key)):
+            return
+        
+        # Print the file is updating
+        print('Updating {}'.format(localFilePath))
         key.put(ACL='public-read',Body=open(localFilePath, 'rb'))
 
 

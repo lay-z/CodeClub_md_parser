@@ -154,10 +154,17 @@
 			"description": "Make a drawing loop to draw a blue ball",
 			"components": [
 				{
-					"text": "**Delete all the JavaScript** you currently have inside your _script.js_ file **except for the first two lines**"
+					"text": "**Comment out all but the first two lines** of your JavaScript code",
+					"hidden": {
+						"lines": [
+							"Select all the code to draw a square and ball then",
+							"On a mac computer press **cmd + ?**",
+							"On a windows computer press **ctrl + ?**"
+						]
+					}
 				},
 				{
-					"text": "Add the following code bellow your existing",
+					"text": "Add the following code bellow your commented existing",
 					"code": {
 						"language": "javascript",
 						"content": "function draw() {\n    console.log('drawing')\n}\nsetInterval(draw, 10);"

@@ -247,7 +247,7 @@
 					"text": "Make variables for how much your ball moves by each step",
 					"code": {
 						"language": "javascript",
-						"content": "var xSpeed = 0;var ySpeed = 2;"
+						"content": "var xSpeed = 0;\nvar ySpeed = 2;"
 					}
 				},
 				{
@@ -355,11 +355,35 @@
 					"text": "Does your Ball now bounce of the top wall? (it will only do it on the top wall"
 				},
 				{
-					"text": "for the bottom wall, we need to check if the balls y position is greater than the canvas size",
+					"text": "For the bottom wall, we need to check if the balls y position is greater than the canvas size",
 					"code": {
 						"language": "javascript",
-						"content": "if(y - ySpeed < canvas.length) {\n\tySpeed = -ySpeed;\n}"
+						"content": "if(y + ySpeed > canvas.height) {\n\tySpeed = -ySpeed;\n}"
 					}
+				},
+				{
+					"text": "Add collision detection for the left and right wall",
+					"hidden": {
+						"lines": [
+							"This will look very similar to the bottom and top walls",
+							"Remeber that the canvas width can be accessed with this code"
+						],
+						"code": {
+							"language": "javascript",
+							"content": "canvas.width"
+						}
+					}
+				},
+				{
+					"text": "Change your `xSpeed` and `ySpeed` to 2",
+					"code": {
+						"language": "javascript",
+						"content": "var xSpeed = 2;\nvar ySpeed = 2;"
+					}
+				},
+				{
+					"text": "Does your ball bounce off all the walls?",
+					"checkmark": true
 				}
 			]
 		}

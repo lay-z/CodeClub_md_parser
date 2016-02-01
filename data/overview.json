@@ -162,8 +162,12 @@
         "module" : 2,
         "number" : 3
     },
-
-
+    "Pacman" : {
+        "provider" : "TuringLab",
+        "language" : "Scratch",
+        "module" : 2,
+        "number" : 4
+    },
     "Talking Computer" : {
         "provider" : "TuringLab",
         "language" : "Python",
@@ -201,5 +205,4 @@
         "module" : 1,
         "number" : 3
     }
-
 }

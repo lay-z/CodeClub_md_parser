@@ -1,0 +1,168 @@
+{
+    "title": "Pacman",
+    "image": "scratch/pacman/game.png",
+    "link": "https://scratch.mit.edu/projects/96234902/#editor",
+    "description": "Create a Scratch version of Pacman",
+    "steps": [        
+        {
+            "title": "Add some dots",
+            "number": "1",
+            "image" : "scratch/pacman/dots.png",
+            "description": "Create the dots for pacman to eat",
+            "components": [
+                {
+                    "text": "Open the **Scratch Starter Project**"
+                },
+                {
+                    "text": "Every time Pacman eats a dot, we will increase the score.Click on the **Dot** sprite and make a **variable** called **Score** to keep track of the score.",
+                    "image": "scratch/make_a_variable.png"
+                },
+                {
+                    "text": "We are also going to use a **variable** to set the **distance between dots**, we will call this **Step**. Make a variable called step"
+                },
+                {
+                    "text": "Now we need to cover the map in dots, first we need to set the **score** and **step** variables",
+                    "blocks": "when FLAG clicked\nset [Score v] to [0]\n set [Step v] to [25]"
+
+                },
+                {
+                    "text": "We are going to cover the map in dots, starting from the top left corner. Add this code **after** we set the variables",
+                    "blocks": "point in direction (90 v) \n go to x: (-216) y:(155)"
+
+                },
+                {
+                    "text": "We are going to use **two loops** to cover the map in dots. The first loop will move the dot top to bottom, the second will move the dot side to side. Add the following code:",
+                    "blocks": "repeat ( (360) / (Step)) \n\t repeat ( (480) / (Step)) \n\t\t if <not <touching color [#0072EF] ?>> then \n\t\t\t create clone of [myself v] \n\t\t end \n\t\t move (Step) steps \n\t end \n\t change y by ((-1)*(Step) \n\t turn right (180) degrees \n end \n broadcast [ready v] "
+                }
+            ]
+        },
+        {
+            "title": "Make Pacman move",
+            "number": "2",
+            "image" : "scratch/pacman/pacman.png",
+            "description": "Use arrow keys to make Pacman move",
+            "components": [
+                {
+                    "text": "While we are setting up the dots, we want Pacman to be hidden:",
+                    "blocks": "when FLAG clicked\nhide"                    
+
+                },
+                {
+                    "text": "Once the game is ready, let's move Pacman to his starting position",
+                    "blocks": "when I receive [ready v] \n show \n go to x: (0) y: (-110) \n point in direction (90 v)"
+                },
+                {
+                    "text": "Now make **Pacman** move forward forever unless he is touching the wall",
+                    "blocks": "forever\n\t if <not <color [#000000] is touching [#0072EF] ?>> then \n\t\t move (3) steps \n\t end \n end "
+                },
+                {
+                    "text": "Now we will add the code to control Pacman. Make **Pacman** move **left** when the left arrow key is pressed",
+                    "blocks": "when [left arrow v] key pressed\n switch costume to [left v] \npoint in direction (-90 v)"
+                },
+                {
+                    "text": "Next write the code to get **Pacman** move **right**",
+                    "blocks": "when [right arrow v] key pressed\n switch costume to [right v] \npoint in direction (90 v)"
+                },
+                {
+                    "text": "Next write the code to get **Pacman** move **down**",
+                    "blocks": "when [down arrow v] key pressed\n switch costume to [right v] \npoint in direction (180 v)"
+                },
+                {
+                    "text": "Finally add the code to make **Pacman** move **up**",
+                    "hidden": {"blocks": "when [up arrow v] key pressed\n switch costume to [right v] \npoint in direction (0 v)"}
+                }
+            ]
+        },
+        {
+            "number": 3,
+            "title": "Eating Dots",
+            "image": "scratch/pacman/eat.png",
+            "description": "Next we'll help Pacman eats those delicious dots",
+            "components": [
+                {
+                    "text": "In your **Dot** sprite add the following code to make them disappear when touching Pacman",
+                    "blocks" : "when I start as a clone \n forever \n\t  if <touching [Pacman v] \n\t\t change [score v] by (1) \n\t\t delete this clone \n\t end \n end"
+                }             
+            ]
+        },
+        {
+            "number": 4,
+            "title": "Add enemies",
+            "image": "scratch/pacman/ghost1.png",
+            "description": "Now we are going to add some scary ghosts",
+            "components": [
+                {
+                    "text": "Add the following code to your **Ghost** sprite to keep it hidden while we set up the dots",
+                    "blocks": "when FLAG clicked\nhide"                
+                },
+                {
+                    "text": "When the game is ready, lets **show** the ghost and point it in the **right** direction",
+                    "blocks": "when I receive [ready v] \nshow\npoint in direction (90 v)"
+                },
+                {
+                    "text": "Lets define our own block to turn the ghost either left or right randomly:",
+                    "blocks": "define randomTurn"
+                },
+                {
+                    "text": "Try adding the code yourself under **randomTurn** to make the ghost turn **left** or **right** randomly.",
+                    "hidden": {"blocks": "define randomTurn\n if <(pick random(0) to (1)) = [0]> then \n\t turn right (90) degrees \n else \n\t turn left (90) degrees "}
+                    
+                },
+                {
+                    "text": "The ghost is going to move forward **forever** unless it is **touching a wall**. **Add** to your current code, we will use our new **randomTurn block**:",
+                    "blocks": "when I receive [ready v] \nshow\npoint in direction (90 v) \n forever \n\t if <not <color [#000000] is touching [#0072EF] ?>> then \n\t\t move (4) steps \n\t else \n\t\t randomTurn \n\t end \n end"
+                },
+                {
+                    "text": "**Click the green flag** - Does the ghost move? You may notice that it can't get to some parts of the map. Lets fix this"
+                },
+                {
+                    "text": "**Change** your code so that the ghost sometimes performs a random turn when moving straight:",
+                    "blocks": "when I receive [ready v] \nshow\npoint in direction (90 v) \n forever \n\t repeat (50) \n\t\t if <not <color [#000000] is touching [#0072EF] ?>> then \n\t\t\t move (4) steps \n\t\t else \n\t\t\t randomTurn \n\t\t end \n\t end \n\t randomTurn \n end "
+
+                }
+            ]
+        },
+        {
+            "number": 5,
+            "title": "Detect collision with Pacman",
+            "image": "scratch/pacman/collide.png",
+            "description": "To make the game a challenge, the player needs to guide Pacman through the maze without touching the ghosts",
+            "components": [
+                {
+                    "text": "Select the **ghosts** sprite and click on the **Scripts** tab",
+                    "image": "scratch/scripts_tab.png"
+                },
+                {
+                    "text": "Add some code blocks to check **if** the **ghost** is **touching** **Pacman**. If so the ghost will broadcast a message that Pacman will receive",
+                    "blocks": "when I receive [ready v] \n forever \n\t if <touching [Pacman v]?> then \n\t\t broadcast [hit v] \n\t end \n end"
+                },
+                {
+                    "text": "We can also add code to make sure the ghost is not upside down when moving left, **Change** your code to:",
+                    "blocks": "when I receive [ready v] \n forever \n\t if <touching [Pacman v]?> then \n\t\t broadcast [hit v] \n\t end \n\t if <(direction) = [-90]> then \n\t\t switch costume to [ghost2 v] \n\t else \n\t\t switch costume to [ghost1 v] \n\t end \n end"
+                },
+                {
+                    "text": "Finally add this code to your **Pacman** sprite to make him go back to the start when he hits a ghost",
+                    "blocks": "when I receive [hit v] \n go to x: (0) y: (-110) \n point in direction (90 v) \n switch costume to [right v]"
+                }
+            ]
+        },
+        {
+            "number": 6,
+            "title": "More Ghosts! ",
+            "image": "scratch/pacman/ghosts.png",
+            "description": "Now we have finished our ghost sprite, lets make more!",
+            "components": [
+                {
+                    "text": "Duplicate your **Ghost** sprite, try making around 5 in total and put them in different positions"
+                },
+                {
+                    "text": "Change the color of each Ghost",
+                    "image": "scratch/pacman/ghost2.png"
+                },
+                {
+                    "text": "As an extension try creating lives. **Pacman** could start with three lives and lose a life every time he hits a ghost."
+                }
+            ]
+        }
+    ]
+}

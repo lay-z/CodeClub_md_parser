@@ -387,5 +387,12 @@
 				}
 			]
 		}
+		{
+			"challenge": true,
+			"title": "Fix your ball bouncing",
+			"image": "web/draw_with_canvas/ball_move.png",
+			"description": "Change your code to move the ball at a differnt speed",
+			"components": []
+		}
 	]
 }

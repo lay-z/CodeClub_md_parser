@@ -138,6 +138,12 @@
         "module" : 1,
         "number" : 6
     },
+    "Racing Game" : {
+        "provider" : "TuringLab",
+        "language" : "Scratch",
+        "module" : 1,
+        "number" : 7
+    },
     "Space Race" : {
         "provider" : "TuringLab",
         "language" : "Scratch",

@@ -1,0 +1,240 @@
+{
+    "title": "Racing Game",
+    "image": "scratch/racing_game/game.png",
+    "link": "https://scratch.mit.edu/projects/96535177/#editor",
+    "description": "Create a Scratch version of Racing Game",
+    "steps": [
+        {
+            "title": "Make The Car Move ",
+            "number": "1",
+            "image" : "scratch/racing_game/move.png",
+            "description": "Use a forever loop to make the Racing Car move",
+            "components": [
+                {
+                    "text": "Open the **Scratch Starter Project**"
+                },
+                {
+                    "text": "If you need more help with a step, click on the ? ->",
+                    "hidden": {"text": "If you still need more help with a step put up your hand and an instructor will come and help you."}
+                },
+                {
+                    "text": "In Scratch, each **Sprite** can have *Scripts** attached that make the Sprite move and talk. Click on the **Racing Car** sprite, and then click on the **Scripts** tab",
+                    "image": "scratch/scripts_tab.png"
+                },
+                {
+                    "text": "To start a game in Scratch, we click the **Green Flag**. This is called an **Event**. In the **Events** tab there are code blocks that check if an event has occured. Find the block that **checks for when the Green Flag is clicked** and **add it to your Racing Car sprite**. ",
+                    "image": "scratch/green_flag.png",
+                    "hidden": {"blocks": "when FLAG clicked"}
+
+                },
+                {
+                    "text": "We want to make the Racing Car **move forward forever** when the Green Flag has been clicked. We will need to use a **forever** loop. Add a forever loop to your script",
+                    "hidden": {
+                        "text": "The block should be connected to your script that checks when the Green Flag is pressed:",
+                        "blocks": "when FLAG clicked \n forever \n end"
+                    }
+                },
+                {
+                    "text": "Any blocks we put **inside** the forever loop will run forever! Add a code block **inside** the forever loop that will make the Racing Car move forward. HINT: blocks that make sprites **move** are in the **motion** tab.",
+                    "hidden": {
+                        "text": "We need to use this block:",
+                        "blocks": "move (5) steps"}   
+                },
+                {
+                    "text": "**Click the Green Flag** - Does the Racing Car move accross the screen?"
+                }
+            ]
+        },
+        {
+            "title": "Starting Position",
+            "number": "2",
+            "image" : "scratch/racing_game/start.png",
+            "description": "All races have a start. We need to make sure the Racing Car begins in the start position every time we play a new game.",
+            "components": [
+                {
+                    "text": "Press the **Red Stop Button** to stop your Racing Car from moving"
+                },
+                {
+                    "text": "Move your Racing Car to the start position by **clicking** on the car and **dragging** it to the start of the track",
+                    "image" : "scratch/racing_game/drag.png"
+                },
+                {
+                    "text": "We want the **Racing Car** to return to this position at the start each game automatically. We can use the go to block to move the sprite to a location. **Click on the motion tab** and find the go to block:",
+                    "blocks": "go to x: (30) y: (130)"
+                },
+                {
+                    "text": "We want the **Racing Car** to go to the start position as soon as the game starts. We **click the Green Flag** to start the game. Add the go to block to your script",
+                    "hidden": {"blocks": "when FLAG clicked \n go to x: (30) y: (130) \n forever \n\t move (5) steps \n end "}
+                },
+                {
+                    "text": "**Click the Green Flag** - Does the Racing Car go back to the same position each time?"
+                },
+                {
+                    "text": "We also want the Racing Car to face in the same direction each time we start the game. Add this block to your script:",
+                    "blocks": "point in direction (90 v)",                    
+                    "hidden": {"blocks": "when FLAG clicked \n go to x: (30) y: (130) \n point in direction (90 v) \n forever \n\t move (5) steps \n end "}
+                }
+            ]
+        },
+        {
+            "number": 3,
+            "title": "Controlling The Racing Car",
+            "image": "scratch/racing_game/car1-square.png",
+            "description": "Next we'll add the controls to change the direction of the Racing Car using the arrow keys",
+            "components": [
+                {
+                    "text": "To control the car we will use the arrow keys, to check if the keys are being pressed, we will use an **if then** block, find this block and add it inside your forever loop: ",
+                    "blocks" : "when FLAG clicked \n go to x: (30) y: (130) \n point in direction (90 v) \n forever \n\t move (5) steps \n\t if <> then \n\t end \n end "
+                },
+                {
+                    "text": "The **if then** block has space to add a second block. This is called the **condition**. If the condition is **true**, then any blocks **inside** the **if then** block will run. Find the key pressed block, this will be our condition: ",
+                    "blocks": "key [space v] pressed?"
+                },
+                {
+                    "text": "First we want to check if the **right arrow** is pressed, at the moment is says space. Click on the black arrow next to space and select right arrow.",
+                    "blocks": "key [right arrow v] pressed?"
+                },
+                {
+                    "text": "Notice how the block has a question mark. If the right arrow is pressed the block will be true. If not it will be false. Add the right arrow pressed block to your **if then** block",
+                    "blocks": " if <key [right arrow v] pressed?> then",
+                    "hidden": {"blocks" : "when FLAG clicked \n go to x: (30) y: (130) \n point in direction (90 v) \n forever \n\t move (5) steps \n\t if <key [right arrow v] pressed?> then \n\t end \n end "}
+                },
+                {
+                    "text": "Finally we need to add a block to make the **Racing Car turn when the condition is true**, in this case when the right arrow key is pressed. We can use this block:",
+                    "blocks": " turn right (10) degrees",
+                    "hidden": {"blocks" : "if <key [right arrow v] pressed?> then \n\t turn right (10) degrees \n end "}
+                },
+                {
+                    "text": "**Click the Green Flag** - Does the Racing Car turn right when you press the right arrow?"
+                },
+                {
+                    "text": "Now we need to add the code to make the Racing Car turn left when we press the left arrow. Add the code blocks to make the Car **turn left** **if** **the left key is pressed**:",
+                    "hidden": {"blocks" : "if <key [left arrow v] pressed?> then \n\t turn left (10) degrees \n end "}
+                },
+                {
+                    "text": "**Click the Green Flag** - Can you turn the Racing Car left and right?"
+                }
+            ]
+        },
+        {
+            "number": 4,
+            "title": "Crashing!",
+            "image": "scratch/racing_game/crash1-square.png",
+            "description": "Next we'll make the Racing Car crash if it goes off the track!",
+            "components": [
+                {
+                    "text": "We are going to use another **if then** block to check if the car is touching the green grass, **add** the **if then** block **inside** the **forever** loop:",
+                    "blocks" : "when FLAG clicked \n go to x: (30) y: (130) \n point in direction (90 v) \n forever \n\t move (5) steps \n\t if <key [right arrow v] pressed?> then \n\t\t turn right (10) degrees \n\t end \n\t if <key [left arrow v] pressed?> then \n\t\t turn left (10) degrees\n\t end \n\t if <> then \n\t end \n end "
+                    
+                },
+                {
+                    "text": "This time we are checking for a different condition. We want to check if the car is touching the grass. Since all the grass is green we can use the **touching color** block as our condition, add this block to your **if then** block:",
+                    "blocks": "touching color [#009933] ?",
+                    "hidden": {"blocks" : "if <touching color [#009933] ?> then \n end "}
+                },
+                {
+                    "text": "If the Racing Car is touching the green grass, we want to switch to our **crash** costume:",
+                    "blocks": "switch costume to [crash1 v]",
+                    "image": "scratch/racing_game/crash1.png",
+                    "hidden": {"blocks" : "if <touching color [#009933] ?> then \n\t switch to costume [crash1 v] \n end "}
+                },
+                {
+                    "text": "After we have switched to our crash costume, we want to wait for 2 seconds. We can use the wait block:",
+                    "blocks": "wait (2) secs",
+                    "hidden": {"blocks" : "if <touching color [#009933] ?> then \n\t switch to costume [crash1 v] \n\t wait (2) secs \n end "}
+                },
+                {
+                    "text": "After the Car has waited for 2 seconds, we want to switch back to the **car1 costume**, move the car back to the **start position** and face the car to the **right**, you will need these blocks:",
+                    "blocks": "switch to costume [car1 v] \n go to x: (30) y: (130) \n point in direction (90 v)",
+                    "hidden": {"blocks" : "if <touching color [#009933] ?> then \n\t switch to costume [crash1 v] \n\t wait (2) secs \n\t switch to costume [car1 v] \n\t go to x:(30) y: (130) \n\t point in direction (90 v)\n end "}
+                },
+                {
+                    "text": "**Click the Green Flag** - Does your car crash when you go off the track and then go back to the start?",
+                    "image": "scratch/racing_game/car-crash.png"
+                },
+                {
+                    "text": "We need to make sure that the **Racing Car** starts with car1 costume, add this block at the **beginning** of your script",
+                    "blocks": "switch to costume [car1 v]"
+                }         
+            ]
+        },
+        {
+            "number": 5,
+            "title": "Winning the Game",
+            "image": "scratch/racing_game/winning.png",
+            "description": "Now we need to add the code to see if the Racing Car crosses the finish line",
+            "components": [
+                {
+                    "text": "We are going to use another **if then** block. You should be an if block expert by now! Add the **if then** block **inside** your forever loop:",
+                    "blocks" : "when FLAG clicked \n go to x: (30) y: (130) \n point in direction (90 v) \n forever \n\t move (5) steps \n\t if <key [right arrow v] pressed?> then \n\t\t turn right (10) degrees \n\t end \n\t if <key [left arrow v] pressed?> then \n\t\t turn left (10) degrees\n\t end \n\t if <touching color [#009933] ?> then \n\t\t switch to costume [crash1 v] \n\t\t wait (2) secs \n\t\t switch to costume [car1 v] \n\t\t go to x:(30) y: (130) \n\t\t point in direction (90 v) \n\t end \n\t if <> then \n\t end \n end "                  
+                },
+                {
+                    "text": "This time we want know if we are touching the finish line. So for our **condition** we can use the following block:",
+                    "blocks": "touching [finish v] ?",
+                    "hidden": {"blocks" : "if <touching [finish v] ?> then \n end "}
+                },
+                {
+                    "text": "If the Racing Car is touching the finish sprite, we want to say \"Player 1 wins\" and stop the game",
+                    "blocks": "say [Player1 wins] for (2) secs \n stop [all v]",
+                    "hidden": {"blocks" : "if <touching [finish v] ?> then \n\t say [Player1 wins] for (2) secs \n stop [all v] \n end "}
+                },
+                {
+                    "text": "**Click the green flag** - Can you complete one lap to win the game?"
+                },
+                {
+                    "text": "**Challenge** right now we can cheat by turning round at the start and crossing the finish straight away! can you think of a way to stop people cheating?",
+                    "image": "scratch/racing_game/cheat.png"
+                }
+            ]
+        },
+        {
+            "number": 6,
+            "title": "Add a second Player",
+            "image": "scratch/racing_game/car2-square.png",
+            "description": "Let's add a second car so two people can play and race each other!",
+            "components": [
+                {
+                    "text": "hold down the shift key and click on the **Racing Car** sprite. then click duplicate",
+                    "image": "scratch/racing_game/duplicate.png"                   
+                },
+                {
+                    "text": "The second car will have the same code as the first. This saves us from writing our the same code. But we need to **change** some blocks. First change the starting position to:",                    
+                    "blocks": "go to x: (30) y: (100)"
+                },
+                {
+                    "text": "The second car uses the car2 costume. In your code, change all occurences of car1 to car2 and change all blocks which say crash1 to crash2."                  
+                    
+                },                
+                {
+                    "text": "for the **Racing Car 2**, we want to turn left using **a** and turn right using **d**. Change the conditions used to turn the car, here is the turn right condition:" ,
+                    "blocks": "if <key [d v] pressed?> then \n\t turn right (10) degrees \n end "    
+                },
+                {
+                    "text": "Finally when **Racing Car 2** touches the finish sprite, we want to say \"Player2 wins! \" " 
+                },
+                {
+                    "text": "Your game is ready to play, ask an instructor to race you!"
+                }
+
+            ]
+        },
+        {
+            "number": 1,
+            "challenge": true,
+            "title": "Extra challenges",
+            "image": "scratch/racing_game/timer.png",
+            "description": "Here are some ways to extend your game",
+            "components": [
+                {
+                    "text": "Try adding your own levels. Create a new backdrop and draw a course of your design. Can you get the level to change when you finish the first race?"
+                },
+                {
+                    "text": "Try adding laps to your game. Use a **variable** to keep track of how many laps remain"
+                },
+                {
+                    "text": "Why not try adding a timer to your game. If you are feeling really brave, try keeping track of the fastest time using a variable"
+                }
+            ]
+        }
+    ]
+}

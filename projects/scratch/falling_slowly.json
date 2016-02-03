@@ -1,0 +1,347 @@
+{
+    "title": "Falling Slowly",
+    "image": "",
+    "link": "",
+    "description": "Score points as you fall through the clouds. Trying to get a highscore before the time is up",
+    "steps": [
+        {
+            "title": "Make the heroine fall",
+            "number": "1",
+            "image": "",
+            "description": "Use looping and coordinates to make the heroine fall through the sky",
+            "components": [
+                {
+                    "checkmark": true,
+                    "text": "Start the heroine at the top of the screen, with coordinates [-200,170]",
+                    "image": "",
+                    "hidden": {
+                        "text": "You'll need to use the following blocks, but fill in the correct coordinates",
+                        "blocks": "when FLAG clicked\n\ngo to x: (...) y: (...)"
+                    }
+                },
+                {
+                    "checkmark": true,
+                    "text": "Approximate gravity by simply making the heroine fall down the y-axis",
+                    "image": "",
+                    "hidden": {
+                        "text": "You'll need the following blocks",
+                        "blocks": "forever \n\n  change y by (...)"
+                    }
+                },
+                {
+                    "checkmark": true,
+                    "text": "When the heroine reaches the bottom she should fall again from the top. This is still just requires coordinates",
+                    "image": "",
+                    "hidden": {
+                        "text": "You'll need the following blocks",
+                        "blocks": "set y to (...) \n\n touching [edge v] ? \n\n\n if () then \n if () then \n else \n "
+                    }
+                },
+                {
+                    "checkmark": true,
+                    "text": "**Does your heroine now fall from the top to bottom of the screen repeatedly?**",
+                    "image": "",
+                    "hidden": {
+                        "text": "Your code should look a bit like this",
+                        "blocks": " when FLAG clicked \n go to x: (-200) y: (170) \n forever \n change y by (-10) \n if (touching [edge v] ?) then \n  if ((y position) < [-150]) then \n set y to (170)\n" 
+                    }  
+                }
+            ]
+        },
+        {
+            "title": "Make the heroine move side to side using the arrow keys",
+            "number": "2",
+            "image": "",
+            "description": "Use looping, keyboard input checking, sprite movement and a variable for speed!",
+            "components": [
+                {
+                    "checkmark": true,
+                    "text": "Start by getting her to move right, without a speed variable at first",
+                    "image": "",
+                    "hidden": {
+                        "text": "You'll need the following blocks",
+                        "blocks": "when FLAG clicked\n\n key [right arrow v] pressed? \n\n move (...) steps \n\n forever "
+                    }
+                },
+                {
+                    "checkmark": true,
+                    "text": "Add the variable speed, so we can **set** this at the beginning",
+                    "image": "",
+                    "hidden": {
+                        "text": "You'll need the following blocks",
+                        "blocks": "(speed) \n\n set [speed v] to [...]"
+                    }
+                },
+                {
+                    "checkmark": true,
+                    "text": "**Does your heroine move to the right when the right arrow key is pressed?**",
+                    "image": "",
+                    "hidden": {
+                        "text": "Your code should look something like this:",
+                        "blocks": "when FLAG clicked \n forever \n if (key [right arrow v] pressed?) \n move (speed) steps"
+                    }
+                },
+                {
+                    "checkmark": true,
+                    "text": "Now do the same for moving left",
+                    "image": "",
+                    "hidden": {
+                        "text": "Think about how you might make the character move in the other direction"
+                    }
+                }
+            ]
+        },
+        {
+            "title": "Give the heroine acceleration, and a maximum speed of 10",
+            "number": "3",
+            "image": "",
+            "description": "Acceleration is when the speed increases over time",
+            "components": [
+                {
+                    "checkmark": true,
+                    "text": "Use your speed variable to make the character speed up (accelerate) slowly",
+                    "image": "",
+                    "hidden": {
+                        "text": "You'll need the following blocks",
+                        "blocks": "change [speed v] by (...)",
+                        "lines": ["Have a think about how quickly she should speed up?"]
+
+                    }
+                },
+                {
+                    "checkmark": true,
+                    "text": "Stop her going faster than a speed of 10",
+                    "image": "",
+                    "hidden": {
+                        "text": "You'll need the following blocks",
+                        "blocks": "([] > [] )\n\n (speed) \n\n change [speed v] by (...)"
+                    }
+                },
+                {
+                    "checkmark": true,
+                    "text": "**Does your heroine move to the right and speedup?**",
+                    "image": "",
+                    "hidden": {
+                        "text": "Your code should look something like this:",
+                        "blocks": "when FLAG clicked \n forever \n if (key [right arrow v] pressed?) \n if ([10] > (speed)) then \n  change [speed v] by (0.25) \n end \n move (speed) steps"
+                    }
+                },
+                {
+                    "checkmark": true,
+                    "text": "Now do the same for moving left",
+                    "image": "",
+                    "hidden": {
+                        "text": "Think about how you might make the character move in the other direction"
+                    }
+                },
+                {
+                    "checkmark": true,
+                    "text": "**Reset the speed to zero once you stop pressing the LEFT or RIGHT keys**",
+                    "image": "",
+                    "hidden": {
+                        "text": "This one's a little tricky, and should look a bit like this:",
+                        "blocks": "if (not ((key [right arrow v] pressed?) or (key [left arrow v] pressed?))) \n set [speed v] to [0]"
+                    }
+                }
+            ]
+        },
+        {
+            "title": "Use 'cloning' to create a platform of clouds",
+            "number": "4",
+            "image": "",
+            "description": "We need to think of an 'algorithm' that will randomly create platforms of different sizes",
+            "components": [
+                {
+                    "checkmark": true,
+                    "text": "Start the cloud cloning in the top left [-200,130]",
+                    "image": "",
+                    "hidden": {
+                        "text": "You'll need the following blocks",
+                        "blocks": "When FLAG clicked \n\n go to x: (-200) y: (130)"
+                    }
+                },
+                {
+                    "checkmark": true,
+                    "text": "Create 4 clones of the cloud next to each other",
+                    "image": "",
+                    "hidden": {
+                        "text": "You'll need the following blocks",
+                        "blocks": "repeat (...) \n end \n\n create clone of [myself v] \n\n move (...) steps"
+                    }
+                },
+                {
+                    "checkmark": true,
+                    "text": "Change this from 4 to a random number of clouds",
+                    "image": "",
+                    "hidden": {
+                        "text": "You'll need the following blocks",
+                        "blocks": "pick random (1) to (4)"
+                    }
+                },
+                {
+                    "checkmark": true,
+                    "text": "**When you click the green flag, does a randomly sized platform appear?** ",
+                    "image": "",
+                    "hidden": {
+                        "text": "Your code should look something like this:",
+                        "blocks": "When FLAG clicked \n go to x: (-200) y: (130) \n repeat (pick random (1) to (4) \n create clone of [myself v] \n\n move (40) steps"
+                    }
+                },
+                {
+                    "checkmark": true,
+                    "text": "Stop your heroine falling (remember how we did this earlier) through the clouds",
+                    "image": "",
+                    "hidden": {
+                        "text": "Your code (in the heroine sprite) will need these blocks:",
+                        "blocks": "if () then \n end \n\n not () \n\n touching [cloud v] ? "
+                    }
+                }
+            ]
+        },
+        {
+            "title": "Create several platforms to fill a row",
+            "number": "5",
+            "image": "",
+            "description": "We need to extend our 'algorithm' to fill a row, but with gaps for the heorine to fall through",
+            "components": [
+                {
+                    "checkmark": true,
+                    "text": "Fill the row to the end but with gaps of 40 steps size",
+                    "image": "",
+                    "hidden": {
+                        "text": "You'll need the following blocks",
+                        "blocks": "repeat until \n end \n\n ([] > []) \n\n (x position) \n\n move (...) steps"
+                    }
+                },
+                {
+                    "checkmark": true,
+                    "text": "Change this from 40, to a random step size",
+                    "image": "",
+                    "hidden": {
+                        "text": "You'll need the following blocks",
+                        "blocks": "pick random (...) to (...)"
+                    }
+                },
+                {
+                    "checkmark": true,
+                    "text": "Now lets make multiple rows!",
+                    "image": "",
+                    "hidden": {
+                        "text": "You'll need the following blocks",
+                        "blocks": "repeat () \n end \n\n change y by (...)"
+                    }
+                },
+                {
+                    "checkmark": true,
+                    "text": "Start the first one in a random x position between -200 and -150",
+                    "image": "",
+                    "hidden": {
+                        "text": "You'll need the following blocks",
+                        "blocks": "set x to () \n\n pick random (...) to (...) "
+                    }
+                },
+                {
+                    "checkmark": true,
+                    "text": "**Do you have several rows of clouds and gaps?**",
+                    "image": "",
+                    "hidden": {
+                        "text": "Your code should look a bit like this:",
+                        "blocks": "When FLAG clicked \n go to x: (-200) y: (130) \n repeat (6) \n repeat until ((x position) > [220])  \n repeat (pick random (1) to (4) \n create clone of [myself v] \n move (40) steps \n end \n move (pick random (40) to (80)) steps \n end \n change y by (-60) \n set x to (pick random (-200) to (-150)"
+                    }
+                }
+            ]
+        },
+        {
+            "title": "Make it more of a game with stars to collect",
+            "number": "6",
+            "image": "",
+            "description": "Randomly place stars around the screen",
+            "components": [
+                {
+                    "checkmark": true,
+                    "text": "Create 25 clones of the stars",
+                    "image": "",
+                    "hidden": {
+                        "text": "You'll need the following blocks",
+                        "blocks": "repeat (...) \n end \n\n create clone of [myself v]"
+                    }
+                },
+                {
+                    "checkmark": true,
+                    "text": "Make the stars appear randomly",
+                    "image": "",
+                    "hidden": {
+                        "text": "You'll need the following blocks",
+                        "blocks": "go to x: () y: () \n\n pick random (...) to (...)"
+                    }
+                },
+                {
+                    "checkmark": true,
+                    "text": "Create a score variable, and make sure it's zero at the start of the game",
+                    "image": "",
+                    "hidden": {
+                        "text": "You'll need the following blocks",
+                        "blocks": "set [score v] to (...)"
+                    }
+                },
+                {
+                    "checkmark": true,
+                    "text": "Get a point every time the heroine touches a star",
+                    "image": "",
+                    "hidden": {
+                        "text": "You'll need the following blocks",
+                        "blocks": "forever \n end \n\n if (...) then \n end \n\n touching [heroine v] ? \n\n change [score v] by (...) \n\n delete this clone"
+                    }
+                },
+                {
+                    "checkmark": true,
+                    "text": "**Can you now collect stars and win points?**",
+                    "image": "",
+                    "hidden": {
+                        "text": "Your code should look something like this:",
+                        "blocks": "when FLAG clicked \n repeat (25) \n create clone of [myself v] \n end \n\n when I start as a clone \n go to x: (pick random (-240) to (240)) y: (pick random (-240) to (240)) \n forever \n if (touching [heroine v]?) then \n change [score v] by (1) \n delete this clone"
+                    }
+                }
+            ]
+        },
+        {
+            "title": "Make a timer, to see how many stars you get in a limited time",
+            "challenge": true,
+            "number": "7",
+            "image": "",
+            "description": "You have to create a time variable in the STAGE and count down the clock",
+            "components": [
+                {
+                    "checkmark": true,
+                    "text": "**Do you have a timer that counts down?**",
+                    "image": "",
+                    "hidden": {
+                        "text": "Your code should look something like this:",
+                        "blocks": "when FLAG clicked \n set [time v] to [30] \n forever \n wait (1) secs \n change [time v] by (-1) \n if ((time) < [1]) then \n stop [all v]"
+                    }
+                }
+            ]
+        },
+        {
+            "title": "Reset the cloud and star positions each time you fall from the top",
+            "challenge": true,
+            "number": "8",
+            "image": "",
+            "description": "You have to use the broadcast functions, and be careful to delete the cloned sprite before making new ones",
+            "components": [
+                {
+                    "checkmark": true,
+                    "text": "**Does your game reset?**",
+                    "image": "",
+                    "hidden": {
+                        "lines": [
+                            "Instead of staring with the flag, you must start when you recieve a message",
+                            "You must also be careful to delete the clones when the heroine reaches the bottom"
+                            ],
+                        "blocks": "when FLAG clicked \n broadcast [new level v] \n\n when I recieve [new level v] \n\n when I start as clone \n forever \n if (([y position v] of [heroine v]) < [-160]) then \n delete this clone"
+                    }
+                }
+            ]
+        }
+    ]
+}

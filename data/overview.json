@@ -204,5 +204,11 @@
         "language" : "Web",
         "module" : 1,
         "number" : 3
+    },
+    "Falling Slowly" : {
+        "provider" : "TuringLab",
+        "language" : "Scratch",
+        "module" : 1,
+        "number" : 8
     }
 }

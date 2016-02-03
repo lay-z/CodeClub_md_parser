@@ -14,7 +14,7 @@ def exists(key):
 
     try:
         key.load()
-    except botocore.exceptions.ClientError as error:
+    except Exception as error:
         if (error.response['Error']['Code'] == "404"):
             exists = False
         else:

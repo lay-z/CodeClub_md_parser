@@ -10,6 +10,18 @@
 				"image": "web/draw_with_canvas/canvas_logo.jpg",
 				"description": "Get your canvas ready to start drawing on",
 				"components": [
+	                {
+	                    "text": "**On the previous screen** click 'Open Starter Web Project' to open a Trinket window",
+	                    "image": "web/open_starter.png"
+	                },
+	                {
+	                    "text": "Now **click Remix** to make your own copy of the Trinket",
+	                    "image": "trinket/remix.png"
+	                },
+	                {
+	                    "text": "Did you successfully remix the Trinket project?",
+	                    "checkmark": true
+	                },
 					{
 						"text": "Canvas is a html element that you can draw on with javascript",
 						"code": {
@@ -18,14 +30,14 @@
 						}
 					},
 					{
-						"text": "Create the HTML for your canvas element, don't forget the **width**, **height** and **id**",
+						"text": "Create the HTML in `index.html` for your canvas element, don't forget the **width**, **height** and **id**",
 						"code": {
 							"language": "html",
 							"content": "<canvas id='myCanvas' width='480' height='320'></canvas>"
 						}
 					},
 					{
-						"text": "Lets style up that canvas! (so we can see it on the page)",
+						"text": "Lets style up that canvas in your `style.css` file",
 						"code": {
 							"language": "css",
 							"content": "canvas {\n\tbackground: orange\n}"
@@ -52,6 +64,9 @@
 			"description": "Get access to the canvas and draw a Square",
 			"components": [
 				{
+					"text": "Draw on your canvas element using JavaScript in your `script.js` file"
+				},
+				{
 					"text": "Access canvas element in javascript, using getElementById()",
 					"code": {
 						"language": "javascript",
@@ -59,7 +74,7 @@
 					}
 				},
 				{
-					"text": "to start drawing on the canvas we need to get the 2d context!!",
+					"text": "To start drawing on the canvas we need to get the 2d context!!",
 					"code": {
 						"language": "javascript",
 						"content": "var ctx = canvas.getContext('2d')"
@@ -104,7 +119,7 @@
 				},
 				{
 					"checkmark": true,
-					"text": "can you draw the square in the top left corner of the screen, and also make it bigger?",
+					"text": "Can you draw the square in the top left corner of the screen, and also make it bigger?",
 					"hidden": {
 						"text": "simply modify the relevant arguments (e.g. x_position) in the **ctx.rect** method",
 						"code": {
@@ -121,7 +136,7 @@
 			"description": "Make a ball that we shall animate",
 			"components": [
 				{
-					"text": "To draw a ball we need to use the **ctx.arc** function, remove the code to draw the square and replace it with this:",
+					"text": "To draw a ball we need to use the **ctx.arc** function, add this code bellow your draw square",
 					"code": {
 						"language": "javascript",
 						"content": "ctx.beginPath();\nctx.arc(canvas.width/2, canvas.height/2, 50, 0, Math.PI*2, false\n);\nctx.fillStyle = 'green';\nctx.fill();\nctx.closePath();"
@@ -154,10 +169,17 @@
 			"description": "Make a drawing loop to draw a blue ball",
 			"components": [
 				{
-					"text": "**Delete all the JavaScript** you currently have inside your _script.js_ file **except for the first two lines**"
+					"text": "**Comment everything except the first two lines** of your JavaScript code",
+					"hidden": {
+						"lines": [
+							"Select all the code to draw a square and ball then",
+							"On a mac computer press **cmd + ?**",
+							"On a windows computer press **ctrl + ?**"
+						]
+					}
 				},
 				{
-					"text": "Add the following code bellow your existing",
+					"text": "Add the following code bellow your commented existing",
 					"code": {
 						"language": "javascript",
 						"content": "function draw() {\n    console.log('drawing')\n}\nsetInterval(draw, 10);"
@@ -169,7 +191,7 @@
 					"hidden": {
 						"lines": [
 							"To open your browser console",
-							"On a mac computer press **cmd + shift + j**",
+							"On a mac computer press **cmd + alt + j**",
 							"On a windows computer press **ctrl + shift + j**"
 							]
 					}
@@ -225,7 +247,7 @@
 					"text": "Make variables for how much your ball moves by each step",
 					"code": {
 						"language": "javascript",
-						"content": "var xSpeed = 0;var ySpeed = 2;"
+						"content": "var xSpeed = 0;\nvar ySpeed = 2;"
 					}
 				},
 				{
@@ -333,13 +355,44 @@
 					"text": "Does your Ball now bounce of the top wall? (it will only do it on the top wall"
 				},
 				{
-					"text": "for the bottom wall, we need to check if the balls y position is greater than the canvas size",
+					"text": "For the bottom wall, we need to check if the balls y position is greater than the canvas size",
 					"code": {
 						"language": "javascript",
-						"content": "if(y - ySpeed < canvas.length) {\n\tySpeed = -ySpeed;\n}"
+						"content": "if(y + ySpeed > canvas.height) {\n\tySpeed = -ySpeed;\n}"
 					}
+				},
+				{
+					"text": "Add collision detection for the left and right wall",
+					"hidden": {
+						"lines": [
+							"This will look very similar to the bottom and top walls",
+							"Remeber that the canvas width can be accessed with this code"
+						],
+						"code": {
+							"language": "javascript",
+							"content": "canvas.width"
+						}
+					}
+				},
+				{
+					"text": "Change your `xSpeed` and `ySpeed` to 2",
+					"code": {
+						"language": "javascript",
+						"content": "var xSpeed = 2;\nvar ySpeed = 2;"
+					}
+				},
+				{
+					"text": "Does your ball bounce off all the walls?",
+					"checkmark": true
 				}
 			]
+		}
+		{
+			"challenge": true,
+			"title": "Fix your ball bouncing",
+			"image": "web/draw_with_canvas/ball_move.png",
+			"description": "Change your code to move the ball at a differnt speed",
+			"components": []
 		}
 	]
 }

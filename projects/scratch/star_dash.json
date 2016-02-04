@@ -1,0 +1,216 @@
+{
+    "title": "Star Dash",
+    "image": "scratch/star_dash/star_dash.gif",
+    "link": "https://scratch.mit.edu/projects/96665655/#editor",
+    "description": "See how long you can last in a dash through space",
+    "steps": [
+        {
+            "title": "Create the star-jumper",
+            "number": "1",
+            "image": "scratch/star_dash/star_dash_jump_nospin.gif",
+            "description": "Create a platform for the star-jumper to jump from using basic coordinates",
+            "components": [
+                {
+                    "checkmark": true,
+                    "text": "Start the star-jumper near the bottom of the screen, with coordinates [-120,-120]",
+                    "image": "scratch/star_dash/star_dash_initial_position.png",
+                    "hidden": {
+                        "text": "You'll need to use the following blocks, but fill in the correct coordinates",
+                        "blocks": "when FLAG clicked\n\ngo to x: (...) y: (...)"
+                    }
+                },
+                {
+                    "checkmark": true,
+                    "text": "Make the star-jumper jump when we press the spacebar",
+                    "image": "scratch/star_dash/star_dash_jump_initial.gif",
+                    "hidden": {
+                        "text": "You'll need to use the following blocks:",
+                        "blocks": "forever \n end \n\n if (...) then \n end \n\n key [space v] pressed? \n\n change y by (...)"
+                    }
+                },
+                {
+                    "checkmark": true,
+                    "text": "Create your own block to hold more complex code for jumping",
+                    "hidden": {
+                        "text": "You'll need to go to 'More Blocks' to create a block, and use this to jump",
+                        "blocks": "forever \n if (key [space v] pressed?) then \n jump::(custom) \n end \n\n define jump "
+                    }
+                },
+                {
+                    "checkmark": true,
+                    "text": "Make the jump happen more smoothly, increasing only a little each time",
+                    "image": "scratch/star_dash/star_dash_jump_smooth.gif",
+                    "hidden": {
+                        "text": "You'll need to use the following blocks:",
+                        "blocks": "repeat (...) \n end \n\n change y by (...)"
+                    }
+                },
+                {
+                    "checkmark": true,
+                    "text": "Make the star-jumper fall back down to the same place",
+                    "image": "scratch/star_dash/star_dash_jump_fall.gif",
+                    "hidden": {
+                        "text": "You'll need to use the exact same blocks as before:"
+                    }
+                },
+                {
+                    "checkmark": true,
+                    "text": "**Does your star-jumper jump and fall smoothly?**",
+                    "hidden": {
+                        "text": "Your code should look something like this:",
+                        "blocks": "when FLAG clicked \n go to x: (-120) y: (-120) \n forever \n if (key [space v] pressed? \n jump::(custom) \n end \n end \n\n define jump \n repeat (20) \n change y by (3) \n end \n repeat (20) \n change y by (-3) "
+                    }
+                }
+            ]
+        },
+        {
+            "title": "Make the star-jumper spin as it jumps",
+            "number": "2",
+            "image": "scratch/star_dash/star_dash_jump_full_flip.gif",
+            "description": "You need to use turn, repeats and a formula to make sure it lands correctly",
+            "components": [
+                {
+                    "checkmark": true,
+                    "text": "Make the star-jumper flip as it jumps",
+                    "image": "scratch/star_dash/star_dash_jump_flip.gif",
+                    "hidden": {
+                        "text": "You'll need to use the following blocks:",
+                        "blocks": "turn right (...) degrees  "
+                    }
+                },
+                {
+                    "checkmark": true,
+                    "text": "Now make sure it always lands upright",
+                    "image": "scratch/star_dash/star_dash_jump_full_flip.gif",
+                    "hidden": {
+                        "text": "You'll need to use the following blocks:",
+                        "blocks": "set [repeat v] to [20] \n\n repeat (repeat) \n end \n\n turn right ((90)/(repeat)) degrees  "
+                    }
+                },
+                {
+                    "checkmark": true,
+                    "text": "Make it flip as it goes up, and comes back down",
+                    "image": "scratch/star_dash/star_dash_jump_flip_fall.gif",
+                    "hidden": {
+                        "text": "You'll need to use the same blocks as before"
+                    }
+                },
+                {
+                    "checkmark": true,
+                    "text": "**Does your star-jumper jump and flip?**",
+                    "hidden": {
+                        "text": "Your code should look something like",
+                        "blocks": "when FLAG clicked \n go to x: (-165) y: (-119) \n forever \n if (key [space v] pressed? \n jump::(custom) \n end \n end \n\n define jump \n point in direction (90 v) \n set [repeat v] to [20] \n repeat (repeat) \n change y by (3) \n turn right ((90)/(repeat)) degrees \n end \n repeat (repeat) \n change y by (-3) \n turn right ((90)/(repeat)) degrees"
+                    }
+                }
+            ]
+        },
+        {
+            "title": "Make the obstables move across the screen",
+            "number": "3",
+            "image": "scratch/star_dash/star_dash_obstacles.gif",
+            "description": "You need to use clones and costume changes for this",
+            "components": [
+                {
+                    "checkmark": true,
+                    "text": "Start the obstacle at the far side of the screen",
+                    "image": "scratch/star_dash/star_dash_obstacle_start.png",
+                    "hidden": {
+                        "text": "You'll need to use the following blocks:",
+                        "blocks": "when FLAG clicked \n\n go to X: (...) y: (...)"
+                    }
+                },
+                {
+                    "checkmark": true,
+                    "text": "Move the obstacle to the right of the screen",
+                    "image": "scratch/star_dash/star_dash_obstacle_move_right.gif",
+                    "hidden": {
+                        "text": "You'll need to use the following blocks:",
+                        "blocks": "forever \n end \n\n change x by (...)"
+                    }
+                },
+                {
+                    "checkmark": true,
+                    "text": "Create clones of the obstacle to have many on the screen",
+                    "image": "scratch/star_dash/star_dash_obstacle_clone.gif",
+                    "hidden": {
+                        "text": "You'll need to use the following blocks:",
+                        "blocks": "forever \n end \n\n create clone of [myself v] \n\n wait (...) secs \n\n when I start as a clone"
+                    }
+                },
+                {
+                    "checkmark": true,
+                    "text": "Delete these clones when they reach the left side of the screen",
+                    "image": "scratch/star_dash/star_dash_obstacle_clone_delete.gif",
+                    "hidden": {
+                        "text": "You'll need to use the following blocks:",
+                        "blocks": "if (...) then \n end \n\n ([...] < [...]) \n\n x position \n\n delete this clone "
+                    }
+                },
+                {
+                    "checkmark": true,
+                    "text": "Change the obstacle by changing the costume",
+                    "hidden": {
+                        "text": "You'll need to use the following blocks:",
+                        "blocks": "next costume"
+                    }
+                },
+                {
+                    "checkmark": true,
+                    "text": "**Do you have different obstacles moving across the screen now?**",
+                    "hidden": {
+                        "text": "Your code should look something like this",
+                        "blocks": "when FLAG clicked \n hide \n forever \n create clone of [myself v] \n wait (pick random (1.5) to (3) ) secs \n next costume \n end \n\n when I start as a clone \n show \n go to x: (240) y: (-137) \n forever \n if ((x position) < [-230]) then \n delete this clone \n end \n if (touching [space-jumper v]?) then \n set [score v] to [0]"
+                    }
+                }
+            ]
+        },
+        {
+            "title": "Add a score",
+            "number": "4",
+            "image": "scratch/star_dash/star_dash_score.png",
+            "description": "Your score will be how long you survive in the game, so you need to create a counter",
+            "components": [
+                {
+                    "checkmark": true,
+                    "text": "In the STAGE create a counter",
+                    "image": "scratch/star_dash/star_dash_score.png",
+                    "hidden": {
+                        "text": "You'll need to use the following blocks:",
+                        "blocks": "when FLAG clicked \n\n set [score v] to [0] \n\n forever \n end \n\n change [score v] by (...) \n\n wait (...) secs"
+                    }
+                },
+                {
+                    "checkmark": true,
+                    "text": "Now reset the counter when you hit an obstacle",
+                    "hidden": {
+                        "text": "You'll need to use the following blocks:",
+                        "blocks": "If (...) then \n end \n\n touching [space-jumper v]? \n\n set [score v] to [...]"
+                    }
+                },
+                {
+                    "checkmark": true,
+                    "text": "**Does your game have a score that increase and gets reset?**",
+                    "hidden": {
+                        "text": "Your code should look similar to the following:",
+                        "blocks": "when FLAG clicked \n set [score v] to [0] \n forever \n change [score v] by (1) \n wait (0.1) secs \n end \n\n if (touching [space-jumper v] ?) then \n set [score v] to [0]"
+                    }
+                }
+            ]
+        },
+        {
+            "title": "Create different levels",
+            "challenge": true,
+            "number": "5",
+            "image": "scratch/star_dash/star_dash_levels.gif",
+            "description": "There are a number of different ways to do this",
+            "components": [
+                {
+                    "checkmark": true,
+                    "text": "Does your game get faster, harder, different?"
+                }
+            ]
+        }
+    ]
+
+}

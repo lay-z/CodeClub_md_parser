@@ -1,0 +1,136 @@
+{
+	"name": "JavaScript Variables",
+	"title": "JavaScript Variables",
+	"image": "web/variables/var2.png",
+	"link": "https://trinket.io/embed/html/f215f19fc5",
+	"description": "Learn how we store data in JavaScript",
+	"steps": [
+		{
+			"title": "Create a variable",
+			"image": "web/variables/var2.png",
+			"description": "We are going to use a variable to store our name",
+			"components": [
+                {
+                    "text": "**On the previous screen** click 'Open Starter Web Project' to open a Trinket window",
+                    "image": "web/open_starter.png"
+                },
+                {
+                    "text": "Now **click Remix** to make your own copy of the Trinket",
+                    "image": "trinket/remix.png"
+                },
+                {
+                    "text": "Did you successfully remix the Trinket project?",
+                    "checkmark": true
+                },
+                {
+					"text": "A **variable** is used to **store information.**. Information is sometimes referred to as **data**. "
+					
+				},
+				{
+					"text": "This is important, so we will say it again! A **variable** is used to **store data.** ",
+					"image": "web/variables/var2.png"
+					
+				},
+				{
+					"text": "All variables have a **name** and all variables can **store** data (information)."
+					
+				},
+				{
+					"text": "A variable then, is like a container with a name. In the image, the variable is called myVariable but does not have any data in it yet.",
+					"image": "web/variables/myVar.png"
+					
+				},
+				{
+					"text": "Variables can store many types of information such as **numbers**, words (a **string**) or more complicated information such as **lists**. In the image, one variable is called **Hi** and stores a **string** and one variable is called **Year** and stores a **number**",
+					"image": "web/variables/vars.png"
+				},
+				{
+					"text": "Put up your hand and wait for an instructor to come over, describe to them what a variable is, what it is used for and what type of information you can store in it",
+					"image": "web/variables/hand-up.jpg",
+					"checkmark": true
+                },						
+				{
+					"text": "Before we can use a variable, we must **declare** it. In JavaScript we can declare a new variables using the **var** key word:",
+					"code": {
+						"language": "javascript",
+						"content": "var name"
+					},
+					"image": "web/variables/name.png"
+					
+				},
+				{
+					"text": "Now we have declared our variable we can store data in it by using the eqauls sign (=). This is called the assignent operator. Anything on the right of the = gets assigned to the variable on the left:",
+					"code": {
+						"language": "javascript",
+						"content": "name = \"Henry\" "
+					},
+					"image": "web/variables/henry.png"
+				},
+				{
+					"text": "We can also declare a variable and store some information in it at the same time. This is called **initialisation**:",
+					"code": {
+						"language": "javascript",
+						"content": "var surname = \"Lake\" "
+					}
+				},
+				{
+					"text": "Now it's your turn! Open the **sketch.js** file. **Inside** the draw function, **after** the comment that says **ADD YOU CODE HERE**, create **two variables**, one to store your **name** and one to store your **surname**",
+					"checkmark": true
+                },
+                {
+					"text": "To **retrieve** the data stored in the variable we just write the name of the variable, simple!",
+					"code": {
+						"language": "javascript",
+						"content": "name"
+					},
+					"image": "web/variables/retrieve.png"
+                },
+				{
+					"text": "Now lets print those variables in a sentence:",
+					"code": {
+						"language": "javascript",
+						"content": " text(\"hello my name is \" + name + \" \" + surname,0,100)"
+					},
+					"image": "web/variables/print.png"
+				},
+				{
+					"text": "Try **changing** what is **stored** in the **name** variable and the **surname**	 variable. Can you get make the text say \"Hello my name is Alan Turing\" ?",
+					"code": {
+						"language": "javascript",
+						"content": " text(\"hello my name is \" + name + \" \" + surname,0,100)"
+					}
+				},
+				{
+					"text": "Show an instructor how you changed the name that is printed."
+				}
+			]
+		},
+		{
+			"title": "Using variables",
+			"image": "web/variables/using.png",
+			"description": "Using variable means we don't have to write out the same thing over and over, we can just save the information in a variable and use that instead.",
+			"components": [	
+				{
+					"text": "Create a new variable called **fullName** and store your first name and surname in it. Try using your two variables name and surname rather than writing out your full name.",
+					"image": "web/variables/combine.png",
+					"hidden": {
+						"text": "Did you manage to complete the challenge without writing your name out again? Ask a instructor for help if not"
+					}
+				},
+				{
+					"text": "Change the line of code that prints out the sentence. This is the line that starts with **text**. Change it to:",
+					"code": {
+						"language": "javascript",
+						"content": " text(\"hello my name is \" + fullName,0,100)"
+					}
+				},
+				{
+					"text": "You should see that it still prints out your full name."
+				},
+				{
+					"text": "To finish this section on variables, make a variable called finished that store the sentence \"I am finished \". Now change your **text** function to say that your finished using your variable."
+				}	
+			]
+		}
+	]
+}

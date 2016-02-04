@@ -1,0 +1,88 @@
+{
+	"name": "JavaScript Variables",
+	"title": "JavaScript Variables",
+	"image": "web/draw_with_canvas/draw_with_canvas.png",
+	"link": "https://trinket.io/embed/html/846ac26a5d",
+	"description": "Learn how we store data in JavaScript",
+	"steps": [
+		{
+				"title": "Create a variable",
+				"image": "web/draw_with_canvas/canvas_logo.jpg",
+				"description": "We are going to use a variable to store our name",
+				"components": [
+	                {
+	                    "text": "**On the previous screen** click 'Open Starter Web Project' to open a Trinket window",
+	                    "image": "web/open_starter.png"
+	                },
+	                {
+	                    "text": "Now **click Remix** to make your own copy of the Trinket",
+	                    "image": "trinket/remix.png"
+	                },
+	                {
+	                    "text": "Did you successfully remix the Trinket project?",
+	                    "checkmark": true
+	                },
+	                {
+						"text": "A **variable** is used to **store information.** "
+						
+					},
+					{
+						"text": "This is important, so we will say it again! A **variable** is used to **store information.** "
+						
+					},
+					{
+						"text": "All variables have a **name** and all variables can **store** information."
+						
+					},
+					{
+						"text": "A variable then, is like a container with a name."
+						
+					},
+					{
+						"text": "Variables can store many types of information such as numbers, words (a string) or more complicated informaion such as lists."
+						
+					},
+					{
+						"text": "Put up your hand and wait for an instructor to come over, describe to them what a variable is, what it is used for and what type of information you can store in it",
+						"checkmark": true
+	                },						
+					{
+						"text": "Before we can use a variable, we must **declare** it. In JavaScript we can declare a new variables using the **var** key word:",
+						"code": {
+							"language": "javascript",
+							"content": "var name"
+						}
+						
+					},
+					{
+						"text": "Now we have declared our variable we can store data in it by using the eqauls sign (=). This is called the assignent operator. Anything on the right of the = gets assigned to the variable on the left:",
+						"code": {
+							"language": "javascript",
+							"content": "name = \"Henry\" "
+						}
+					},
+					{
+						"text": ". We can store information in them using the equals sign (=) like so: ",
+						"code": {
+							"language": "javascript",
+							"content": "var name = \"Henry\" \n var surname \n surname = \"Lake \" "
+						}
+					},
+					{
+						"text": "We did two things there, first we declared "
+					},
+					{
+						"text": "Now it's your turn! Create ",
+						"checkmark": true
+	                },
+					{
+						"text": "To create a new variable we need to use the **var** keyword followed by the name of our variable",
+						"code": {
+							"language": "html",
+							"content": "<canvas></canvas>"
+						}
+					}
+				]
+		}		
+	]
+}

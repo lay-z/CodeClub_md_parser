@@ -94,7 +94,7 @@
 					"image": "web/variables/print.png"
 				},
 				{
-					"text": "Try **changing** what is **stored** in the **name** variable and the **surname**	 variable. Can you get make the text say \"Hello my name is Alan Turing\" ?",
+					"text": "Try **changing** what is **stored** in the **name** variable and the **surname** variable. Can you get make the text say \"Hello my name is Alan Turing\"?",
 					"code": {
 						"language": "javascript",
 						"content": " text(\"hello my name is \" + name + \" \" + surname,0,100)"
